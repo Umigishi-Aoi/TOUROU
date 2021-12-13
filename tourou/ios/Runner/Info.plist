@@ -11,7 +11,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>tourou</string>
+	<string>TOUROU$(APP_ID_SUFFIX)</string>
+	<key>CFBundleDisplayName</key>
+    <string>TOUROU$(APP_ID_SUFFIX)</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
