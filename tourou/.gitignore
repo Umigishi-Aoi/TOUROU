@@ -51,3 +51,6 @@ app.*.map.json
 
 #iOS Settings
 **/ios/Flutter/DartDefines.xcconfig
+
+#firebase_options
+/lib/firebase_options*

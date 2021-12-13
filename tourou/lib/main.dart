@@ -1,6 +1,27 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+import 'firebase_options_prod.dart';
+import 'firebase_options_stg.dart';
+
+void main() async{
+
+  WidgetsFlutterBinding.ensureInitialized();
+  var flavor = const String.fromEnvironment('FLAVOR');
+
+  switch(flavor){
+    case "stg":
+      await Firebase.initializeApp(
+        options: DefaultFirebaseOptionsStg.currentPlatform,
+      );
+      break;
+    case "prod":
+      await Firebase.initializeApp(
+        options: DefaultFirebaseOptionsProd.currentPlatform,
+      );
+      break;
+  }
+
   runApp(const MyApp());
 }
 
