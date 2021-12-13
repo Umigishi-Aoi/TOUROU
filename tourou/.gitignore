@@ -47,6 +47,7 @@ app.*.map.json
 
 # Android icon
 **/android/app/src/main/res/mipmap*/
+**/android/app/src/main/res/drawable*/
 
 #iOS Settings
 **/ios/Flutter/DartDefines.xcconfig
