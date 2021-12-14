@@ -4,18 +4,18 @@ import 'package:flutter/material.dart';
 import 'firebase_options_prod.dart';
 import 'firebase_options_stg.dart';
 
-void main() async{
+Future<void> main() async{
 
   WidgetsFlutterBinding.ensureInitialized();
-  var flavor = const String.fromEnvironment('FLAVOR');
+  const flavor = String.fromEnvironment('FLAVOR');
 
   switch(flavor){
-    case "stg":
+    case 'stg':
       await Firebase.initializeApp(
         options: DefaultFirebaseOptionsStg.currentPlatform,
       );
       break;
-    case "prod":
+    case 'prod':
       await Firebase.initializeApp(
         options: DefaultFirebaseOptionsProd.currentPlatform,
       );
@@ -35,14 +35,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home: Scaffold(
-        appBar: AppBar(title: Text("test"),),
+        appBar: AppBar(title: const Text('test'),),
         body: Center(
-          child: Container(
-            child: Column(
-              children: [
-                Text("FLAVOR is $flavor")
-              ],
-            )
+          child: Column(
+            children: const [
+              Text('FLAVOR is $flavor')
+            ],
           ),
         )
       )
