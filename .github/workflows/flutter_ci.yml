@@ -1,17 +1,7 @@
 on:
   pull_request:
-    paths:
-      - '**.dart'
-      - 'pubspec.*'
-      - 'analysis_options.yaml'
-      - '.github/workflows/flutter_ci.yaml'
   push:
     branches: [master]
-    paths:
-      - '**.dart'
-      - 'pubspec.*'
-      - 'analysis_options.yaml'
-      - '.github/workflows/flutter_ci.yaml'
 
 jobs:
   format:
@@ -28,7 +18,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '2.8.0'
+          channel: 'stable'
       - name: install dependencies
+        working-directory: ./tourou
         run: flutter pub get
-      - run: flutter analyze --fatal-infos --fatal-warnings .
+      - name: analyze
+        run: flutter analyze --fatal-infos --fatal-warnings .
 

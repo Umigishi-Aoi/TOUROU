@@ -27,5 +27,8 @@ linter:
     # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
     avoid_classes_with_only_static_members : false　
 
+analyzer:
+  exclude:
+    - lib/main.dart
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
