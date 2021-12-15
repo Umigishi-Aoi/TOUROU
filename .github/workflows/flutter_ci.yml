@@ -31,5 +31,6 @@ jobs:
       - name: install dependencies
         working-directory: ./tourou
         run: flutter pub get
-      - run: flutter analyze --fatal-infos --fatal-warnings .
+      - working-directory: ./tourou
+        run: flutter analyze --fatal-infos --fatal-warnings .
 
