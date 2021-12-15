@@ -35,5 +35,5 @@ jobs:
         working-directory: ./tourou
         run: flutter pub get
       - name: analyze
-      - run: flutter analyze --fatal-infos --fatal-warnings .
+        run: flutter analyze --fatal-infos --fatal-warnings .
 
