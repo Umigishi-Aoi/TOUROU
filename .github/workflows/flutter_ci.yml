@@ -1,16 +1,16 @@
 on:
   pull_request:
     paths:
-      - 'tourou/lib/**.dart'
-      - 'tourou/pubspec.*'
-      - 'tourou/analysis_options.yaml'
+      - '**.dart'
+      - 'pubspec.*'
+      - 'analysis_options.yaml'
       - '.github/workflows/flutter_ci.yaml'
   push:
     branches: [main]
     paths:
-      - 'tourou/lib/**.dart'
-      - 'tourou/pubspec.*'
-      - 'tourou/analysis_options.yaml'
+      - '**.dart'
+      - 'pubspec.*'
+      - 'analysis_options.yaml'
       - '.github/workflows/flutter_ci.yaml'
 
 jobs:
