@@ -27,3 +27,10 @@ jobs:
       - name: analyze
         run: flutter analyze --fatal-infos --fatal-warnings .
 
+  sort:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v1
+      - run: flutter pub run import_sorter:main --exit-if-changed
