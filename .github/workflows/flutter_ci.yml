@@ -6,7 +6,7 @@ on:
       - 'analysis_options.yaml'
       - '.github/workflows/flutter_ci.yaml'
   push:
-    branches: [main]
+    branches: [master]
     paths:
       - '**.dart'
       - 'pubspec.*'
