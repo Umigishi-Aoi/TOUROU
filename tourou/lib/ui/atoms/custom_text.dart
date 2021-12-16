@@ -7,17 +7,23 @@ import 'package:tourou/res/constants.dart';
 
 class CustomText extends StatelessWidget {
   CustomText(
-      {Key? key, required this.text, this.color, this.fontSize, this.bold})
+      {Key? key,
+      required this.text,
+      this.color,
+      this.fontSize,
+      this.bold,
+      this.function})
       : super(key: key);
 
   final String text;
   final Color? color;
   final double? fontSize;
   final FontWeight? bold;
+  final void Function()? function;
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return GestureDetector(
       child: Text(
         text,
         style: TextStyle(
@@ -26,6 +32,7 @@ class CustomText extends StatelessWidget {
           fontWeight: bold ?? FontWeight.normal,
         ),
       ),
+      onTap: function,
     );
   }
 }
