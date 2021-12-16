@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 // Project imports:
 import 'package:tourou/gen/colors.gen.dart';
+import 'package:tourou/res/constants.dart';
 
 class CustomText extends StatelessWidget {
   CustomText(
@@ -20,8 +21,8 @@ class CustomText extends StatelessWidget {
       child: Text(
         text,
         style: TextStyle(
-          color: color ?? ColorName.mainBlack,
-          fontSize: fontSize ?? 16,
+          color: color ?? ColorName.textWhite,
+          fontSize: fontSize ?? mainTextSize,
           fontWeight: bold ?? FontWeight.normal,
         ),
       ),
