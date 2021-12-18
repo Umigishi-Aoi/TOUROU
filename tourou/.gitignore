@@ -54,3 +54,4 @@ app.*.map.json
 
 #firebase_options
 /lib/firebase_options*
+/lib/res/firebase_constants.dart
