@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import '../../gen/colors.gen.dart';
 import '../../res/constants.dart';
 import '../atoms/custom_text.dart';
