@@ -13,6 +13,7 @@ class CustomTextField extends StatelessWidget {
     required this.controller,
     required this.height,
     required this.width,
+    this.minLines,
     this.fontSize,
     this.textColor,
     this.fillColor,
@@ -26,6 +27,7 @@ class CustomTextField extends StatelessWidget {
 
   final double height;
   final double width;
+  final int? minLines;
   final double? fontSize;
   final Color? textColor;
   final Color? fillColor;
