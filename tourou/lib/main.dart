@@ -5,24 +5,25 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 // Project imports:
+import '../../res/constants.dart';
 import 'firebase_options_prod.dart';
 import 'firebase_options_stg.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  const flavor = String.fromEnvironment('FLAVOR');
 
-  switch (flavor) {
-    case 'stg':
+  switch (makeFlavor(flavor)) {
+    case Flavor.stg:
       await Firebase.initializeApp(
         options: DefaultFirebaseOptionsStg.currentPlatform,
       );
       break;
-    case 'prod':
+    case Flavor.prod:
       await Firebase.initializeApp(
         options: DefaultFirebaseOptionsProd.currentPlatform,
       );
       break;
+    default:
   }
 
   runApp(const MyApp());
