@@ -15,7 +15,6 @@ class ImageButton extends StatefulWidget {
   final BoxFit? fit;
   final bool isCircle;
 
-
   const ImageButton({
     Key? key,
     required this.firstImagePath,
