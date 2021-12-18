@@ -2,6 +2,12 @@
 import 'package:flutter/material.dart';
 
 class CustomImages extends StatelessWidget {
+  final String path;
+  final double height;
+  final double? width;
+  final BoxFit? fit;
+  final bool isCircle;
+
   const CustomImages({
     Key? key,
     required this.path,
@@ -10,12 +16,6 @@ class CustomImages extends StatelessWidget {
     this.fit,
     this.isCircle = false,
   }) : super(key: key);
-
-  final String path;
-  final double height;
-  final double? width;
-  final BoxFit? fit;
-  final bool isCircle;
 
   @override
   Widget build(BuildContext context) {

@@ -7,17 +7,6 @@ import '../../res/constants.dart';
 import '../atoms/custom_text.dart';
 
 class CustomElevatedButton extends StatelessWidget {
-  const CustomElevatedButton(
-      {Key? key,
-      required this.text,
-      this.color,
-      this.fontSize,
-      required this.height,
-      required this.width,
-      this.buttonColor,
-      this.function})
-      : super(key: key);
-
   final String text;
   final Color? color;
   final double? fontSize;
@@ -28,6 +17,17 @@ class CustomElevatedButton extends StatelessWidget {
   final Color? buttonColor;
 
   final void Function()? function;
+
+  const CustomElevatedButton(
+      {Key? key,
+      required this.text,
+      this.color,
+      this.fontSize,
+      required this.height,
+      required this.width,
+      this.buttonColor,
+      this.function})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

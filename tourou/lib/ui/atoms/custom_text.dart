@@ -6,6 +6,12 @@ import 'package:tourou/gen/colors.gen.dart';
 import 'package:tourou/res/constants.dart';
 
 class CustomText extends StatelessWidget {
+  final String text;
+  final Color? color;
+  final double? fontSize;
+  final FontWeight? bold;
+  final void Function()? function;
+
   CustomText(
       {Key? key,
       required this.text,
@@ -14,12 +20,6 @@ class CustomText extends StatelessWidget {
       this.bold,
       this.function})
       : super(key: key);
-
-  final String text;
-  final Color? color;
-  final double? fontSize;
-  final FontWeight? bold;
-  final void Function()? function;
 
   @override
   Widget build(BuildContext context) {
