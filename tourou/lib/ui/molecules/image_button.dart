@@ -6,6 +6,16 @@ import 'package:tourou/res/constants.dart';
 import 'package:tourou/ui/atoms/custom_images.dart';
 
 class ImageButton extends StatefulWidget {
+  final String firstImagePath;
+  final double height;
+  final Function function;
+
+  final String? secondImagePath;
+  final double? width;
+  final BoxFit? fit;
+  final bool isCircle;
+
+
   const ImageButton({
     Key? key,
     required this.firstImagePath,
@@ -16,15 +26,6 @@ class ImageButton extends StatefulWidget {
     this.fit,
     this.isCircle = false,
   }) : super(key: key);
-
-  final String firstImagePath;
-  final double height;
-  final Function function;
-
-  final String? secondImagePath;
-  final double? width;
-  final BoxFit? fit;
-  final bool isCircle;
 
   @override
   _ImageButtonState createState() => _ImageButtonState();

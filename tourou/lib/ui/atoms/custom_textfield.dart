@@ -7,20 +7,6 @@ import '../../gen/colors.gen.dart';
 import '../../res/constants.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({
-    Key? key,
-    required this.hint,
-    required this.controller,
-    required this.height,
-    required this.width,
-    this.minLines,
-    this.fontSize,
-    this.textColor,
-    this.fillColor,
-    this.borderColor,
-    this.textInputFormatters,
-  }) : super(key: key);
-
   final String hint;
 
   final TextEditingController controller;
@@ -34,6 +20,20 @@ class CustomTextField extends StatelessWidget {
   final Color? borderColor;
 
   final List<TextInputFormatter>? textInputFormatters;
+
+  const CustomTextField({
+    Key? key,
+    required this.hint,
+    required this.controller,
+    required this.height,
+    required this.width,
+    this.minLines,
+    this.fontSize,
+    this.textColor,
+    this.fillColor,
+    this.borderColor,
+    this.textInputFormatters,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
