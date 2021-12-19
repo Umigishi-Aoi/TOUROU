@@ -1,5 +1,5 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/ui/atoms/custom_image.dart';
 
 class TitleOrganisms extends StatelessWidget {
   const TitleOrganisms({Key? key}) : super(key: key);
@@ -7,8 +7,7 @@ class TitleOrganisms extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
-      ],
+      children: [],
     );
   }
 }
