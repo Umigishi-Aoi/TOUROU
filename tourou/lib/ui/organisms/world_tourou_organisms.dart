@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:tourou/gen/colors.gen.dart';
 import 'package:tourou/res/constants.dart';
 import 'package:tourou/ui/atoms/custom_images.dart';
@@ -30,7 +33,8 @@ class WorldTourouMolecules extends StatelessWidget {
       this.textColor,
       required this.userId,
       this.userIdColor,
-      required this.tourouText, required this.reportFunction})
+      required this.tourouText,
+      required this.reportFunction})
       : super(key: key);
 
   @override

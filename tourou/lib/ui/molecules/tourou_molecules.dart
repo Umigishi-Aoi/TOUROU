@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:tourou/gen/colors.gen.dart';
 import 'package:tourou/ui/atoms/custom_images.dart';
 import 'package:tourou/ui/atoms/custom_text.dart';
