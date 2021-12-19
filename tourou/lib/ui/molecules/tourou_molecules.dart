@@ -2,9 +2,9 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:tourou/gen/colors.gen.dart';
-import 'package:tourou/ui/atoms/custom_images.dart';
-import 'package:tourou/ui/atoms/custom_text.dart';
+import '../../gen/colors.gen.dart';
+import '../atoms/custom_images.dart';
+import '../atoms/custom_text.dart';
 
 class TourouMolecules extends StatelessWidget {
   final String profileImagePath;
