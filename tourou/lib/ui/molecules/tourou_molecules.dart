@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 // Project imports:
 import '../../gen/colors.gen.dart';
-import '../atoms/custom_images.dart';
+import '../atoms/custom_image.dart';
 import '../atoms/custom_text.dart';
 
 class TourouMolecules extends StatelessWidget {
@@ -36,7 +36,7 @@ class TourouMolecules extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        CustomImages(
+        CustomImage(
           path: profileImagePath,
           height: profileImageHeight,
           isCircle: true,

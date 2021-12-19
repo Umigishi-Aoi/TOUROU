@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 // Project imports:
 import 'package:tourou/res/constants.dart';
-import 'package:tourou/ui/atoms/custom_images.dart';
+import 'package:tourou/ui/atoms/custom_image.dart';
 
 class ImageButton extends StatefulWidget {
   final String firstImagePath;
@@ -39,7 +39,7 @@ class _ImageButtonState extends State<ImageButton> {
       children: [
         if (_flag == false || widget.secondImagePath == null)
           GestureDetector(
-            child: CustomImages(
+            child: CustomImage(
               path: widget.firstImagePath,
               height: widget.height,
               width: widget.width,
@@ -60,7 +60,7 @@ class _ImageButtonState extends State<ImageButton> {
             },
           )
         else
-          CustomImages(
+          CustomImage(
             path: widget.secondImagePath!,
             height: widget.height,
             width: widget.width,

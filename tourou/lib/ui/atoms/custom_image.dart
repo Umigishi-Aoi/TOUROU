@@ -1,14 +1,14 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
-class CustomImages extends StatelessWidget {
+class CustomImage extends StatelessWidget {
   final String path;
   final double height;
   final double? width;
   final BoxFit? fit;
   final bool isCircle;
 
-  const CustomImages({
+  const CustomImage({
     Key? key,
     required this.path,
     required this.height,
