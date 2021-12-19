@@ -44,7 +44,7 @@ class CustomTextField extends StatelessWidget {
         controller: controller,
         style: TextStyle(
           height: height,
-          fontSize: fontSize ?? mainTextSize,
+          fontSize: fontSize ?? mainTextFontSize,
           color: textColor ?? ColorName.mainBlack,
         ),
         decoration: InputDecoration(

@@ -2,11 +2,11 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:tourou/gen/colors.gen.dart';
-import 'package:tourou/res/constants.dart';
-import 'package:tourou/ui/atoms/custom_image.dart';
-import 'package:tourou/ui/atoms/custom_text.dart';
-import 'package:tourou/ui/molecules/custom_icon_button.dart';
+import '../../gen/colors.gen.dart';
+import '../../res/constants.dart';
+import '../atoms/custom_image.dart';
+import '../atoms/custom_text.dart';
+import '../molecules/custom_icon_button.dart';
 
 class WorldTourouMolecules extends StatelessWidget {
   final double? tourouWidth;

@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:tourou/ui/atoms/custom_icon.dart';
+import '../atoms/custom_icon.dart';
 
 class CustomIconButton extends StatelessWidget {
   final void Function() function;

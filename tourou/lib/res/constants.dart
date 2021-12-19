@@ -1,4 +1,4 @@
-const double mainTextSize = 24;
+const double mainTextFontSize = 24;
 const int imageDuration = 1;
 const double radiusRatio = 0.2;
 const double buttonHeightTextRatio = 0.43;
@@ -9,6 +9,11 @@ const double tourouProfileImageHeightRatio = 0.05;
 const double tourouReportIconSizeRatio = 0.01;
 const double tourouUserNameFontSize = 32;
 const double tourouTextWidthRatio = 0.8;
+
+const double explanationTitleHeightRatio = 0.1;
+const double explanationTextHeightRatio = 0.7;
+const double explanationTextWidthRatio = 0.8;
+const double explanationTextButtonHeightRatio = 0.1;
 
 const flavor = String.fromEnvironment('FLAVOR');
 
