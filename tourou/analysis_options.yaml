@@ -30,5 +30,6 @@ linter:
 analyzer:
   exclude:
     - lib/main.dart
+    - lib/ads/adaptive_banner_ad.dart
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
