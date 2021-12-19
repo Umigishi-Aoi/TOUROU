@@ -42,6 +42,7 @@ dev_dependencies:
   flutter_lints: ^1.0.0
   flutter_test:
     sdk: flutter
+  import_path_converter: ^1.0.1
   import_sorter: ^4.6.0
   pedantic_mono: any
 
@@ -106,3 +107,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+import_path_converter:
+  relative: true

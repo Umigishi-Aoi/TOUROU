@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import 'package:tourou/res/constants.dart';
-import 'package:tourou/ui/atoms/custom_image.dart';
+import '../../res/constants.dart';
+import '../atoms/custom_image.dart';
 
 class ImageButton extends StatefulWidget {
   final String firstImagePath;
