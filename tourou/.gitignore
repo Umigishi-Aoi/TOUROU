@@ -55,6 +55,3 @@ app.*.map.json
 #firebase_options
 /lib/firebase_options*
 /lib/res/firebase_constants.dart
-
-#admob_setting
-/lib/ads/ad_helper.dart
