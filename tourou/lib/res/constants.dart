@@ -3,6 +3,13 @@ const int imageDuration = 1;
 const double radiusRatio = 0.2;
 const double buttonHeightTextRatio = 0.43;
 const double fabIconSize = 24;
+
+const double tourouWidthRatio = 0.9;
+const double tourouProfileImageHeightRatio = 0.05;
+const double tourouReportIconSizeRatio = 0.01;
+const double tourouUserNameFontSize = 32;
+const double tourouTextWidthRatio = 0.8;
+
 const flavor = String.fromEnvironment('FLAVOR');
 
 enum Flavor { dev, stg, prod, undefined }
