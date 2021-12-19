@@ -1,0 +1,11 @@
+<resources>
+    <color name="mainBlack">#FF333333</color>
+    <color name="textWhite">#FFEEEEEE</color>
+    <color name="textButton">#FF02D1FE</color>
+    <color name="userIdText">#FFC4C4C4</color>
+    <color name="itemBackground">#FFC4C4C4</color>
+    <color name="tourouBackgoround">#FFFFFFB3</color>
+    <color name="goodBackgoround">#FFB3D9FF</color>
+    <color name="FABBackgoround">#FFB3D9FF</color>
+    <color name="switchAccentColor">#FF02D1FE</color>
+</resources>

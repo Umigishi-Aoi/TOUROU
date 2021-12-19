@@ -1,0 +1,9 @@
+# flutter_launcher_icons-stg.yaml
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path_ios: "assets/launcher_icon/icon_stg.png"
+  image_path_android: "assets/launcher_icon/icon_android_foreground_stg.png"
+  adaptive_icon_background: "assets/launcher_icon/icon_android_background.png"
+  adaptive_icon_foreground: "assets/launcher_icon/icon_android_foreground_stg.png"
