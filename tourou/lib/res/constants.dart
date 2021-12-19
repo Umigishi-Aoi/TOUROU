@@ -2,6 +2,7 @@ const double mainTextSize = 24;
 const int imageDuration = 1;
 const double radiusRatio = 0.2;
 const double buttonHeightTextRatio = 0.43;
+const double fabIconSize = 24;
 const flavor = String.fromEnvironment('FLAVOR');
 
 enum Flavor { dev, stg, prod, undefined }
