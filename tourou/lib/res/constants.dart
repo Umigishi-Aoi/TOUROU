@@ -17,7 +17,7 @@ const double explanationTextButtonHeightRatio = 0.1;
 
 const double tabBarIndicatorWeight = 1.0;
 const double tabBarIndicatorHorizontalPadding = 16.0;
-const double tabBarIndicatorVerticalPadding=8.0;
+const double tabBarIndicatorVerticalPadding = 8.0;
 
 const flavor = String.fromEnvironment('FLAVOR');
 
