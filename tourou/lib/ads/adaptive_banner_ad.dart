@@ -1,6 +1,10 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
+// Project imports:
 import 'ad_helper.dart';
 
 class AdaptiveBannerAd extends StatefulWidget {
@@ -11,7 +15,6 @@ class AdaptiveBannerAd extends StatefulWidget {
 }
 
 class _AdaptiveBannerAdState extends State<AdaptiveBannerAd> {
-
   //バナー広告のインスタンス
   BannerAd? _ad;
 
@@ -36,7 +39,7 @@ class _AdaptiveBannerAdState extends State<AdaptiveBannerAd> {
 
   @override
   void dispose() {
-    if(_ad != null) {
+    if (_ad != null) {
       _ad!.dispose();
     }
     _adSize = null;
@@ -55,13 +58,11 @@ class _AdaptiveBannerAdState extends State<AdaptiveBannerAd> {
         child: FutureBuilder(
             future: _getAdSize(context),
             builder: (context, snapshot) {
-              if (snapshot.connectionState ==
-                  ConnectionState.done) {
+              if (snapshot.connectionState == ConnectionState.done) {
                 if (snapshot.hasError) {
                   return Center(
                     child: Text(snapshot.error.toString(),
-                        textAlign: TextAlign.center,
-                        textScaleFactor: 1.3),
+                        textAlign: TextAlign.center, textScaleFactor: 1.3),
                   );
                 }
                 if (!_isAdLoaded) {
