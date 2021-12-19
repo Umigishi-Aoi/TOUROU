@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:tourou/gen/colors.gen.dart';
 import 'package:tourou/res/constants.dart';
-import 'package:tourou/ui/atoms/custom_icon.dart';
 import 'package:tourou/ui/atoms/custom_images.dart';
 import 'package:tourou/ui/atoms/custom_text.dart';
+import 'package:tourou/ui/molecules/custom_icon_button.dart';
 
-class TourouMolecules extends StatelessWidget {
+class WorldTourouMolecules extends StatelessWidget {
   final double? tourouWidth;
+
+  final void Function() reportFunction;
 
   final String profileImagePath;
   final double? profileImageHeight;
@@ -19,7 +21,7 @@ class TourouMolecules extends StatelessWidget {
 
   final String tourouText;
 
-  const TourouMolecules(
+  const WorldTourouMolecules(
       {Key? key,
       this.tourouWidth,
       required this.profileImagePath,
@@ -28,7 +30,7 @@ class TourouMolecules extends StatelessWidget {
       this.textColor,
       required this.userId,
       this.userIdColor,
-      required this.tourouText})
+      required this.tourouText, required this.reportFunction})
       : super(key: key);
 
   @override
@@ -42,7 +44,8 @@ class TourouMolecules extends StatelessWidget {
         children: [
           Align(
             alignment: Alignment.topRight,
-            child: CustomIcon(
+            child: CustomIconButton(
+              function: reportFunction,
               iconData: Icons.error_outline,
               size: displayHeight * tourouReportIconSizeRatio,
             ),
