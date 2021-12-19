@@ -32,12 +32,20 @@ if (project.hasProperty('dart-defines')) {
             }
 }
 
+def loadProperties(filename) {
+    def props = new Properties()
+    file(filename).withInputStream {
+        props.load(it)
+    }
+    return props
+}
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -56,7 +64,7 @@ android {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.zerokaraapp.tourou"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         if (dartEnvironmentVariables.FLAVOR != 'prod') {
@@ -67,10 +75,19 @@ android {
     }
 
     buildTypes {
+        debug {
+            def props = loadProperties("$rootDir/app/gradle.properties")
+            manifestPlaceholders = [admob_app_id: props.admobAppIdDebug]
+        }
+
         release {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            def props = loadProperties("$rootDir/app/gradle.properties")
+            manifestPlaceholders = [admob_app_id: props.admobAppIdRelease]
         }
     }
 }
