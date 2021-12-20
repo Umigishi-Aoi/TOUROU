@@ -1,14 +1,14 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/ui/molecules/custom_elevated_button.dart';
-import 'package:tourou/ui/molecules/tourou_molecules.dart';
 
 // Project imports:
 import '../../gen/colors.gen.dart';
 import '../../res/constants.dart';
 import '../atoms/custom_image.dart';
 import '../atoms/custom_text.dart';
+import '../molecules/custom_elevated_button.dart';
 import '../molecules/custom_icon_button.dart';
+import '../molecules/tourou_molecules.dart';
 
 class WorldTourouOrganisms extends StatelessWidget {
   final double? tourouWidth;
