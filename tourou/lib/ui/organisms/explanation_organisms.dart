@@ -55,7 +55,7 @@ class ExplanationOrganisms extends StatelessWidget {
           child: CustomText(
             text: titleText,
             color: textColor,
-            fontSize: titleFontSize,
+            fontSize: titleFontSize ?? titleTextFontSizeConstants,
             bold: titleBold ?? FontWeight.bold,
           ),
         ),
