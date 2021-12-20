@@ -21,6 +21,7 @@ const double explanationTitleHeightRatio = 0.1;
 const double explanationTextHeightRatio = 0.7;
 const double explanationTextWidthRatio = 0.8;
 const double explanationTextButtonHeightRatio = 0.1;
+const double titleTextFontSizeConstants = 32;
 
 const double tabBarIndicatorWeight = 1.0;
 const double tabBarIndicatorHorizontalPadding = 16.0;
