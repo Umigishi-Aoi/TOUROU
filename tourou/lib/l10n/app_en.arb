@@ -1,6 +1,18 @@
 {
-  "helloWorld": "Hello World!",
-  "@helloWorld": {
-    "description": "The conventional newborn programmer greeting"
+  "additionalTitleText": "SNS App Not to Share",
+  "@additionalTitleText": {
+    "description": "additionalTitleText"
+  },
+  "explanationText": "Tap the egg \nfor new registration!",
+  "@explanationText": {
+    "description": "explanationText"
+  },
+  "titleTextButtonFirstText": "Login is ",
+  "@titleTextButtonFirstText": {
+    "description": "titleTextButtonFirstText"
+  },
+  "titleTextButtonSecondText": "here",
+  "@titleTextButtonSecondText": {
+    "description": "titleTextButtonSecondText"
   }
 }

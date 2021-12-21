@@ -10,6 +10,7 @@ class CustomText extends StatelessWidget {
   final Color? color;
   final double? fontSize;
   final FontWeight? bold;
+  final TextAlign? textAlign;
   final void Function()? function;
 
   CustomText(
@@ -18,7 +19,8 @@ class CustomText extends StatelessWidget {
       this.color,
       this.fontSize,
       this.bold,
-      this.function})
+      this.function,
+      this.textAlign})
       : super(key: key);
 
   @override
@@ -26,6 +28,7 @@ class CustomText extends StatelessWidget {
     return GestureDetector(
       child: Text(
         text,
+        textAlign: textAlign ?? TextAlign.start,
         style: TextStyle(
           color: color ?? ColorName.textWhite,
           fontSize: fontSize ?? mainTextFontSize,

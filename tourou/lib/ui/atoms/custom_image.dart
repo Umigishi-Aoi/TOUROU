@@ -36,7 +36,7 @@ class CustomImage extends StatelessWidget {
         width: width,
         child: Image.asset(
           path,
-          fit: fit ?? BoxFit.cover,
+          fit: fit ?? BoxFit.contain,
         ),
       );
     }
