@@ -24,8 +24,12 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: 'stable'
-      - run: flutter pub get
-      - run: flutter test --no-test-assets --coverage --coverage-path=~/coverage/lcov.info
+      - name: install dependencies
+        working-directory: ./tourou
+        run: flutter pub get
+      - name: test
+        working-directory: ./tourou
+        run: flutter test --no-test-assets --coverage --coverage-path=~/coverage/lcov.info
       - uses: codecov/codecov-action@v1
         with:
           token: ${{secrets.CODECOV_TOKEN}}
