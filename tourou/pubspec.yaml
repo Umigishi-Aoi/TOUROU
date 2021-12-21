@@ -85,6 +85,10 @@ flutter:
     - assets/logo/
     - assets/images/
 
+  fonts:
+    - family: MPLUS1
+      fonts:
+        - asset: assets/fonts/Mplus1-Regular.ttf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

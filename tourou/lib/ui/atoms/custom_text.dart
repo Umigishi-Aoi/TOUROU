@@ -1,5 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:tourou/gen/fonts.gen.dart';
 
 // Project imports:
 import '../../gen/colors.gen.dart';
@@ -33,6 +34,7 @@ class CustomText extends StatelessWidget {
           color: color ?? ColorName.textWhite,
           fontSize: fontSize ?? mainTextFontSize,
           fontWeight: bold ?? FontWeight.normal,
+          fontFamily: FontFamily.mplus1
         ),
       ),
       onTap: function,
