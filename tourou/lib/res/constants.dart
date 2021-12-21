@@ -43,7 +43,6 @@ const double explanationFontSizeConstant = 28;
 const double titleTextButtonTopMarginRatio = 0.1;
 const double titleTextButtonFontSize = 16;
 
-
 const flavor = String.fromEnvironment('FLAVOR');
 
 enum Flavor { dev, stg, prod, undefined }

@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 // Package imports:
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:tourou/tourou.dart';
 
 // Project imports:
 import '../../res/constants.dart';
 import 'ads/adaptive_banner_ad.dart';
 import 'firebase_options_prod.dart';
 import 'firebase_options_stg.dart';
+import 'tourou.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

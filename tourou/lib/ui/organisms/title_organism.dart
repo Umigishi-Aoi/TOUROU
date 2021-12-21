@@ -1,10 +1,13 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/gen/colors.gen.dart';
-import 'package:tourou/res/constants.dart';
-import 'package:tourou/ui/atoms/custom_image.dart';
-import 'package:tourou/ui/atoms/custom_text.dart';
-import 'package:tourou/ui/molecules/image_button.dart';
-import 'package:tourou/ui/molecules/text_text_button.dart';
+
+// Project imports:
+import '../../gen/colors.gen.dart';
+import '../../res/constants.dart';
+import '../atoms/custom_image.dart';
+import '../atoms/custom_text.dart';
+import '../molecules/image_button.dart';
+import '../molecules/text_text_button.dart';
 
 class TitleOrganism extends StatelessWidget {
   final String logoPath;
@@ -95,11 +98,10 @@ class TitleOrganism extends StatelessWidget {
           function: imageButtonFunction,
         ),
         CustomText(
-          text: explanationText,
-          color: explanationColor ?? ColorName.textWhite,
-          fontSize: explanationFontSize ?? explanationFontSizeConstant,
-            textAlign: additionalTitleTextAlign ?? TextAlign.center
-        ),
+            text: explanationText,
+            color: explanationColor ?? ColorName.textWhite,
+            fontSize: explanationFontSize ?? explanationFontSizeConstant,
+            textAlign: additionalTitleTextAlign ?? TextAlign.center),
         SizedBox(
           height: textButtonTopMargin ??
               displayHeight * titleTextButtonTopMarginRatio,
