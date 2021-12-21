@@ -1,13 +1,14 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
-// Package imports:
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
 // Project imports:
 import '../../gen/assets.gen.dart';
 import '../../gen/colors.gen.dart';
+import '../../l10n/app_localizations.dart';
 import '../organisms/title_organism.dart';
+
+// Package imports:
+
 
 class TitlePage extends StatelessWidget {
   const TitlePage({Key? key}) : super(key: key);

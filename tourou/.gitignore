@@ -58,3 +58,6 @@ app.*.map.json
 
 #admob_helper
 /lib/ads/ad_helper.dart
+
+#golden test
+**/failures/*.png
