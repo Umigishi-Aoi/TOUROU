@@ -23,6 +23,7 @@ jobs:
           fetch-depth: 1
       - uses: subosito/flutter-action@v1
         with:
+          flutter-version: '2.8.0'
           channel: 'stable'
       - name: install dependencies
         working-directory: ./tourou
