@@ -10,6 +10,7 @@ import '../../res/constants.dart';
 import 'ads/adaptive_banner_ad.dart';
 import 'firebase_options_prod.dart';
 import 'firebase_options_stg.dart';
+import 'tourou.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +31,7 @@ Future<void> main() async {
 
   MobileAds.instance.initialize();
 
-  runApp(const MyApp());
+  runApp(const Tourou());
 }
 
 class MyApp extends StatelessWidget {
