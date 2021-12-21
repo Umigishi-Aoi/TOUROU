@@ -1,15 +1,26 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 // Package imports:
 import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
-import 'package:tourou/l10n/app_localizations.dart';
-import 'package:tourou/ui/pages/title_page.dart';
+
+// Project imports:
+import '../../../lib/l10n/app_localizations.dart';
+import '../../../lib/ui/pages/title_page.dart';
+
+Future<void> loadJapaneseFont() async {
+  TestWidgetsFlutterBinding.ensureInitialized();
+  final binary = rootBundle.load('assets/fonts/Mplus1-Regular.ttf');
+  final loader = FontLoader('Roboto')..addFont(binary);
+  await loader.load();
+}
 
 void main() {
   testGoldens('title_page_golden_test', (WidgetTester tester) async {
     await loadAppFonts();
+    await loadJapaneseFont();
 
     //デバイスの画面サイズ
     final size6 = Size(375, 667);
@@ -69,44 +80,4 @@ void main() {
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'title_page_ipad_ja');
   });
-
-  /*
-  testGoldens('title_page_golden_test', (WidgetTester tester) async {
-    await loadAppFonts();
-
-    final builder = DeviceBuilder()
-      ..overrideDevicesForAllScenarios(devices: [
-        Device.phone,
-        Device.iphone11,
-        Device.tabletPortrait,
-      ])
-
-    //どのWidgetでテストするか指定する
-      ..addScenario(
-        widget: MaterialApp(
-            localizationsDelegates: AppLocalizations.localizationsDelegates,
-            supportedLocales: AppLocalizations.supportedLocales,
-            locale: Locale('en'),
-            home: TitlePage(),
-        ),
-        name: 'en_test',
-      )
-      ..addScenario(
-        widget: MaterialApp(
-            localizationsDelegates: AppLocalizations.localizationsDelegates,
-            supportedLocales: AppLocalizations.supportedLocales,
-            locale: Locale('ja'),
-            home: TitlePage(),
-        ),
-        name: 'ja_test',
-      );
-
-
-    //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpDeviceBuilder(builder);
-
-    //マスターのスクリーンショットと同じかテストする
-    await screenMatchesGolden(tester, 'title_page');
-  });*/
-
 }

@@ -7,7 +7,6 @@ import 'ui/pages/title_page.dart';
 
 // Package imports:
 
-
 class Tourou extends StatelessWidget {
   const Tourou({Key? key}) : super(key: key);
 

@@ -9,7 +9,6 @@ import '../organisms/title_organism.dart';
 
 // Package imports:
 
-
 class TitlePage extends StatelessWidget {
   const TitlePage({Key? key}) : super(key: key);
 

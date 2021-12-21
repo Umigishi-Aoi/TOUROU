@@ -5,6 +5,7 @@
 
 // ignore_for_file: directives_ordering,unnecessary_import
 
+// Flutter imports:
 import 'package:flutter/widgets.dart';
 
 class $AssetsImagesGen {
