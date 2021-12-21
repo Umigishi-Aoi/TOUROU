@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // Package imports:
 import 'package:firebase_core/firebase_core.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:tourou/tourou.dart';
 
 // Project imports:
 import '../../res/constants.dart';
@@ -30,7 +31,7 @@ Future<void> main() async {
 
   MobileAds.instance.initialize();
 
-  runApp(const MyApp());
+  runApp(const Tourou());
 }
 
 class MyApp extends StatelessWidget {

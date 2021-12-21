@@ -5,8 +5,23 @@
 
 // ignore_for_file: directives_ordering,unnecessary_import
 
-// Flutter imports:
 import 'package:flutter/widgets.dart';
+
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  /// File path: assets/images/enter_icon.png
+  AssetGenImage get enterIcon =>
+      const AssetGenImage('assets/images/enter_icon.png');
+
+  /// File path: assets/images/enter_icon_tourou.png
+  AssetGenImage get enterIconTourou =>
+      const AssetGenImage('assets/images/enter_icon_tourou.png');
+
+  /// File path: assets/images/icon_no_image.png
+  AssetGenImage get iconNoImage =>
+      const AssetGenImage('assets/images/icon_no_image.png');
+}
 
 class $AssetsLogoGen {
   const $AssetsLogoGen();
@@ -18,6 +33,7 @@ class $AssetsLogoGen {
 class Assets {
   Assets._();
 
+  static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsLogoGen logo = $AssetsLogoGen();
 }
 
