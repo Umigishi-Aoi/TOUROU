@@ -6,9 +6,9 @@ import '../../gen/colors.gen.dart';
 import '../../res/constants.dart';
 import '../atoms/custom_image.dart';
 import '../atoms/custom_text.dart';
-import '../molecules/tourou_molecules.dart';
+import '../molecules/tourou_molecule.dart';
 
-class SelfTourouOrganisms extends StatelessWidget {
+class SelfTourouOrganism extends StatelessWidget {
   final double? tourouWidth;
 
   final void Function() reportFunction;
@@ -31,7 +31,7 @@ class SelfTourouOrganisms extends StatelessWidget {
   final double? goodNumberFontSize;
   final Color? goodNumberColor;
 
-  const SelfTourouOrganisms(
+  const SelfTourouOrganism(
       {Key? key,
       required this.reportFunction,
       required this.profileImagePath,
@@ -74,7 +74,7 @@ class SelfTourouOrganisms extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                TourouMolecules(
+                TourouMolecule(
                   profileImagePath: profileImagePath,
                   profileImageHeight: profileImageHeight ??
                       displayHeight * tourouProfileImageHeightRatio,

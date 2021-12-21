@@ -6,7 +6,7 @@ import '../../gen/colors.gen.dart';
 import '../atoms/custom_image.dart';
 import '../atoms/custom_text.dart';
 
-class TourouMolecules extends StatelessWidget {
+class TourouMolecule extends StatelessWidget {
   final String profileImagePath;
   final double profileImageHeight;
 
@@ -19,7 +19,7 @@ class TourouMolecules extends StatelessWidget {
   final String tourouText;
   final double tourouTextWidth;
 
-  const TourouMolecules(
+  const TourouMolecule(
       {Key? key,
       required this.profileImagePath,
       required this.profileImageHeight,

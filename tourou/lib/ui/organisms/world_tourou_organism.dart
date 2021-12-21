@@ -8,9 +8,9 @@ import '../atoms/custom_image.dart';
 import '../atoms/custom_text.dart';
 import '../molecules/custom_elevated_button.dart';
 import '../molecules/custom_icon_button.dart';
-import '../molecules/tourou_molecules.dart';
+import '../molecules/tourou_molecule.dart';
 
-class WorldTourouOrganisms extends StatelessWidget {
+class WorldTourouOrganism extends StatelessWidget {
   final double? tourouWidth;
 
   final void Function() reportFunction;
@@ -40,7 +40,7 @@ class WorldTourouOrganisms extends StatelessWidget {
   final double? goodNumberFontSize;
   final Color? goodNumberColor;
 
-  const WorldTourouOrganisms({
+  const WorldTourouOrganism({
     Key? key,
     required this.profileImagePath,
     required this.userName,
@@ -86,7 +86,7 @@ class WorldTourouOrganisms extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                TourouMolecules(
+                TourouMolecule(
                   profileImagePath: profileImagePath,
                   profileImageHeight: profileImageHeight ??
                       displayHeight * tourouProfileImageHeightRatio,

@@ -6,7 +6,7 @@ import '../../gen/colors.gen.dart';
 import '../../res/constants.dart';
 import '../atoms/custom_text.dart';
 
-class ExplanationOrganisms extends StatelessWidget {
+class ExplanationOrganism extends StatelessWidget {
   final double? titleHeight;
   final String titleText;
   final Color? textColor;
@@ -24,7 +24,7 @@ class ExplanationOrganisms extends StatelessWidget {
   final double? textButtonFontSize;
   final void Function() function;
 
-  const ExplanationOrganisms(
+  const ExplanationOrganism(
       {Key? key,
       this.titleHeight,
       required this.titleText,
