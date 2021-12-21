@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 // Project imports:
 import '../../gen/colors.gen.dart';
+import '../../gen/fonts.gen.dart';
 import '../../res/constants.dart';
 
 class CustomText extends StatelessWidget {
@@ -30,10 +31,10 @@ class CustomText extends StatelessWidget {
         text,
         textAlign: textAlign ?? TextAlign.start,
         style: TextStyle(
-          color: color ?? ColorName.textWhite,
-          fontSize: fontSize ?? mainTextFontSize,
-          fontWeight: bold ?? FontWeight.normal,
-        ),
+            color: color ?? ColorName.textWhite,
+            fontSize: fontSize ?? mainTextFontSize,
+            fontWeight: bold ?? FontWeight.normal,
+            fontFamily: FontFamily.mplus1),
       ),
       onTap: function,
     );

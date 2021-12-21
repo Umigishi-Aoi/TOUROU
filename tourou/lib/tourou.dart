@@ -1,11 +1,11 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
-// Package imports:
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
 // Project imports:
+import 'l10n/app_localizations.dart';
 import 'ui/pages/title_page.dart';
+
+// Package imports:
 
 class Tourou extends StatelessWidget {
   const Tourou({Key? key}) : super(key: key);
