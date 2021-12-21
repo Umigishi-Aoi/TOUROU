@@ -16,7 +16,7 @@ on:
 jobs:
   flutter_test:
     runs-on: macos-latest
-    timeout-minutes: 10
+    timeout-minutes: 100
     steps:
       - uses: actions/checkout@v2
         with:
