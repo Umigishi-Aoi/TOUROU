@@ -20,7 +20,7 @@ Future<void> loadJapaneseFont() async {
 void main() {
   testGoldens('title_page_golden_test', (WidgetTester tester) async {
     // await loadAppFonts();
-    await loadJapaneseFont();
+    // await loadJapaneseFont();
 
     //デバイスの画面サイズ
     final size6 = Size(375, 667);
