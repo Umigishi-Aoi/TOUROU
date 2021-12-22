@@ -31,7 +31,7 @@ jobs:
       - name: test
         working-directory: ./tourou
         #run: flutter test --no-test-assets --coverage --coverage-path=~/coverage/lcov.info
-        run: flutter test --no-test-assets
+        run: flutter test 
       #- uses: codecov/codecov-action@v1
        # with:
         #  token: ${{secrets.CODECOV_TOKEN}}
