@@ -30,8 +30,8 @@ jobs:
         run: flutter pub get
       - name: test
         working-directory: ./tourou
-        run: flutter test --coverage --coverage-path=~/coverage/lcov.info
+        run: flutter test --coverage --coverage-path=coverage/lcov.info
       - uses: codecov/codecov-action@v1
         with:
           token: ${{secrets.CODECOV_TOKEN}}
-          file: ~/tourou/coverage/lcov.info
+          file: tourou/coverage/lcov.info
