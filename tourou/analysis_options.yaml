@@ -31,5 +31,8 @@ analyzer:
   exclude:
     - lib/main.dart
     - lib/ads/adaptive_banner_ad.dart
+
+  errors:
+    asset_directory_does_not_exist : ignore
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options

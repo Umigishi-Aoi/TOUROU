@@ -43,6 +43,11 @@ const double explanationFontSizeConstant = 28;
 const double titleTextButtonTopMarginRatio = 0.1;
 const double titleTextButtonFontSize = 16;
 
+//google sign in button setting
+const double googleSignInButtonHorizontalPadding = 8;
+const double googleSignInButtonIconMargin = 24;
+const double googleSignInButtonIconSize = 18;
+
 const flavor = String.fromEnvironment('FLAVOR');
 
 enum Flavor { dev, stg, prod, undefined }

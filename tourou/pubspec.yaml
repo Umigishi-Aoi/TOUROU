@@ -1,6 +1,8 @@
 name: tourou
 description: A new Flutter project.
 
+# ignore_for_file : asset_directory_does_not_exist
+
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -33,6 +35,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  flutter_svg: ^1.0.0
   google_mobile_ads: ^1.0.1
   intl: ^0.17.0
   # The following adds the Cupertino Icons font to your application.
@@ -66,7 +69,8 @@ flutter_gen:
   colors:
     inputs:
       - assets/color/colors.xml
-
+  integrations:
+    flutter_svg: true
 
 flutter_icons:
   android: true
@@ -84,6 +88,7 @@ flutter:
   assets:
     - assets/logo/
     - assets/images/
+    - assets/sign_in_icons/
 
   fonts:
     - family: MPLUS1

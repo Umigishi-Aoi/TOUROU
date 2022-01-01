@@ -61,3 +61,6 @@ app.*.map.json
 
 #golden test
 **/failures/*.png
+
+#icon
+assets/sign_in_icons/
