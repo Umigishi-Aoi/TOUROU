@@ -26,11 +26,11 @@ linter:
     # avoid_print: false  # Uncomment to disable the `avoid_print` rule
     # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
     avoid_classes_with_only_static_members : false　
-    asset_directory_does_not_exist : false
 
 analyzer:
   exclude:
     - lib/main.dart
     - lib/ads/adaptive_banner_ad.dart
+    - pubspec.yaml
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
