@@ -48,6 +48,11 @@ const double googleSignInButtonHorizontalPadding = 8;
 const double googleSignInButtonIconMargin = 24;
 const double googleSignInButtonIconSize = 18;
 
+//apple sign in button setting
+const double appleSignInButtonMinimumWidth = 140;
+const double appleSignInButtonMinimumHeight = 30;
+const double appleSignInButtonHorizonalPaddingRatio = 0.08;
+
 const flavor = String.fromEnvironment('FLAVOR');
 
 enum Flavor { dev, stg, prod, undefined }
