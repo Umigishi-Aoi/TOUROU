@@ -5,9 +5,8 @@
 
 // ignore_for_file: directives_ordering,unnecessary_import
 
-// Flutter imports:
-import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter/material.dart';
 
 class ColorName {
   ColorName._();
@@ -15,14 +14,23 @@ class ColorName {
   /// Color: #FFB3D9FF
   static const Color fABBackgoround = Color(0xFFB3D9FF);
 
+  /// Color: #FF000000
+  static const Color appleSignInButtonBlack = Color(0xFF000000);
+
   /// Color: #FFB3D9FF
   static const Color goodBackgoround = Color(0xFFB3D9FF);
+
+  /// Color: #8A000000
+  static const Color googleSignInButtonBlack = Color(0x8A000000);
 
   /// Color: #FFC4C4C4
   static const Color itemBackground = Color(0xFFC4C4C4);
 
   /// Color: #FF333333
   static const Color mainBlack = Color(0xFF333333);
+
+  /// Color: #FFFFFFFF
+  static const Color signInButtonWhite = Color(0xFFFFFFFF);
 
   /// Color: #FF02D1FE
   static const Color switchAccentColor = Color(0xFF02D1FE);

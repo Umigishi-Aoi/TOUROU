@@ -33,6 +33,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  flutter_svg: ^1.0.0
   google_mobile_ads: ^1.0.1
   intl: ^0.17.0
   # The following adds the Cupertino Icons font to your application.
@@ -66,7 +67,8 @@ flutter_gen:
   colors:
     inputs:
       - assets/color/colors.xml
-
+  integrations:
+    flutter_svg: true
 
 flutter_icons:
   android: true
@@ -84,6 +86,7 @@ flutter:
   assets:
     - assets/logo/
     - assets/images/
+    - assets/sign_in_icons/
 
   fonts:
     - family: MPLUS1
