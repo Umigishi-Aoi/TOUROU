@@ -1,5 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
+// Flutter imports:
 import 'package:flutter/widgets.dart';
 
 @immutable

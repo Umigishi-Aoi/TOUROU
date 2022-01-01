@@ -1,9 +1,11 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/gen/assets.gen.dart';
-import 'package:tourou/gen/colors.gen.dart';
-import 'package:tourou/res/constants.dart';
-import 'package:tourou/ui/atoms/custom_text.dart';
+
+// Project imports:
+import '../../gen/assets.gen.dart';
+import '../../gen/colors.gen.dart';
+import '../../res/constants.dart';
+import '../atoms/custom_text.dart';
 
 class CustomGoogleSignInButton extends StatelessWidget {
   final String text;

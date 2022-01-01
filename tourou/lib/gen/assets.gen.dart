@@ -5,9 +5,12 @@
 
 // ignore_for_file: directives_ordering,unnecessary_import
 
-import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+// Flutter imports:
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
+
+// Package imports:
+import 'package:flutter_svg/flutter_svg.dart';
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
