@@ -35,6 +35,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  flutter_sliding_tutorial: ^1.1.2
   flutter_svg: ^1.0.0
   google_mobile_ads: ^1.0.1
   intl: ^0.17.0
