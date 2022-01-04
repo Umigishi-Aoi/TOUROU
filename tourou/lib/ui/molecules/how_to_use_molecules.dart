@@ -1,6 +1,9 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/res/constants.dart';
-import 'package:tourou/ui/atoms/custom_image.dart';
+
+// Project imports:
+import '../../res/constants.dart';
+import '../atoms/custom_image.dart';
 
 class HowToUseMolecules extends StatefulWidget {
   final ValueNotifier<double> notifier;

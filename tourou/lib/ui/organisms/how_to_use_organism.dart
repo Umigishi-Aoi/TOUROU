@@ -1,9 +1,17 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:flutter_sliding_tutorial/flutter_sliding_tutorial.dart';
-import 'package:tourou/gen/colors.gen.dart';
-import 'package:tourou/res/constants.dart';
-import 'package:tourou/ui/atoms/custom_icon.dart';
-import 'package:tourou/ui/molecules/how_to_use_molecules.dart';
+
+// Project imports:
+import '../../gen/colors.gen.dart';
+import '../../res/constants.dart';
+import '../atoms/custom_icon.dart';
+import '../atoms/custom_text.dart';
+import '../molecules/how_to_use_indicator.dart';
+import '../molecules/how_to_use_molecules.dart';
+import '../molecules/text_text_button.dart';
 
 class HowToUseOrganisms extends StatelessWidget {
   final double? imageHeight;
@@ -11,6 +19,7 @@ class HowToUseOrganisms extends StatelessWidget {
   final double? indicatorHeight;
   final double? indicatorSize;
   final double? indicatorMargin;
+  final String text;
 
   const HowToUseOrganisms({
     Key? key,
@@ -19,6 +28,7 @@ class HowToUseOrganisms extends StatelessWidget {
     this.indicatorHeight,
     this.indicatorSize,
     this.indicatorMargin,
+    required this.text,
   }) : super(key: key);
 
   @override
@@ -37,25 +47,16 @@ class HowToUseOrganisms extends StatelessWidget {
             imageWidth: imageWidth ?? deviceWidth * howToUseWidthRatio,
           ),
         ),
-        Container(
-          width: double.infinity,
-          height: indicatorHeight ?? howToUseIndicatorHeight,
-          child: SlidingIndicator(
-            indicatorCount: howToUsePageCount,
-            notifier: notifier,
-            activeIndicator: CustomIcon(
-              iconData: Icons.circle,
-              color: ColorName.signInButtonWhite,
-              size: indicatorSize ?? howToUseIndicatorSize,
-            ),
-            inActiveIndicator: CustomIcon(
-              iconData: Icons.circle,
-              color: ColorName.itemBackground,
-              size: indicatorSize ?? howToUseIndicatorSize,
-            ),
-            margin: indicatorMargin ?? howToUseIndicatorMargin,
-          ),
-        )
+        HowToUseIndicator(
+          notifier: notifier,
+          indicatorHeight: indicatorHeight ?? howToUseIndicatorHeight,
+          indicatorSize: indicatorSize ?? howToUseIndicatorSize,
+          indicatorMargin: indicatorMargin ?? howToUseIndicatorMargin,
+        ),
+        CustomText(
+          text: text,
+          color: ColorName.textButton,
+        ),
       ],
     );
   }

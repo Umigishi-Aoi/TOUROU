@@ -61,7 +61,6 @@ const double howToUseIndicatorHeight = 48;
 const double howToUseIndicatorMargin = 8;
 const double howToUseIndicatorSize = 24;
 
-
 const flavor = String.fromEnvironment('FLAVOR');
 
 enum Flavor { dev, stg, prod, undefined }

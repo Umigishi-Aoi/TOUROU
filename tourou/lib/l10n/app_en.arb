@@ -14,5 +14,9 @@
   "titleTextButtonSecondText": "here",
   "@titleTextButtonSecondText": {
     "description": "titleTextButtonSecondText"
+  },
+  "howToUseText": "Start",
+  "@howToUseText": {
+    "description": "howToUseSecondText"
   }
 }

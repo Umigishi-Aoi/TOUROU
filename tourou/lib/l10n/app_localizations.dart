@@ -124,6 +124,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'here'**
   String get titleTextButtonSecondText;
+
+  /// howToUseSecondText
+  ///
+  /// In en, this message translates to:
+  /// **'Start'**
+  String get howToUseText;
 }
 
 class _AppLocalizationsDelegate
