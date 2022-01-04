@@ -1,17 +1,12 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
-// Package imports:
-import 'package:flutter_sliding_tutorial/flutter_sliding_tutorial.dart';
-
 // Project imports:
 import '../../gen/colors.gen.dart';
 import '../../res/constants.dart';
-import '../atoms/custom_icon.dart';
 import '../atoms/custom_text.dart';
 import '../molecules/how_to_use_indicator.dart';
 import '../molecules/how_to_use_molecules.dart';
-import '../molecules/text_text_button.dart';
 
 class HowToUseOrganisms extends StatelessWidget {
   final double? imageHeight;
