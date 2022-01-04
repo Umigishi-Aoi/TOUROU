@@ -55,9 +55,12 @@ const double appleSignInButtonHorizonalPaddingRatio = 0.08;
 
 //How to use setting
 const int howToUsePageCount = 4;
+const double howToUseHeightRatio = 0.6;
+const double howToUseWidthRatio = 0.9;
 const double howToUseIndicatorHeight = 48;
 const double howToUseIndicatorMargin = 8;
 const double howToUseIndicatorSize = 24;
+
 
 const flavor = String.fromEnvironment('FLAVOR');
 
@@ -70,3 +73,5 @@ Flavor makeFlavor(String flavor) {
     return Flavor.undefined;
   }
 }
+
+enum SuportedLocale { ja, en }

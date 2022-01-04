@@ -6,22 +6,36 @@ import 'package:tourou/ui/atoms/custom_icon.dart';
 import 'package:tourou/ui/molecules/how_to_use_molecules.dart';
 
 class HowToUseOrganisms extends StatelessWidget {
+  final double? imageHeight;
+  final double? imageWidth;
   final double? indicatorHeight;
   final double? indicatorSize;
   final double? indicatorMargin;
 
-  const HowToUseOrganisms({Key? key, this.indicatorHeight, this.indicatorSize})
-      : super(key: key);
+  const HowToUseOrganisms({
+    Key? key,
+    this.imageWidth,
+    this.imageHeight,
+    this.indicatorHeight,
+    this.indicatorSize,
+    this.indicatorMargin,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final ValueNotifier<double> notifier = ValueNotifier(0);
+    final double deviceHeight = MediaQuery.of(context).size.height;
+    final double deviceWidth = MediaQuery.of(context).size.width;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Expanded(
-          child: HowToUseMolecules(),
+          child: HowToUseMolecules(
+            notifier: notifier,
+            imageHeight: imageHeight ?? deviceHeight * howToUseHeightRatio,
+            imageWidth: imageWidth ?? deviceWidth * howToUseWidthRatio,
+          ),
         ),
         Container(
           width: double.infinity,

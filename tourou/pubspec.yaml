@@ -90,6 +90,8 @@ flutter:
     - assets/logo/
     - assets/images/
     - assets/sign_in_icons/
+    - assets/how_to_use/en/
+    - assets/how_to_use/ja/
 
   fonts:
     - family: MPLUS1
