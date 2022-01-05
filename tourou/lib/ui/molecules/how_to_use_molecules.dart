@@ -53,9 +53,9 @@ class _HowToUseMoleculesState extends State<HowToUseMolecules> {
         final String imageName;
 
         if (languageCode == SuportedLocale.ja.name) {
-          imageName = "assets/how_to_use/ja/how_to_use_${index + 1}.png";
+          imageName = "assets/how_to_use/ja/how_to_use_ja_${index + 1}.png";
         } else {
-          imageName = "assets/how_to_use/en/how_to_use_${index + 1}.png";
+          imageName = "assets/how_to_use/en/how_to_use_en_${index + 1}.png";
         }
 
         return CustomImage(

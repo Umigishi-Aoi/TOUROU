@@ -1,4 +1,6 @@
-// Project imports:
+
+
+
 import 'app_localizations.dart';
 
 /// The translations for Japanese (`ja`).
@@ -16,6 +18,9 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get titleTextButtonSecondText => 'こちら';
+
+  @override
+  String get howToUseTitle => 'How to Use';
 
   @override
   String get howToUseText => 'スタート';
