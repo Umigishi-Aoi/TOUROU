@@ -16,7 +16,8 @@ class HowToUsePage extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: HowToUseOrganisms(
-            text: AppLocalizations.of(context)!.howToUseText,
+            titleText: AppLocalizations.of(context)!.howToUseTitle,
+            buttonText: AppLocalizations.of(context)!.howToUseText,
             function: (){},
           ),
         ),

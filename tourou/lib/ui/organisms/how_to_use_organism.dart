@@ -9,22 +9,26 @@ import '../molecules/how_to_use_indicator.dart';
 import '../molecules/how_to_use_molecules.dart';
 
 class HowToUseOrganisms extends StatelessWidget {
+  final String titleText;
+  final double? titleFontSize;
   final double? imageHeight;
   final double? imageWidth;
   final double? indicatorHeight;
   final double? indicatorSize;
   final double? indicatorMargin;
-  final String text;
+  final String buttonText;
   final void Function() function;
 
   const HowToUseOrganisms({
     Key? key,
+    required this.titleText,
+    this.titleFontSize,
     this.imageWidth,
     this.imageHeight,
     this.indicatorHeight,
     this.indicatorSize,
     this.indicatorMargin,
-    required this.text,
+    required this.buttonText,
     required this.function,
   }) : super(key: key);
 
@@ -37,6 +41,14 @@ class HowToUseOrganisms extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
+        Padding(
+          padding: const EdgeInsets.all(howToUseTitlePadding),
+          child: CustomText(
+            text: titleText,
+            fontSize: titleFontSize ?? howToUseTitleFontSize,
+          ),
+        ),
+
         Expanded(
           child: HowToUseMolecules(
             notifier: notifier,
@@ -50,10 +62,13 @@ class HowToUseOrganisms extends StatelessWidget {
           indicatorSize: indicatorSize ?? howToUseIndicatorSize,
           indicatorMargin: indicatorMargin ?? howToUseIndicatorMargin,
         ),
-        CustomText(
-          text: text,
-          color: ColorName.textButton,
-          function: function,
+        Padding(
+          padding: const EdgeInsets.all(howToUseButtonPadding),
+          child: CustomText(
+            text: buttonText,
+            color: ColorName.textButton,
+            function: function,
+          ),
         ),
       ],
     );

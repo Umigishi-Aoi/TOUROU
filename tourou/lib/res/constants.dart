@@ -60,6 +60,9 @@ const double howToUseWidthRatio = 0.9;
 const double howToUseIndicatorHeight = 48;
 const double howToUseIndicatorMargin = 8;
 const double howToUseIndicatorSize = 24;
+const double howToUseTitleFontSize = 28;
+const double howToUseTitlePadding = 32;
+const double howToUseButtonPadding = 32;
 
 const flavor = String.fromEnvironment('FLAVOR');
 
