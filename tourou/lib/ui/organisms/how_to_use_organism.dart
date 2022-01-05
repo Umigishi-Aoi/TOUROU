@@ -15,6 +15,7 @@ class HowToUseOrganisms extends StatelessWidget {
   final double? indicatorSize;
   final double? indicatorMargin;
   final String text;
+  final void Function() function;
 
   const HowToUseOrganisms({
     Key? key,
@@ -24,6 +25,7 @@ class HowToUseOrganisms extends StatelessWidget {
     this.indicatorSize,
     this.indicatorMargin,
     required this.text,
+    required this.function,
   }) : super(key: key);
 
   @override
@@ -51,6 +53,7 @@ class HowToUseOrganisms extends StatelessWidget {
         CustomText(
           text: text,
           color: ColorName.textButton,
+          function: function,
         ),
       ],
     );

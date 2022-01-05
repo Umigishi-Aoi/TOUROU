@@ -17,6 +17,7 @@ class HowToUsePage extends StatelessWidget {
         child: Center(
           child: HowToUseOrganisms(
             text: AppLocalizations.of(context)!.howToUseText,
+            function: (){},
           ),
         ),
       ),
