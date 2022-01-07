@@ -1,5 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:tourou/ui/molecules/custom_elevated_button.dart';
 
 // Project imports:
 import '../../gen/colors.gen.dart';
@@ -17,6 +18,8 @@ class HowToUseOrganisms extends StatelessWidget {
   final double? indicatorSize;
   final double? indicatorMargin;
   final String buttonText;
+  final double? buttonWidth;
+  final double? buttonHeight;
   final void Function() function;
 
   const HowToUseOrganisms({
@@ -29,6 +32,8 @@ class HowToUseOrganisms extends StatelessWidget {
     this.indicatorSize,
     this.indicatorMargin,
     required this.buttonText,
+    this.buttonWidth,
+    this.buttonHeight,
     required this.function,
   }) : super(key: key);
 
@@ -48,7 +53,6 @@ class HowToUseOrganisms extends StatelessWidget {
             fontSize: titleFontSize ?? howToUseTitleFontSize,
           ),
         ),
-
         Expanded(
           child: HowToUseMolecules(
             notifier: notifier,
@@ -63,13 +67,14 @@ class HowToUseOrganisms extends StatelessWidget {
           indicatorMargin: indicatorMargin ?? howToUseIndicatorMargin,
         ),
         Padding(
-          padding: const EdgeInsets.all(howToUseButtonPadding),
-          child: CustomText(
-            text: buttonText,
-            color: ColorName.textButton,
-            function: function,
-          ),
-        ),
+            padding: const EdgeInsets.all(howToUseButtonPadding),
+            child: CustomElevatedButton(
+              text: buttonText,
+              height: buttonHeight ?? deviceHeight * howToUseButtonHeightRatio,
+              width: buttonWidth ?? deviceWidth * howToUseButtonWidthRatio,
+              buttonColor: ColorName.tourouBackgoround,
+              function: () {},
+            )),
       ],
     );
   }
