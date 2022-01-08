@@ -1,11 +1,11 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/ui/molecules/custom_elevated_button.dart';
 
 // Project imports:
 import '../../gen/colors.gen.dart';
 import '../../res/constants.dart';
 import '../atoms/custom_text.dart';
+import '../molecules/custom_elevated_button.dart';
 import '../molecules/how_to_use_indicator.dart';
 import '../molecules/how_to_use_molecules.dart';
 

@@ -1,9 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
-// Project imports:
-import '../../gen/colors.gen.dart';
-
 class CustomCheckBox extends StatefulWidget {
   final Color? color;
   final void Function(bool?)? onChanged;
@@ -21,7 +18,7 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
   @override
   Widget build(BuildContext context) {
     return Checkbox(
-      activeColor: widget.color ?? ColorName.switchAccentColor,
+      activeColor: widget.color,
       value: _isCheck,
       onChanged: (value) {
         setState(() {

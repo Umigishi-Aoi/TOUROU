@@ -1,13 +1,14 @@
-
+// Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+// Package imports:
 import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
-import '../../../lib/ui/pages/how_to_use_page.dart';
 
+// Project imports:
 import '../../../lib/l10n/app_localizations.dart';
-
+import '../../../lib/ui/pages/how_to_use_page.dart';
 
 Future<void> loadJapaneseFont() async {
   TestWidgetsFlutterBinding.ensureInitialized();

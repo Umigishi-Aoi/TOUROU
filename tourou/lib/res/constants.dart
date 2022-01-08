@@ -66,7 +66,6 @@ const double howToUseButtonPadding = 16;
 const double howToUseButtonWidthRatio = 0.8;
 const double howToUseButtonHeightRatio = 0.1;
 
-
 const flavor = String.fromEnvironment('FLAVOR');
 
 enum Flavor { dev, stg, prod, undefined }

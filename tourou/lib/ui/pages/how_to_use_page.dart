@@ -18,7 +18,7 @@ class HowToUsePage extends StatelessWidget {
           child: HowToUseOrganisms(
             titleText: AppLocalizations.of(context)!.howToUseTitle,
             buttonText: AppLocalizations.of(context)!.howToUseText,
-            function: (){},
+            function: () {},
           ),
         ),
       ),
