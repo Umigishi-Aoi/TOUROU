@@ -1,9 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
-// Project imports:
-import '../../gen/colors.gen.dart';
-
 class CustomSwitch extends StatefulWidget {
   final Color? activeColor;
   final Color? inactiveColor;
@@ -24,8 +21,8 @@ class _CustomSwitchState extends State<CustomSwitch> {
   Widget build(BuildContext context) {
     return Switch(
       value: _isActive,
-      activeColor: widget.activeColor ?? ColorName.switchAccentColor,
-      inactiveThumbColor: widget.inactiveColor ?? ColorName.textWhite,
+      activeColor: widget.activeColor,
+      inactiveThumbColor: widget.inactiveColor,
       onChanged: (value) {
         setState(() {
           _isActive = value;
