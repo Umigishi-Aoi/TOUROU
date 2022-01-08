@@ -1,40 +1,37 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
-// Project imports:
-import '../../gen/colors.gen.dart';
-import '../../gen/fonts.gen.dart';
-import '../../res/constants.dart';
-
 class CustomText extends StatelessWidget {
   final String text;
   final Color? color;
   final double? fontSize;
   final FontWeight? bold;
   final TextAlign? textAlign;
+  final String? fontFamily;
   final void Function()? function;
 
-  CustomText(
-      {Key? key,
-      required this.text,
-      this.color,
-      this.fontSize,
-      this.bold,
-      this.function,
-      this.textAlign})
-      : super(key: key);
+  CustomText({
+    Key? key,
+    required this.text,
+    this.color,
+    this.fontSize,
+    this.bold,
+    this.function,
+    this.textAlign,
+    this.fontFamily,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Text(
         text,
-        textAlign: textAlign ?? TextAlign.start,
+        textAlign: textAlign,
         style: TextStyle(
-            color: color ?? ColorName.textWhite,
-            fontSize: fontSize ?? mainTextFontSize,
-            fontWeight: bold ?? FontWeight.normal,
-            fontFamily: FontFamily.mplus1),
+            color: color,
+            fontSize: fontSize,
+            fontWeight: bold,
+            fontFamily: fontFamily),
       ),
       onTap: function,
     );
