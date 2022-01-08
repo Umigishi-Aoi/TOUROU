@@ -17,7 +17,7 @@ class CustomTextField extends StatelessWidget {
   final double? fontSize;
   final Color? textColor;
   final Color? fillColor;
-  final Color? borderColor;
+  final Color borderColor;
 
   final List<TextInputFormatter>? textInputFormatters;
 
@@ -31,7 +31,7 @@ class CustomTextField extends StatelessWidget {
     this.fontSize,
     this.textColor,
     this.fillColor,
-    this.borderColor,
+    required this.borderColor,
     this.textInputFormatters,
   }) : super(key: key);
 
@@ -44,17 +44,17 @@ class CustomTextField extends StatelessWidget {
         controller: controller,
         style: TextStyle(
           height: height,
-          fontSize: fontSize ?? mainTextFontSize,
-          color: textColor ?? ColorName.mainBlack,
+          fontSize: fontSize,
+          color: textColor,
         ),
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
-              color: borderColor ?? ColorName.textWhite,
+              color: borderColor,
             ),
           ),
           hintText: hint,
-          fillColor: fillColor ?? ColorName.itemBackground,
+          fillColor: fillColor,
         ),
       ),
     );
