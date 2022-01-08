@@ -1,9 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
-// Project imports:
-import '../../gen/colors.gen.dart';
-
 class CustomIcon extends StatelessWidget {
   final IconData iconData;
   final double size;
@@ -21,7 +18,7 @@ class CustomIcon extends StatelessWidget {
     return Icon(
       iconData,
       size: size,
-      color: color ?? ColorName.textWhite,
+      color: color,
     );
   }
 }
