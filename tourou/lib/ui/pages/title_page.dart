@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../../gen/assets.gen.dart';
 import '../../gen/colors.gen.dart';
 import '../../l10n/app_localizations.dart';
-import '../organisms/title_organism.dart';
+import '../templates/title_template.dart';
 
 // Package imports:
 
@@ -18,7 +18,7 @@ class TitlePage extends StatelessWidget {
         backgroundColor: ColorName.mainBlack,
         body: SafeArea(
           child: Center(
-            child: TitleOrganism(
+            child: TitleTemplate(
                 logoPath: Assets.logo.logoA.path,
                 additionalTitleText:
                     AppLocalizations.of(context)!.additionalTitleText,

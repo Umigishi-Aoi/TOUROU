@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // Project imports:
 import '../../gen/colors.gen.dart';
 import '../../l10n/app_localizations.dart';
-import '../organisms/how_to_use_organism.dart';
+import '../templates/how_to_use_template.dart';
 
 class HowToUsePage extends StatelessWidget {
   const HowToUsePage({Key? key}) : super(key: key);

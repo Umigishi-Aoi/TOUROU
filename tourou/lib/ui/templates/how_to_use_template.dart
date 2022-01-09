@@ -9,7 +9,7 @@ import '../molecules/custom_elevated_button.dart';
 import '../molecules/how_to_use_indicator.dart';
 import '../molecules/how_to_use_molecules.dart';
 
-class HowToUseOrganisms extends StatelessWidget {
+class HowToUseTemplate extends StatelessWidget {
   final String titleText;
   final double? titleFontSize;
   final double? imageHeight;
@@ -22,7 +22,7 @@ class HowToUseOrganisms extends StatelessWidget {
   final double? buttonHeight;
   final void Function() function;
 
-  const HowToUseOrganisms({
+  const HowToUseTemplate({
     Key? key,
     required this.titleText,
     this.titleFontSize,

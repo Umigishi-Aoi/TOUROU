@@ -9,7 +9,7 @@ import '../atoms/custom_text.dart';
 import '../molecules/image_button.dart';
 import '../molecules/text_text_button.dart';
 
-class TitleOrganism extends StatelessWidget {
+class TitleTemplate extends StatelessWidget {
   final String logoPath;
   final double? logoHeight;
   final double? logoWidth;
@@ -39,7 +39,7 @@ class TitleOrganism extends StatelessWidget {
   final double? logoBottomMargin;
   final double? textButtonTopMargin;
 
-  const TitleOrganism(
+  const TitleTemplate(
       {Key? key,
       required this.logoPath,
       required this.additionalTitleText,
