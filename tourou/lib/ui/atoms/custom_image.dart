@@ -6,7 +6,7 @@ class CustomImage extends StatelessWidget {
   final double? height;
   final double? width;
   final BoxFit? fit;
-  final bool isCircle;
+  final bool? isCircle;
 
   const CustomImage({
     Key? key,
@@ -14,7 +14,7 @@ class CustomImage extends StatelessWidget {
     this.height,
     this.width,
     this.fit,
-    this.isCircle = false,
+    this.isCircle,
   }) : super(key: key);
 
   @override
@@ -26,7 +26,7 @@ class CustomImage extends StatelessWidget {
         decoration: BoxDecoration(
             shape: BoxShape.circle,
             image: DecorationImage(
-              fit: fit ?? BoxFit.contain,
+              fit: fit,
               image: AssetImage(path),
             )),
       );
@@ -36,7 +36,7 @@ class CustomImage extends StatelessWidget {
         width: width,
         child: Image.asset(
           path,
-          fit: fit ?? BoxFit.contain,
+          fit: fit,
         ),
       );
     }
