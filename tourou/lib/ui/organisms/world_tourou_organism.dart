@@ -13,60 +13,78 @@ class WorldTourouOrganism extends StatelessWidget {
 
   final void Function() reportFunction;
   final double errorIconSize;
+  final Color iconColor;
 
   final String profileImagePath;
   final double profileImageHeight;
+  final BoxFit profileImageFit;
 
   final String userName;
-  final Color? textColor;
+  final double userNameFontSize;
+  final Color textColor;
 
-  final String? fontFamily;
+  final String fontFamily;
 
   final String userId;
-  final Color? userIdColor;
+  final Color userIdColor;
 
   final String tourouText;
+  final double tourouTextFontSize;
   final double tourouContentWidth;
 
   final String? tourouImagePath;
+  final double tourouImageHeight;
+  final BoxFit tourouImgageFit;
 
   final String goodButtonText;
   final double goodButtonHeight;
   final double goodButtonWidth;
   final void Function() goodButtonFunction;
-  final Color? goodButtonActiveColor;
-  final Color? goodButtonInactiveColor;
+  final Color goodButtonActiveColor;
+  final Color goodButtonInactiveColor;
+  final Color buttonColor;
+  final double buttonFontSize;
+  final void Function() function;
 
   final double goodButtonMargin;
 
   final String goodNumber;
-  final double? goodNumberFontSize;
-  final Color? goodNumberColor;
+  final double goodNumberFontSize;
+  final Color goodNumberColor;
 
   const WorldTourouOrganism({
     Key? key,
+    required this.iconColor,
     required this.profileImagePath,
+    required this.profileImageFit,
     required this.userName,
+    required this.userNameFontSize,
     required this.userId,
     required this.tourouText,
+    required this.tourouTextFontSize,
     required this.reportFunction,
     required this.goodButtonText,
     required this.goodButtonFunction,
     required this.goodNumber,
     this.tourouWidth,
     required this.profileImageHeight,
-    this.textColor,
-    this.userIdColor,
+    required this.textColor,
+    required this.userIdColor,
     required this.tourouContentWidth,
     this.tourouImagePath,
+    required this.tourouImageHeight,
+    required this.tourouImgageFit,
     required this.goodButtonHeight,
     required this.goodButtonWidth,
-    this.goodButtonActiveColor,
-    this.goodButtonInactiveColor,
-    this.goodNumberFontSize,
-    this.goodNumberColor,
+    required this.goodButtonActiveColor,
+    required this.goodButtonInactiveColor,
+    required this.buttonColor,
+    required this.buttonFontSize,
+    required this.function,
+    required this.goodNumberFontSize,
+    required this.goodNumberColor,
     required this.errorIconSize,
-    this.fontFamily,
+    required this.fontFamily,
     required this.goodButtonMargin,
   }) : super(key: key);
 
@@ -82,6 +100,7 @@ class WorldTourouOrganism extends StatelessWidget {
               function: reportFunction,
               iconData: Icons.error_outline,
               size: errorIconSize,
+              color: iconColor,
             ),
           ),
           Align(
@@ -92,9 +111,12 @@ class WorldTourouOrganism extends StatelessWidget {
                 TourouMolecule(
                   profileImagePath: profileImagePath,
                   profileImageHeight: profileImageHeight,
+                  imageFit: profileImageFit,
                   userName: userName,
+                  userNameFontSize: userNameFontSize,
                   userId: userId,
                   tourouText: tourouText,
+                  tourouTextFontSize: tourouTextFontSize,
                   tourouTextWidth: tourouContentWidth,
                   textColor: textColor,
                   userIdColor: userIdColor,
@@ -104,6 +126,8 @@ class WorldTourouOrganism extends StatelessWidget {
                   CustomImage(
                     path: tourouImagePath!,
                     width: tourouContentWidth,
+                    height: tourouImageHeight,
+                    fit: tourouImgageFit,
                   ),
                 Row(
                   children: [
@@ -116,6 +140,9 @@ class WorldTourouOrganism extends StatelessWidget {
                       width: goodButtonWidth,
                       color: goodButtonActiveColor,
                       fontFamily: fontFamily,
+                      buttonColor: buttonColor,
+                      fontSize: buttonFontSize,
+                      function: function,
                     ),
                     SizedBox(
                       width: goodButtonMargin,
