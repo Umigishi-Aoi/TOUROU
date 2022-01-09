@@ -12,6 +12,8 @@ class TextSwitch extends StatelessWidget {
   final Color? color;
   final double? fontSize;
   final FontWeight? bold;
+  final String? fontFamily;
+
   final void Function()? function;
 
   final Color? activeColor;
@@ -25,6 +27,7 @@ class TextSwitch extends StatelessWidget {
       this.color,
       this.fontSize,
       this.bold,
+      this.fontFamily,
       this.function,
       this.activeColor,
       this.inactiveColor,
@@ -43,6 +46,7 @@ class TextSwitch extends StatelessWidget {
             color: color,
             fontSize: fontSize,
             bold: bold,
+            fontFamily: fontFamily,
           ),
           CustomSwitch(
             onChanged: onChanged,
