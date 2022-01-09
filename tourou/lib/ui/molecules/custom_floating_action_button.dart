@@ -6,17 +6,17 @@ import '../atoms/custom_icon.dart';
 
 class CustomFloatingActionButton extends StatelessWidget {
   final void Function() function;
-  final Color? buttonColor;
+  final Color buttonColor;
 
   final double iconSize;
-  final Color? iconColor;
+  final Color iconColor;
 
   const CustomFloatingActionButton(
       {Key? key,
       required this.function,
-      this.buttonColor,
+      required this.buttonColor,
       required this.iconSize,
-      this.iconColor})
+      required this.iconColor})
       : super(key: key);
 
   @override
