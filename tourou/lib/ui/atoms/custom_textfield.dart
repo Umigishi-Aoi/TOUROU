@@ -11,12 +11,12 @@ class CustomTextField extends StatelessWidget {
 
   final TextEditingController controller;
 
-  final double? height;
-  final double? width;
+  final double height;
+  final double width;
   final int? minLines;
-  final double? fontSize;
-  final Color? textColor;
-  final Color? fillColor;
+  final double fontSize;
+  final Color textColor;
+  final Color fillColor;
   final Color borderColor;
 
   final List<TextInputFormatter> textInputFormatters;
@@ -25,12 +25,12 @@ class CustomTextField extends StatelessWidget {
     Key? key,
     required this.hint,
     required this.controller,
-    this.height,
-    this.width,
+    required this.height,
+    required this.width,
     this.minLines,
-    this.fontSize,
-    this.textColor,
-    this.fillColor,
+    required this.fontSize,
+    required this.textColor,
+    required this.fillColor,
     required this.borderColor,
     required this.textInputFormatters,
   }) : super(key: key);
