@@ -7,49 +7,59 @@ import '../atoms/custom_text.dart';
 import '../molecules/tourou_molecule.dart';
 
 class SelfTourouOrganism extends StatelessWidget {
-  final double? tourouWidth;
+  final double tourouWidth;
 
   final void Function() reportFunction;
 
   final String profileImagePath;
   final double profileImageHeight;
+  final BoxFit profileImageFit;
 
   final double goodPadding;
 
   final String userName;
-  final Color? textColor;
-  final String? fontFamily;
+  final double userNameFontSize;
+  final Color textColor;
+  final String fontFamily;
 
   final String userId;
-  final Color? userIdColor;
+  final Color userIdColor;
 
   final String tourouText;
+  final double tourouTextFontSize;
   final double tourouContentWidth;
 
   final String? tourouImagePath;
+  final double tourouImageHeight;
+  final BoxFit tourouImageFit;
 
   final String goodNumber;
-  final double? goodNumberFontSize;
-  final Color? goodNumberColor;
+  final double goodNumberFontSize;
+  final Color goodNumberColor;
 
   const SelfTourouOrganism({
     Key? key,
     required this.reportFunction,
     required this.profileImagePath,
+    required this.profileImageFit,
     required this.goodPadding,
     required this.userName,
+    required this.userNameFontSize,
     required this.userId,
     required this.tourouText,
-    this.fontFamily,
+    required this.tourouTextFontSize,
+    required this.fontFamily,
     required this.goodNumber,
-    this.tourouWidth,
+    required this.tourouWidth,
     required this.profileImageHeight,
-    this.textColor,
-    this.userIdColor,
+    required this.textColor,
+    required this.userIdColor,
     required this.tourouContentWidth,
     this.tourouImagePath,
-    this.goodNumberFontSize,
-    this.goodNumberColor,
+    required this.tourouImageHeight,
+    required this.tourouImageFit,
+    required this.goodNumberFontSize,
+    required this.goodNumberColor,
   }) : super(key: key);
 
   @override
@@ -75,10 +85,14 @@ class SelfTourouOrganism extends StatelessWidget {
                 TourouMolecule(
                   profileImagePath: profileImagePath,
                   profileImageHeight: profileImageHeight,
+                  imageFit: profileImageFit,
                   userName: userName,
+                  userNameFontSize: userNameFontSize,
+                  fontFamily: fontFamily,
                   userId: userId,
                   tourouText: tourouText,
                   tourouTextWidth: tourouContentWidth,
+                  tourouTextFontSize: tourouTextFontSize,
                   textColor: textColor,
                   userIdColor: userIdColor,
                 ),
@@ -86,6 +100,8 @@ class SelfTourouOrganism extends StatelessWidget {
                   CustomImage(
                     path: tourouImagePath!,
                     width: tourouContentWidth,
+                    height: tourouImageHeight,
+                    fit: tourouImageFit,
                   ),
               ],
             ),
