@@ -21,20 +21,19 @@ class CustomGoogleSignInButton extends StatelessWidget {
   final double iconMargin;
   final double iconSize;
 
-  const CustomGoogleSignInButton(
-      {Key? key,
-      required this.text,
-      required this.textColor,
-      required this.fontSize,
-      required this.height,
-      required this.width,
-      required this.buttonColor,
-      required this.function,
-      required this.horizontalPadding,
-      required this.iconMargin,
-      required this.iconSize,
-      })
-      : super(key: key);
+  const CustomGoogleSignInButton({
+    Key? key,
+    required this.text,
+    required this.textColor,
+    required this.fontSize,
+    required this.height,
+    required this.width,
+    required this.buttonColor,
+    required this.function,
+    required this.horizontalPadding,
+    required this.iconMargin,
+    required this.iconSize,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
