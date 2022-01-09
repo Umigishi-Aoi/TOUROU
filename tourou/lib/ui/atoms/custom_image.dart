@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 
 class CustomImage extends StatelessWidget {
   final String path;
-  final double? height;
+  final double height;
   final double? width;
-  final BoxFit? fit;
+  final BoxFit fit;
   final bool? isCircle;
 
   const CustomImage({
     Key? key,
     required this.path,
-    this.height,
+    required this.height,
     this.width,
-    this.fit,
+    required this.fit,
     this.isCircle,
   }) : super(key: key);
 
