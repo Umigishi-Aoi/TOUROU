@@ -11,28 +11,28 @@ class CustomTextField extends StatelessWidget {
 
   final TextEditingController controller;
 
-  final double height;
-  final double width;
+  final double? height;
+  final double? width;
   final int? minLines;
   final double? fontSize;
   final Color? textColor;
   final Color? fillColor;
   final Color borderColor;
 
-  final List<TextInputFormatter>? textInputFormatters;
+  final List<TextInputFormatter> textInputFormatters;
 
   const CustomTextField({
     Key? key,
     required this.hint,
     required this.controller,
-    required this.height,
-    required this.width,
+    this.height,
+    this.width,
     this.minLines,
     this.fontSize,
     this.textColor,
     this.fillColor,
     required this.borderColor,
-    this.textInputFormatters,
+    required this.textInputFormatters,
   }) : super(key: key);
 
   @override
