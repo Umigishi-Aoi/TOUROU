@@ -5,8 +5,8 @@ class CustomBottomNavigationBar extends StatefulWidget {
   final Icon worldIcon;
   final Icon selfIcon;
   final Icon settingIcon;
-  final Color? backgroundColor;
-  final Color? itemColor;
+  final Color backgroundColor;
+  final Color itemColor;
   final void Function(int) function;
 
   const CustomBottomNavigationBar({
@@ -15,8 +15,8 @@ class CustomBottomNavigationBar extends StatefulWidget {
     required this.selfIcon,
     required this.settingIcon,
     required this.function,
-    this.backgroundColor,
-    this.itemColor,
+    required this.backgroundColor,
+    required this.itemColor,
   }) : super(key: key);
 
   @override
