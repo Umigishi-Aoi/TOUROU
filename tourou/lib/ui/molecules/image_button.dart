@@ -11,7 +11,7 @@ class ImageButton extends StatefulWidget {
 
   final String? secondImagePath;
   final double? width;
-  final BoxFit? fit;
+  final BoxFit fit;
   final bool isCircle;
 
   final int duration;
@@ -23,7 +23,7 @@ class ImageButton extends StatefulWidget {
     required this.function,
     this.secondImagePath,
     this.width,
-    this.fit,
+    required this.fit,
     required this.isCircle,
     required this.duration,
   }) : super(key: key);
