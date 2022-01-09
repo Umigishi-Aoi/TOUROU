@@ -2,10 +2,10 @@
 import 'package:flutter/material.dart';
 
 class CustomCheckBox extends StatefulWidget {
-  final Color? color;
+  final Color color;
   final void Function(bool?) onChanged;
 
-  const CustomCheckBox({Key? key, this.color, required this.onChanged})
+  const CustomCheckBox({Key? key, required this.color, required this.onChanged})
       : super(key: key);
 
   @override
