@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 class CustomSwitch extends StatefulWidget {
   final Color? activeColor;
   final Color? inactiveColor;
-  final void Function(bool?)? onChanged;
+  final void Function(bool?) onChanged;
 
   const CustomSwitch(
-      {Key? key, this.activeColor, this.inactiveColor, this.onChanged})
+      {Key? key, this.activeColor, this.inactiveColor, required this.onChanged})
       : super(key: key);
 
   @override
@@ -27,9 +27,8 @@ class _CustomSwitchState extends State<CustomSwitch> {
         setState(() {
           _isActive = value;
         });
-        if (widget.onChanged != null) {
-          widget.onChanged!(value);
-        }
+
+        widget.onChanged(value);
       },
     );
   }

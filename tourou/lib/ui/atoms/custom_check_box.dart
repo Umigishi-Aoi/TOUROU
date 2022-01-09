@@ -25,8 +25,7 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
           _isCheck = value!;
         });
 
-          widget.onChanged(value);
-
+        widget.onChanged(value);
       },
     );
   }
