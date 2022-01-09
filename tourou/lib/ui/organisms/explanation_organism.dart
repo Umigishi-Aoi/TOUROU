@@ -5,40 +5,40 @@ import 'package:flutter/material.dart';
 import '../atoms/custom_text.dart';
 
 class ExplanationOrganism extends StatelessWidget {
-  final double? titleHeight;
+  final double titleHeight;
   final String titleText;
-  final Color? textColor;
-  final double? titleFontSize;
-  final FontWeight? titleBold;
-  final String? fontFamily;
+  final Color textColor;
+  final double titleFontSize;
+  final FontWeight titleBold;
+  final String fontFamily;
 
-  final double? explanationTextHeight;
-  final double? explanationTextWidth;
+  final double explanationTextHeight;
+  final double explanationTextWidth;
   final String explanationText;
-  final double? explanationFontSize;
+  final double explanationFontSize;
 
-  final double? buttonHeight;
+  final double buttonHeight;
   final String buttonText;
-  final Color? textButtonColor;
-  final double? textButtonFontSize;
+  final Color textButtonColor;
+  final double textButtonFontSize;
   final void Function() function;
 
   const ExplanationOrganism({
     Key? key,
-    this.titleHeight,
+    required this.titleHeight,
     required this.titleText,
-    this.textColor,
-    this.titleFontSize,
-    this.titleBold,
-    this.fontFamily,
-    this.explanationTextHeight,
-    this.explanationTextWidth,
+    required this.textColor,
+    required this.titleFontSize,
+    required this.titleBold,
+    required this.fontFamily,
+    required this.explanationTextHeight,
+    required this.explanationTextWidth,
     required this.explanationText,
-    this.explanationFontSize,
-    this.buttonHeight,
+    required this.explanationFontSize,
+    required this.buttonHeight,
     required this.buttonText,
-    this.textButtonColor,
-    this.textButtonFontSize,
+    required this.textButtonColor,
+    required this.textButtonFontSize,
     required this.function,
   }) : super(key: key);
 
