@@ -6,8 +6,8 @@ class TourouTabBar extends StatelessWidget {
   final String secondTabText;
   final TabController controller;
 
-  final Color? labelColor;
-  final Color? unselectedLabelColor;
+  final Color labelColor;
+  final Color unselectedLabelColor;
   final double indicatorWeight;
   final double horizontalPadding;
   final double verticalPadding;
@@ -19,8 +19,8 @@ class TourouTabBar extends StatelessWidget {
     required this.firstTabText,
     required this.secondTabText,
     required this.controller,
-    this.labelColor,
-    this.unselectedLabelColor,
+    required this.labelColor,
+    required this.unselectedLabelColor,
     required this.indicatorWeight,
     required this.horizontalPadding,
     required this.verticalPadding,
