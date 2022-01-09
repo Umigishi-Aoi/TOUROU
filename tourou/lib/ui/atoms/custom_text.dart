@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 class CustomText extends StatelessWidget {
   final String text;
-  final Color? color;
-  final double? fontSize;
+  final Color color;
+  final double fontSize;
   final FontWeight? bold;
   final TextAlign? textAlign;
   final String? fontFamily;
@@ -13,8 +13,8 @@ class CustomText extends StatelessWidget {
   CustomText({
     Key? key,
     required this.text,
-    this.color,
-    this.fontSize,
+    required this.color,
+    required this.fontSize,
     this.bold,
     this.function,
     this.textAlign,
