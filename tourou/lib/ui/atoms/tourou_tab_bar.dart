@@ -1,10 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
-// Project imports:
-import '../../gen/colors.gen.dart';
-import '../../res/constants.dart';
-
 class TourouTabBar extends StatelessWidget {
   final String firstTabText;
   final String secondTabText;
@@ -12,9 +8,9 @@ class TourouTabBar extends StatelessWidget {
 
   final Color? labelColor;
   final Color? unselectedLabelColor;
-  final double? indicatorWeight;
-  final double? horizontalPadding;
-  final double? verticalPadding;
+  final double indicatorWeight;
+  final double horizontalPadding;
+  final double verticalPadding;
 
   late final List<Tab> tabs;
 
@@ -25,9 +21,9 @@ class TourouTabBar extends StatelessWidget {
     required this.controller,
     this.labelColor,
     this.unselectedLabelColor,
-    this.indicatorWeight,
-    this.horizontalPadding,
-    this.verticalPadding,
+    required this.indicatorWeight,
+    required this.horizontalPadding,
+    required this.verticalPadding,
   }) : super(key: key) {
     this.tabs = [
       Tab(
@@ -44,15 +40,15 @@ class TourouTabBar extends StatelessWidget {
     return TabBar(
       tabs: tabs,
       controller: controller,
-      labelColor: labelColor ?? ColorName.textWhite,
+      labelColor: labelColor,
       labelStyle: TextStyle(fontWeight: FontWeight.bold),
-      unselectedLabelColor: unselectedLabelColor ?? ColorName.userIdText,
-      indicatorColor: labelColor ?? ColorName.textWhite,
+      unselectedLabelColor: unselectedLabelColor,
+      indicatorColor: labelColor,
       indicatorSize: TabBarIndicatorSize.tab,
-      indicatorWeight: indicatorWeight ?? tabBarIndicatorWeight,
+      indicatorWeight: indicatorWeight,
       indicatorPadding: EdgeInsets.symmetric(
-        horizontal: horizontalPadding ?? tabBarIndicatorHorizontalPadding,
-        vertical: verticalPadding ?? tabBarIndicatorVerticalPadding,
+        horizontal: horizontalPadding,
+        vertical: verticalPadding,
       ),
     );
   }
