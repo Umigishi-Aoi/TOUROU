@@ -8,15 +8,18 @@ import '../atoms/custom_image.dart';
 class HowToUseMolecules extends StatefulWidget {
   final ValueNotifier<double> notifier;
 
+  final int pageCount;
+
   final double imageHeight;
   final double imageWidth;
 
-  const HowToUseMolecules(
-      {Key? key,
-      required this.notifier,
-      required this.imageHeight,
-      required this.imageWidth})
-      : super(key: key);
+  const HowToUseMolecules({
+    Key? key,
+    required this.notifier,
+    required this.pageCount,
+    required this.imageHeight,
+    required this.imageWidth,
+  }) : super(key: key);
 
   @override
   _HowToUseMoleculesState createState() => _HowToUseMoleculesState();
@@ -45,7 +48,7 @@ class _HowToUseMoleculesState extends State<HowToUseMolecules> {
   Widget build(BuildContext context) {
     return PageView(
       controller: _pageController,
-      children: List<Widget>.generate(howToUsePageCount, (index) {
+      children: List<Widget>.generate(widget.pageCount, (index) {
         Locale locale = Localizations.localeOf(context);
 
         String languageCode = locale.languageCode;
