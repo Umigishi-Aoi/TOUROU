@@ -8,28 +8,34 @@ import '../atoms/custom_text.dart';
 class TourouMolecule extends StatelessWidget {
   final String profileImagePath;
   final double profileImageHeight;
+  final BoxFit imageFit;
 
   final String userName;
-  final Color? textColor;
-  final String? fontFamily;
+  final Color textColor;
+  final String fontFamily;
+  final double userNameFontSize;
 
   final String userId;
-  final Color? userIdColor;
+  final Color userIdColor;
 
   final String tourouText;
   final double tourouTextWidth;
+  final double tourouTextFontSize;
 
   const TourouMolecule({
     Key? key,
     required this.profileImagePath,
     required this.profileImageHeight,
+    required this.imageFit,
     required this.userName,
-    this.textColor,
-    this.fontFamily,
+    required this.textColor,
+    required this.fontFamily,
     required this.userId,
-    this.userIdColor,
+    required this.userIdColor,
+    required this.userNameFontSize,
     required this.tourouText,
     required this.tourouTextWidth,
+    required this.tourouTextFontSize,
   }) : super(key: key);
 
   @override
@@ -41,16 +47,19 @@ class TourouMolecule extends StatelessWidget {
           path: profileImagePath,
           height: profileImageHeight,
           isCircle: true,
+          fit: imageFit,
         ),
         CustomText(
           text: userName,
           color: textColor,
           fontFamily: fontFamily,
+          fontSize: userNameFontSize,
         ),
         CustomText(
           text: userId,
           color: userIdColor,
           fontFamily: fontFamily,
+          fontSize: userNameFontSize,
         ),
         Container(
           width: tourouTextWidth,
@@ -59,6 +68,7 @@ class TourouMolecule extends StatelessWidget {
             text: tourouText,
             color: textColor,
             fontFamily: fontFamily,
+            fontSize: tourouTextFontSize,
           ),
         ),
       ],
