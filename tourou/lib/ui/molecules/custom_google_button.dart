@@ -7,35 +7,33 @@ import '../atoms/custom_text.dart';
 
 class CustomGoogleSignInButton extends StatelessWidget {
   final String text;
-  final Color? textColor;
-  final double? fontSize;
+  final Color textColor;
+  final double fontSize;
 
   final double height;
   final double width;
 
-  final Color? buttonColor;
+  final Color buttonColor;
 
-  final void Function()? function;
+  final void Function() function;
 
   final double horizontalPadding;
-  final double? iconMargin;
-  final double? iconSize;
-  final IconData? icon;
+  final double iconMargin;
+  final double iconSize;
 
-  const CustomGoogleSignInButton(
-      {Key? key,
-      required this.text,
-      this.textColor,
-      this.fontSize,
-      required this.height,
-      required this.width,
-      this.buttonColor,
-      this.function,
-      required this.horizontalPadding,
-      this.iconMargin,
-      this.iconSize,
-      this.icon})
-      : super(key: key);
+  const CustomGoogleSignInButton({
+    Key? key,
+    required this.text,
+    required this.textColor,
+    required this.fontSize,
+    required this.height,
+    required this.width,
+    required this.buttonColor,
+    required this.function,
+    required this.horizontalPadding,
+    required this.iconMargin,
+    required this.iconSize,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
