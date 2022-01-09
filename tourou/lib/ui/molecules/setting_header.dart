@@ -7,30 +7,30 @@ import '../../res/constants.dart';
 import '../atoms/custom_text.dart';
 
 class SettingHeader extends StatelessWidget {
-  final double? width;
+  final double width;
   final String backText;
-  final double? backFontSize;
-  final Color? backTextColor;
-  final String? fontFamily;
+  final double backFontSize;
+  final Color backTextColor;
+  final String fontFamily;
   final void Function() function;
 
   final String titleText;
-  final double? titleFontSize;
-  final FontWeight? titleBold;
-  final Color? titleTextColor;
+  final double titleFontSize;
+  final FontWeight titleBold;
+  final Color titleTextColor;
 
   const SettingHeader({
     Key? key,
-    this.width,
+    required this.width,
     required this.backText,
     required this.function,
     required this.titleText,
-    this.backFontSize,
-    this.backTextColor,
-    this.fontFamily,
-    this.titleFontSize,
-    this.titleBold,
-    this.titleTextColor,
+    required this.backFontSize,
+    required this.backTextColor,
+    required this.fontFamily,
+    required this.titleFontSize,
+    required this.titleBold,
+    required this.titleTextColor,
   }) : super(key: key);
 
   @override
