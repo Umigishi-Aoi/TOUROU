@@ -12,6 +12,7 @@ class HowToUseMolecules extends StatefulWidget {
 
   final double imageHeight;
   final double imageWidth;
+  final BoxFit imageFit;
 
   const HowToUseMolecules({
     Key? key,
@@ -19,6 +20,7 @@ class HowToUseMolecules extends StatefulWidget {
     required this.pageCount,
     required this.imageHeight,
     required this.imageWidth,
+    required this.imageFit,
   }) : super(key: key);
 
   @override
@@ -65,6 +67,7 @@ class _HowToUseMoleculesState extends State<HowToUseMolecules> {
           path: imageName,
           height: widget.imageHeight,
           width: widget.imageWidth,
+          fit: widget.imageFit,
         );
       }),
     );
