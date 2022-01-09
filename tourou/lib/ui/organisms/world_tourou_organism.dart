@@ -2,8 +2,6 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import '../../gen/colors.gen.dart';
-import '../../res/constants.dart';
 import '../atoms/custom_image.dart';
 import '../atoms/custom_text.dart';
 import '../molecules/custom_elevated_button.dart';
@@ -14,27 +12,32 @@ class WorldTourouOrganism extends StatelessWidget {
   final double? tourouWidth;
 
   final void Function() reportFunction;
+  final double errorIconSize;
 
   final String profileImagePath;
-  final double? profileImageHeight;
+  final double profileImageHeight;
 
   final String userName;
   final Color? textColor;
+
+  final String? fontFamily;
 
   final String userId;
   final Color? userIdColor;
 
   final String tourouText;
-  final double? tourouContentWidth;
+  final double tourouContentWidth;
 
   final String? tourouImagePath;
 
   final String goodButtonText;
-  final double? goodButtonHeight;
-  final double? goodButtonWidth;
+  final double goodButtonHeight;
+  final double goodButtonWidth;
   final void Function() goodButtonFunction;
   final Color? goodButtonActiveColor;
   final Color? goodButtonInactiveColor;
+
+  final double goodButtonMargin;
 
   final String goodNumber;
   final double? goodNumberFontSize;
@@ -51,26 +54,26 @@ class WorldTourouOrganism extends StatelessWidget {
     required this.goodButtonFunction,
     required this.goodNumber,
     this.tourouWidth,
-    this.profileImageHeight,
+    required this.profileImageHeight,
     this.textColor,
     this.userIdColor,
-    this.tourouContentWidth,
+    required this.tourouContentWidth,
     this.tourouImagePath,
-    this.goodButtonHeight,
-    this.goodButtonWidth,
+    required this.goodButtonHeight,
+    required this.goodButtonWidth,
     this.goodButtonActiveColor,
     this.goodButtonInactiveColor,
     this.goodNumberFontSize,
     this.goodNumberColor,
+    required this.errorIconSize,
+    this.fontFamily,
+    required this.goodButtonMargin,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    double displayWidth = MediaQuery.of(context).size.width;
-    double displayHeight = MediaQuery.of(context).size.height;
-
     return Container(
-      width: tourouWidth ?? displayWidth * tourouWidthRatio,
+      width: tourouWidth,
       child: Stack(
         children: [
           Align(
@@ -78,7 +81,7 @@ class WorldTourouOrganism extends StatelessWidget {
             child: CustomIconButton(
               function: reportFunction,
               iconData: Icons.error_outline,
-              size: displayHeight * tourouReportIconSizeRatio,
+              size: errorIconSize,
             ),
           ),
           Align(
@@ -88,43 +91,40 @@ class WorldTourouOrganism extends StatelessWidget {
               children: [
                 TourouMolecule(
                   profileImagePath: profileImagePath,
-                  profileImageHeight: profileImageHeight ??
-                      displayHeight * tourouProfileImageHeightRatio,
+                  profileImageHeight: profileImageHeight,
                   userName: userName,
                   userId: userId,
                   tourouText: tourouText,
-                  tourouTextWidth: tourouContentWidth ??
-                      displayWidth * tourouContentWidthRatio,
+                  tourouTextWidth: tourouContentWidth,
                   textColor: textColor,
                   userIdColor: userIdColor,
+                  fontFamily: fontFamily,
                 ),
                 if (tourouImagePath != null)
                   CustomImage(
                     path: tourouImagePath!,
-                    width: tourouContentWidth ??
-                        displayWidth * tourouContentWidthRatio,
+                    width: tourouContentWidth,
                   ),
                 Row(
                   children: [
                     SizedBox(
-                      width: displayWidth * goodButtonMarginRatio,
+                      width: goodButtonMargin,
                     ),
                     CustomElevatedButton(
                       text: goodButtonText,
-                      height: goodButtonHeight ??
-                          displayHeight * goodButtonHeightRatio,
-                      width: goodButtonWidth ??
-                          displayWidth * goodButtonWidthRatio,
-                      color: goodButtonActiveColor ?? ColorName.goodBackgoround,
+                      height: goodButtonHeight,
+                      width: goodButtonWidth,
+                      color: goodButtonActiveColor,
+                      fontFamily: fontFamily,
                     ),
                     SizedBox(
-                      width: displayWidth * goodButtonMarginRatio,
+                      width: goodButtonMargin,
                     ),
                     CustomText(
                       text: goodNumber,
-                      fontSize:
-                          goodNumberFontSize ?? goodNumberFontSizeConstant,
-                      color: goodNumberColor ?? ColorName.textButton,
+                      fontSize: goodNumberFontSize,
+                      color: goodNumberColor,
+                      fontFamily: fontFamily,
                     )
                   ],
                 ),
