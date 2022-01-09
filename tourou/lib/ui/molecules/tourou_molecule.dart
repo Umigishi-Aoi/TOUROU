@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import '../../gen/colors.gen.dart';
 import '../atoms/custom_image.dart';
 import '../atoms/custom_text.dart';
 
@@ -12,6 +11,7 @@ class TourouMolecule extends StatelessWidget {
 
   final String userName;
   final Color? textColor;
+  final String? fontFamily;
 
   final String userId;
   final Color? userIdColor;
@@ -19,17 +19,18 @@ class TourouMolecule extends StatelessWidget {
   final String tourouText;
   final double tourouTextWidth;
 
-  const TourouMolecule(
-      {Key? key,
-      required this.profileImagePath,
-      required this.profileImageHeight,
-      required this.userName,
-      this.textColor,
-      required this.userId,
-      this.userIdColor,
-      required this.tourouText,
-      required this.tourouTextWidth})
-      : super(key: key);
+  const TourouMolecule({
+    Key? key,
+    required this.profileImagePath,
+    required this.profileImageHeight,
+    required this.userName,
+    this.textColor,
+    this.fontFamily,
+    required this.userId,
+    this.userIdColor,
+    required this.tourouText,
+    required this.tourouTextWidth,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -43,18 +44,21 @@ class TourouMolecule extends StatelessWidget {
         ),
         CustomText(
           text: userName,
-          color: textColor ?? ColorName.mainBlack,
+          color: textColor,
+          fontFamily: fontFamily,
         ),
         CustomText(
           text: userId,
-          color: userIdColor ?? ColorName.userIdText,
+          color: userIdColor,
+          fontFamily: fontFamily,
         ),
         Container(
           width: tourouTextWidth,
           alignment: Alignment.topLeft,
           child: CustomText(
             text: tourouText,
-            color: textColor ?? ColorName.mainBlack,
+            color: textColor,
+            fontFamily: fontFamily,
           ),
         ),
       ],
