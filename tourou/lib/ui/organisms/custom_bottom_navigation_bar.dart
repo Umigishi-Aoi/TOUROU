@@ -1,9 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
-// Project imports:
-import '../../gen/colors.gen.dart';
-
 class CustomBottomNavigationBar extends StatefulWidget {
   final Icon worldIcon;
   final Icon selfIcon;
@@ -45,9 +42,9 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         BottomNavigationBarItem(icon: widget.selfIcon),
         BottomNavigationBarItem(icon: widget.settingIcon),
       ],
-      backgroundColor: widget.backgroundColor ?? ColorName.mainBlack,
-      selectedItemColor: widget.itemColor ?? ColorName.textWhite,
-      unselectedItemColor: widget.itemColor ?? ColorName.textWhite,
+      backgroundColor: widget.backgroundColor,
+      selectedItemColor: widget.itemColor,
+      unselectedItemColor: widget.itemColor,
       showSelectedLabels: false,
       showUnselectedLabels: false,
       currentIndex: _selectedIndex,
