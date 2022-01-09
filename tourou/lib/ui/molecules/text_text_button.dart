@@ -6,27 +6,27 @@ import '../atoms/custom_text.dart';
 
 class TextTextButton extends StatelessWidget {
   final String firstText;
-  final Color? firstColor;
-  final double? fontSize;
+  final Color firstColor;
+  final double fontSize;
   final FontWeight? firstBold;
-  final String? fontFamily;
+  final String fontFamily;
 
   final String secondText;
-  final Color? secondColor;
+  final Color secondColor;
   final FontWeight? secondBold;
-  final void Function()? function;
+  final void Function() function;
 
   const TextTextButton({
     Key? key,
     required this.firstText,
-    this.firstColor,
-    this.fontSize,
+    required this.firstColor,
+    required this.fontSize,
     this.firstBold,
-    this.fontFamily,
+    required this.fontFamily,
     required this.secondText,
-    this.secondColor,
+    required this.secondColor,
     this.secondBold,
-    this.function,
+    required this.function,
   }) : super(key: key);
 
   @override
