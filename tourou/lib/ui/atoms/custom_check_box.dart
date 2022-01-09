@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 class CustomCheckBox extends StatefulWidget {
   final Color? color;
-  final void Function(bool?)? onChanged;
+  final void Function(bool?) onChanged;
 
-  const CustomCheckBox({Key? key, this.color, this.onChanged})
+  const CustomCheckBox({Key? key, this.color, required this.onChanged})
       : super(key: key);
 
   @override
@@ -24,9 +24,9 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
         setState(() {
           _isCheck = value!;
         });
-        if (widget.onChanged != null) {
-          widget.onChanged!(value);
-        }
+
+          widget.onChanged(value);
+
       },
     );
   }
