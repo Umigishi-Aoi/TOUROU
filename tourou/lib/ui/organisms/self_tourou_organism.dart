@@ -2,8 +2,6 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import '../../gen/colors.gen.dart';
-import '../../res/constants.dart';
 import '../atoms/custom_image.dart';
 import '../atoms/custom_text.dart';
 import '../molecules/tourou_molecule.dart';
@@ -14,16 +12,19 @@ class SelfTourouOrganism extends StatelessWidget {
   final void Function() reportFunction;
 
   final String profileImagePath;
-  final double? profileImageHeight;
+  final double profileImageHeight;
+
+  final double goodPadding;
 
   final String userName;
   final Color? textColor;
+  final String? fontFamily;
 
   final String userId;
   final Color? userIdColor;
 
   final String tourouText;
-  final double? tourouContentWidth;
+  final double tourouContentWidth;
 
   final String? tourouImagePath;
 
@@ -31,43 +32,40 @@ class SelfTourouOrganism extends StatelessWidget {
   final double? goodNumberFontSize;
   final Color? goodNumberColor;
 
-  const SelfTourouOrganism(
-      {Key? key,
-      required this.reportFunction,
-      required this.profileImagePath,
-      required this.userName,
-      required this.userId,
-      required this.tourouText,
-      required this.goodNumber,
-      this.tourouWidth,
-      this.profileImageHeight,
-      this.textColor,
-      this.userIdColor,
-      this.tourouContentWidth,
-      this.tourouImagePath,
-      this.goodNumberFontSize,
-      this.goodNumberColor})
-      : super(key: key);
+  const SelfTourouOrganism({
+    Key? key,
+    required this.reportFunction,
+    required this.profileImagePath,
+    required this.goodPadding,
+    required this.userName,
+    required this.userId,
+    required this.tourouText,
+    this.fontFamily,
+    required this.goodNumber,
+    this.tourouWidth,
+    required this.profileImageHeight,
+    this.textColor,
+    this.userIdColor,
+    required this.tourouContentWidth,
+    this.tourouImagePath,
+    this.goodNumberFontSize,
+    this.goodNumberColor,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    double displayWidth = MediaQuery.of(context).size.width;
-    double displayHeight = MediaQuery.of(context).size.height;
-
-    double _profileImageHeight =
-        profileImageHeight ?? displayHeight * tourouProfileImageHeightRatio;
-
     return Container(
-      width: tourouWidth ?? displayWidth * tourouWidthRatio,
+      width: tourouWidth,
       child: Stack(
         children: [
           Positioned(
-              top: _profileImageHeight + mainTextFontSize,
-              right: goodNumberPadding,
+              top: profileImageHeight,
+              right: goodPadding,
               child: CustomText(
                 text: goodNumber,
-                fontSize: goodNumberFontSize ?? goodNumberFontSizeConstant,
-                color: goodNumberColor ?? ColorName.textButton,
+                fontSize: goodNumberFontSize,
+                color: goodNumberColor,
+                fontFamily: fontFamily,
               )),
           Align(
             alignment: Alignment.topCenter,
@@ -76,21 +74,18 @@ class SelfTourouOrganism extends StatelessWidget {
               children: [
                 TourouMolecule(
                   profileImagePath: profileImagePath,
-                  profileImageHeight: profileImageHeight ??
-                      displayHeight * tourouProfileImageHeightRatio,
+                  profileImageHeight: profileImageHeight,
                   userName: userName,
                   userId: userId,
                   tourouText: tourouText,
-                  tourouTextWidth: tourouContentWidth ??
-                      displayWidth * tourouContentWidthRatio,
+                  tourouTextWidth: tourouContentWidth,
                   textColor: textColor,
                   userIdColor: userIdColor,
                 ),
                 if (tourouImagePath != null)
                   CustomImage(
                     path: tourouImagePath!,
-                    width: tourouContentWidth ??
-                        displayWidth * tourouContentWidthRatio,
+                    width: tourouContentWidth,
                   ),
               ],
             ),
