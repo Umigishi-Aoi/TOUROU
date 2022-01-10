@@ -64,3 +64,6 @@ app.*.map.json
 
 #icon
 assets/sign_in_icons/
+
+#fvm
+.fvm/flutter_sdk
