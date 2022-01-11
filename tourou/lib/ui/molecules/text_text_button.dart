@@ -39,12 +39,14 @@ class TextTextButton extends StatelessWidget {
           color: firstColor,
           fontSize: fontSize,
           bold: firstBold,
+          fontFamily: fontFamily,
         ),
         CustomText(
           text: secondText,
           color: secondColor,
           fontSize: fontSize,
           bold: secondBold,
+          fontFamily: fontFamily,
         )
       ],
     );
