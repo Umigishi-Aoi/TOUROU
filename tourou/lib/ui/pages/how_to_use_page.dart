@@ -2,8 +2,6 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import '../../gen/colors.gen.dart';
-import '../../l10n/app_localizations.dart';
 import '../templates/how_to_use_template.dart';
 
 class HowToUsePage extends StatelessWidget {
@@ -11,17 +9,6 @@ class HowToUsePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: ColorName.mainBlack,
-      body: SafeArea(
-        child: Center(
-          child: HowToUseOrganisms(
-            titleText: AppLocalizations.of(context)!.howToUseTitle,
-            buttonText: AppLocalizations.of(context)!.howToUseText,
-            function: () {},
-          ),
-        ),
-      ),
-    );
+    return HowToUseTemplate(function: () {});
   }
 }
