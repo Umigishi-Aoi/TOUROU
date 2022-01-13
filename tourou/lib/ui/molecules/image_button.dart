@@ -14,7 +14,7 @@ class ImageButton extends StatefulWidget {
   final BoxFit fit;
   final bool isCircle;
 
-  final int duration;
+  final int? duration;
 
   const ImageButton({
     Key? key,
@@ -25,7 +25,7 @@ class ImageButton extends StatefulWidget {
     this.width,
     required this.fit,
     required this.isCircle,
-    required this.duration,
+    this.duration,
   }) : super(key: key);
 
   @override
@@ -53,9 +53,9 @@ class _ImageButtonState extends State<ImageButton> {
                 setState(() {
                   _flag = true;
                 });
-                if (widget.secondImagePath != null) {
+                if (widget.secondImagePath != null && widget.duration != null) {
                   await Future<void>.delayed(
-                      Duration(milliseconds: widget.duration));
+                      Duration(milliseconds: widget.duration!));
                 }
                 widget.function();
               }

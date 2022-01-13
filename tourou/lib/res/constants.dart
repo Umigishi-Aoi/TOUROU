@@ -75,6 +75,7 @@ const double newUserRegistrationFieldHeightRatio = 0.1;
 const double newUserRegistrationFieldFontSizeRatio = 0.9;
 const double newUserRegistrationButtonTopMarginRatio = 0.2;
 const double newUserRegistrationButtonMargin = 8;
+const int newUserRegistrationMinLine = 1;
 
 const flavor = String.fromEnvironment('FLAVOR');
 
