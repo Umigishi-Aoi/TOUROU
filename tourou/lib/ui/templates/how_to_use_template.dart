@@ -63,14 +63,14 @@ class HowToUseTemplate extends StatelessWidget {
                   padding: const EdgeInsets.all(howToUseButtonPadding),
                   child: CustomElevatedButton(
                     text: AppLocalizations.of(context)!.howToUseText,
-                    height: deviceHeight * howToUseButtonHeightRatio,
-                    width: deviceWidth * howToUseButtonWidthRatio,
+                    height: deviceHeight * buttonHeightRatio,
+                    width: deviceWidth * buttonWidthRatio,
                     buttonColor: ColorName.tourouBackgoround,
                     function: function,
                     color: ColorName.mainBlack,
                     fontSize: deviceHeight *
-                        howToUseButtonHeightRatio *
-                        buttonHeightTextRatio,
+                        buttonHeightRatio *
+                        buttonHeightFontSizeRatio,
                     fontFamily: FontFamily.mplus1,
                   )),
             ],

@@ -22,4 +22,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get howToUseText => 'Start';
+
+  @override
+  String get userId => 'User ID';
+
+  @override
+  String get userIdHint => 'tourou1234';
+
+  @override
+  String get userName => 'User Name';
+
+  @override
+  String get userNameHint => 'TOUROU';
+
+  @override
+  String get registration => 'Registration';
 }
