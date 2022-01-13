@@ -64,7 +64,7 @@ const double howToUseTitleFontSize = 28;
 const double howToUseTitlePadding = 32;
 const double howToUseButtonPadding = 16;
 const double howToUseButtonWidthRatio = 0.8;
-const double howToUseButtonHeightRatio = 0.1;
+const double howToUseButtonHeightRatio = 0.06;
 
 const flavor = String.fromEnvironment('FLAVOR');
 
