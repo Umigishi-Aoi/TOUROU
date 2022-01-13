@@ -83,27 +83,6 @@ void main() {
 
   });
 
-  //PageViewがあるか確認
-  testWidgets('PageViewのチェック', (WidgetTester tester) async {
-    await loadAppFonts();
-    await loadJapaneseFont();
-
-    //デバイスの画面サイズ
-    final size13ProMax = Size(428, 926);
-
-    //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(
-        MaterialApp(
-          localizationsDelegates: AppLocalizations.localizationsDelegates,
-          supportedLocales: AppLocalizations.supportedLocales,
-          locale: Locale('en'),
-          home: HowToUsePage(),
-        ),
-        surfaceSize: size13ProMax);
-
-    expect(find.byType(PageView), findsOneWidget);
-  });
-
   //フリングして正しい画像が出るかのチェック
   testGoldens('how_to_use_page_en_fling_test', (WidgetTester tester) async {
     await loadAppFonts();
