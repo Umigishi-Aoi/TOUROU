@@ -9,9 +9,10 @@ class CustomTextField extends StatelessWidget {
 
   final double height;
   final double width;
-  final int? minLines;
+  final int minLines;
   final double fontSize;
   final Color textColor;
+  final String fontFamily;
   final Color fillColor;
   final Color borderColor;
 
@@ -23,9 +24,10 @@ class CustomTextField extends StatelessWidget {
     required this.controller,
     required this.height,
     required this.width,
-    this.minLines,
+    required this.minLines,
     required this.fontSize,
     required this.textColor,
+    required this.fontFamily,
     required this.fillColor,
     required this.borderColor,
     required this.textInputFormatters,
@@ -42,6 +44,7 @@ class CustomTextField extends StatelessWidget {
           height: height,
           fontSize: fontSize,
           color: textColor,
+          fontFamily: fontFamily,
         ),
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
