@@ -5,23 +5,29 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sliding_tutorial/flutter_sliding_tutorial.dart';
 
 // Project imports:
-import '../../gen/colors.gen.dart';
-import '../../res/constants.dart';
 import '../atoms/custom_icon.dart';
 
 class HowToUseIndicator extends StatelessWidget {
   final ValueNotifier<double> notifier;
 
+  final int pageCount;
+
   final double indicatorHeight;
   final double indicatorSize;
   final double indicatorMargin;
 
+  final Color activeColor;
+  final Color inActiveColor;
+
   const HowToUseIndicator({
     Key? key,
     required this.notifier,
+    required this.pageCount,
     required this.indicatorHeight,
     required this.indicatorSize,
     required this.indicatorMargin,
+    required this.activeColor,
+    required this.inActiveColor,
   }) : super(key: key);
 
   @override
@@ -30,16 +36,16 @@ class HowToUseIndicator extends StatelessWidget {
       width: double.infinity,
       height: indicatorHeight,
       child: SlidingIndicator(
-        indicatorCount: howToUsePageCount,
+        indicatorCount: pageCount,
         notifier: notifier,
         activeIndicator: CustomIcon(
           iconData: Icons.circle,
-          color: ColorName.signInButtonWhite,
+          color: activeColor,
           size: indicatorSize,
         ),
         inActiveIndicator: CustomIcon(
           iconData: Icons.circle,
-          color: ColorName.itemBackground,
+          color: inActiveColor,
           size: indicatorSize,
         ),
         margin: indicatorMargin,

@@ -9,26 +9,29 @@ class TextSwitch extends StatelessWidget {
   final double width;
 
   final String text;
-  final Color? color;
-  final double? fontSize;
+  final Color color;
+  final double fontSize;
   final FontWeight? bold;
+  final String fontFamily;
+
   final void Function()? function;
 
-  final Color? activeColor;
-  final Color? inactiveColor;
-  final void Function(bool?)? onChanged;
+  final Color activeColor;
+  final Color inactiveColor;
+  final void Function(bool?) onChanged;
 
   const TextSwitch(
       {Key? key,
       required this.width,
       required this.text,
-      this.color,
-      this.fontSize,
+      required this.color,
+      required this.fontSize,
       this.bold,
+      required this.fontFamily,
       this.function,
-      this.activeColor,
-      this.inactiveColor,
-      this.onChanged})
+      required this.activeColor,
+      required this.inactiveColor,
+      required this.onChanged})
       : super(key: key);
 
   @override
@@ -43,6 +46,7 @@ class TextSwitch extends StatelessWidget {
             color: color,
             fontSize: fontSize,
             bold: bold,
+            fontFamily: fontFamily,
           ),
           CustomSwitch(
             onChanged: onChanged,

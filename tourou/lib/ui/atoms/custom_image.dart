@@ -3,18 +3,18 @@ import 'package:flutter/material.dart';
 
 class CustomImage extends StatelessWidget {
   final String path;
-  final double? height;
+  final double height;
   final double? width;
-  final BoxFit? fit;
-  final bool isCircle;
+  final BoxFit fit;
+  final bool? isCircle;
 
   const CustomImage({
     Key? key,
     required this.path,
-    this.height,
+    required this.height,
     this.width,
-    this.fit,
-    this.isCircle = false,
+    required this.fit,
+    this.isCircle,
   }) : super(key: key);
 
   @override
@@ -26,7 +26,7 @@ class CustomImage extends StatelessWidget {
         decoration: BoxDecoration(
             shape: BoxShape.circle,
             image: DecorationImage(
-              fit: fit ?? BoxFit.contain,
+              fit: fit,
               image: AssetImage(path),
             )),
       );
@@ -36,7 +36,7 @@ class CustomImage extends StatelessWidget {
         width: width,
         child: Image.asset(
           path,
-          fit: fit ?? BoxFit.contain,
+          fit: fit,
         ),
       );
     }

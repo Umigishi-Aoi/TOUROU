@@ -2,32 +2,32 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import '../../gen/colors.gen.dart';
-import '../../res/constants.dart';
 import '../atoms/custom_text.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   final String text;
-  final Color? color;
-  final double? fontSize;
+  final Color color;
+  final double fontSize;
+  final String fontFamily;
 
   final double height;
   final double width;
 
-  final Color? buttonColor;
+  final Color buttonColor;
 
-  final void Function()? function;
+  final void Function() function;
 
-  const CustomElevatedButton(
-      {Key? key,
-      required this.text,
-      this.color,
-      this.fontSize,
-      required this.height,
-      required this.width,
-      this.buttonColor,
-      this.function})
-      : super(key: key);
+  const CustomElevatedButton({
+    Key? key,
+    required this.text,
+    required this.color,
+    required this.fontSize,
+    required this.fontFamily,
+    required this.height,
+    required this.width,
+    required this.buttonColor,
+    required this.function,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -38,11 +38,12 @@ class CustomElevatedButton extends StatelessWidget {
         onPressed: function,
         child: CustomText(
           text: text,
-          color: color ?? ColorName.mainBlack,
-          fontSize: fontSize ?? height * buttonHeightTextRatio,
+          color: color,
+          fontSize: fontSize,
+          fontFamily: fontFamily,
         ),
         style: ElevatedButton.styleFrom(
-          primary: buttonColor ?? ColorName.itemBackground,
+          primary: buttonColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(height / 2),
           ),

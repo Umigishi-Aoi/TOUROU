@@ -125,6 +125,12 @@ abstract class AppLocalizations {
   /// **'here'**
   String get titleTextButtonSecondText;
 
+  /// howToUseTitle
+  ///
+  /// In en, this message translates to:
+  /// **'How to Use'**
+  String get howToUseTitle;
+
   /// howToUseSecondText
   ///
   /// In en, this message translates to:

@@ -2,24 +2,13 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import '../../gen/colors.gen.dart';
-import '../../l10n/app_localizations.dart';
-import '../organisms/how_to_use_organism.dart';
+import '../templates/how_to_use_template.dart';
 
 class HowToUsePage extends StatelessWidget {
   const HowToUsePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: ColorName.mainBlack,
-      body: SafeArea(
-        child: Center(
-          child: HowToUseOrganisms(
-            text: AppLocalizations.of(context)!.howToUseText,
-          ),
-        ),
-      ),
-    );
+    return HowToUseTemplate(function: () {});
   }
 }

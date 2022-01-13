@@ -3,41 +3,37 @@ import 'package:flutter/material.dart';
 
 // Project imports:
 import '../../gen/assets.gen.dart';
-import '../../gen/colors.gen.dart';
-import '../../res/constants.dart';
 import '../atoms/custom_text.dart';
 
 class CustomGoogleSignInButton extends StatelessWidget {
   final String text;
-  final Color? textColor;
-  final double? fontSize;
+  final Color textColor;
+  final double fontSize;
 
   final double height;
   final double width;
 
-  final Color? buttonColor;
+  final Color buttonColor;
 
-  final void Function()? function;
+  final void Function() function;
 
-  final double? horizontalPadding;
-  final double? iconMargin;
-  final double? iconSize;
-  final IconData? icon;
+  final double horizontalPadding;
+  final double iconMargin;
+  final double iconSize;
 
-  const CustomGoogleSignInButton(
-      {Key? key,
-      required this.text,
-      this.textColor,
-      this.fontSize,
-      required this.height,
-      required this.width,
-      this.buttonColor,
-      this.function,
-      this.horizontalPadding,
-      this.iconMargin,
-      this.iconSize,
-      this.icon})
-      : super(key: key);
+  const CustomGoogleSignInButton({
+    Key? key,
+    required this.text,
+    required this.textColor,
+    required this.fontSize,
+    required this.height,
+    required this.width,
+    required this.buttonColor,
+    required this.function,
+    required this.horizontalPadding,
+    required this.iconMargin,
+    required this.iconSize,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -47,29 +43,28 @@ class CustomGoogleSignInButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: function,
         style: ElevatedButton.styleFrom(
-          primary: buttonColor ?? ColorName.signInButtonWhite,
+          primary: buttonColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(height / 2),
           ),
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal:
-                horizontalPadding ?? googleSignInButtonHorizontalPadding,
+            horizontal: horizontalPadding,
           ),
           child: Row(
             children: [
               Assets.signInIcons.googleLogo.svg(
-                width: iconSize ?? googleSignInButtonIconSize,
-                height: iconSize ?? googleSignInButtonIconSize,
+                width: iconSize,
+                height: iconSize,
               ),
               SizedBox(
-                width: iconMargin ?? googleSignInButtonIconMargin,
+                width: iconMargin,
               ),
               CustomText(
                 text: text,
-                color: textColor ?? ColorName.googleSignInButtonBlack,
-                fontSize: fontSize ?? height * buttonHeightTextRatio,
+                color: textColor,
+                fontSize: fontSize,
               ),
             ],
           ),

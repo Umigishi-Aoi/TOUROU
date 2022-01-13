@@ -1,81 +1,77 @@
-// Dart imports:
-import 'dart:math';
-
 // Flutter imports:
 import 'package:flutter/material.dart';
 
 // Project imports:
 import '../../gen/assets.gen.dart';
-import '../../gen/colors.gen.dart';
-import '../../res/constants.dart';
 import '../atoms/custom_text.dart';
 
 class CustomGoogleSignInButton extends StatelessWidget {
   final String text;
-  final Color? textColor;
-  final double? fontSize;
+  final Color textColor;
+  final double fontSize;
 
   final double height;
   final double width;
 
-  final Color? buttonColor;
+  final Color buttonColor;
 
-  final void Function()? function;
+  final void Function() function;
 
-  final double? horizontalPadding;
-  final double? iconMargin;
-  final double? iconSize;
-  final IconData? icon;
+  final double horizontalPadding;
+  final double iconMargin;
+  final double iconSize;
 
-  const CustomGoogleSignInButton(
-      {Key? key,
-      required this.text,
-      this.textColor,
-      this.fontSize,
-      required this.height,
-      required this.width,
-      this.buttonColor,
-      this.function,
-      this.horizontalPadding,
-      this.iconMargin,
-      this.iconSize,
-      this.icon})
-      : super(key: key);
+  const CustomGoogleSignInButton({
+    Key? key,
+    required this.text,
+    required this.textColor,
+    required this.fontSize,
+    required this.height,
+    required this.width,
+    required this.buttonColor,
+    required this.function,
+    required this.horizontalPadding,
+    required this.iconMargin,
+    required this.iconSize,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final double _height = max(height, appleSignInButtonMinimumHeight);
-    final double _width = max(width, appleSignInButtonMinimumWidth);
+    // final double _height = max(height, appleSignInButtonMinimumHeight);
+    // final double _width = max(width, appleSignInButtonMinimumWidth);
     return SizedBox(
-      height: _height,
-      width: _width,
+      height: height,
+      width: width,
       child: ElevatedButton(
         onPressed: function,
         style: ElevatedButton.styleFrom(
-          primary: buttonColor ?? ColorName.signInButtonWhite,
+          primary: buttonColor,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(_height / 2),
+            borderRadius: BorderRadius.circular(height / 2),
           ),
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: horizontalPadding ??
-                max(googleSignInButtonHorizontalPadding,
-                    _width * appleSignInButtonHorizonalPaddingRatio),
+            horizontal: horizontalPadding
+            // ?? max(googleSignInButtonHorizontalPadding,
+            //     _width * appleSignInButtonHorizonalPaddingRatio)
+            ,
           ),
           child: Row(
             children: [
               Assets.signInIcons.appleLogo.svg(
-                width: iconSize ?? _height,
-                height: iconSize ?? _height,
+                width: iconSize,
+                height: iconSize,
               ),
               SizedBox(
-                width: iconMargin ?? googleSignInButtonIconMargin,
+                width: iconMargin,
               ),
               CustomText(
                 text: text,
-                color: textColor ?? ColorName.googleSignInButtonBlack,
-                fontSize: fontSize ?? _height * buttonHeightTextRatio,
+                color: textColor,
+                fontSize: fontSize
+                // ?? _height * buttonHeightTextRatio
+                ,
               ),
             ],
           ),

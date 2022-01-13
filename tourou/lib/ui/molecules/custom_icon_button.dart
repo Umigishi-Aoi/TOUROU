@@ -9,14 +9,14 @@ class CustomIconButton extends StatelessWidget {
 
   final IconData iconData;
   final double size;
-  final Color? color;
+  final Color color;
 
   const CustomIconButton(
       {Key? key,
       required this.function,
       required this.iconData,
       required this.size,
-      this.color})
+      required this.color})
       : super(key: key);
 
   @override

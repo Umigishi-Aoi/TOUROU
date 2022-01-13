@@ -18,5 +18,8 @@ class AppLocalizationsJa extends AppLocalizations {
   String get titleTextButtonSecondText => 'こちら';
 
   @override
+  String get howToUseTitle => 'How to Use';
+
+  @override
   String get howToUseText => 'スタート';
 }
