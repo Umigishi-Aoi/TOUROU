@@ -4,7 +4,7 @@ import 'package:tourou/res/constants.dart';
 import 'package:tourou/ui/molecules/custom_elevated_button.dart';
 import 'package:tourou/ui/molecules/image_button.dart';
 import 'package:tourou/ui/molecules/text_textField.dart';
-
+import '../../l10n/app_localizations.dart';
 class NewUserRegistrationTemplate extends StatelessWidget {
   const NewUserRegistrationTemplate({Key? key}) : super(key: key);
 
@@ -49,11 +49,11 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                         padding: EdgeInsets.all(
                             newUserRegistrationFieldPadding),
                         child: TextTextField(
-                          text: text,
+                          text: AppLocalizations.of(context)!.userId,
                           titleTextColor: titleTextColor,
                           titleFontSize: fieldFontSize,
                           fontFamily: fontFamily,
-                          hint: hint,
+                          hint: AppLocalizations.of(context)!.userIdHint,
                           controller: controller,
                           height: fieldHeight,
                           width: fieldWidth,
@@ -69,11 +69,11 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                         padding: EdgeInsets.all(
                             newUserRegistrationFieldPadding),
                         child: TextTextField(
-                          text: text,
+                          text: AppLocalizations.of(context)!.userName,
                           titleTextColor: titleTextColor,
                           titleFontSize: fieldFontSize,
                           fontFamily: fontFamily,
-                          hint: hint,
+                          hint: AppLocalizations.of(context)!.userNameHint,
                           controller: controller,
                           height: fieldHeight,
                           width: fieldWidth
@@ -94,7 +94,7 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(newUserRegistrationButtonMargin),
                     child: CustomElevatedButton(
-                      text: text,
+                      text: AppLocalizations.of(context)!.registration,
                       color: color,
                       fontSize: displayHeight * buttonHeightRatio *
                           buttonHeightFontSizeRatio,
