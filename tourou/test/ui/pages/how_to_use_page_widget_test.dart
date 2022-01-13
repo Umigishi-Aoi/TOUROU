@@ -1,4 +1,5 @@
 // Flutter imports:
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -79,5 +80,77 @@ void main() {
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'how_to_use_page_ipad_ja');
+
   });
+
+  //PageViewがあるか確認
+  testWidgets('PageViewのチェック', (WidgetTester tester) async {
+    await loadAppFonts();
+    await loadJapaneseFont();
+
+    //デバイスの画面サイズ
+    final size13ProMax = Size(428, 926);
+
+    //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
+    await tester.pumpWidgetBuilder(
+        MaterialApp(
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          locale: Locale('en'),
+          home: HowToUsePage(),
+        ),
+        surfaceSize: size13ProMax);
+
+    expect(find.byType(PageView), findsOneWidget);
+  });
+
+  //フリングして正しい画像が出るかのチェック
+  testGoldens('how_to_use_page_en_fling_test', (WidgetTester tester) async {
+    await loadAppFonts();
+    await loadJapaneseFont();
+
+    //デバイスの画面サイズ
+    final size13ProMax = Size(428, 926);
+
+    //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
+    await tester.pumpWidgetBuilder(
+        MaterialApp(
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          locale: Locale('en'),
+          home: HowToUsePage(),
+        ),
+        surfaceSize: size13ProMax);
+
+    for(int i = 0 ;i < 3 ; i++) {
+      await tester.fling(find.byType(PageView), Offset(-250.0, 0.0), 300);
+
+      await screenMatchesGolden(tester, 'how_to_use_page_swipe_en_$i');
+    }
+  });
+
+  testGoldens('how_to_use_page_ja_fling_test', (WidgetTester tester) async {
+    await loadAppFonts();
+    await loadJapaneseFont();
+
+    //デバイスの画面サイズ
+    final size13ProMax = Size(428, 926);
+
+    //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
+    await tester.pumpWidgetBuilder(
+        MaterialApp(
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          locale: Locale('ja'),
+          home: HowToUsePage(),
+        ),
+        surfaceSize: size13ProMax);
+
+    for(int i = 0 ;i < 3 ; i++) {
+      await tester.fling(find.byType(PageView), Offset(-250.0, 0.0), 300);
+
+      await screenMatchesGolden(tester, 'how_to_use_page_swipe_ja_$i');
+    }
+  });
+
 }
