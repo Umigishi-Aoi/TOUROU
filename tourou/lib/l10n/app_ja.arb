@@ -6,6 +6,8 @@
   "howToUseTitle": "How to Use",
   "howToUseText": "スタート",
   "userId": "User ID",
+  "userIdHint": "tourou1234",
   "userName": "User Name",
+  "userNameHint": "トウロウ",
   "registration": "登録"
 }

@@ -136,11 +136,23 @@ abstract class AppLocalizations {
   /// **'User ID'**
   String get userId;
 
+  /// User ID hint text
+  ///
+  /// In en, this message translates to:
+  /// **'tourou1234'**
+  String get userIdHint;
+
   /// User Name Text
   ///
   /// In en, this message translates to:
   /// **'User Name'**
   String get userName;
+
+  /// User Name hint Text
+  ///
+  /// In en, this message translates to:
+  /// **'TOUROU'**
+  String get userNameHint;
 
   /// registration Text
   ///
