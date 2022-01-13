@@ -1,5 +1,8 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/ui/templates/new_user_registration_template.dart';
+
+// Project imports:
+import '../templates/new_user_registration_template.dart';
 
 class NewUserRegistrationPage extends StatefulWidget {
   const NewUserRegistrationPage({Key? key}) : super(key: key);

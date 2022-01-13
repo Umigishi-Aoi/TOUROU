@@ -1,13 +1,16 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:tourou/gen/assets.gen.dart';
-import 'package:tourou/gen/colors.gen.dart';
-import 'package:tourou/gen/fonts.gen.dart';
-import 'package:tourou/res/constants.dart';
-import 'package:tourou/ui/molecules/custom_elevated_button.dart';
-import 'package:tourou/ui/molecules/image_button.dart';
-import 'package:tourou/ui/molecules/text_textField.dart';
+
+// Project imports:
+import '../../gen/assets.gen.dart';
+import '../../gen/colors.gen.dart';
+import '../../gen/fonts.gen.dart';
 import '../../l10n/app_localizations.dart';
+import '../../res/constants.dart';
+import '../molecules/custom_elevated_button.dart';
+import '../molecules/image_button.dart';
+import '../molecules/text_textField.dart';
 
 class NewUserRegistrationTemplate extends StatelessWidget {
   final void Function() imageFunction;

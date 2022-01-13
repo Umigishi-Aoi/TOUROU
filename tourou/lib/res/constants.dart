@@ -66,7 +66,6 @@ const double howToUseTitleFontSize = 28;
 const double howToUseTitlePadding = 32;
 const double howToUseButtonPadding = 16;
 
-
 //new user registration page setting
 const double newUserRegistrationImageTopMarginRatio = 0.05;
 const double newUserRegistrationImageHeightRatio = 0.2;
