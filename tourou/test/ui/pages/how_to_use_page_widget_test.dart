@@ -1,5 +1,6 @@
 // Flutter imports:
 
+// Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -80,7 +81,6 @@ void main() {
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'how_to_use_page_ipad_ja');
-
   });
 
   //フリングして正しい画像が出るかのチェック
@@ -101,7 +101,7 @@ void main() {
         ),
         surfaceSize: size13ProMax);
 
-    for(int i = 0 ;i < 3 ; i++) {
+    for (int i = 0; i < 3; i++) {
       await tester.fling(find.byType(PageView), Offset(-250.0, 0.0), 300);
 
       await screenMatchesGolden(tester, 'how_to_use_page_swipe_en_$i');
@@ -125,11 +125,10 @@ void main() {
         ),
         surfaceSize: size13ProMax);
 
-    for(int i = 0 ;i < 3 ; i++) {
+    for (int i = 0; i < 3; i++) {
       await tester.fling(find.byType(PageView), Offset(-250.0, 0.0), 300);
 
       await screenMatchesGolden(tester, 'how_to_use_page_swipe_ja_$i');
     }
   });
-
 }
