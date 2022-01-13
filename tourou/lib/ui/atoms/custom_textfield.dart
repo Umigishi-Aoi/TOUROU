@@ -2,10 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-// Project imports:
-import '../../gen/colors.gen.dart';
-import '../../res/constants.dart';
-
 class CustomTextField extends StatelessWidget {
   final String hint;
 
