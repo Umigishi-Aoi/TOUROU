@@ -22,5 +22,17 @@
   "howToUseText": "Start",
   "@howToUseText": {
     "description": "howToUseSecondText"
+  },
+  "userId": "User ID",
+  "@userId": {
+    "description": "User ID Text"
+  },
+  "userName": "User Name",
+  "@userName": {
+    "description": "User Name Text"
+  },
+  "registration": "Registration",
+  "@registration": {
+    "description": "registration Text"
   }
 }

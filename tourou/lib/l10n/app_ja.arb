@@ -4,5 +4,8 @@
   "titleTextButtonFirstText": "ログインは",
   "titleTextButtonSecondText": "こちら",
   "howToUseTitle": "How to Use",
-  "howToUseText": "スタート"
+  "howToUseText": "スタート",
+  "userId": "User ID",
+  "userName": "User Name",
+  "registration": "登録"
 }
