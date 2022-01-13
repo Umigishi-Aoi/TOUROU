@@ -29,13 +29,15 @@ class NewUserRegistrationTemplate extends StatelessWidget {
           child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       SizedBox(
                         height: displayHeight *
                             newUserRegistrationImageTopMarginRatio,
-                      )
+                      ),
                       ImageButton(
                         firstImagePath: firstImagePath,
                         height: displayHeight *
