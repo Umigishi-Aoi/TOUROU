@@ -36,12 +36,12 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      height: height,
       width: width,
       child: TextField(
         inputFormatters: textInputFormatters,
         controller: controller,
         style: TextStyle(
-          height: height,
           fontSize: fontSize,
           color: textColor,
           fontFamily: fontFamily,
@@ -54,6 +54,7 @@ class CustomTextField extends StatelessWidget {
           ),
           hintText: hint,
           fillColor: fillColor,
+          filled: true,
         ),
       ),
     );
