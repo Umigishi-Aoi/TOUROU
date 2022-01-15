@@ -19,6 +19,15 @@ Future<void> loadJapaneseFont() async {
   await loader.load();
 }
 
+Widget TestWidget(String language) {
+  return MaterialApp(
+    localizationsDelegates: AppLocalizations.localizationsDelegates,
+    supportedLocales: AppLocalizations.supportedLocales,
+    locale: Locale(language),
+    home: HowToUsePage(),
+  );
+}
+
 void main() {
   testGoldens('how_to_use_page_golden_test', (WidgetTester tester) async {
     await loadAppFonts();
@@ -29,12 +38,7 @@ void main() {
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
     await tester.pumpWidgetBuilder(
-        MaterialApp(
-          localizationsDelegates: AppLocalizations.localizationsDelegates,
-          supportedLocales: AppLocalizations.supportedLocales,
-          locale: Locale('en'),
-          home: HowToUsePage(),
-        ),
+        TestWidget('en'),
         surfaceSize: size6);
 
     //マスターのスクリーンショットと同じかテストする
@@ -42,12 +46,7 @@ void main() {
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
     await tester.pumpWidgetBuilder(
-        MaterialApp(
-          localizationsDelegates: AppLocalizations.localizationsDelegates,
-          supportedLocales: AppLocalizations.supportedLocales,
-          locale: Locale('ja'),
-          home: HowToUsePage(),
-        ),
+        TestWidget('ja'),
         surfaceSize: size6);
 
     //マスターのスクリーンショットと同じかテストする
@@ -58,12 +57,7 @@ void main() {
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
     await tester.pumpWidgetBuilder(
-        MaterialApp(
-          localizationsDelegates: AppLocalizations.localizationsDelegates,
-          supportedLocales: AppLocalizations.supportedLocales,
-          locale: Locale('en'),
-          home: HowToUsePage(),
-        ),
+        TestWidget('en'),
         surfaceSize: sizePad);
 
     //マスターのスクリーンショットと同じかテストする
@@ -71,12 +65,7 @@ void main() {
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
     await tester.pumpWidgetBuilder(
-        MaterialApp(
-          localizationsDelegates: AppLocalizations.localizationsDelegates,
-          supportedLocales: AppLocalizations.supportedLocales,
-          locale: Locale('ja'),
-          home: HowToUsePage(),
-        ),
+        TestWidget('ja'),
         surfaceSize: sizePad);
 
     //マスターのスクリーンショットと同じかテストする
@@ -93,12 +82,7 @@ void main() {
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
     await tester.pumpWidgetBuilder(
-        MaterialApp(
-          localizationsDelegates: AppLocalizations.localizationsDelegates,
-          supportedLocales: AppLocalizations.supportedLocales,
-          locale: Locale('en'),
-          home: HowToUsePage(),
-        ),
+        TestWidget('en'),
         surfaceSize: size13ProMax);
 
     for (int i = 0; i < 3; i++) {
@@ -117,12 +101,7 @@ void main() {
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
     await tester.pumpWidgetBuilder(
-        MaterialApp(
-          localizationsDelegates: AppLocalizations.localizationsDelegates,
-          supportedLocales: AppLocalizations.supportedLocales,
-          locale: Locale('ja'),
-          home: HowToUsePage(),
-        ),
+        TestWidget('ja'),
         surfaceSize: size13ProMax);
 
     for (int i = 0; i < 3; i++) {
