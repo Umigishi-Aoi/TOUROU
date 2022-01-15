@@ -43,7 +43,6 @@ class NewUserRegistrationTemplate extends StatelessWidget {
         body: SafeArea(
           child: Center(
               child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Column(
@@ -74,7 +73,7 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                         minLines: newUserRegistrationMinLine,
                         fieldFontSize: fieldFontSize,
                         fieldTextColor: ColorName.mainBlack,
-                        fillColor: ColorName.itemBackground,
+                        fillColor: ColorName.tourouBackground,
                         borderColor: ColorName.textWhite,
                         textInputFormatters: [
                           FilteringTextInputFormatter.allow(
@@ -95,7 +94,7 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                       minLines: newUserRegistrationMinLine,
                       fieldFontSize: fieldFontSize,
                       fieldTextColor: ColorName.mainBlack,
-                      fillColor: ColorName.itemBackground,
+                      fillColor: ColorName.tourouBackground,
                       borderColor: ColorName.textWhite,
                       textInputFormatters: [
                         FilteringTextInputFormatter.allow(RegExp(r'{,16}')),
@@ -118,7 +117,7 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                   fontFamily: FontFamily.mplus1,
                   height: displayHeight * buttonHeightRatio,
                   width: displayWidth * buttonWidthRatio,
-                  buttonColor: ColorName.itemBackground,
+                  buttonColor: ColorName.tourouBackground,
                   function: buttonFunction,
                 ),
               )

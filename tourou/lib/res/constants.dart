@@ -67,13 +67,13 @@ const double howToUseTitlePadding = 32;
 const double howToUseButtonPadding = 16;
 
 //new user registration page setting
-const double newUserRegistrationImageTopMarginRatio = 0.05;
+const double newUserRegistrationImageTopMarginRatio = 0.1;
 const double newUserRegistrationImageHeightRatio = 0.2;
-const double newUserRegistrationFieldPadding = 8;
+const double newUserRegistrationFieldPadding = 16;
 const double newUserRegistrationFieldHeightRatio = 0.1;
-const double newUserRegistrationFieldFontSizeRatio = 0.9;
-const double newUserRegistrationButtonTopMarginRatio = 0.2;
-const double newUserRegistrationButtonMargin = 8;
+const double newUserRegistrationFieldFontSizeRatio = 0.3;
+const double newUserRegistrationButtonTopMarginRatio = 0.15;
+const double newUserRegistrationButtonMargin = 18;
 const int newUserRegistrationMinLine = 1;
 
 const flavor = String.fromEnvironment('FLAVOR');

@@ -43,7 +43,7 @@ class ColorName {
   static const Color textWhite = Color(0xFFEEEEEE);
 
   /// Color: #FFFFFFB3
-  static const Color tourouBackgoround = Color(0xFFFFFFB3);
+  static const Color tourouBackground = Color(0xFFFFFFB3);
 
   /// Color: #FFC4C4C4
   static const Color userIdText = Color(0xFFC4C4C4);

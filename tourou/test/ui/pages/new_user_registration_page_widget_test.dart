@@ -8,7 +8,7 @@ import 'package:golden_toolkit/golden_toolkit.dart';
 
 // Project imports:
 import '../../../lib/l10n/app_localizations.dart';
-import '../../../lib/ui/pages/title_page.dart';
+import '../../../lib/ui/pages/new_user_registration_page.dart';
 
 Future<void> loadJapaneseFont() async {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -22,12 +22,13 @@ Widget TestWidget(String language) {
     localizationsDelegates: AppLocalizations.localizationsDelegates,
     supportedLocales: AppLocalizations.supportedLocales,
     locale: Locale(language),
-    home: TitlePage(),
+    home: NewUserRegistrationPage(),
   );
 }
 
 void main() {
-  testGoldens('title_page_golden_test', (WidgetTester tester) async {
+  testGoldens('new_user_registration_page_golden_test',
+      (WidgetTester tester) async {
     await loadAppFonts();
     await loadJapaneseFont();
 
@@ -38,13 +39,13 @@ void main() {
     await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: size6);
 
     //マスターのスクリーンショットと同じかテストする
-    await screenMatchesGolden(tester, 'title_page_iphone6_en');
+    await screenMatchesGolden(tester, 'new_user_registration_page_iphone6_en');
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
     await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: size6);
 
     //マスターのスクリーンショットと同じかテストする
-    await screenMatchesGolden(tester, 'title_page_iphone6_ja');
+    await screenMatchesGolden(tester, 'new_user_registration_page_iphone6_ja');
 
     //デバイスの画面サイズ
     final sizePad = Size(1024, 1366);
@@ -53,12 +54,12 @@ void main() {
     await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: sizePad);
 
     //マスターのスクリーンショットと同じかテストする
-    await screenMatchesGolden(tester, 'title_page_ipad_en');
+    await screenMatchesGolden(tester, 'new_user_registration_page_ipad_en');
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
     await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: sizePad);
 
     //マスターのスクリーンショットと同じかテストする
-    await screenMatchesGolden(tester, 'title_page_ipad_ja');
+    await screenMatchesGolden(tester, 'new_user_registration_page_ipad_ja');
   });
 }

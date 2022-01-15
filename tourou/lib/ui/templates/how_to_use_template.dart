@@ -65,7 +65,7 @@ class HowToUseTemplate extends StatelessWidget {
                     text: AppLocalizations.of(context)!.howToUseText,
                     height: deviceHeight * buttonHeightRatio,
                     width: deviceWidth * buttonWidthRatio,
-                    buttonColor: ColorName.tourouBackgoround,
+                    buttonColor: ColorName.tourouBackground,
                     function: function,
                     color: ColorName.mainBlack,
                     fontSize: deviceHeight *
