@@ -1,6 +1,4 @@
 // Flutter imports:
-
-// Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -37,17 +35,13 @@ void main() {
     final size6 = Size(375, 667);
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(
-        TestWidget('en'),
-        surfaceSize: size6);
+    await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: size6);
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'how_to_use_page_iphone6_en');
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(
-        TestWidget('ja'),
-        surfaceSize: size6);
+    await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: size6);
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'how_to_use_page_iphone6_ja');
@@ -56,17 +50,13 @@ void main() {
     final sizePad = Size(1024, 1366);
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(
-        TestWidget('en'),
-        surfaceSize: sizePad);
+    await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: sizePad);
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'how_to_use_page_ipad_en');
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(
-        TestWidget('ja'),
-        surfaceSize: sizePad);
+    await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: sizePad);
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'how_to_use_page_ipad_ja');
@@ -81,9 +71,7 @@ void main() {
     final size13ProMax = Size(428, 926);
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(
-        TestWidget('en'),
-        surfaceSize: size13ProMax);
+    await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: size13ProMax);
 
     for (int i = 0; i < 3; i++) {
       await tester.fling(find.byType(PageView), Offset(-250.0, 0.0), 300);
@@ -100,9 +88,7 @@ void main() {
     final size13ProMax = Size(428, 926);
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(
-        TestWidget('ja'),
-        surfaceSize: size13ProMax);
+    await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: size13ProMax);
 
     for (int i = 0; i < 3; i++) {
       await tester.fling(find.byType(PageView), Offset(-250.0, 0.0), 300);
