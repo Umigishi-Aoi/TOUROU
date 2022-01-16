@@ -8,6 +8,7 @@ import 'package:tourou/ui/atoms/custom_image.dart';
 import 'package:tourou/ui/atoms/custom_text.dart';
 import 'package:tourou/ui/molecules/text_text_button.dart';
 import 'package:tourou/ui/organisms/sign_in_buttons_organism.dart';
+import '../../l10n/app_localizations.dart';
 
 class NewRegistrationTemplate extends StatelessWidget {
   final SvgPicture googleIcon;
@@ -50,7 +51,7 @@ class NewRegistrationTemplate extends StatelessWidget {
               ),
               SignInButtonsOrganism(
                   googleIcon: googleIcon,
-                  googleText: '',
+                  googleText: AppLocalizations.of(context)!.signUpWithGoogle,
                   textColor: ColorName.googleSignInButtonBlack,
                   fontSize: fontSize,
                   height: displayHeight * buttonHeightRatio,
@@ -62,13 +63,13 @@ class NewRegistrationTemplate extends StatelessWidget {
                   iconSize: googleSignInButtonIconSize,
                   buttonMargin: displayHeight * signInButtonsMarginRatio,
                   appleIcon: appleIcon,
-                  appleText: '',
+                  appleText: AppLocalizations.of(context)!.signUpWithApple,
                   appleFunction: appleFunction),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CustomText(
-                    text: '',
+                    text: AppLocalizations.of(context)!.signUpExplanation,
                     color: ColorName.textWhite,
                     fontSize: fontSize,
                     fontFamily: FontFamily.mplus1,
@@ -77,33 +78,33 @@ class NewRegistrationTemplate extends StatelessWidget {
                     height: displayHeight * newRegistrationTextMarginRatio,
                   ),
                   TextTextButton(
-                      firstText: '',
+                      firstText: AppLocalizations.of(context)!.dot,
                       firstColor: ColorName.textWhite,
                       fontSize: fontSize,
                       fontFamily: FontFamily.mplus1,
-                      secondText: '',
+                      secondText: AppLocalizations.of(context)!.disclaimer,
                       secondColor: ColorName.textButton,
                       function: disclaimerFunction),
                   SizedBox(
                     height: displayHeight * newRegistrationTextMarginRatio,
                   ),
                   TextTextButton(
-                      firstText: '',
+                      firstText: AppLocalizations.of(context)!.dot,
                       firstColor: ColorName.textWhite,
                       fontSize: fontSize,
                       fontFamily: FontFamily.mplus1,
-                      secondText: '',
+                      secondText: AppLocalizations.of(context)!.privacyPolicy,
                       secondColor: ColorName.textButton,
                       function: privacyPolicyFunction),
                 ],
               ),
 
               TextTextButton(
-                  firstText: '',
+                  firstText: AppLocalizations.of(context)!.goBackTo,
                   firstColor: ColorName.textWhite,
                   fontSize: fontSize,
                   fontFamily: FontFamily.mplus1,
-                  secondText: '',
+                  secondText: AppLocalizations.of(context)!.title,
                   secondColor: ColorName.textButton,
                   function: goBackToTitleFunction),
             ],
