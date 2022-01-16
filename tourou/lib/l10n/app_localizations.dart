@@ -101,71 +101,119 @@ abstract class AppLocalizations {
     Locale('ja')
   ];
 
-  /// additionalTitleText
+  /// No description provided for @additionalTitleText.
   ///
   /// In en, this message translates to:
   /// **'SNS App Not to Share'**
   String get additionalTitleText;
 
-  /// explanationText
+  /// No description provided for @explanationText.
   ///
   /// In en, this message translates to:
   /// **'Tap the egg \nfor new registration!'**
   String get explanationText;
 
-  /// titleTextButtonFirstText
+  /// No description provided for @titleTextButtonFirstText.
   ///
   /// In en, this message translates to:
   /// **'Login is '**
   String get titleTextButtonFirstText;
 
-  /// titleTextButtonSecondText
+  /// No description provided for @titleTextButtonSecondText.
   ///
   /// In en, this message translates to:
   /// **'here'**
   String get titleTextButtonSecondText;
 
-  /// howToUseTitle
+  /// No description provided for @howToUseTitle.
   ///
   /// In en, this message translates to:
   /// **'How to Use'**
   String get howToUseTitle;
 
-  /// howToUseSecondText
+  /// No description provided for @howToUseText.
   ///
   /// In en, this message translates to:
   /// **'Start'**
   String get howToUseText;
 
-  /// User ID Text
+  /// No description provided for @userId.
   ///
   /// In en, this message translates to:
   /// **'User ID'**
   String get userId;
 
-  /// User ID hint text
+  /// No description provided for @userIdHint.
   ///
   /// In en, this message translates to:
   /// **'tourou1234'**
   String get userIdHint;
 
-  /// User Name Text
+  /// No description provided for @userName.
   ///
   /// In en, this message translates to:
   /// **'User Name'**
   String get userName;
 
-  /// User Name hint Text
+  /// No description provided for @userNameHint.
   ///
   /// In en, this message translates to:
   /// **'TOUROU'**
   String get userNameHint;
 
-  /// registration Text
+  /// No description provided for @registration.
   ///
   /// In en, this message translates to:
   /// **'Registration'**
   String get registration;
+
+  /// No description provided for @signUpWithGoogle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up with Google'**
+  String get signUpWithGoogle;
+
+  /// No description provided for @signUpWithApple.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up with Apple'**
+  String get signUpWithApple;
+
+  /// No description provided for @signUpExplanation.
+  ///
+  /// In en, this message translates to:
+  /// **'By signing up, you agree to followings.'**
+  String get signUpExplanation;
+
+  /// No description provided for @disclaimer.
+  ///
+  /// In en, this message translates to:
+  /// **'Disclaimer'**
+  String get disclaimer;
+
+  /// No description provided for @privacyPolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy Policy'**
+  String get privacyPolicy;
+
+  /// No description provided for @dot.
+  ///
+  /// In en, this message translates to:
+  /// **'・ '**
+  String get dot;
+
+  /// No description provided for @goBackTo.
+  ///
+  /// In en, this message translates to:
+  /// **'Go back to '**
+  String get goBackTo;
+
+  /// No description provided for @title.
+  ///
+  /// In en, this message translates to:
+  /// **'Title'**
+  String get title;
 }
 
 class _AppLocalizationsDelegate

@@ -1,46 +1,21 @@
 {
   "additionalTitleText": "SNS App Not to Share",
-  "@additionalTitleText": {
-    "description": "additionalTitleText"
-  },
   "explanationText": "Tap the egg \nfor new registration!",
-  "@explanationText": {
-    "description": "explanationText"
-  },
   "titleTextButtonFirstText": "Login is ",
-  "@titleTextButtonFirstText": {
-    "description": "titleTextButtonFirstText"
-  },
   "titleTextButtonSecondText": "here",
-  "@titleTextButtonSecondText": {
-    "description": "titleTextButtonSecondText"
-  },
   "howToUseTitle": "How to Use",
-  "@howToUseTitle": {
-    "description": "howToUseTitle"
-  },
   "howToUseText": "Start",
-  "@howToUseText": {
-    "description": "howToUseSecondText"
-  },
   "userId": "User ID",
-  "@userId": {
-    "description": "User ID Text"
-  },
   "userIdHint": "tourou1234",
-  "@userIdHint": {
-    "description": "User ID hint text"
-  },
   "userName": "User Name",
-  "@userName": {
-  "description": "User Name Text"
-  },
   "userNameHint": "TOUROU",
-  "@userNameHint": {
-    "description": "User Name hint Text"
-  },
   "registration": "Registration",
-  "@registration": {
-    "description": "registration Text"
-  }
+  "signUpWithGoogle": "Sign up with Google",
+  "signUpWithApple": "Sign up with Apple",
+  "signUpExplanation": "By signing up, you agree to followings.",
+  "disclaimer": "Disclaimer",
+  "privacyPolicy": "Privacy Policy",
+  "dot": "・ ",
+  "goBackTo": "Go back to ",
+  "title": "Title"
 }

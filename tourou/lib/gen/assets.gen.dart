@@ -12,6 +12,13 @@ import 'package:flutter/widgets.dart';
 // Package imports:
 import 'package:flutter_svg/flutter_svg.dart';
 
+class $AssetsHowToUseGen {
+  const $AssetsHowToUseGen();
+
+  $AssetsHowToUseEnGen get en => const $AssetsHowToUseEnGen();
+  $AssetsHowToUseJaGen get ja => const $AssetsHowToUseJaGen();
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -47,12 +54,67 @@ class $AssetsSignInIconsGen {
       const SvgGenImage('assets/sign_in_icons/google_logo.svg');
 }
 
+class $AssetsSignInIconsForTestGen {
+  const $AssetsSignInIconsForTestGen();
+
+  /// File path: assets/sign_in_icons_for_test/apple_test.svg
+  SvgGenImage get appleTest =>
+      const SvgGenImage('assets/sign_in_icons_for_test/apple_test.svg');
+
+  /// File path: assets/sign_in_icons_for_test/google_test.svg
+  SvgGenImage get googleTest =>
+      const SvgGenImage('assets/sign_in_icons_for_test/google_test.svg');
+}
+
+class $AssetsHowToUseEnGen {
+  const $AssetsHowToUseEnGen();
+
+  /// File path: assets/how_to_use/en/how_to_use_en_1.png
+  AssetGenImage get howToUseEn1 =>
+      const AssetGenImage('assets/how_to_use/en/how_to_use_en_1.png');
+
+  /// File path: assets/how_to_use/en/how_to_use_en_2.png
+  AssetGenImage get howToUseEn2 =>
+      const AssetGenImage('assets/how_to_use/en/how_to_use_en_2.png');
+
+  /// File path: assets/how_to_use/en/how_to_use_en_3.png
+  AssetGenImage get howToUseEn3 =>
+      const AssetGenImage('assets/how_to_use/en/how_to_use_en_3.png');
+
+  /// File path: assets/how_to_use/en/how_to_use_en_4.png
+  AssetGenImage get howToUseEn4 =>
+      const AssetGenImage('assets/how_to_use/en/how_to_use_en_4.png');
+}
+
+class $AssetsHowToUseJaGen {
+  const $AssetsHowToUseJaGen();
+
+  /// File path: assets/how_to_use/ja/how_to_use_ja_1.png
+  AssetGenImage get howToUseJa1 =>
+      const AssetGenImage('assets/how_to_use/ja/how_to_use_ja_1.png');
+
+  /// File path: assets/how_to_use/ja/how_to_use_ja_2.png
+  AssetGenImage get howToUseJa2 =>
+      const AssetGenImage('assets/how_to_use/ja/how_to_use_ja_2.png');
+
+  /// File path: assets/how_to_use/ja/how_to_use_ja_3.png
+  AssetGenImage get howToUseJa3 =>
+      const AssetGenImage('assets/how_to_use/ja/how_to_use_ja_3.png');
+
+  /// File path: assets/how_to_use/ja/how_to_use_ja_4.png
+  AssetGenImage get howToUseJa4 =>
+      const AssetGenImage('assets/how_to_use/ja/how_to_use_ja_4.png');
+}
+
 class Assets {
   Assets._();
 
+  static const $AssetsHowToUseGen howToUse = $AssetsHowToUseGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsLogoGen logo = $AssetsLogoGen();
   static const $AssetsSignInIconsGen signInIcons = $AssetsSignInIconsGen();
+  static const $AssetsSignInIconsForTestGen signInIconsForTest =
+      $AssetsSignInIconsForTestGen();
 }
 
 class AssetGenImage extends AssetImage {

@@ -34,9 +34,9 @@ class NewUserRegistrationTemplate extends StatelessWidget {
     final double displayHeight = MediaQuery.of(context).size.height;
     final double displayWidth = MediaQuery.of(context).size.width;
     final double fieldHeight =
-        displayHeight * newUserRegistrationFieldHeightRatio;
+        displayHeight * newProfileSettingFieldHeightRatio;
     final double fieldFontSize =
-        fieldHeight * newUserRegistrationFieldFontSizeRatio;
+        fieldHeight * newProfileSettingFieldFontSizeRatio;
     final double fieldWidth = displayWidth * buttonWidthRatio;
     return Scaffold(
         backgroundColor: ColorName.mainBlack,
@@ -50,17 +50,17 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                 children: [
                   SizedBox(
                     height:
-                        displayHeight * newUserRegistrationImageTopMarginRatio,
+                        displayHeight * newProfileSettingImageTopMarginRatio,
                   ),
                   ImageButton(
                     firstImagePath: Assets.images.iconNoImage.path,
-                    height: displayHeight * newUserRegistrationImageHeightRatio,
+                    height: displayHeight * newProfileSettingImageHeightRatio,
                     function: imageFunction,
                     fit: BoxFit.cover,
                     isCircle: true,
                   ),
                   Padding(
-                    padding: EdgeInsets.all(newUserRegistrationFieldPadding),
+                    padding: EdgeInsets.all(newProfileSettingFieldPadding),
                     child: TextTextField(
                         text: AppLocalizations.of(context)!.userId,
                         titleTextColor: ColorName.textWhite,
@@ -70,7 +70,7 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                         controller: userIdController,
                         height: fieldHeight,
                         width: fieldWidth,
-                        minLines: newUserRegistrationMinLine,
+                        minLines: newProfileSettingMinLine,
                         fieldFontSize: fieldFontSize,
                         fieldTextColor: ColorName.mainBlack,
                         fillColor: ColorName.tourouBackground,
@@ -81,7 +81,7 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                         ]),
                   ),
                   Padding(
-                    padding: EdgeInsets.all(newUserRegistrationFieldPadding),
+                    padding: EdgeInsets.all(newProfileSettingFieldPadding),
                     child: TextTextField(
                       text: AppLocalizations.of(context)!.userName,
                       titleTextColor: ColorName.textWhite,
@@ -91,7 +91,7 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                       controller: userNameController,
                       height: fieldHeight,
                       width: fieldWidth,
-                      minLines: newUserRegistrationMinLine,
+                      minLines: newProfileSettingMinLine,
                       fieldFontSize: fieldFontSize,
                       fieldTextColor: ColorName.mainBlack,
                       fillColor: ColorName.tourouBackground,
@@ -104,10 +104,10 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: displayHeight * newUserRegistrationButtonTopMarginRatio,
+                height: displayHeight * newProfileSettingButtonTopMarginRatio,
               ),
               Padding(
-                padding: EdgeInsets.all(newUserRegistrationButtonMargin),
+                padding: EdgeInsets.all(newProfileSettingButtonMargin),
                 child: CustomElevatedButton(
                   text: AppLocalizations.of(context)!.registration,
                   color: ColorName.mainBlack,

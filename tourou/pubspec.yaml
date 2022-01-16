@@ -90,6 +90,7 @@ flutter:
     - assets/logo/
     - assets/images/
     - assets/sign_in_icons/
+    - assets/sign_in_icons_for_test/
     - assets/how_to_use/en/
     - assets/how_to_use/ja/
 

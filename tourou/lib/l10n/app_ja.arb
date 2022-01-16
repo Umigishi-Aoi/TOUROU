@@ -9,5 +9,13 @@
   "userIdHint": "tourou1234",
   "userName": "User Name",
   "userNameHint": "トウロウ",
-  "registration": "登録"
+  "registration": "登録",
+  "signUpWithGoogle": "Sign up with Google",
+  "signUpWithApple": "Sign up with Apple",
+  "signUpExplanation": "サインアップすると、以下に同意したことになります。",
+  "disclaimer": "免責事項",
+  "privacyPolicy": "プライバシーポリシー",
+  "dot": "・ ",
+  "goBackTo": "タイトルへ",
+  "title": "戻る"
 }

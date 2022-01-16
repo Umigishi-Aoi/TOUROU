@@ -37,4 +37,28 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get registration => '登録';
+
+  @override
+  String get signUpWithGoogle => 'Sign up with Google';
+
+  @override
+  String get signUpWithApple => 'Sign up with Apple';
+
+  @override
+  String get signUpExplanation => 'サインアップすると、以下に同意したことになります。';
+
+  @override
+  String get disclaimer => '免責事項';
+
+  @override
+  String get privacyPolicy => 'プライバシーポリシー';
+
+  @override
+  String get dot => '・ ';
+
+  @override
+  String get goBackTo => 'タイトルへ';
+
+  @override
+  String get title => '戻る';
 }
