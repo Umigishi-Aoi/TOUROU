@@ -182,7 +182,7 @@ abstract class AppLocalizations {
   /// No description provided for @signUpExplanation.
   ///
   /// In en, this message translates to:
-  /// **'By signing up, you agree to followings.'**
+  /// **'By signing up,\nyou agree to followings.'**
   String get signUpExplanation;
 
   /// No description provided for @disclaimer.

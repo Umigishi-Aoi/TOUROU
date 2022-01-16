@@ -16,6 +16,8 @@ class TextTextButton extends StatelessWidget {
   final FontWeight? secondBold;
   final void Function() function;
 
+  final MainAxisAlignment mainAxisAlignment;
+
   const TextTextButton({
     Key? key,
     required this.firstText,
@@ -27,12 +29,13 @@ class TextTextButton extends StatelessWidget {
     required this.secondColor,
     this.secondBold,
     required this.function,
+    required this.mainAxisAlignment,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: mainAxisAlignment,
       children: [
         CustomText(
           text: firstText,

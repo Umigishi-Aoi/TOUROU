@@ -83,6 +83,7 @@ class TitleTemplate extends StatelessWidget {
                 firstColor: ColorName.textWhite,
                 secondColor: ColorName.textButton,
                 fontFamily: FontFamily.mplus1,
+                mainAxisAlignment: MainAxisAlignment.center,
               ),
             ],
           ),

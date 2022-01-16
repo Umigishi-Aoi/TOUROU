@@ -45,7 +45,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get signUpWithApple => 'Sign up with Apple';
 
   @override
-  String get signUpExplanation => 'By signing up, you agree to followings.';
+  String get signUpExplanation => 'By signing up,\nyou agree to followings.';
 
   @override
   String get disclaimer => 'Disclaimer';
