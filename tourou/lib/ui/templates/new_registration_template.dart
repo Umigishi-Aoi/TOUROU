@@ -91,7 +91,7 @@ class NewRegistrationTemplate extends StatelessWidget {
                   fontFamilyInApple: FontFamily.mplus1,
                 ),
               Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
                     padding: EdgeInsets.symmetric(
@@ -118,7 +118,7 @@ class NewRegistrationTemplate extends StatelessWidget {
                       secondText: AppLocalizations.of(context)!.disclaimer,
                       secondColor: ColorName.textButton,
                       function: disclaimerFunction,
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                     ),
                   ),
                   SizedBox(
@@ -135,7 +135,7 @@ class NewRegistrationTemplate extends StatelessWidget {
                       secondText: AppLocalizations.of(context)!.privacyPolicy,
                       secondColor: ColorName.textButton,
                       function: privacyPolicyFunction,
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                     ),
                   ),
                 ],
