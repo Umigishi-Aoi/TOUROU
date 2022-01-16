@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 import '../../gen/assets.gen.dart';
 import '../atoms/custom_text.dart';
 
-class CustomGoogleSignInButton extends StatelessWidget {
+class SignInButton extends StatelessWidget {
+  final SvgGenImage icon;
   final String text;
   final Color textColor;
   final double fontSize;
@@ -21,8 +22,9 @@ class CustomGoogleSignInButton extends StatelessWidget {
   final double iconMargin;
   final double iconSize;
 
-  const CustomGoogleSignInButton({
+  const SignInButton({
     Key? key,
+    required this.icon,
     required this.text,
     required this.textColor,
     required this.fontSize,
@@ -62,6 +64,11 @@ class CustomGoogleSignInButton extends StatelessWidget {
               Assets.signInIcons.appleLogo.svg(
                 width: iconSize,
                 height: iconSize,
+              ),
+              SizedBox(
+                height: iconSize,
+                width: iconSize,
+                child: icon,
               ),
               SizedBox(
                 width: iconMargin,
