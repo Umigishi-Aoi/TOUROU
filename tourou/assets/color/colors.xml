@@ -9,6 +9,5 @@
     <color name="FABBackgoround">#FFB3D9FF</color>
     <color name="switchAccentColor">#FF02D1FE</color>
     <color name="signInButtonWhite">#FFFFFFFF</color>
-    <color name="googleSignInButtonBlack">#8A000000</color>
-    <color name="appleSignInButtonBlack">#FF000000</color>
+    <color name="signInButtonBlack">#FF000000</color>
 </resources>

@@ -55,7 +55,7 @@ class NewRegistrationTemplate extends StatelessWidget {
                 SignInButtonsOrganism(
                   googleIcon: Assets.signInIconsForTest.googleTest.svg(),
                   googleText: AppLocalizations.of(context)!.signUpWithGoogle,
-                  textColor: ColorName.googleSignInButtonBlack,
+                  textColor: ColorName.signInButtonBlack,
                   fontSize: fontSize,
                   height: displayHeight * buttonHeightRatio,
                   width: displayWidth * buttonWidthRatio,
@@ -75,7 +75,7 @@ class NewRegistrationTemplate extends StatelessWidget {
                 SignInButtonsOrganism(
                   googleIcon: Assets.signInIcons.googleLogo.svg(),
                   googleText: AppLocalizations.of(context)!.signUpWithGoogle,
-                  textColor: ColorName.googleSignInButtonBlack,
+                  textColor: ColorName.signInButtonBlack,
                   fontSize: fontSize,
                   height: displayHeight * buttonHeightRatio,
                   width: displayWidth * buttonWidthRatio,

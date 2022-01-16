@@ -5,12 +5,9 @@
 
 // ignore_for_file: directives_ordering,unnecessary_import
 
-// Flutter imports:
-import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-
-// Package imports:
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/services.dart';
 
 class $AssetsHowToUseGen {
   const $AssetsHowToUseGen();
