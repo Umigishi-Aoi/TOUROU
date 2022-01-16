@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import '../templates/new_user_registration_template.dart';
+import '../templates/new_profile_setting_template.dart';
 
 class NewUserRegistrationPage extends StatefulWidget {
   const NewUserRegistrationPage({Key? key}) : super(key: key);
