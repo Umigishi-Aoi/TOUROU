@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 // Project imports:
-import '../../gen/assets.gen.dart';
 import '../atoms/custom_text.dart';
 
 class SignInButton extends StatelessWidget {

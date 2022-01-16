@@ -1,14 +1,16 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:tourou/gen/assets.gen.dart';
-import 'package:tourou/gen/colors.gen.dart';
-import 'package:tourou/gen/fonts.gen.dart';
-import 'package:tourou/res/constants.dart';
-import 'package:tourou/ui/atoms/custom_image.dart';
-import 'package:tourou/ui/atoms/custom_text.dart';
-import 'package:tourou/ui/molecules/text_text_button.dart';
-import 'package:tourou/ui/organisms/sign_in_buttons_organism.dart';
+
+// Project imports:
+import '../../gen/assets.gen.dart';
+import '../../gen/colors.gen.dart';
+import '../../gen/fonts.gen.dart';
 import '../../l10n/app_localizations.dart';
+import '../../res/constants.dart';
+import '../atoms/custom_image.dart';
+import '../atoms/custom_text.dart';
+import '../molecules/text_text_button.dart';
+import '../organisms/sign_in_buttons_organism.dart';
 
 class NewRegistrationTemplate extends StatelessWidget {
   final void Function() googleFunction;

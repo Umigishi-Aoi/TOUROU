@@ -1,5 +1,8 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/ui/templates/new_registration_template.dart';
+
+// Project imports:
+import '../templates/new_registration_template.dart';
 
 class NewRegistrationPage extends StatelessWidget {
   final bool isTest;
