@@ -47,7 +47,8 @@ class NewRegistrationTemplate extends StatelessWidget {
             children: [
               CustomImage(
                 path: Assets.images.enterIconTourou.path,
-                height: displayHeight * logoHeightRatio,
+                height: displayHeight * titleButtonHeightRatio,
+                width: displayWidth * titleButtonWidthRatio,
                 fit: BoxFit.contain,
               ),
               if (isTest)
