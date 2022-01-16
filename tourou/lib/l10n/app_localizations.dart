@@ -1,15 +1,11 @@
-// Dart imports:
+
 import 'dart:async';
 
-// Flutter imports:
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
-
-// Package imports:
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
-// Project imports:
 import 'app_localizations_en.dart';
 import 'app_localizations_ja.dart';
 
@@ -65,8 +61,7 @@ import 'app_localizations_ja.dart';
 /// be consistent with the languages listed in the AppLocalizations.supportedLocales
 /// property.
 abstract class AppLocalizations {
-  AppLocalizations(String locale)
-      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  AppLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -74,8 +69,7 @@ abstract class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  static const LocalizationsDelegate<AppLocalizations> delegate =
-      _AppLocalizationsDelegate();
+  static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -87,8 +81,7 @@ abstract class AppLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
-      <LocalizationsDelegate<dynamic>>[
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
     delegate,
     GlobalMaterialLocalizations.delegate,
     GlobalCupertinoLocalizations.delegate,
@@ -101,75 +94,122 @@ abstract class AppLocalizations {
     Locale('ja')
   ];
 
-  /// additionalTitleText
+  /// No description provided for @additionalTitleText.
   ///
   /// In en, this message translates to:
   /// **'SNS App Not to Share'**
   String get additionalTitleText;
 
-  /// explanationText
+  /// No description provided for @explanationText.
   ///
   /// In en, this message translates to:
   /// **'Tap the egg \nfor new registration!'**
   String get explanationText;
 
-  /// titleTextButtonFirstText
+  /// No description provided for @titleTextButtonFirstText.
   ///
   /// In en, this message translates to:
   /// **'Login is '**
   String get titleTextButtonFirstText;
 
-  /// titleTextButtonSecondText
+  /// No description provided for @titleTextButtonSecondText.
   ///
   /// In en, this message translates to:
   /// **'here'**
   String get titleTextButtonSecondText;
 
-  /// howToUseTitle
+  /// No description provided for @howToUseTitle.
   ///
   /// In en, this message translates to:
   /// **'How to Use'**
   String get howToUseTitle;
 
-  /// howToUseSecondText
+  /// No description provided for @howToUseText.
   ///
   /// In en, this message translates to:
   /// **'Start'**
   String get howToUseText;
 
-  /// User ID Text
+  /// No description provided for @userId.
   ///
   /// In en, this message translates to:
   /// **'User ID'**
   String get userId;
 
-  /// User ID hint text
+  /// No description provided for @userIdHint.
   ///
   /// In en, this message translates to:
   /// **'tourou1234'**
   String get userIdHint;
 
-  /// User Name Text
+  /// No description provided for @userName.
   ///
   /// In en, this message translates to:
   /// **'User Name'**
   String get userName;
 
-  /// User Name hint Text
+  /// No description provided for @userNameHint.
   ///
   /// In en, this message translates to:
   /// **'TOUROU'**
   String get userNameHint;
 
-  /// registration Text
+  /// No description provided for @registration.
   ///
   /// In en, this message translates to:
   /// **'Registration'**
   String get registration;
+
+  /// No description provided for @signUpWithGoogle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up with Google'**
+  String get signUpWithGoogle;
+
+  /// No description provided for @signUpWithApple.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up with Apple'**
+  String get signUpWithApple;
+
+  /// No description provided for @signUpExplanation.
+  ///
+  /// In en, this message translates to:
+  /// **'By signing up, you agree to followings.'**
+  String get signUpExplanation;
+
+  /// No description provided for @disclaimer.
+  ///
+  /// In en, this message translates to:
+  /// **'Disclaimer'**
+  String get disclaimer;
+
+  /// No description provided for @privacyPolicy.
+  ///
+  /// In en, this message translates to:
+  /// **'Privacy Policy'**
+  String get privacyPolicy;
+
+  /// No description provided for @dot.
+  ///
+  /// In en, this message translates to:
+  /// **'・ '**
+  String get dot;
+
+  /// No description provided for @goBackTo.
+  ///
+  /// In en, this message translates to:
+  /// **'Go back to '**
+  String get goBackTo;
+
+  /// No description provided for @title.
+  ///
+  /// In en, this message translates to:
+  /// **'Title'**
+  String get title;
 }
 
-class _AppLocalizationsDelegate
-    extends LocalizationsDelegate<AppLocalizations> {
+class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
   const _AppLocalizationsDelegate();
 
   @override
@@ -178,25 +218,25 @@ class _AppLocalizationsDelegate
   }
 
   @override
-  bool isSupported(Locale locale) =>
-      <String>['en', 'ja'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['en', 'ja'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
 }
 
 AppLocalizations lookupAppLocalizations(Locale locale) {
+
+
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'en':
-      return AppLocalizationsEn();
-    case 'ja':
-      return AppLocalizationsJa();
+    case 'en': return AppLocalizationsEn();
+    case 'ja': return AppLocalizationsJa();
   }
 
   throw FlutterError(
-      'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-      'an issue with the localizations generation tool. Please file an issue '
-      'on GitHub with a reproducible sample app and the gen-l10n configuration '
-      'that was used.');
+    'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+    'an issue with the localizations generation tool. Please file an issue '
+    'on GitHub with a reproducible sample app and the gen-l10n configuration '
+    'that was used.'
+  );
 }

@@ -1,4 +1,6 @@
-// Project imports:
+
+
+
 import 'app_localizations.dart';
 
 /// The translations for English (`en`).
@@ -37,4 +39,28 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get registration => 'Registration';
+
+  @override
+  String get signUpWithGoogle => 'Sign up with Google';
+
+  @override
+  String get signUpWithApple => 'Sign up with Apple';
+
+  @override
+  String get signUpExplanation => 'By signing up, you agree to followings.';
+
+  @override
+  String get disclaimer => 'Disclaimer';
+
+  @override
+  String get privacyPolicy => 'Privacy Policy';
+
+  @override
+  String get dot => '・ ';
+
+  @override
+  String get goBackTo => 'Go back to ';
+
+  @override
+  String get title => 'Title';
 }
