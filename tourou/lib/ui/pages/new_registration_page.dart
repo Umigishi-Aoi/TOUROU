@@ -9,13 +9,11 @@ class NewRegistrationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NewRegistrationTemplate(
-        googleIcon: googleIcon,
-        appleIcon: appleIcon,
-        googleFunction: googleFunction,
-        appleFunction: appleFunction,
-        privacyPolicyFunction: privacyPolicyFunction,
-        disclaimerFunction: disclaimerFunction,
-        goBackToTitleFunction: goBackToTitleFunction,
+        googleFunction: () {},
+        appleFunction: () {},
+        privacyPolicyFunction: () {},
+        disclaimerFunction: () {},
+        goBackToTitleFunction: () {},
         isTest: isTest);
   }
 }
