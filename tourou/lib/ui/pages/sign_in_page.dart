@@ -1,5 +1,8 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/ui/templates/sign_in_template.dart';
+
+// Project imports:
+import '../templates/sign_in_template.dart';
 
 class SignInPage extends StatelessWidget {
   final bool isTest;
@@ -9,9 +12,9 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SignInTemplate(
-        googleFunction: (){},
-        appleFunction: (){},
-        goBackToTitleFunction: (){},
+        googleFunction: () {},
+        appleFunction: () {},
+        goBackToTitleFunction: () {},
         isTest: isTest);
   }
 }
