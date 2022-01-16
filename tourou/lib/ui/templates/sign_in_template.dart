@@ -99,6 +99,5 @@ class SignInTemplate extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }
