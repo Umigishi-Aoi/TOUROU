@@ -1,6 +1,3 @@
-// Dart imports:
-import 'dart:io';
-
 // Flutter imports:
 import 'package:flutter/material.dart';
 
@@ -65,7 +62,7 @@ class SignInButtonsOrganism extends StatelessWidget {
           iconMargin: iconMargin,
           iconSize: iconSize,
         ),
-        if (Platform.isIOS)
+        if (Theme.of(context).platform == TargetPlatform.iOS)
           Column(
             children: [
               SizedBox(
