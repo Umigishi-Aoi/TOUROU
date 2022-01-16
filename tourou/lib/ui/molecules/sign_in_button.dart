@@ -42,8 +42,6 @@ class SignInButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final double _height = max(height, appleSignInButtonMinimumHeight);
-    // final double _width = max(width, appleSignInButtonMinimumWidth);
     return SizedBox(
       height: height,
       width: width,
@@ -57,10 +55,7 @@ class SignInButton extends StatelessWidget {
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: horizontalPadding
-            // ?? max(googleSignInButtonHorizontalPadding,
-            //     _width * appleSignInButtonHorizonalPaddingRatio)
-            ,
+            horizontal: horizontalPadding,
           ),
           child: Row(
             children: [
@@ -75,9 +70,7 @@ class SignInButton extends StatelessWidget {
               CustomText(
                 text: text,
                 color: textColor,
-                fontSize: fontSize
-                // ?? _height * buttonHeightTextRatio
-                ,
+                fontSize: fontSize,
               ),
             ],
           ),
