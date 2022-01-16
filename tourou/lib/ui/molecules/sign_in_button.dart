@@ -1,12 +1,13 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 // Project imports:
 import '../../gen/assets.gen.dart';
 import '../atoms/custom_text.dart';
 
 class SignInButton extends StatelessWidget {
-  final SvgGenImage icon;
+  final SvgPicture icon;
   final String text;
   final Color textColor;
   final double fontSize;
@@ -61,10 +62,6 @@ class SignInButton extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Assets.signInIcons.appleLogo.svg(
-                width: iconSize,
-                height: iconSize,
-              ),
               SizedBox(
                 height: iconSize,
                 width: iconSize,
