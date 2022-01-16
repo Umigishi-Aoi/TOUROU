@@ -61,4 +61,10 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get title => '戻る';
+
+  @override
+  String get signInWithGoogle => 'Sign in with Google';
+
+  @override
+  String get signInWithApple => 'Sign in with Apple';
 }
