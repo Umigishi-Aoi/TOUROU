@@ -67,7 +67,8 @@ class NewRegistrationTemplate extends StatelessWidget {
                   appleIcon: Assets.signInIconsForTest.appleTest.svg(),
                   appleText: AppLocalizations.of(context)!.signUpWithApple,
                   appleFunction: appleFunction,
-                  fontFamily: FontFamily.mplus1,
+                  fontFamilyInApple: FontFamily.mplus1,
+                  fontFamilyInGoogle: FontFamily.mplus1,
                 )
               else
                 SignInButtonsOrganism(
@@ -86,7 +87,7 @@ class NewRegistrationTemplate extends StatelessWidget {
                   appleIcon: Assets.signInIcons.appleLogo.svg(),
                   appleText: AppLocalizations.of(context)!.signUpWithApple,
                   appleFunction: appleFunction,
-                  fontFamily: FontFamily.mplus1,
+                  fontFamilyInApple: FontFamily.mplus1,
                 ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

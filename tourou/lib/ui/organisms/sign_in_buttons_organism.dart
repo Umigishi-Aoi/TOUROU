@@ -25,7 +25,8 @@ class SignInButtonsOrganism extends StatelessWidget {
   final SvgPicture appleIcon;
   final String appleText;
   final void Function() appleFunction;
-  final String fontFamily;
+  final String fontFamilyInApple;
+  final String? fontFamilyInGoogle;
 
   const SignInButtonsOrganism({
     Key? key,
@@ -44,7 +45,8 @@ class SignInButtonsOrganism extends StatelessWidget {
     required this.appleIcon,
     required this.appleText,
     required this.appleFunction,
-    required this.fontFamily,
+    required this.fontFamilyInApple,
+    this.fontFamilyInGoogle,
   }) : super(key: key);
 
   @override
@@ -63,6 +65,7 @@ class SignInButtonsOrganism extends StatelessWidget {
           horizontalPadding: horizontalPadding,
           iconMargin: iconMargin,
           iconSize: iconSize,
+          fontFamily: fontFamilyInGoogle,
         ),
         if (Theme.of(context).platform == TargetPlatform.iOS)
           Column(
@@ -82,7 +85,7 @@ class SignInButtonsOrganism extends StatelessWidget {
                 horizontalPadding: horizontalPadding,
                 iconMargin: iconMargin,
                 iconSize: iconSize,
-                fontFamily: fontFamily,
+                fontFamily: fontFamilyInApple,
               ),
             ],
           ),
