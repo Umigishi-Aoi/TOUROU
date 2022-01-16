@@ -19,6 +19,8 @@ class NewRegistrationTemplate extends StatelessWidget {
   final void Function() disclaimerFunction;
   final void Function() goBackToTitleFunction;
 
+  final bool isTest;
+
   const NewRegistrationTemplate({
     Key? key,
     required this.googleIcon,
@@ -28,6 +30,7 @@ class NewRegistrationTemplate extends StatelessWidget {
     required this.privacyPolicyFunction,
     required this.disclaimerFunction,
     required this.goBackToTitleFunction,
+    required this.isTest,
   }) : super(key: key);
 
   @override
@@ -49,22 +52,40 @@ class NewRegistrationTemplate extends StatelessWidget {
                 height: displayHeight * logoHeightRatio,
                 fit: BoxFit.contain,
               ),
-              SignInButtonsOrganism(
-                  googleIcon: googleIcon,
-                  googleText: AppLocalizations.of(context)!.signUpWithGoogle,
-                  textColor: ColorName.googleSignInButtonBlack,
-                  fontSize: fontSize,
-                  height: displayHeight * buttonHeightRatio,
-                  width: displayWidth * buttonWidthRatio,
-                  buttonColor: ColorName.signInButtonWhite,
-                  googleFunction: googleFunction,
-                  horizontalPadding: googleSignInButtonHorizontalPadding,
-                  iconMargin: googleSignInButtonIconMargin,
-                  iconSize: googleSignInButtonIconSize,
-                  buttonMargin: displayHeight * signInButtonsMarginRatio,
-                  appleIcon: appleIcon,
-                  appleText: AppLocalizations.of(context)!.signUpWithApple,
-                  appleFunction: appleFunction),
+              if (isTest)
+                SignInButtonsOrganism(
+                    googleIcon: Assets.signInIconsForTest.googleTest.svg(),
+                    googleText: AppLocalizations.of(context)!.signUpWithGoogle,
+                    textColor: ColorName.googleSignInButtonBlack,
+                    fontSize: fontSize,
+                    height: displayHeight * buttonHeightRatio,
+                    width: displayWidth * buttonWidthRatio,
+                    buttonColor: ColorName.signInButtonWhite,
+                    googleFunction: googleFunction,
+                    horizontalPadding: googleSignInButtonHorizontalPadding,
+                    iconMargin: googleSignInButtonIconMargin,
+                    iconSize: googleSignInButtonIconSize,
+                    buttonMargin: displayHeight * signInButtonsMarginRatio,
+                    appleIcon: Assets.signInIconsForTest.appleTest.svg(),
+                    appleText: AppLocalizations.of(context)!.signUpWithApple,
+                    appleFunction: appleFunction)
+              else
+                SignInButtonsOrganism(
+                    googleIcon: Assets.signInIcons.googleLogo.svg(),
+                    googleText: AppLocalizations.of(context)!.signUpWithGoogle,
+                    textColor: ColorName.googleSignInButtonBlack,
+                    fontSize: fontSize,
+                    height: displayHeight * buttonHeightRatio,
+                    width: displayWidth * buttonWidthRatio,
+                    buttonColor: ColorName.signInButtonWhite,
+                    googleFunction: googleFunction,
+                    horizontalPadding: googleSignInButtonHorizontalPadding,
+                    iconMargin: googleSignInButtonIconMargin,
+                    iconSize: googleSignInButtonIconSize,
+                    buttonMargin: displayHeight * signInButtonsMarginRatio,
+                    appleIcon: Assets.signInIcons.appleLogo.svg(),
+                    appleText: AppLocalizations.of(context)!.signUpWithApple,
+                    appleFunction: appleFunction),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -98,7 +119,6 @@ class NewRegistrationTemplate extends StatelessWidget {
                       function: privacyPolicyFunction),
                 ],
               ),
-
               TextTextButton(
                   firstText: AppLocalizations.of(context)!.goBackTo,
                   firstColor: ColorName.textWhite,
