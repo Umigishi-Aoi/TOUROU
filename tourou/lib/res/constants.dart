@@ -67,14 +67,14 @@ const double howToUseTitlePadding = 32;
 const double howToUseButtonPadding = 16;
 
 //new profile setting page setting
-const double newUserRegistrationImageTopMarginRatio = 0.1;
-const double newUserRegistrationImageHeightRatio = 0.2;
-const double newUserRegistrationFieldPadding = 16;
-const double newUserRegistrationFieldHeightRatio = 0.1;
-const double newUserRegistrationFieldFontSizeRatio = 0.3;
-const double newUserRegistrationButtonTopMarginRatio = 0.15;
-const double newUserRegistrationButtonMargin = 18;
-const int newUserRegistrationMinLine = 1;
+const double newProfileSettingImageTopMarginRatio = 0.1;
+const double newProfileSettingImageHeightRatio = 0.2;
+const double newProfileSettingFieldPadding = 16;
+const double newProfileSettingFieldHeightRatio = 0.1;
+const double newProfileSettingFieldFontSizeRatio = 0.3;
+const double newProfileSettingButtonTopMarginRatio = 0.15;
+const double newProfileSettingButtonMargin = 18;
+const int newProfileSettingMinLine = 1;
 
 //new user registration page setting
 const double signInButtonsMarginRatio = 0.1;
