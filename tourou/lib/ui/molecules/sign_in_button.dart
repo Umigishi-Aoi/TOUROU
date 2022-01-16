@@ -12,6 +12,7 @@ class SignInButton extends StatelessWidget {
   final String text;
   final Color textColor;
   final double fontSize;
+  final String? fontFamily;
 
   final double height;
   final double width;
@@ -37,6 +38,7 @@ class SignInButton extends StatelessWidget {
     required this.horizontalPadding,
     required this.iconMargin,
     required this.iconSize,
+    this.fontFamily,
   }) : super(key: key);
 
   @override
@@ -70,6 +72,7 @@ class SignInButton extends StatelessWidget {
                 text: text,
                 color: textColor,
                 fontSize: fontSize,
+                fontFamily: fontFamily,
               ),
             ],
           ),

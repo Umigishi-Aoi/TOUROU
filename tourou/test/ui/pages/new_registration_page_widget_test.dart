@@ -49,8 +49,7 @@ void main() {
         surfaceSize: size6);
 
     //マスターのスクリーンショットと同じかテストする
-    await screenMatchesGolden(
-        tester, 'new_registration_page_iphone6_iOS_ja');
+    await screenMatchesGolden(tester, 'new_registration_page_iphone6_iOS_ja');
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
     await tester.pumpWidgetBuilder(TestWidget(TargetPlatform.android, 'en'),
@@ -90,15 +89,13 @@ void main() {
         surfaceSize: sizePad);
 
     //マスターのスクリーンショットと同じかテストする
-    await screenMatchesGolden(
-        tester, 'new_registration_page_ipad_android_en');
+    await screenMatchesGolden(tester, 'new_registration_page_ipad_android_en');
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
     await tester.pumpWidgetBuilder(TestWidget(TargetPlatform.android, 'ja'),
         surfaceSize: sizePad);
 
     //マスターのスクリーンショットと同じかテストする
-    await screenMatchesGolden(
-        tester, 'new_registration_page_ipad_android_ja');
+    await screenMatchesGolden(tester, 'new_registration_page_ipad_android_ja');
   });
 }

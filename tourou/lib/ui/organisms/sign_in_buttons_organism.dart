@@ -25,6 +25,7 @@ class SignInButtonsOrganism extends StatelessWidget {
   final SvgPicture appleIcon;
   final String appleText;
   final void Function() appleFunction;
+  final String fontFamily;
 
   const SignInButtonsOrganism({
     Key? key,
@@ -43,6 +44,7 @@ class SignInButtonsOrganism extends StatelessWidget {
     required this.appleIcon,
     required this.appleText,
     required this.appleFunction,
+    required this.fontFamily,
   }) : super(key: key);
 
   @override
@@ -80,6 +82,7 @@ class SignInButtonsOrganism extends StatelessWidget {
                 horizontalPadding: horizontalPadding,
                 iconMargin: iconMargin,
                 iconSize: iconSize,
+                fontFamily: fontFamily,
               ),
             ],
           ),
