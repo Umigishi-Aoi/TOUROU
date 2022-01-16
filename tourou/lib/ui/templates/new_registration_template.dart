@@ -11,8 +11,6 @@ import 'package:tourou/ui/organisms/sign_in_buttons_organism.dart';
 import '../../l10n/app_localizations.dart';
 
 class NewRegistrationTemplate extends StatelessWidget {
-  final SvgPicture googleIcon;
-  final SvgPicture appleIcon;
   final void Function() googleFunction;
   final void Function() appleFunction;
   final void Function() privacyPolicyFunction;
@@ -23,8 +21,6 @@ class NewRegistrationTemplate extends StatelessWidget {
 
   const NewRegistrationTemplate({
     Key? key,
-    required this.googleIcon,
-    required this.appleIcon,
     required this.googleFunction,
     required this.appleFunction,
     required this.privacyPolicyFunction,
