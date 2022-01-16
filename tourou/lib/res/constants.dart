@@ -79,6 +79,8 @@ const int newProfileSettingMinLine = 1;
 //new user registration page setting
 const double signInButtonsMarginRatio = 0.1;
 const double newRegistrationTextMarginRatio = 0.025;
+const double newRegistrationExplanationHorizontalPadding = 32;
+const double newRegistrationItemHorizontalPadding = 64;
 
 const flavor = String.fromEnvironment('FLAVOR');
 

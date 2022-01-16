@@ -93,37 +93,50 @@ class NewRegistrationTemplate extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  CustomText(
-                    text: AppLocalizations.of(context)!.signUpExplanation,
-                    color: ColorName.textWhite,
-                    fontSize: fontSize,
-                    fontFamily: FontFamily.mplus1,
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal:
+                            newRegistrationExplanationHorizontalPadding),
+                    child: CustomText(
+                      text: AppLocalizations.of(context)!.signUpExplanation,
+                      color: ColorName.textWhite,
+                      fontSize: fontSize,
+                      fontFamily: FontFamily.mplus1,
+                    ),
                   ),
                   SizedBox(
                     height: displayHeight * newRegistrationTextMarginRatio,
                   ),
-                  TextTextButton(
-                    firstText: AppLocalizations.of(context)!.dot,
-                    firstColor: ColorName.textWhite,
-                    fontSize: fontSize,
-                    fontFamily: FontFamily.mplus1,
-                    secondText: AppLocalizations.of(context)!.disclaimer,
-                    secondColor: ColorName.textButton,
-                    function: disclaimerFunction,
-                    mainAxisAlignment: MainAxisAlignment.start,
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: newRegistrationItemHorizontalPadding),
+                    child: TextTextButton(
+                      firstText: AppLocalizations.of(context)!.dot,
+                      firstColor: ColorName.textWhite,
+                      fontSize: fontSize,
+                      fontFamily: FontFamily.mplus1,
+                      secondText: AppLocalizations.of(context)!.disclaimer,
+                      secondColor: ColorName.textButton,
+                      function: disclaimerFunction,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                    ),
                   ),
                   SizedBox(
                     height: displayHeight * newRegistrationTextMarginRatio,
                   ),
-                  TextTextButton(
-                    firstText: AppLocalizations.of(context)!.dot,
-                    firstColor: ColorName.textWhite,
-                    fontSize: fontSize,
-                    fontFamily: FontFamily.mplus1,
-                    secondText: AppLocalizations.of(context)!.privacyPolicy,
-                    secondColor: ColorName.textButton,
-                    function: privacyPolicyFunction,
-                    mainAxisAlignment: MainAxisAlignment.start,
+                  Padding(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: newRegistrationItemHorizontalPadding),
+                    child: TextTextButton(
+                      firstText: AppLocalizations.of(context)!.dot,
+                      firstColor: ColorName.textWhite,
+                      fontSize: fontSize,
+                      fontFamily: FontFamily.mplus1,
+                      secondText: AppLocalizations.of(context)!.privacyPolicy,
+                      secondColor: ColorName.textButton,
+                      function: privacyPolicyFunction,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                    ),
                   ),
                 ],
               ),
