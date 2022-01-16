@@ -1,4 +1,6 @@
-// Project imports:
+
+
+
 import 'app_localizations.dart';
 
 /// The translations for Japanese (`ja`).
@@ -45,7 +47,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get signUpWithApple => 'Sign up with Apple';
 
   @override
-  String get signUpExplanation => 'サインアップすると、以下に同意したことになります。';
+  String get signUpExplanation => 'サインアップすると、\n以下に同意したことになります。';
 
   @override
   String get disclaimer => '免責事項';
