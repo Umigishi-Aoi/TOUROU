@@ -17,5 +17,7 @@
   "privacyPolicy": "Privacy Policy",
   "dot": "・ ",
   "goBackTo": "Go back to ",
-  "title": "Title"
+  "title": "Title",
+  "signInWithGoogle": "Sign in with Google",
+  "signInWithApple": "Sign in with Apple"
 }

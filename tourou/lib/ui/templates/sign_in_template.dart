@@ -1,10 +1,14 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/gen/assets.gen.dart';
-import 'package:tourou/gen/colors.gen.dart';
-import 'package:tourou/gen/fonts.gen.dart';
-import 'package:tourou/res/constants.dart';
-import 'package:tourou/ui/molecules/text_text_button.dart';
-import 'package:tourou/ui/organisms/sign_in_buttons_organism.dart';
+
+// Project imports:
+import '../../gen/assets.gen.dart';
+import '../../gen/colors.gen.dart';
+import '../../gen/fonts.gen.dart';
+import '../../l10n/app_localizations.dart';
+import '../../res/constants.dart';
+import '../molecules/text_text_button.dart';
+import '../organisms/sign_in_buttons_organism.dart';
 
 class SignInTemplate extends StatelessWidget {
   final void Function() googleFunction;
@@ -41,7 +45,7 @@ class SignInTemplate extends StatelessWidget {
               if (isTest)
                 SignInButtonsOrganism(
                   googleIcon: Assets.signInIconsForTest.googleTest.svg(),
-                  googleText: AppLocalizations.of(context)!.signUpWithGoogle,
+                  googleText: AppLocalizations.of(context)!.signInWithGoogle,
                   textColor: ColorName.signInButtonBlack,
                   fontSize: fontSize,
                   height: displayHeight * buttonHeightRatio,
@@ -53,7 +57,7 @@ class SignInTemplate extends StatelessWidget {
                   iconSize: googleSignInButtonIconSize,
                   buttonMargin: displayHeight * signInButtonsMarginRatio,
                   appleIcon: Assets.signInIconsForTest.appleTest.svg(),
-                  appleText: AppLocalizations.of(context)!.signUpWithApple,
+                  appleText: AppLocalizations.of(context)!.signInWithApple,
                   appleFunction: appleFunction,
                   fontFamilyInApple: FontFamily.mplus1,
                   fontFamilyInGoogle: FontFamily.mplus1,
@@ -61,7 +65,7 @@ class SignInTemplate extends StatelessWidget {
               else
                 SignInButtonsOrganism(
                   googleIcon: Assets.signInIcons.googleLogo.svg(),
-                  googleText: AppLocalizations.of(context)!.signUpWithGoogle,
+                  googleText: AppLocalizations.of(context)!.signInWithGoogle,
                   textColor: ColorName.signInButtonBlack,
                   fontSize: fontSize,
                   height: displayHeight * buttonHeightRatio,
@@ -73,7 +77,7 @@ class SignInTemplate extends StatelessWidget {
                   iconSize: googleSignInButtonIconSize,
                   buttonMargin: displayHeight * signInButtonsMarginRatio,
                   appleIcon: Assets.signInIcons.appleLogo.svg(),
-                  appleText: AppLocalizations.of(context)!.signUpWithApple,
+                  appleText: AppLocalizations.of(context)!.signInWithApple,
                   appleFunction: appleFunction,
                   fontFamilyInApple: FontFamily.mplus1,
                 ),
