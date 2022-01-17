@@ -82,6 +82,9 @@ const double newRegistrationTextMarginRatio = 0.025;
 const double newRegistrationExplanationHorizontalPadding = 32;
 const double newRegistrationItemHorizontalPadding = 64;
 
+//sign in page setting
+const double signInMarginRatio = 0.2;
+
 const flavor = String.fromEnvironment('FLAVOR');
 
 enum Flavor { dev, stg, prod, undefined }

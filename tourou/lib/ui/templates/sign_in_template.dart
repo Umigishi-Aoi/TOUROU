@@ -82,7 +82,7 @@ class SignInTemplate extends StatelessWidget {
                   fontFamilyInApple: FontFamily.mplus1,
                 ),
               SizedBox(
-                height: displayHeight * titleButtonHeightRatio,
+                height: displayHeight * signInMarginRatio,
               ),
               TextTextButton(
                 firstText: AppLocalizations.of(context)!.goBackTo,
