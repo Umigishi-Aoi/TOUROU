@@ -9,7 +9,7 @@ import '../molecules/custom_icon_button.dart';
 import '../molecules/tourou_molecule.dart';
 
 class WorldTourouOrganism extends StatelessWidget {
-  final double? tourouWidth;
+  final double tourouWidth;
 
   final void Function() reportFunction;
   final double errorIconSize;
@@ -54,6 +54,7 @@ class WorldTourouOrganism extends StatelessWidget {
 
   const WorldTourouOrganism({
     Key? key,
+    required this.tourouWidth,
     required this.iconColor,
     required this.profileImagePath,
     required this.profileImageFit,
@@ -66,7 +67,6 @@ class WorldTourouOrganism extends StatelessWidget {
     required this.goodButtonText,
     required this.goodButtonFunction,
     required this.goodNumber,
-    this.tourouWidth,
     required this.profileImageHeight,
     required this.textColor,
     required this.userIdColor,
