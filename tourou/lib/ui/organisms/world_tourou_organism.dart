@@ -42,7 +42,6 @@ class WorldTourouOrganism extends StatelessWidget {
   final void Function() goodButtonFunction;
   final Color buttonColor;
   final double buttonFontSize;
-  final void Function() function;
 
   final double goodButtonMargin;
 
@@ -76,7 +75,6 @@ class WorldTourouOrganism extends StatelessWidget {
     required this.goodButtonWidth,
     required this.buttonColor,
     required this.buttonFontSize,
-    required this.function,
     required this.goodNumberFontSize,
     required this.goodNumberColor,
     required this.errorIconSize,
@@ -138,7 +136,7 @@ class WorldTourouOrganism extends StatelessWidget {
                       fontFamily: fontFamily,
                       buttonColor: buttonColor,
                       fontSize: buttonFontSize,
-                      function: function,
+                      function: goodButtonFunction,
                     ),
                     SizedBox(
                       width: goodButtonMargin,
