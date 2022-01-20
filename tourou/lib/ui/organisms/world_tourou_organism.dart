@@ -40,7 +40,7 @@ class WorldTourouOrganism extends StatelessWidget {
   final double goodButtonHeight;
   final double goodButtonWidth;
   final void Function() goodButtonFunction;
-  final Color goodButtonActiveColor;
+  final Color goodButtonTextColor;
   final Color buttonColor;
   final double buttonFontSize;
   final void Function() function;
@@ -75,7 +75,7 @@ class WorldTourouOrganism extends StatelessWidget {
     required this.tourouImgageFit,
     required this.goodButtonHeight,
     required this.goodButtonWidth,
-    required this.goodButtonActiveColor,
+    required this.goodButtonTextColor,
     required this.buttonColor,
     required this.buttonFontSize,
     required this.function,
@@ -136,7 +136,7 @@ class WorldTourouOrganism extends StatelessWidget {
                       text: goodButtonText,
                       height: goodButtonHeight,
                       width: goodButtonWidth,
-                      color: goodButtonActiveColor,
+                      color: goodButtonTextColor,
                       fontFamily: fontFamily,
                       buttonColor: buttonColor,
                       fontSize: buttonFontSize,
