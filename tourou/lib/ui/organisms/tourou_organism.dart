@@ -9,11 +9,9 @@ import '../atoms/custom_text.dart';
 class TourouMolecule extends StatelessWidget {
   final String profileImagePath;
   final double profileImageHeight;
-  final BoxFit imageFit;
   final void Function(Object object) function;
   final Object object;
-
-
+  
   final String userName;
   final Color textColor;
   final String fontFamily;
@@ -34,7 +32,6 @@ class TourouMolecule extends StatelessWidget {
     Key? key,
     required this.profileImagePath,
     required this.profileImageHeight,
-    required this.imageFit,
     required this.function,
     required this.object,
     required this.userName,
