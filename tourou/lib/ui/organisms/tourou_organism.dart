@@ -1,5 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:tourou/ui/molecules/image_button.dart';
 
 // Project imports:
 import '../atoms/custom_image.dart';
@@ -9,6 +10,9 @@ class TourouMolecule extends StatelessWidget {
   final String profileImagePath;
   final double profileImageHeight;
   final BoxFit imageFit;
+  final void Function(Object object) function;
+  final Object object;
+
 
   final String userName;
   final Color textColor;
@@ -22,11 +26,17 @@ class TourouMolecule extends StatelessWidget {
   final double tourouTextWidth;
   final double tourouTextFontSize;
 
+  final String? tourouImagePath;
+  final double tourouImageHeight;
+  final void Function(Object object) tourouImageFunction;
+
   const TourouMolecule({
     Key? key,
     required this.profileImagePath,
     required this.profileImageHeight,
     required this.imageFit,
+    required this.function,
+    required this.object,
     required this.userName,
     required this.textColor,
     required this.fontFamily,
@@ -36,6 +46,9 @@ class TourouMolecule extends StatelessWidget {
     required this.tourouText,
     required this.tourouTextWidth,
     required this.tourouTextFontSize,
+    this.tourouImagePath,
+    required this.tourouImageHeight,
+    required this.tourouImageFunction,
   }) : super(key: key);
 
   @override
@@ -43,11 +56,13 @@ class TourouMolecule extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        CustomImage(
-          path: profileImagePath,
+        ImageButton(
+          firstImagePath: profileImagePath,
           height: profileImageHeight,
+          fit: BoxFit.cover,
           isCircle: true,
-          fit: imageFit,
+          objectFunction: function,
+          object: object,
         ),
         CustomText(
           text: userName,
@@ -71,6 +86,16 @@ class TourouMolecule extends StatelessWidget {
             fontSize: tourouTextFontSize,
           ),
         ),
+        if (tourouImagePath != null)
+          ImageButton(
+            firstImagePath: tourouImagePath!,
+            width: tourouTextWidth,
+            height: tourouImageHeight,
+            fit: BoxFit.contain,
+            isCircle: false,
+            objectFunction: tourouImageFunction,
+            object: object,
+          ),
       ],
     );
   }
