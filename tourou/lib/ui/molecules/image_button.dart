@@ -7,7 +7,9 @@ import '../atoms/custom_image.dart';
 class ImageButton extends StatefulWidget {
   final String firstImagePath;
   final double height;
-  final Function function;
+  final void Function()? function;
+  final void Function(Object object)? objectFunction;
+  final Object? object;
 
   final String? secondImagePath;
   final double? width;
@@ -20,7 +22,9 @@ class ImageButton extends StatefulWidget {
     Key? key,
     required this.firstImagePath,
     required this.height,
-    required this.function,
+    this.function,
+    this.objectFunction,
+    this.object,
     this.secondImagePath,
     this.width,
     required this.fit,
@@ -57,7 +61,12 @@ class _ImageButtonState extends State<ImageButton> {
                   await Future<void>.delayed(
                       Duration(milliseconds: widget.duration!));
                 }
-                widget.function();
+                if(widget.function != null) {
+                  widget.function!();
+                }
+                if(widget.objectFunction != null && widget.object != null) {
+                  widget.objectFunction!(widget.object!);
+                }
               }
             },
           )

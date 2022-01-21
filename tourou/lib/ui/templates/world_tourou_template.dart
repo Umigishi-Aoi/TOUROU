@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tourou/gen/colors.gen.dart';
+import 'package:tourou/gen/fonts.gen.dart';
+import 'package:tourou/res/constants.dart';
 import 'package:tourou/temp/world_tourou.dart';
 import 'package:tourou/ui/atoms/tourou_tab_bar.dart';
 import 'package:tourou/ui/organisms/world_tourou_organism.dart';
@@ -42,41 +44,43 @@ class WorldTourouTemplate extends StatelessWidget {
                 child: TabBarView(
                   children: [
                     ListView.builder(itemBuilder: (context, index) {
+                      WorldTourou worldTourou = newWorldTourous[index];
                       return WorldTourouOrganism(
-                          tourouWidth: tourouWidth,
-                          iconColor: iconColor,
-                          profileImagePath: newWorldTourous[index]
+                          tourouWidth: displayWidth * tourouContentWidthRatio,
+                          iconColor: ColorName.itemBackground,
+                          errorIconSize: displayHeight * tourouReportIconSizeRatio,
+                          profileImagePath: worldTourou
                               .profileImagePath,
-                          profileImageFit: profileImageFit,
-                          userName: newWorldTourous[index].userName,
-                          userNameFontSize: userNameFontSize,
-                          userId: newWorldTourous[index].userId,
-                          tourouText: newWorldTourous[index].tourouText,
-                          tourouTextFontSize: tourouTextFontSize,
+                          profileImageHeight: displayHeight *
+                              tourouProfileImageHeightRatio,
+                          profileImageFit: BoxFit.cover,
+                          userName: worldTourou.userName,
+                          userNameFontSize: tourouUserNameFontSize,
+                          userId: worldTourou.userId,
+                          tourouText: worldTourou.tourouText,
+                          tourouTextFontSize: tourouUserNameFontSize,
                           reportFunction: reportFunction,
                           goodButtonText: goodButtonText,
                           goodButtonFunction: goodButtonFunction,
-                          goodNumber: newWorldTourous[index].goodNumber,
-                          profileImageHeight: profileImageHeight,
-                          textColor: textColor,
-                          userIdColor: userIdColor,
-                          tourouContentWidth: tourouContentWidth,
-                          tourouImagePath: newWorldTourous[index]
+                          goodNumber: worldTourou.goodNumber,
+                          textColor: ColorName.mainBlack,
+                          userIdColor: ColorName.userIdText,
+                          tourouContentWidth: displayWidth *
+                              tourouContentWidthRatio,
+                          tourouImagePath: worldTourou
                               .tourouImagePath,
-                          tourouImageHeight: tourouImageHeight,
-                          tourouImgageFit: tourouImgageFit,
-                          goodButtonHeight: goodButtonHeight,
-                          goodButtonWidth: goodButtonWidth,
-                          goodButtonActiveColor: goodButtonActiveColor,
-                          goodButtonInactiveColor: goodButtonInactiveColor,
-                          buttonColor: buttonColor,
-                          buttonFontSize: buttonFontSize,
-                          function: function,
-                          goodNumberFontSize: goodNumberFontSize,
-                          goodNumberColor: goodNumberColor,
-                          errorIconSize: errorIconSize,
-                          fontFamily: fontFamily,
-                          goodButtonMargin: goodButtonMargin)
+                          tourouImageHeight: displayHeight *
+                              tourouProfileImageHeightRatio,
+                          tourouImgageFit: BoxFit.contain,
+                          goodButtonHeight: displayHeight * goodButtonHeightRatio,
+                          goodButtonWidth: displayWidth * goodButtonWidthRatio,
+                          buttonColor: ColorName.goodBackgoround,
+                          buttonFontSize: displayHeight * goodButtonHeightRatio * buttonHeightFontSizeRatio,
+                          goodNumberFontSize: displayHeight * goodButtonHeightRatio * buttonHeightFontSizeRatio,
+                          goodNumberColor: ColorName.switchAccentColor,
+
+                          fontFamily: FontFamily.mplus1,
+                          goodButtonMargin: displayWidth * goodButtonMarginRatio)
                     }),
                   ],
                 ),
