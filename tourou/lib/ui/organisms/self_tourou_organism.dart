@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // Project imports:
 import '../atoms/custom_image.dart';
 import '../atoms/custom_text.dart';
-import '../molecules/tourou_molecule.dart';
+import '../molecules/tourou_organism.dart';
 
 class SelfTourouOrganism extends StatelessWidget {
   final double tourouWidth;
