@@ -6,7 +6,7 @@ import '../atoms/custom_image.dart';
 import '../atoms/custom_text.dart';
 import '../molecules/custom_elevated_button.dart';
 import '../molecules/custom_icon_button.dart';
-import '../molecules/tourou_organism.dart';
+import 'tourou_organism.dart';
 
 class WorldTourouOrganism extends StatelessWidget {
   final double tourouWidth;
