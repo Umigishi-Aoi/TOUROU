@@ -8,37 +8,34 @@ import '../atoms/custom_text.dart';
 
 class TourouOrganism extends StatelessWidget {
 
+  final TourouData tourouData;
+
   final double profileImageHeight;
   final void Function(Object object) profileFunction;
-  final TourouData tourouData;
 
   final Color textColor;
   final String fontFamily;
   final double userNameFontSize;
 
   final Color userIdColor;
-
-  final String tourouText;
+  
   final double tourouTextWidth;
   final double tourouTextFontSize;
 
-  final String? tourouImagePath;
   final double tourouImageHeight;
   final void Function(Object object) tourouImageFunction;
 
   const TourouOrganism({
     Key? key,
+    required this.tourouData,
     required this.profileImageHeight,
     required this.profileFunction,
-    required this.tourouData,
     required this.textColor,
     required this.fontFamily,
     required this.userIdColor,
     required this.userNameFontSize,
-    required this.tourouText,
     required this.tourouTextWidth,
     required this.tourouTextFontSize,
-    this.tourouImagePath,
     required this.tourouImageHeight,
     required this.tourouImageFunction,
   }) : super(key: key);
