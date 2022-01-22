@@ -69,4 +69,13 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get signInWithApple => 'Sign in with Apple';
+
+  @override
+  String get trendTourou => 'トレンド';
+
+  @override
+  String get newTourou => '最新';
+
+  @override
+  String get good => 'Good';
 }

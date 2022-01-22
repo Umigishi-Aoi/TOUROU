@@ -19,5 +19,8 @@
   "goBackTo": "タイトルへ",
   "title": "戻る",
   "signInWithGoogle": "Sign in with Google",
-  "signInWithApple": "Sign in with Apple"
+  "signInWithApple": "Sign in with Apple",
+  "trendTourou": "トレンド",
+  "newTourou": "最新",
+  "good": "Good"
 }

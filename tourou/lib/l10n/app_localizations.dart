@@ -219,6 +219,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Sign in with Apple'**
   String get signInWithApple;
+
+  /// No description provided for @trendTourou.
+  ///
+  /// In en, this message translates to:
+  /// **'Trend'**
+  String get trendTourou;
+
+  /// No description provided for @newTourou.
+  ///
+  /// In en, this message translates to:
+  /// **'New'**
+  String get newTourou;
+
+  /// No description provided for @good.
+  ///
+  /// In en, this message translates to:
+  /// **'Good'**
+  String get good;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
