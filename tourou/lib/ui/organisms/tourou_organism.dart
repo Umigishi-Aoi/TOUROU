@@ -1,23 +1,21 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:tourou/temp/toruou_data.dart';
 import 'package:tourou/ui/molecules/image_button.dart';
 
 // Project imports:
-import '../../tourou.dart';
 import '../atoms/custom_text.dart';
 
 class TourouOrganism extends StatelessWidget {
-  final String profileImagePath;
-  final double profileImageHeight;
-  final void Function(Tourou tourou) profileFunction;
-  final Tourou tourou;
 
-  final String userName;
+  final double profileImageHeight;
+  final void Function(Object object) profileFunction;
+  final TourouData tourouData;
+
   final Color textColor;
   final String fontFamily;
   final double userNameFontSize;
 
-  final String userId;
   final Color userIdColor;
 
   final String tourouText;
@@ -30,14 +28,11 @@ class TourouOrganism extends StatelessWidget {
 
   const TourouOrganism({
     Key? key,
-    required this.profileImagePath,
     required this.profileImageHeight,
     required this.profileFunction,
-    required this.tourou,
-    required this.userName,
+    required this.tourouData,
     required this.textColor,
     required this.fontFamily,
-    required this.userId,
     required this.userIdColor,
     required this.userNameFontSize,
     required this.tourouText,
@@ -54,21 +49,21 @@ class TourouOrganism extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         ImageButton(
-          firstImagePath: tourou,
+          firstImagePath: tourouData.profileImagePath,
           height: profileImageHeight,
           fit: BoxFit.cover,
           isCircle: true,
           objectFunction: profileFunction,
-          object: object,
+          object: tourouData,
         ),
         CustomText(
-          text: userName,
+          text: tourouData.userName,
           color: textColor,
           fontFamily: fontFamily,
           fontSize: userNameFontSize,
         ),
         CustomText(
-          text: userId,
+          text: tourouData.userId,
           color: userIdColor,
           fontFamily: fontFamily,
           fontSize: userNameFontSize,
@@ -77,21 +72,21 @@ class TourouOrganism extends StatelessWidget {
           width: tourouTextWidth,
           alignment: Alignment.topLeft,
           child: CustomText(
-            text: tourouText,
+            text: tourouData.tourouText,
             color: textColor,
             fontFamily: fontFamily,
             fontSize: tourouTextFontSize,
           ),
         ),
-        if (tourouImagePath != null)
+        if (tourouData.tourouImagePath != null)
           ImageButton(
-            firstImagePath: tourouImagePath!,
+            firstImagePath: tourouData.tourouImagePath!,
             width: tourouTextWidth,
             height: tourouImageHeight,
             fit: BoxFit.contain,
             isCircle: false,
             objectFunction: tourouImageFunction,
-            object: object,
+            object: tourouData,
           ),
       ],
     );
