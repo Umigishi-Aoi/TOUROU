@@ -1,5 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:tourou/temp/toruou_data.dart';
 
 // Project imports:
 import '../atoms/custom_image.dart';
@@ -7,59 +8,47 @@ import '../atoms/custom_text.dart';
 import 'tourou_organism.dart';
 
 class SelfTourouOrganism extends StatelessWidget {
+
+  final TourouData tourouData;
   final double tourouWidth;
 
-  final void Function() reportFunction;
-
-  final String profileImagePath;
   final double profileImageHeight;
-  final BoxFit profileImageFit;
+  final void Function(TourouData tourouData) profileFunction;
 
   final double goodPadding;
 
-  final String userName;
   final double userNameFontSize;
   final Color textColor;
   final String fontFamily;
 
-  final String userId;
   final Color userIdColor;
 
-  final String tourouText;
   final double tourouTextFontSize;
   final double tourouContentWidth;
 
-  final String? tourouImagePath;
   final double tourouImageHeight;
-  final BoxFit tourouImageFit;
+  final void Function(TourouData tourouData) tourouImagaFunction;
 
-  final String goodNumber;
   final double goodNumberFontSize;
   final Color goodNumberColor;
 
   const SelfTourouOrganism({
     Key? key,
-    required this.reportFunction,
-    required this.profileImagePath,
-    required this.profileImageFit,
-    required this.goodPadding,
-    required this.userName,
+    required this.tourouData,
+    required this.profileImageHeight,
+    required this.profileFunction,
     required this.userNameFontSize,
-    required this.userId,
-    required this.tourouText,
+    required this.userIdColor,
     required this.tourouTextFontSize,
     required this.fontFamily,
-    required this.goodNumber,
     required this.tourouWidth,
-    required this.profileImageHeight,
     required this.textColor,
-    required this.userIdColor,
     required this.tourouContentWidth,
-    this.tourouImagePath,
     required this.tourouImageHeight,
-    required this.tourouImageFit,
+    required this.tourouImagaFunction,
     required this.goodNumberFontSize,
     required this.goodNumberColor,
+    required this.goodPadding,
   }) : super(key: key);
 
   @override
@@ -72,7 +61,7 @@ class SelfTourouOrganism extends StatelessWidget {
               top: profileImageHeight,
               right: goodPadding,
               child: CustomText(
-                text: goodNumber,
+                text: tourouData.goodNumber,
                 fontSize: goodNumberFontSize,
                 color: goodNumberColor,
                 fontFamily: fontFamily,
@@ -83,26 +72,18 @@ class SelfTourouOrganism extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 TourouOrganism(
-                  profileImagePath: profileImagePath,
+                  tourouData: tourouData,
                   profileImageHeight: profileImageHeight,
-                  imageFit: profileImageFit,
-                  userName: userName,
+                  profileFunction: profileFunction,
                   userNameFontSize: userNameFontSize,
                   fontFamily: fontFamily,
-                  userId: userId,
-                  tourouText: tourouText,
                   tourouTextWidth: tourouContentWidth,
                   tourouTextFontSize: tourouTextFontSize,
                   textColor: textColor,
                   userIdColor: userIdColor,
+                  tourouImageHeight: tourouImageHeight,
+                  tourouImageFunction: tourouImagaFunction,
                 ),
-                if (tourouImagePath != null)
-                  CustomImage(
-                    path: tourouImagePath!,
-                    width: tourouContentWidth,
-                    height: tourouImageHeight,
-                    fit: tourouImageFit,
-                  ),
               ],
             ),
           ),
