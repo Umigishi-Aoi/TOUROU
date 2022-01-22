@@ -1,5 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:tourou/temp/toruou_data.dart';
 
 // Project imports:
 import '../atoms/custom_text.dart';
@@ -8,37 +9,36 @@ import '../molecules/custom_icon_button.dart';
 import 'tourou_organism.dart';
 
 class WorldTourouOrganism extends StatelessWidget {
-  final Object tourou;
+  final TourouData tourouData;
+
+  final void Function(TourouData tourouData) worldTourouTapFunction;
 
   final double tourouWidth;
 
-  final void Function() reportFunction;
+  final void Function(TourouData tourouData) reportFunction;
   final double errorIconSize;
   final Color iconColor;
 
-  final String profileImagePath;
   final double profileImageHeight;
+  final void Function(TourouData tourouData) profileFunction;
 
-  final String userName;
   final double userNameFontSize;
   final Color textColor;
 
   final String fontFamily;
 
-  final String userId;
   final Color userIdColor;
 
-  final String tourouText;
   final double tourouTextFontSize;
   final double tourouContentWidth;
 
-  final String? tourouImagePath;
   final double tourouImageHeight;
+  final void Function(TourouData tourouData) tourouImageFunction;
 
   final String goodButtonText;
   final double goodButtonHeight;
   final double goodButtonWidth;
-  final void Function() goodButtonFunction;
+  final void Function(TourouData tourouData) goodButtonFunction;
   final Color buttonColor;
   final double buttonFontSize;
 
@@ -50,14 +50,13 @@ class WorldTourouOrganism extends StatelessWidget {
 
   const WorldTourouOrganism({
     Key? key,
+    required this.tourouData,
+    required this.worldTourouTapFunction,
     required this.tourouWidth,
     required this.iconColor,
-    required this.profileImagePath,
     required this.profileImageHeight,
-    required this.userName,
+    required this.profileFunction,
     required this.userNameFontSize,
-    required this.userId,
-    required this.tourouText,
     required this.tourouTextFontSize,
     required this.reportFunction,
     required this.goodButtonText,
@@ -66,8 +65,8 @@ class WorldTourouOrganism extends StatelessWidget {
     required this.textColor,
     required this.userIdColor,
     required this.tourouContentWidth,
-    this.tourouImagePath,
     required this.tourouImageHeight,
+    required this.tourouImageFunction,
     required this.goodButtonHeight,
     required this.goodButtonWidth,
     required this.buttonColor,
@@ -81,72 +80,76 @@ class WorldTourouOrganism extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: tourouWidth,
-      child: Stack(
-        children: [
-          Align(
-            alignment: Alignment.topRight,
-            child: CustomIconButton(
-              function: reportFunction,
-              iconData: Icons.error_outline,
-              size: errorIconSize,
-              color: iconColor,
+    return GestureDetector(
+      onTap: () {
+        worldTourouTapFunction(tourouData);
+      },
+      child: Container(
+        width: tourouWidth,
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.topRight,
+              child: CustomIconButton(
+                function: () {
+                  reportFunction(tourouData);
+                },
+                iconData: Icons.error_outline,
+                size: errorIconSize,
+                color: iconColor,
+              ),
             ),
-          ),
-          Align(
-            alignment: Alignment.topCenter,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                TourouOrganism(
-                  profileImagePath: profileImagePath,
-                  profileImageHeight: profileImageHeight,
-                  profileFunction: profileFunction,
-                  object: object,
-                  userName: userName,
-                  userNameFontSize: userNameFontSize,
-                  userId: userId,
-                  tourouText: tourouText,
-                  tourouTextFontSize: tourouTextFontSize,
-                  tourouTextWidth: tourouContentWidth,
-                  textColor: textColor,
-                  userIdColor: userIdColor,
-                  fontFamily: fontFamily,
-                  tourouImagePath: tourouImagePath,
-                  tourouImageHeight: tourouImageHeight,
-                  tourouImageFunction: tourouImageFunction,
-                ),
-                Row(
-                  children: [
-                    SizedBox(
-                      width: goodButtonMargin,
-                    ),
-                    CustomElevatedButton(
-                      text: goodButtonText,
-                      height: goodButtonHeight,
-                      width: goodButtonWidth,
-                      color: textColor,
-                      fontFamily: fontFamily,
-                      buttonColor: buttonColor,
-                      fontSize: buttonFontSize,
-                      function: goodButtonFunction,
-                    ),
-                    SizedBox(
-                      width: goodButtonMargin,
-                    ),
-                    CustomText(
-                      text: goodNumber,
-                      fontSize: goodNumberFontSize,
-                      color: goodNumberColor,
-                      fontFamily: fontFamily,
-                    )
-                  ],
-                ),
-              ],
+            Align(
+              alignment: Alignment.topCenter,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  TourouOrganism(
+                    tourouData: tourouData,
+                    profileImageHeight: profileImageHeight,
+                    profileFunction: profileFunction,
+                    userNameFontSize: userNameFontSize,
+                    tourouTextFontSize: tourouTextFontSize,
+                    tourouTextWidth: tourouContentWidth,
+                    textColor: textColor,
+                    userIdColor: userIdColor,
+                    fontFamily: fontFamily,
+                    tourouImageHeight: tourouImageHeight,
+                    tourouImageFunction: tourouImageFunction,
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: goodButtonMargin,
+                      ),
+                      CustomElevatedButton(
+                        text: goodButtonText,
+                        height: goodButtonHeight,
+                        width: goodButtonWidth,
+                        color: textColor,
+                        fontFamily: fontFamily,
+                        buttonColor: buttonColor,
+                        fontSize: buttonFontSize,
+                        function: () {
+                          goodButtonFunction(tourouData);
+                        },
+                      ),
+                      SizedBox(
+                        width: goodButtonMargin,
+                      ),
+                      CustomText(
+                        text: tourouData.goodNumber,
+                        fontSize: goodNumberFontSize,
+                        color: goodNumberColor,
+                        fontFamily: fontFamily,
+                      )
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
