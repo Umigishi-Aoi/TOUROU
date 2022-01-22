@@ -7,7 +7,6 @@ import 'package:tourou/ui/molecules/image_button.dart';
 import '../atoms/custom_text.dart';
 
 class TourouOrganism extends StatelessWidget {
-
   final TourouData tourouData;
 
   final double profileImageHeight;
@@ -46,11 +45,13 @@ class TourouOrganism extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         ImageButton(
-            firstImagePath: tourouData.profileImagePath,
-            height: profileImageHeight,
-            fit: BoxFit.cover,
-            isCircle: true,
-            function: (){profileFunction(tourouData)},
+          firstImagePath: tourouData.profileImagePath,
+          height: profileImageHeight,
+          fit: BoxFit.cover,
+          isCircle: true,
+          function: () {
+            profileFunction(tourouData);
+          },
         ),
         CustomText(
           text: tourouData.userName,
@@ -82,7 +83,7 @@ class TourouOrganism extends StatelessWidget {
             fit: BoxFit.contain,
             isCircle: false,
             function: () {
-              tourouImageFunction(tourouData)
+              tourouImageFunction(tourouData);
             },
           ),
       ],
