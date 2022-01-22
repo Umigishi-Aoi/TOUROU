@@ -1,14 +1,12 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/temp/toruou_data.dart';
 
 // Project imports:
-import '../atoms/custom_image.dart';
+import '../../temp/toruou_data.dart';
 import '../atoms/custom_text.dart';
 import 'tourou_organism.dart';
 
 class SelfTourouOrganism extends StatelessWidget {
-
   final TourouData tourouData;
   final double tourouWidth;
 

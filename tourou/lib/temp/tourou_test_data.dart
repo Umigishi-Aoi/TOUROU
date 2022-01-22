@@ -1,4 +1,3 @@
-
 // Project imports:
 import '../gen/assets.gen.dart';
 import 'toruou_data.dart';
@@ -38,8 +37,7 @@ class TourouTestData {
         profileImagePath: Assets.images.iconNoImage.path,
         userName: 'kenta',
         userId: 'kenta3456',
-        tourouText:
-        '今日はいい天気ですね',
+        tourouText: '今日はいい天気ですね',
         goodNumber: '5000',
       ));
     }
