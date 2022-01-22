@@ -33,7 +33,7 @@ const double tabBarIndicatorWeight = 1.0;
 const double tabBarIndicatorHorizontalPadding = 16.0;
 const double tabBarIndicatorVerticalPadding = 8.0;
 
-const int initialTabIndex = 1;
+const int initialTabIndex = 0;
 const int tabLength = 2;
 
 //title organism setting
