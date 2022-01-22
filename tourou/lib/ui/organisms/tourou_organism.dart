@@ -11,19 +11,19 @@ class TourouOrganism extends StatelessWidget {
   final TourouData tourouData;
 
   final double profileImageHeight;
-  final void Function(Object object) profileFunction;
+  final void Function(TourouData tourouData) profileFunction;
 
   final Color textColor;
   final String fontFamily;
   final double userNameFontSize;
 
   final Color userIdColor;
-  
+
   final double tourouTextWidth;
   final double tourouTextFontSize;
 
   final double tourouImageHeight;
-  final void Function(Object object) tourouImageFunction;
+  final void Function(TourouData tourouData) tourouImageFunction;
 
   const TourouOrganism({
     Key? key,
@@ -46,12 +46,11 @@ class TourouOrganism extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         ImageButton(
-          firstImagePath: tourouData.profileImagePath,
-          height: profileImageHeight,
-          fit: BoxFit.cover,
-          isCircle: true,
-          objectFunction: profileFunction,
-          object: tourouData,
+            firstImagePath: tourouData.profileImagePath,
+            height: profileImageHeight,
+            fit: BoxFit.cover,
+            isCircle: true,
+            function: (){profileFunction(tourouData)},
         ),
         CustomText(
           text: tourouData.userName,
@@ -82,8 +81,9 @@ class TourouOrganism extends StatelessWidget {
             height: tourouImageHeight,
             fit: BoxFit.contain,
             isCircle: false,
-            objectFunction: tourouImageFunction,
-            object: tourouData,
+            function: () {
+              tourouImageFunction(tourouData)
+            },
           ),
       ],
     );
