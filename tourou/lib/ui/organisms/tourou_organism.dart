@@ -1,10 +1,10 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/temp/toruou_data.dart';
-import 'package:tourou/ui/molecules/image_button.dart';
 
 // Project imports:
+import '../../temp/toruou_data.dart';
 import '../atoms/custom_text.dart';
+import '../molecules/image_button.dart';
 
 class TourouOrganism extends StatelessWidget {
   final TourouData tourouData;

@@ -1,8 +1,8 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/temp/toruou_data.dart';
 
 // Project imports:
+import '../../temp/toruou_data.dart';
 import '../atoms/custom_text.dart';
 import '../molecules/custom_elevated_button.dart';
 import '../molecules/custom_icon_button.dart';

@@ -57,7 +57,7 @@ class _ImageButtonState extends State<ImageButton> {
                   await Future<void>.delayed(
                       Duration(milliseconds: widget.duration!));
                 }
-                if(widget.function != null) {
+                if (widget.function != null) {
                   widget.function!();
                 }
               }
