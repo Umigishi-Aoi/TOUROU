@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tourou/gen/colors.gen.dart';
 import 'package:tourou/gen/fonts.gen.dart';
 import 'package:tourou/res/constants.dart';
-import 'package:tourou/temp/world_tourou.dart';
+import 'package:tourou/temp/toruou_data.dart';
 import 'package:tourou/ui/atoms/tourou_tab_bar.dart';
 import 'package:tourou/ui/organisms/world_tourou_organism.dart';
 
@@ -11,8 +11,8 @@ import '../../ads/adaptive_banner_ad.dart';
 class WorldTourouTemplate extends StatelessWidget {
   final bool isTest;
 
-  final List<WorldTourou> newWorldTourous;
-  final List<WorldTourou> trendWorldTourous;
+  final List<TourouData> newWorldTourous;
+  final List<TourouData> trendWorldTourous;
 
   const WorldTourouTemplate({Key? key}) : super(key: key);
 
@@ -44,7 +44,7 @@ class WorldTourouTemplate extends StatelessWidget {
                 child: TabBarView(
                   children: [
                     ListView.builder(itemBuilder: (context, index) {
-                      WorldTourou worldTourou = newWorldTourous[index];
+                      TourouData worldTourou = newWorldTourous[index];
                       return WorldTourouOrganism(
                           tourouWidth: displayWidth * tourouContentWidthRatio,
                           iconColor: ColorName.itemBackground,

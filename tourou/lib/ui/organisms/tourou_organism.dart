@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:tourou/ui/molecules/image_button.dart';
 
 // Project imports:
+import '../../tourou.dart';
 import '../atoms/custom_text.dart';
 
 class TourouOrganism extends StatelessWidget {
   final String profileImagePath;
   final double profileImageHeight;
-  final void Function(Object object) profileFunction;
-  final Object object;
+  final void Function(Tourou tourou) profileFunction;
+  final Tourou tourou;
 
   final String userName;
   final Color textColor;
@@ -32,7 +33,7 @@ class TourouOrganism extends StatelessWidget {
     required this.profileImagePath,
     required this.profileImageHeight,
     required this.profileFunction,
-    required this.object,
+    required this.tourou,
     required this.userName,
     required this.textColor,
     required this.fontFamily,
@@ -53,7 +54,7 @@ class TourouOrganism extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         ImageButton(
-          firstImagePath: profileImagePath,
+          firstImagePath: tourou,
           height: profileImageHeight,
           fit: BoxFit.cover,
           isCircle: true,

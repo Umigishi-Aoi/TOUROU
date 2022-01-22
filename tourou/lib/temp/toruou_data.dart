@@ -1,4 +1,4 @@
-class WorldTourou {
+class TourouData {
   final String profileImagePath;
   final String userName;
   final String userId;
@@ -6,7 +6,7 @@ class WorldTourou {
   final String? tourouImagePath;
   final String goodNumber;
 
-  WorldTourou(
+  TourouData(
       {required this.profileImagePath,
       required this.userName,
       required this.userId,
