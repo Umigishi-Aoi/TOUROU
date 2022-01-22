@@ -1,5 +1,3 @@
-// Dart imports:
-import 'dart:math';
 
 // Project imports:
 import '../gen/assets.gen.dart';
@@ -10,29 +8,42 @@ class TourouTestData {
 
   TourouTestData._({required this.tourouTestData});
 
-  factory TourouTestData.testData() {
+  factory TourouTestData() {
     List<TourouData> testData = [];
 
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 25; i++) {
       testData.add(TourouData(
         profileImagePath: Assets.images.iconNoImage.path,
-        userName: generateNonce(10),
-        userId: generateNonce(8),
-        tourouText: generateNonce(Random().nextInt(100)),
-        goodNumber: Random().nextInt(100).toString(),
+        userName: 'kenta',
+        userId: 'kenta1234',
+        tourouText: '今日はいい天気ですね',
+        goodNumber: '0',
+      ));
+      testData.add(TourouData(
+        profileImagePath: Assets.images.iconNoImage.path,
+        userName: 'kentakentakentakenta',
+        userId: 'kenta5678',
+        tourouText: '今日はいい天気ですね',
+        goodNumber: '1',
+      ));
+      testData.add(TourouData(
+        profileImagePath: Assets.images.iconNoImage.path,
+        userName: 'kenta',
+        userId: 'kenta9012',
+        tourouText:
+            '今日はいい天気ですね今日はいい天気ですね今日はいい天気ですね今日はいい天気ですね今日はいい天気ですね今日はいい天気ですね今日はいい天気ですね今日はいい天気ですね',
+        goodNumber: '0',
+      ));
+      testData.add(TourouData(
+        profileImagePath: Assets.images.iconNoImage.path,
+        userName: 'kenta',
+        userId: 'kenta3456',
+        tourouText:
+        '今日はいい天気ですね',
+        goodNumber: '5000',
       ));
     }
 
     return TourouTestData._(tourouTestData: testData);
   }
-}
-
-String generateNonce([int length = 32]) {
-  const charset =
-      '0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._';
-  final random = Random.secure();
-  final randomStr =
-      List.generate(length, (_) => charset[random.nextInt(charset.length)])
-          .join();
-  return randomStr;
 }

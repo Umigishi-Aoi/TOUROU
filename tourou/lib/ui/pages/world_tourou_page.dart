@@ -15,11 +15,11 @@ class WorldTourouPage extends StatelessWidget {
     return WorldTourouTemplate(
       isTest: isTest,
       newWorldTourous: isTest
-          ? TourouTestData.testData().tourouTestData
-          : TourouTestData.testData().tourouTestData,
+          ? TourouTestData().tourouTestData
+          : TourouTestData().tourouTestData,
       trendWorldTourous: isTest
-          ? TourouTestData.testData().tourouTestData
-          : TourouTestData.testData().tourouTestData,
+          ? TourouTestData().tourouTestData
+          : TourouTestData().tourouTestData,
       worldTourouTapFunction: (tourouData) {},
       reportFunction: (tourouData) {},
       profileFunction: (tourouData) {},
