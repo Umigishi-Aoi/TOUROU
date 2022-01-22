@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:tourou/ui/molecules/image_button.dart';
 
 // Project imports:
-import '../atoms/custom_image.dart';
 import '../atoms/custom_text.dart';
 
-class TourouMolecule extends StatelessWidget {
+class TourouOrganism extends StatelessWidget {
   final String profileImagePath;
   final double profileImageHeight;
   final void Function(Object object) profileFunction;
@@ -28,7 +27,7 @@ class TourouMolecule extends StatelessWidget {
   final double tourouImageHeight;
   final void Function(Object object) tourouImageFunction;
 
-  const TourouMolecule({
+  const TourouOrganism({
     Key? key,
     required this.profileImagePath,
     required this.profileImageHeight,

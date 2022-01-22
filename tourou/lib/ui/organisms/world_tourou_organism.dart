@@ -2,13 +2,14 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import '../atoms/custom_image.dart';
 import '../atoms/custom_text.dart';
 import '../molecules/custom_elevated_button.dart';
 import '../molecules/custom_icon_button.dart';
 import 'tourou_organism.dart';
 
 class WorldTourouOrganism extends StatelessWidget {
+  final Object tourou;
+
   final double tourouWidth;
 
   final void Function() reportFunction;
@@ -17,7 +18,6 @@ class WorldTourouOrganism extends StatelessWidget {
 
   final String profileImagePath;
   final double profileImageHeight;
-  final BoxFit profileImageFit;
 
   final String userName;
   final double userNameFontSize;
@@ -34,7 +34,6 @@ class WorldTourouOrganism extends StatelessWidget {
 
   final String? tourouImagePath;
   final double tourouImageHeight;
-  final BoxFit tourouImgageFit;
 
   final String goodButtonText;
   final double goodButtonHeight;
@@ -55,7 +54,6 @@ class WorldTourouOrganism extends StatelessWidget {
     required this.iconColor,
     required this.profileImagePath,
     required this.profileImageHeight,
-    required this.profileImageFit,
     required this.userName,
     required this.userNameFontSize,
     required this.userId,
@@ -70,7 +68,6 @@ class WorldTourouOrganism extends StatelessWidget {
     required this.tourouContentWidth,
     this.tourouImagePath,
     required this.tourouImageHeight,
-    required this.tourouImgageFit,
     required this.goodButtonHeight,
     required this.goodButtonWidth,
     required this.buttonColor,
@@ -102,10 +99,11 @@ class WorldTourouOrganism extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                TourouMolecule(
+                TourouOrganism(
                   profileImagePath: profileImagePath,
                   profileImageHeight: profileImageHeight,
-                  imageFit: profileImageFit,
+                  profileFunction: profileFunction,
+                  object: object,
                   userName: userName,
                   userNameFontSize: userNameFontSize,
                   userId: userId,
@@ -115,14 +113,10 @@ class WorldTourouOrganism extends StatelessWidget {
                   textColor: textColor,
                   userIdColor: userIdColor,
                   fontFamily: fontFamily,
+                  tourouImagePath: tourouImagePath,
+                  tourouImageHeight: tourouImageHeight,
+                  tourouImageFunction: tourouImageFunction,
                 ),
-                if (tourouImagePath != null)
-                  CustomImage(
-                    path: tourouImagePath!,
-                    width: tourouContentWidth,
-                    height: tourouImageHeight,
-                    fit: tourouImgageFit,
-                  ),
                 Row(
                   children: [
                     SizedBox(

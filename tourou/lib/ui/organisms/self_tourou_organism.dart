@@ -82,7 +82,7 @@ class SelfTourouOrganism extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                TourouMolecule(
+                TourouOrganism(
                   profileImagePath: profileImagePath,
                   profileImageHeight: profileImageHeight,
                   imageFit: profileImageFit,
