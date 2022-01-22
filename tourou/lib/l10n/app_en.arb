@@ -19,5 +19,8 @@
   "goBackTo": "Go back to ",
   "title": "Title",
   "signInWithGoogle": "Sign in with Google",
-  "signInWithApple": "Sign in with Apple"
+  "signInWithApple": "Sign in with Apple",
+  "trendTourou": "Trend",
+  "newTourou": "New",
+  "good": "Good"
 }

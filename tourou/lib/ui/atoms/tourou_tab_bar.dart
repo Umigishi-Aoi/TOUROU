@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 class TourouTabBar extends StatelessWidget {
   final String firstTabText;
   final String secondTabText;
-  final TabController controller;
 
   final Color labelColor;
   final Color unselectedLabelColor;
@@ -18,7 +17,6 @@ class TourouTabBar extends StatelessWidget {
     Key? key,
     required this.firstTabText,
     required this.secondTabText,
-    required this.controller,
     required this.labelColor,
     required this.unselectedLabelColor,
     required this.indicatorWeight,
@@ -39,7 +37,6 @@ class TourouTabBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return TabBar(
       tabs: tabs,
-      controller: controller,
       labelColor: labelColor,
       labelStyle: TextStyle(fontWeight: FontWeight.bold),
       unselectedLabelColor: unselectedLabelColor,
