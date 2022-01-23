@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 
 // Project imports:
 import 'l10n/app_localizations.dart';
-import 'ui/organisms/world_tourou_organism.dart';
-import 'ui/pages/title_page.dart';
 import 'ui/pages/world_tourou_page.dart';
 
 // Package imports:
