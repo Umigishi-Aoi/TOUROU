@@ -77,7 +77,9 @@ class TourouOrganism extends StatelessWidget {
             fontSize: tourouTextFontSize,
           ),
         ),
-        SizedBox(height: contentBottomPadding,),
+        SizedBox(
+          height: contentBottomPadding,
+        ),
         if (tourouData.tourouImagePath != null)
           Column(
             children: [
@@ -91,10 +93,11 @@ class TourouOrganism extends StatelessWidget {
                   tourouImageFunction(tourouData);
                 },
               ),
-              SizedBox(height: contentBottomPadding,),
+              SizedBox(
+                height: contentBottomPadding,
+              ),
             ],
           ),
-
       ],
     );
   }
