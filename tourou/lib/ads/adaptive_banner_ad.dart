@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 // Project imports:
-import 'ad_helper_export.dart';
+import 'ad_helper_abs.dart';
 
 class AdaptiveBannerAd extends StatefulWidget {
   const AdaptiveBannerAd({Key? key}) : super(key: key);
@@ -23,6 +23,8 @@ class _AdaptiveBannerAdState extends State<AdaptiveBannerAd> {
 
   //バナー広告がロードされたかどうかを判別するフラグ
   bool _isAdLoaded = false;
+
+  BaseAdHelper baseAdHelper = BaseAdHelper();
 
   //バナー広告のサイズの取得
   Future<AdSize?> _getAdSize(BuildContext context) async {
@@ -67,7 +69,7 @@ class _AdaptiveBannerAdState extends State<AdaptiveBannerAd> {
                 }
                 if (!_isAdLoaded) {
                   _ad = BannerAd(
-                    adUnitId: AdHelper.bannerAdUnitId,
+                    adUnitId: baseAdHelper.bannerAdUnitId,
                     size: _adSize!,
                     request: AdRequest(),
                     listener: BannerAdListener(

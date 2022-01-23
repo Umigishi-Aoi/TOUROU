@@ -1,14 +1,13 @@
-// Dart imports:
-import 'dart:io';
+// Project imports:
+import 'ad_helper_abs.dart';
 
-class AdHelper {
-  static String get bannerAdUnitId {
-    if (Platform.isAndroid) {
-      return "ca-app-pub-3940256099942544/6300978111";
-    } else if (Platform.isIOS) {
-      return "ca-app-pub-3940256099942544/2934735716";
-    } else {
-      throw UnsupportedError("Unsupported platform");
-    }
+class TestAdHelper implements BaseAdHelper {
+  TestAdHelper() {}
+
+  String get bannerAdUnitId {
+    print('test mode');
+    return '';
   }
 }
+
+BaseAdHelper getHelper() => TestAdHelper();
