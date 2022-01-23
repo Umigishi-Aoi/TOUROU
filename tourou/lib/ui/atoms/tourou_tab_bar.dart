@@ -25,9 +25,11 @@ class TourouTabBar extends StatelessWidget {
   }) : super(key: key) {
     this.tabs = [
       Tab(
+        key: ValueKey('firstTab'),
         text: firstTabText,
       ),
       Tab(
+        key: ValueKey('secondTab'),
         text: secondTabText,
       ),
     ];
