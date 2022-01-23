@@ -46,7 +46,7 @@ class WorldTourouOrganism extends StatelessWidget {
   final Color buttonColor;
   final double buttonFontSize;
 
-  final double goodButtonMargin;
+  final double goodButtonTextWidth;
 
   final String goodNumber;
   final double goodNumberFontSize;
@@ -83,7 +83,7 @@ class WorldTourouOrganism extends StatelessWidget {
     required this.goodNumberColor,
     required this.errorIconSize,
     required this.fontFamily,
-    required this.goodButtonMargin,
+    required this.goodButtonTextWidth,
   }) : super(key: key);
 
   @override
@@ -132,33 +132,35 @@ class WorldTourouOrganism extends StatelessWidget {
                       tourouImageHeight: tourouImageHeight,
                       tourouImageFunction: tourouImageFunction,
                     ),
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: goodButtonMargin,
-                        ),
-                        CustomElevatedButton(
-                          text: goodButtonText,
-                          height: goodButtonHeight,
-                          width: goodButtonWidth,
-                          color: textColor,
-                          fontFamily: fontFamily,
-                          buttonColor: buttonColor,
-                          fontSize: buttonFontSize,
-                          function: () {
-                            goodButtonFunction(tourouData);
-                          },
-                        ),
-                        SizedBox(
-                          width: goodButtonMargin,
-                        ),
-                        CustomText(
-                          text: tourouData.goodNumber,
-                          fontSize: goodNumberFontSize,
-                          color: goodNumberColor,
-                          fontFamily: fontFamily,
-                        )
-                      ],
+                    SizedBox(
+                      width: tourouContentWidth,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          CustomElevatedButton(
+                            text: goodButtonText,
+                            height: goodButtonHeight,
+                            width: goodButtonWidth,
+                            color: textColor,
+                            fontFamily: fontFamily,
+                            buttonColor: buttonColor,
+                            fontSize: buttonFontSize,
+                            function: () {
+                              goodButtonFunction(tourouData);
+                            },
+                          ),
+                          SizedBox(
+                            width: goodButtonTextWidth,
+                            child: CustomText(
+                              text: tourouData.goodNumber,
+                              fontSize: goodNumberFontSize,
+                              color: goodNumberColor,
+                              fontFamily: fontFamily,
+                            ),
+                          ),
+                          // SizedBox(),
+                        ],
+                      ),
                     ),
                   ],
                 ),

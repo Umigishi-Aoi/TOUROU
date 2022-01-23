@@ -111,8 +111,8 @@ class WorldTourouTemplate extends StatelessWidget {
                                 buttonHeightFontSizeRatio,
                             goodNumberColor: ColorName.switchAccentColor,
                             fontFamily: FontFamily.mplus1,
-                            goodButtonMargin:
-                                displayWidth * goodButtonMarginRatio,
+                            goodButtonTextWidth:
+                                displayWidth * goodButtonTextWidthRatio,
                           ),
                         );
                       }),
@@ -159,8 +159,8 @@ class WorldTourouTemplate extends StatelessWidget {
                                 buttonHeightFontSizeRatio,
                             goodNumberColor: ColorName.switchAccentColor,
                             fontFamily: FontFamily.mplus1,
-                            goodButtonMargin:
-                                displayWidth * goodButtonMarginRatio,
+                            goodButtonTextWidth:
+                                displayWidth * goodButtonTextWidthRatio,
                           ),
                         );
                       }),

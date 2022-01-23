@@ -20,7 +20,7 @@ const double tourouContentBottomPadding = 8;
 
 const double goodButtonHeightRatio = 0.05;
 const double goodButtonWidthRatio = 0.4;
-const double goodButtonMarginRatio = 0.05;
+const double goodButtonTextWidthRatio = 0.1;
 const double goodNumberFontSizeConstant = 32;
 
 const double goodNumberPadding = 16;
