@@ -43,14 +43,16 @@ class WorldTourouTemplate extends StatelessWidget {
       initialIndex: initialTabIndex,
       length: tabLength,
       child: Scaffold(
+        backgroundColor: ColorName.mainBlack,
         appBar: AppBar(
+          backgroundColor: ColorName.mainBlack,
             flexibleSpace: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             TourouTabBar(
               firstTabText: AppLocalizations.of(context)!.trendTourou,
               secondTabText: AppLocalizations.of(context)!.newTourou,
-              labelColor: ColorName.mainBlack,
+              labelColor: ColorName.textWhite,
               unselectedLabelColor: ColorName.userIdText,
               indicatorWeight: tabBarIndicatorWeight,
               horizontalPadding: tabBarIndicatorHorizontalPadding,
@@ -65,86 +67,95 @@ class WorldTourouTemplate extends StatelessWidget {
                 Expanded(
                   child: TabBarView(
                     children: [
-                      ListView.builder(itemBuilder: (context, index) {
+                      ListView.builder(
+                          itemBuilder: (context, index) {
                         TourouData worldTourou = newWorldTourous[index];
-                        return WorldTourouOrganism(
-                          tourouData: worldTourou,
-                          worldTourouTapFunction: worldTourouTapFunction,
-                          tourouWidth: displayWidth * tourouContentWidthRatio,
-                          iconColor: ColorName.itemBackground,
-                          errorIconSize:
-                              displayHeight * tourouReportIconSizeRatio,
-                          reportFunction: reportFunction,
-                          profileImageHeight:
-                              displayHeight * tourouProfileImageHeightRatio,
-                          profileFunction: profileFunction,
-                          userNameFontSize: tourouUserNameFontSize,
-                          tourouTextFontSize: tourouUserNameFontSize,
-                          goodButtonText: AppLocalizations.of(context)!.good,
-                          goodButtonFunction: goodButtonFunction,
-                          goodNumber: worldTourou.goodNumber,
-                          textColor: ColorName.mainBlack,
-                          userIdColor: ColorName.userIdText,
-                          tourouContentWidth:
-                              displayWidth * tourouContentWidthRatio,
-                          tourouImageHeight:
-                              displayHeight * tourouProfileImageHeightRatio,
-                          tourouImageFunction: tourouImageFunction,
-                          goodButtonHeight:
-                              displayHeight * goodButtonHeightRatio,
-                          goodButtonWidth: displayWidth * goodButtonWidthRatio,
-                          buttonColor: ColorName.goodBackgoround,
-                          buttonFontSize: displayHeight *
-                              goodButtonHeightRatio *
-                              buttonHeightFontSizeRatio,
-                          goodNumberFontSize: displayHeight *
-                              goodButtonHeightRatio *
-                              buttonHeightFontSizeRatio,
-                          goodNumberColor: ColorName.switchAccentColor,
-                          fontFamily: FontFamily.mplus1,
-                          goodButtonMargin:
-                              displayWidth * goodButtonMarginRatio,
+                        return Padding(
+                          padding: EdgeInsets.all(tourouPadding),
+                          child: WorldTourouOrganism(
+                            tourouData: worldTourou,
+                            worldTourouTapFunction: worldTourouTapFunction,
+                            tourouWidth: displayWidth * tourouWidthRatio,
+                            tourouColor: ColorName.tourouBackground,
+                            iconColor: ColorName.itemBackground,
+                            errorIconSize:
+                                displayHeight * tourouReportIconSizeRatio,
+                            reportFunction: reportFunction,
+                            profileImageHeight:
+                                displayHeight * tourouProfileImageHeightRatio,
+                            profileFunction: profileFunction,
+                            userNameFontSize: tourouUserNameFontSize,
+                            tourouTextFontSize: tourouUserNameFontSize,
+                            goodButtonText: AppLocalizations.of(context)!.good,
+                            goodButtonFunction: goodButtonFunction,
+                            goodNumber: worldTourou.goodNumber,
+                            textColor: ColorName.mainBlack,
+                            userIdColor: ColorName.userIdText,
+                            tourouContentWidth:
+                                displayWidth * tourouContentWidthRatio,
+                            tourouImageHeight:
+                                displayHeight * tourouProfileImageHeightRatio,
+                            tourouImageFunction: tourouImageFunction,
+                            goodButtonHeight:
+                                displayHeight * goodButtonHeightRatio,
+                            goodButtonWidth: displayWidth * goodButtonWidthRatio,
+                            buttonColor: ColorName.goodBackgoround,
+                            buttonFontSize: displayHeight *
+                                goodButtonHeightRatio *
+                                buttonHeightFontSizeRatio,
+                            goodNumberFontSize: displayHeight *
+                                goodButtonHeightRatio *
+                                buttonHeightFontSizeRatio,
+                            goodNumberColor: ColorName.switchAccentColor,
+                            fontFamily: FontFamily.mplus1,
+                            goodButtonMargin:
+                                displayWidth * goodButtonMarginRatio,
+                          ),
                         );
                       }),
                       ListView.builder(itemBuilder: (context, index) {
                         TourouData worldTourou = trendWorldTourous[index];
-                        return WorldTourouOrganism(
-                          tourouData: worldTourou,
-                          worldTourouTapFunction: worldTourouTapFunction,
-                          tourouWidth: displayWidth * tourouContentWidthRatio,
-                          iconColor: ColorName.itemBackground,
-                          errorIconSize:
-                              displayHeight * tourouReportIconSizeRatio,
-                          reportFunction: reportFunction,
-                          profileImageHeight:
-                              displayHeight * tourouProfileImageHeightRatio,
-                          profileFunction: profileFunction,
-                          userNameFontSize: tourouUserNameFontSize,
-                          tourouTextFontSize: tourouUserNameFontSize,
-                          goodButtonText: AppLocalizations.of(context)!.good,
-                          goodButtonFunction: goodButtonFunction,
-                          goodNumber: worldTourou.goodNumber,
-                          textColor: ColorName.mainBlack,
-                          userIdColor: ColorName.userIdText,
-                          tourouContentWidth:
-                              displayWidth * tourouContentWidthRatio,
-                          tourouImageHeight:
-                              displayHeight * tourouProfileImageHeightRatio,
-                          tourouImageFunction: tourouImageFunction,
-                          goodButtonHeight:
-                              displayHeight * goodButtonHeightRatio,
-                          goodButtonWidth: displayWidth * goodButtonWidthRatio,
-                          buttonColor: ColorName.goodBackgoround,
-                          buttonFontSize: displayHeight *
-                              goodButtonHeightRatio *
-                              buttonHeightFontSizeRatio,
-                          goodNumberFontSize: displayHeight *
-                              goodButtonHeightRatio *
-                              buttonHeightFontSizeRatio,
-                          goodNumberColor: ColorName.switchAccentColor,
-                          fontFamily: FontFamily.mplus1,
-                          goodButtonMargin:
-                              displayWidth * goodButtonMarginRatio,
+                        return Padding(
+                          padding: EdgeInsets.all(tourouPadding),
+                          child: WorldTourouOrganism(
+                            tourouData: worldTourou,
+                            worldTourouTapFunction: worldTourouTapFunction,
+                            tourouWidth: displayWidth * tourouContentWidthRatio,
+                            tourouColor: ColorName.tourouBackground,
+                            iconColor: ColorName.itemBackground,
+                            errorIconSize:
+                                displayHeight * tourouReportIconSizeRatio,
+                            reportFunction: reportFunction,
+                            profileImageHeight:
+                                displayHeight * tourouProfileImageHeightRatio,
+                            profileFunction: profileFunction,
+                            userNameFontSize: tourouUserNameFontSize,
+                            tourouTextFontSize: tourouUserNameFontSize,
+                            goodButtonText: AppLocalizations.of(context)!.good,
+                            goodButtonFunction: goodButtonFunction,
+                            goodNumber: worldTourou.goodNumber,
+                            textColor: ColorName.mainBlack,
+                            userIdColor: ColorName.userIdText,
+                            tourouContentWidth:
+                                displayWidth * tourouContentWidthRatio,
+                            tourouImageHeight:
+                                displayHeight * tourouProfileImageHeightRatio,
+                            tourouImageFunction: tourouImageFunction,
+                            goodButtonHeight:
+                                displayHeight * goodButtonHeightRatio,
+                            goodButtonWidth: displayWidth * goodButtonWidthRatio,
+                            buttonColor: ColorName.goodBackgoround,
+                            buttonFontSize: displayHeight *
+                                goodButtonHeightRatio *
+                                buttonHeightFontSizeRatio,
+                            goodNumberFontSize: displayHeight *
+                                goodButtonHeightRatio *
+                                buttonHeightFontSizeRatio,
+                            goodNumberColor: ColorName.switchAccentColor,
+                            fontFamily: FontFamily.mplus1,
+                            goodButtonMargin:
+                                displayWidth * goodButtonMarginRatio,
+                          ),
                         );
                       }),
                     ],

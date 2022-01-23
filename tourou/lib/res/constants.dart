@@ -11,8 +11,9 @@ const double buttonWidthRatio = 0.8;
 const double tourouWidthRatio = 0.9;
 const double tourouProfileImageHeightRatio = 0.05;
 const double tourouReportIconSizeRatio = 0.01;
-const double tourouUserNameFontSize = 32;
+const double tourouUserNameFontSize = 16;
 const double tourouContentWidthRatio = 0.8;
+const double tourouPadding = 16;
 
 const double goodButtonHeightRatio = 0.05;
 const double goodButtonWidthRatio = 0.4;
