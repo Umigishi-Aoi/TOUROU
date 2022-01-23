@@ -31,9 +31,9 @@ const double explanationTextButtonHeightRatio = 0.1;
 const double titleTextFontSizeConstants = 32;
 
 //tourou tab bar setting
-const double tabBarIndicatorWeight = 1.0;
+const double tabBarIndicatorWeight = 3.0;
 const double tabBarIndicatorHorizontalPadding = 16.0;
-const double tabBarIndicatorVerticalPadding = 8.0;
+const double tabBarIndicatorVerticalPadding = 0.0;
 
 const int initialTabIndex = 0;
 const int tabLength = 2;
