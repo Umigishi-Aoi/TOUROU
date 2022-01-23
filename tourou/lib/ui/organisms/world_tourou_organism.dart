@@ -34,6 +34,7 @@ class WorldTourouOrganism extends StatelessWidget {
 
   final double tourouTextFontSize;
   final double tourouContentWidth;
+  final double contentBottomPadding;
 
   final double tourouImageHeight;
   final void Function(TourouData tourouData) tourouImageFunction;
@@ -64,6 +65,7 @@ class WorldTourouOrganism extends StatelessWidget {
     required this.profileFunction,
     required this.userNameFontSize,
     required this.tourouTextFontSize,
+    required this.contentBottomPadding,
     required this.reportFunction,
     required this.goodButtonText,
     required this.goodButtonFunction,
@@ -123,6 +125,7 @@ class WorldTourouOrganism extends StatelessWidget {
                       userNameFontSize: userNameFontSize,
                       tourouTextFontSize: tourouTextFontSize,
                       tourouTextWidth: tourouContentWidth,
+                      contentBottomPadding: contentBottomPadding,
                       textColor: textColor,
                       userIdColor: userIdColor,
                       fontFamily: fontFamily,

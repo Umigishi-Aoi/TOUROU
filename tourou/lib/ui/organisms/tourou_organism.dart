@@ -20,6 +20,7 @@ class TourouOrganism extends StatelessWidget {
 
   final double tourouTextWidth;
   final double tourouTextFontSize;
+  final double contentBottomPadding;
 
   final double tourouImageHeight;
   final void Function(TourouData tourouData) tourouImageFunction;
@@ -35,6 +36,7 @@ class TourouOrganism extends StatelessWidget {
     required this.userNameFontSize,
     required this.tourouTextWidth,
     required this.tourouTextFontSize,
+    required this.contentBottomPadding,
     required this.tourouImageHeight,
     required this.tourouImageFunction,
   }) : super(key: key);
@@ -75,17 +77,24 @@ class TourouOrganism extends StatelessWidget {
             fontSize: tourouTextFontSize,
           ),
         ),
+        SizedBox(height: contentBottomPadding,),
         if (tourouData.tourouImagePath != null)
-          ImageButton(
-            firstImagePath: tourouData.tourouImagePath!,
-            width: tourouTextWidth,
-            height: tourouImageHeight,
-            fit: BoxFit.contain,
-            isCircle: false,
-            function: () {
-              tourouImageFunction(tourouData);
-            },
+          Column(
+            children: [
+              ImageButton(
+                firstImagePath: tourouData.tourouImagePath!,
+                width: tourouTextWidth,
+                height: tourouImageHeight,
+                fit: BoxFit.contain,
+                isCircle: false,
+                function: () {
+                  tourouImageFunction(tourouData);
+                },
+              ),
+              SizedBox(height: contentBottomPadding,),
+            ],
           ),
+
       ],
     );
   }
