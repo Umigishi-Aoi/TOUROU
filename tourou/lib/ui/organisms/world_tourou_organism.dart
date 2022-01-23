@@ -15,6 +15,7 @@ class WorldTourouOrganism extends StatelessWidget {
 
   final double tourouWidth;
   final Color tourouColor;
+  final double borderRadius;
 
   final void Function(TourouData tourouData) reportFunction;
   final double errorIconSize;
@@ -55,6 +56,7 @@ class WorldTourouOrganism extends StatelessWidget {
     required this.worldTourouTapFunction,
     required this.tourouWidth,
     required this.tourouColor,
+    required this.borderRadius,
     required this.iconColor,
     required this.profileImageHeight,
     required this.profileFunction,
@@ -88,7 +90,10 @@ class WorldTourouOrganism extends StatelessWidget {
       },
       child: Container(
         width: tourouWidth,
-        color: tourouColor,
+        decoration: BoxDecoration(
+          color: tourouColor,
+          borderRadius: BorderRadius.circular(borderRadius),
+        ),
         child: Stack(
           children: [
             Align(

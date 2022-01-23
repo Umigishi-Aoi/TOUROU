@@ -77,6 +77,7 @@ class WorldTourouTemplate extends StatelessWidget {
                             worldTourouTapFunction: worldTourouTapFunction,
                             tourouWidth: displayWidth * tourouWidthRatio,
                             tourouColor: ColorName.tourouBackground,
+                            borderRadius: tourouBorderRadius,
                             iconColor: ColorName.itemBackground,
                             errorIconSize:
                                 displayHeight * tourouReportIconSizeRatio,
@@ -122,6 +123,7 @@ class WorldTourouTemplate extends StatelessWidget {
                             worldTourouTapFunction: worldTourouTapFunction,
                             tourouWidth: displayWidth * tourouContentWidthRatio,
                             tourouColor: ColorName.tourouBackground,
+                            borderRadius: tourouBorderRadius,
                             iconColor: ColorName.itemBackground,
                             errorIconSize:
                                 displayHeight * tourouReportIconSizeRatio,
