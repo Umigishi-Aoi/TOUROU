@@ -62,6 +62,8 @@ void main() {
 
     await screenMatchesGolden(tester, 'world_tourou_page_iphone6_en_secondTab');
 
+    await tester.tap(find.byKey(ValueKey('firstTab')));
+
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
     await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: size6);
 
