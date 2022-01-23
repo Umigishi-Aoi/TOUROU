@@ -10,7 +10,7 @@ const double buttonWidthRatio = 0.8;
 //tourou setting
 const double tourouWidthRatio = 0.9;
 const double tourouProfileImageHeightRatio = 0.05;
-const double tourouReportIconSizeRatio = 0.01;
+const double tourouReportIconSizeRatio = 0.03;
 const double tourouUserNameFontSize = 16;
 const double tourouContentWidthRatio = 0.8;
 const double tourouMargin = 16;
