@@ -71,13 +71,14 @@ class WorldTourouTemplate extends StatelessWidget {
                           itemBuilder: (context, index) {
                         TourouData worldTourou = newWorldTourous[index];
                         return Padding(
-                          padding: EdgeInsets.all(tourouPadding),
+                          padding: EdgeInsets.all(tourouMargin),
                           child: WorldTourouOrganism(
                             tourouData: worldTourou,
                             worldTourouTapFunction: worldTourouTapFunction,
                             tourouWidth: displayWidth * tourouWidthRatio,
                             tourouColor: ColorName.tourouBackground,
                             borderRadius: tourouBorderRadius,
+                            verticalPadding: tourouVerticalPadding,
                             iconColor: ColorName.itemBackground,
                             errorIconSize:
                                 displayHeight * tourouReportIconSizeRatio,
@@ -117,7 +118,7 @@ class WorldTourouTemplate extends StatelessWidget {
                       ListView.builder(itemBuilder: (context, index) {
                         TourouData worldTourou = trendWorldTourous[index];
                         return Padding(
-                          padding: EdgeInsets.all(tourouPadding),
+                          padding: EdgeInsets.all(tourouMargin),
                           child: WorldTourouOrganism(
                             tourouData: worldTourou,
                             worldTourouTapFunction: worldTourouTapFunction,
@@ -125,6 +126,7 @@ class WorldTourouTemplate extends StatelessWidget {
                             tourouColor: ColorName.tourouBackground,
                             borderRadius: tourouBorderRadius,
                             iconColor: ColorName.itemBackground,
+                            verticalPadding: tourouVerticalPadding,
                             errorIconSize:
                                 displayHeight * tourouReportIconSizeRatio,
                             reportFunction: reportFunction,
