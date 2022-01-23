@@ -45,21 +45,21 @@ class WorldTourouTemplate extends StatelessWidget {
       child: Scaffold(
         backgroundColor: ColorName.mainBlack,
         appBar: AppBar(
-          backgroundColor: ColorName.mainBlack,
+            backgroundColor: ColorName.mainBlack,
             flexibleSpace: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            TourouTabBar(
-              firstTabText: AppLocalizations.of(context)!.trendTourou,
-              secondTabText: AppLocalizations.of(context)!.newTourou,
-              labelColor: ColorName.textWhite,
-              unselectedLabelColor: ColorName.userIdText,
-              indicatorWeight: tabBarIndicatorWeight,
-              horizontalPadding: tabBarIndicatorHorizontalPadding,
-              verticalPadding: tabBarIndicatorVerticalPadding,
-            ),
-          ],
-        )),
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                TourouTabBar(
+                  firstTabText: AppLocalizations.of(context)!.trendTourou,
+                  secondTabText: AppLocalizations.of(context)!.newTourou,
+                  labelColor: ColorName.textWhite,
+                  unselectedLabelColor: ColorName.userIdText,
+                  indicatorWeight: tabBarIndicatorWeight,
+                  horizontalPadding: tabBarIndicatorHorizontalPadding,
+                  verticalPadding: tabBarIndicatorVerticalPadding,
+                ),
+              ],
+            )),
         body: SafeArea(
           child: Center(
             child: Column(
@@ -67,11 +67,12 @@ class WorldTourouTemplate extends StatelessWidget {
                 Expanded(
                   child: TabBarView(
                     children: [
-                      ListView.builder(
-                          itemBuilder: (context, index) {
+                      ListView.builder(itemBuilder: (context, index) {
                         TourouData worldTourou = newWorldTourous[index];
                         return Padding(
-                          padding: EdgeInsets.all(tourouMargin),
+                          padding: EdgeInsets.symmetric(
+                              vertical: tourouHorizontalMargin / 2,
+                              horizontal: tourouHorizontalMargin),
                           child: WorldTourouOrganism(
                             tourouData: worldTourou,
                             worldTourouTapFunction: worldTourouTapFunction,
@@ -101,7 +102,8 @@ class WorldTourouTemplate extends StatelessWidget {
                             tourouImageFunction: tourouImageFunction,
                             goodButtonHeight:
                                 displayHeight * goodButtonHeightRatio,
-                            goodButtonWidth: displayWidth * goodButtonWidthRatio,
+                            goodButtonWidth:
+                                displayWidth * goodButtonWidthRatio,
                             buttonColor: ColorName.goodBackgoround,
                             buttonFontSize: displayHeight *
                                 goodButtonHeightRatio *
@@ -119,7 +121,9 @@ class WorldTourouTemplate extends StatelessWidget {
                       ListView.builder(itemBuilder: (context, index) {
                         TourouData worldTourou = trendWorldTourous[index];
                         return Padding(
-                          padding: EdgeInsets.all(tourouMargin),
+                          padding: EdgeInsets.symmetric(
+                              vertical: tourouHorizontalMargin / 2,
+                              horizontal: tourouHorizontalMargin),
                           child: WorldTourouOrganism(
                             tourouData: worldTourou,
                             worldTourouTapFunction: worldTourouTapFunction,
@@ -149,7 +153,8 @@ class WorldTourouTemplate extends StatelessWidget {
                             tourouImageFunction: tourouImageFunction,
                             goodButtonHeight:
                                 displayHeight * goodButtonHeightRatio,
-                            goodButtonWidth: displayWidth * goodButtonWidthRatio,
+                            goodButtonWidth:
+                                displayWidth * goodButtonWidthRatio,
                             buttonColor: ColorName.goodBackgoround,
                             buttonFontSize: displayHeight *
                                 goodButtonHeightRatio *
