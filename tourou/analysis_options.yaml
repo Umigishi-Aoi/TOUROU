@@ -34,5 +34,6 @@ analyzer:
 
   errors:
     asset_directory_does_not_exist : ignore
+    no_such_file_or_directory : ignore
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
