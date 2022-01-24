@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 // Project imports:
-import 'ad_helper_export.dart';
+import 'ad_helper.dart';
 
 class AdaptiveBannerAd extends StatefulWidget {
   const AdaptiveBannerAd({Key? key}) : super(key: key);
