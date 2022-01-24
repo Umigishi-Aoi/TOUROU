@@ -14,6 +14,9 @@ class WorldTourouOrganism extends StatelessWidget {
   final void Function(TourouData tourouData) worldTourouTapFunction;
 
   final double tourouWidth;
+  final Color tourouColor;
+  final double borderRadius;
+  final double verticalPadding;
 
   final void Function(TourouData tourouData) reportFunction;
   final double errorIconSize;
@@ -31,6 +34,7 @@ class WorldTourouOrganism extends StatelessWidget {
 
   final double tourouTextFontSize;
   final double tourouContentWidth;
+  final double contentBottomPadding;
 
   final double tourouImageHeight;
   final void Function(TourouData tourouData) tourouImageFunction;
@@ -42,7 +46,7 @@ class WorldTourouOrganism extends StatelessWidget {
   final Color buttonColor;
   final double buttonFontSize;
 
-  final double goodButtonMargin;
+  final double goodButtonTextWidth;
 
   final String goodNumber;
   final double goodNumberFontSize;
@@ -53,11 +57,15 @@ class WorldTourouOrganism extends StatelessWidget {
     required this.tourouData,
     required this.worldTourouTapFunction,
     required this.tourouWidth,
+    required this.tourouColor,
+    required this.borderRadius,
+    required this.verticalPadding,
     required this.iconColor,
     required this.profileImageHeight,
     required this.profileFunction,
     required this.userNameFontSize,
     required this.tourouTextFontSize,
+    required this.contentBottomPadding,
     required this.reportFunction,
     required this.goodButtonText,
     required this.goodButtonFunction,
@@ -75,80 +83,93 @@ class WorldTourouOrganism extends StatelessWidget {
     required this.goodNumberColor,
     required this.errorIconSize,
     required this.fontFamily,
-    required this.goodButtonMargin,
+    required this.goodButtonTextWidth,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        worldTourouTapFunction(tourouData);
-      },
-      child: Container(
-        width: tourouWidth,
-        child: Stack(
-          children: [
-            Align(
-              alignment: Alignment.topRight,
-              child: CustomIconButton(
-                function: () {
-                  reportFunction(tourouData);
-                },
-                iconData: Icons.error_outline,
-                size: errorIconSize,
-                color: iconColor,
+    return InkWell(
+      child: GestureDetector(
+        behavior: HitTestBehavior.translucent,
+        onTap: () {
+          worldTourouTapFunction(tourouData);
+        },
+        child: Container(
+          width: tourouWidth,
+          decoration: BoxDecoration(
+            color: tourouColor,
+            borderRadius: BorderRadius.circular(borderRadius),
+          ),
+          child: Stack(
+            children: [
+              Align(
+                alignment: Alignment.topRight,
+                child: CustomIconButton(
+                  function: () {
+                    reportFunction(tourouData);
+                  },
+                  iconData: Icons.error_outline,
+                  size: errorIconSize,
+                  color: iconColor,
+                ),
               ),
-            ),
-            Align(
-              alignment: Alignment.topCenter,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  TourouOrganism(
-                    tourouData: tourouData,
-                    profileImageHeight: profileImageHeight,
-                    profileFunction: profileFunction,
-                    userNameFontSize: userNameFontSize,
-                    tourouTextFontSize: tourouTextFontSize,
-                    tourouTextWidth: tourouContentWidth,
-                    textColor: textColor,
-                    userIdColor: userIdColor,
-                    fontFamily: fontFamily,
-                    tourouImageHeight: tourouImageHeight,
-                    tourouImageFunction: tourouImageFunction,
-                  ),
-                  Row(
+              Align(
+                alignment: Alignment.topCenter,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(vertical: verticalPadding),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SizedBox(
-                        width: goodButtonMargin,
-                      ),
-                      CustomElevatedButton(
-                        text: goodButtonText,
-                        height: goodButtonHeight,
-                        width: goodButtonWidth,
-                        color: textColor,
+                      TourouOrganism(
+                        tourouData: tourouData,
+                        profileImageHeight: profileImageHeight,
+                        profileFunction: profileFunction,
+                        userNameFontSize: userNameFontSize,
+                        tourouTextFontSize: tourouTextFontSize,
+                        tourouTextWidth: tourouContentWidth,
+                        contentBottomPadding: contentBottomPadding,
+                        textColor: textColor,
+                        userIdColor: userIdColor,
                         fontFamily: fontFamily,
-                        buttonColor: buttonColor,
-                        fontSize: buttonFontSize,
-                        function: () {
-                          goodButtonFunction(tourouData);
-                        },
+                        tourouImageHeight: tourouImageHeight,
+                        tourouImageFunction: tourouImageFunction,
                       ),
                       SizedBox(
-                        width: goodButtonMargin,
+                        width: tourouContentWidth,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            CustomElevatedButton(
+                              text: goodButtonText,
+                              height: goodButtonHeight,
+                              width: goodButtonWidth,
+                              color: textColor,
+                              fontFamily: fontFamily,
+                              buttonColor: buttonColor,
+                              fontSize: buttonFontSize,
+                              function: () {
+                                goodButtonFunction(tourouData);
+                              },
+                            ),
+                            SizedBox(
+                              width: goodButtonTextWidth,
+                              child: CustomText(
+                                text: tourouData.goodNumber,
+                                fontSize: goodNumberFontSize,
+                                color: goodNumberColor,
+                                fontFamily: fontFamily,
+                              ),
+                            ),
+                            // SizedBox(),
+                          ],
+                        ),
                       ),
-                      CustomText(
-                        text: tourouData.goodNumber,
-                        fontSize: goodNumberFontSize,
-                        color: goodNumberColor,
-                        fontFamily: fontFamily,
-                      )
                     ],
                   ),
-                ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

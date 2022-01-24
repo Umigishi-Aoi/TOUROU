@@ -10,13 +10,17 @@ const double buttonWidthRatio = 0.8;
 //tourou setting
 const double tourouWidthRatio = 0.9;
 const double tourouProfileImageHeightRatio = 0.05;
-const double tourouReportIconSizeRatio = 0.01;
-const double tourouUserNameFontSize = 32;
+const double tourouReportIconSizeRatio = 0.03;
+const double tourouUserNameFontSize = 16;
 const double tourouContentWidthRatio = 0.8;
+const double tourouHorizontalMargin = 16;
+const double tourouBorderRadius = 8;
+const double tourouVerticalPadding = 16;
+const double tourouContentBottomPadding = 8;
 
 const double goodButtonHeightRatio = 0.05;
 const double goodButtonWidthRatio = 0.4;
-const double goodButtonMarginRatio = 0.05;
+const double goodButtonTextWidthRatio = 0.15;
 const double goodNumberFontSizeConstant = 32;
 
 const double goodNumberPadding = 16;
@@ -29,9 +33,9 @@ const double explanationTextButtonHeightRatio = 0.1;
 const double titleTextFontSizeConstants = 32;
 
 //tourou tab bar setting
-const double tabBarIndicatorWeight = 1.0;
+const double tabBarIndicatorWeight = 3.0;
 const double tabBarIndicatorHorizontalPadding = 16.0;
-const double tabBarIndicatorVerticalPadding = 8.0;
+const double tabBarIndicatorVerticalPadding = 0.0;
 
 const int initialTabIndex = 0;
 const int tabLength = 2;

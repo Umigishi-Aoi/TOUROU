@@ -23,6 +23,7 @@ class SelfTourouOrganism extends StatelessWidget {
 
   final double tourouTextFontSize;
   final double tourouContentWidth;
+  final double contentBottomPadding;
 
   final double tourouImageHeight;
   final void Function(TourouData tourouData) tourouImagaFunction;
@@ -42,6 +43,7 @@ class SelfTourouOrganism extends StatelessWidget {
     required this.tourouWidth,
     required this.textColor,
     required this.tourouContentWidth,
+    required this.contentBottomPadding,
     required this.tourouImageHeight,
     required this.tourouImagaFunction,
     required this.goodNumberFontSize,
@@ -77,6 +79,7 @@ class SelfTourouOrganism extends StatelessWidget {
                   fontFamily: fontFamily,
                   tourouTextWidth: tourouContentWidth,
                   tourouTextFontSize: tourouTextFontSize,
+                  contentBottomPadding: contentBottomPadding,
                   textColor: textColor,
                   userIdColor: userIdColor,
                   tourouImageHeight: tourouImageHeight,
