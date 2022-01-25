@@ -1,6 +1,9 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/temp/toruou_data.dart';
-import 'package:tourou/ui/templates/world_tourou_detail_template.dart';
+
+// Project imports:
+import '../../temp/toruou_data.dart';
+import '../templates/world_tourou_detail_template.dart';
 
 class WorldTourouDetailPage extends StatelessWidget {
   final TourouData worldTourou;

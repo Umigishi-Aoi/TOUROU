@@ -1,12 +1,14 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/gen/colors.gen.dart';
-import 'package:tourou/gen/fonts.gen.dart';
-import 'package:tourou/res/constants.dart';
-import 'package:tourou/temp/toruou_data.dart';
-import 'package:tourou/ui/atoms/custom_text.dart';
-import 'package:tourou/ui/organisms/world_tourou_organism.dart';
 
+// Project imports:
+import '../../gen/colors.gen.dart';
+import '../../gen/fonts.gen.dart';
 import '../../l10n/app_localizations.dart';
+import '../../res/constants.dart';
+import '../../temp/toruou_data.dart';
+import '../atoms/custom_text.dart';
+import '../organisms/world_tourou_organism.dart';
 
 class WorldTourouDetailTemplate extends StatelessWidget {
   final TourouData worldTourou;
