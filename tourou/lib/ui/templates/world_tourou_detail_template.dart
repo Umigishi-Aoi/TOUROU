@@ -38,7 +38,10 @@ class WorldTourouDetailTemplate extends StatelessWidget {
         title: CustomText(
             text: AppLocalizations.of(context)!.detail,
             color: ColorName.textWhite,
-            fontSize: howToUseTitleFontSize),
+            fontSize: howToUseTitleFontSize,
+            fontFamily: FontFamily.mplus1,
+            textAlign: TextAlign.center,
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
