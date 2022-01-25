@@ -1,7 +1,9 @@
-
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/temp/tourou_test_data.dart';
-import 'package:tourou/ui/templates/self_tourou_template.dart';
+
+// Project imports:
+import '../../temp/tourou_test_data.dart';
+import '../templates/self_tourou_template.dart';
 
 class TitlePage extends StatelessWidget {
   final bool isTest;

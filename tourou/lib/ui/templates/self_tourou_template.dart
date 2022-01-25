@@ -1,12 +1,15 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/gen/colors.gen.dart';
-import 'package:tourou/gen/fonts.gen.dart';
-import 'package:tourou/res/constants.dart';
-import 'package:tourou/temp/toruou_data.dart';
-import 'package:tourou/ui/atoms/tourou_tab_bar.dart';
-import 'package:tourou/ui/organisms/self_tourou_organism.dart';
+
+// Project imports:
 import '../../ads/adaptive_banner_ad.dart';
+import '../../gen/colors.gen.dart';
+import '../../gen/fonts.gen.dart';
 import '../../l10n/app_localizations.dart';
+import '../../res/constants.dart';
+import '../../temp/toruou_data.dart';
+import '../atoms/tourou_tab_bar.dart';
+import '../organisms/self_tourou_organism.dart';
 
 class SelfTourouTemplate extends StatelessWidget {
   final bool isTest;
