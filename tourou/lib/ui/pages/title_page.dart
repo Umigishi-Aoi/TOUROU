@@ -2,27 +2,15 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
-import '../../temp/tourou_test_data.dart';
-import '../templates/self_tourou_template.dart';
+import '../templates/title_template.dart';
 
 class TitlePage extends StatelessWidget {
-  final bool isTest;
-
-  const TitlePage({Key? key, required this.isTest}) : super(key: key);
+  const TitlePage({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SelfTourouTemplate(
-      isTest: isTest,
-      newSelfTourous: isTest
-          ? TourouTestData().tourouTestData
-          : TourouTestData().tourouTestData,
-      trendSelfTourous: isTest
-          ? TourouTestData().tourouTestData
-          : TourouTestData().tourouTestData,
-      selfTourouTapFunction: (tourouData) {},
-      profileFunction: (tourouData) {},
-      tourouImageFunction: (tourouData) {},
-    );
+    return TitleTemplate(imageButtonFunction: () {}, textButtonFunction: () {});
   }
 }
