@@ -5,12 +5,12 @@ import 'package:flutter/services.dart';
 // Package imports:
 import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
-import 'package:tourou/temp/toruou_data.dart';
-import 'package:tourou/temp/tourou_test_data.dart';
-import 'package:tourou/ui/pages/world_tourou_detail_page.dart';
 
 // Project imports:
 import '../../../lib/l10n/app_localizations.dart';
+import '../../../lib/temp/toruou_data.dart';
+import '../../../lib/temp/tourou_test_data.dart';
+import '../../../lib/ui/pages/world_tourou_detail_page.dart';
 
 Future<void> loadJapaneseFont() async {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +30,8 @@ Widget TestWidget(String language) {
 }
 
 void main() {
-  testGoldens('world_tourou_detail_page_golden_test', (WidgetTester tester) async {
+  testGoldens('world_tourou_detail_page_golden_test',
+      (WidgetTester tester) async {
     await loadAppFonts();
     await loadJapaneseFont();
 
