@@ -20,7 +20,7 @@ Future<void> loadJapaneseFont() async {
 }
 
 Widget TestWidget(String language) {
-  TourouData worldTourou = TourouTestData().tourouTestData[3];
+  TourouData worldTourou = TourouTestData().tourouTestData[2];
   return MaterialApp(
     localizationsDelegates: AppLocalizations.localizationsDelegates,
     supportedLocales: AppLocalizations.supportedLocales,
