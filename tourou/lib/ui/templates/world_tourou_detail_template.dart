@@ -37,11 +37,11 @@ class WorldTourouDetailTemplate extends StatelessWidget {
         backgroundColor: ColorName.mainBlack,
         title: Center(
           child: CustomText(
-              text: AppLocalizations.of(context)!.detail,
-              color: ColorName.textWhite,
-              fontSize: howToUseTitleFontSize,
-              fontFamily: FontFamily.mplus1,
-              textAlign: TextAlign.center,
+            text: AppLocalizations.of(context)!.detail,
+            color: ColorName.textWhite,
+            fontSize: howToUseTitleFontSize,
+            fontFamily: FontFamily.mplus1,
+            textAlign: TextAlign.center,
           ),
         ),
       ),
@@ -64,7 +64,8 @@ class WorldTourouDetailTemplate extends StatelessWidget {
                   iconColor: ColorName.itemBackground,
                   errorIconSize: displayHeight * tourouReportIconSizeRatio,
                   reportFunction: reportFunction,
-                  profileImageHeight: displayHeight * tourouProfileImageHeightRatio,
+                  profileImageHeight:
+                      displayHeight * tourouProfileImageHeightRatio,
                   profileFunction: profileFunction,
                   userNameFontSize: tourouUserNameFontSize,
                   tourouTextFontSize: tourouUserNameFontSize,
@@ -74,7 +75,8 @@ class WorldTourouDetailTemplate extends StatelessWidget {
                   textColor: ColorName.mainBlack,
                   userIdColor: ColorName.userIdText,
                   tourouContentWidth: displayWidth * tourouContentWidthRatio,
-                  tourouImageHeight: displayHeight * tourouProfileImageHeightRatio,
+                  tourouImageHeight:
+                      displayHeight * tourouProfileImageHeightRatio,
                   tourouImageFunction: tourouImageFunction,
                   goodButtonHeight: displayHeight * goodButtonHeightRatio,
                   goodButtonWidth: displayWidth * goodButtonWidthRatio,
