@@ -76,4 +76,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get good => 'Good';
+
+  @override
+  String get detail => 'Detail';
 }

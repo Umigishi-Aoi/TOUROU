@@ -6,6 +6,7 @@ const double buttonHeightFontSizeRatio = 0.43;
 const double fabIconSize = 24;
 const double buttonHeightRatio = 0.06;
 const double buttonWidthRatio = 0.8;
+const double howToUseTitleFontSize = 28;
 
 //tourou setting
 const double tourouWidthRatio = 0.9;
@@ -69,7 +70,6 @@ const double howToUseWidthRatio = 0.9;
 const double howToUseIndicatorHeight = 48;
 const double howToUseIndicatorMargin = 8;
 const double howToUseIndicatorSize = 24;
-const double howToUseTitleFontSize = 28;
 const double howToUseTitlePadding = 32;
 const double howToUseButtonPadding = 16;
 

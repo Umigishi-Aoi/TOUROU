@@ -76,4 +76,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get good => 'Good';
+
+  @override
+  String get detail => '詳細';
 }
