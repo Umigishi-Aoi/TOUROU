@@ -25,6 +25,7 @@ const double goodButtonTextWidthRatio = 0.15;
 const double goodNumberFontSizeConstant = 32;
 
 const double goodNumberPadding = 16;
+const double selfTourouGoodPadding = 16;
 
 //explanation organism setting
 const double explanationTitleHeightRatio = 0.1;

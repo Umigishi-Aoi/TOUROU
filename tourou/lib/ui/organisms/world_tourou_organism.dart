@@ -86,88 +86,86 @@ class WorldTourouOrganism extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      child: GestureDetector(
-        behavior: HitTestBehavior.translucent,
-        onTap: () {
-          worldTourouTapFunction(tourouData);
-        },
-        child: Container(
-          width: tourouWidth,
-          decoration: BoxDecoration(
-            color: tourouColor,
-            borderRadius: BorderRadius.circular(borderRadius),
-          ),
-          child: Stack(
-            children: [
-              Align(
-                alignment: Alignment.topRight,
-                child: CustomIconButton(
-                  function: () {
-                    reportFunction(tourouData);
-                  },
-                  iconData: Icons.error_outline,
-                  size: errorIconSize,
-                  color: iconColor,
-                ),
+    return GestureDetector(
+      behavior: HitTestBehavior.translucent,
+      onTap: () {
+        worldTourouTapFunction(tourouData);
+      },
+      child: Container(
+        width: tourouWidth,
+        decoration: BoxDecoration(
+          color: tourouColor,
+          borderRadius: BorderRadius.circular(borderRadius),
+        ),
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.topRight,
+              child: CustomIconButton(
+                function: () {
+                  reportFunction(tourouData);
+                },
+                iconData: Icons.error_outline,
+                size: errorIconSize,
+                color: iconColor,
               ),
-              Align(
-                alignment: Alignment.topCenter,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: verticalPadding),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      TourouOrganism(
-                        tourouData: tourouData,
-                        profileImageHeight: profileImageHeight,
-                        profileFunction: profileFunction,
-                        userNameFontSize: userNameFontSize,
-                        tourouTextFontSize: tourouTextFontSize,
-                        tourouTextWidth: tourouContentWidth,
-                        contentBottomPadding: contentBottomPadding,
-                        textColor: textColor,
-                        userIdColor: userIdColor,
-                        fontFamily: fontFamily,
-                        tourouImageHeight: tourouImageHeight,
-                        tourouImageFunction: tourouImageFunction,
-                      ),
-                      SizedBox(
-                        width: tourouContentWidth,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            CustomElevatedButton(
-                              text: goodButtonText,
-                              height: goodButtonHeight,
-                              width: goodButtonWidth,
-                              color: textColor,
+            ),
+            Align(
+              alignment: Alignment.topCenter,
+              child: Padding(
+                padding: EdgeInsets.symmetric(vertical: verticalPadding),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    TourouOrganism(
+                      tourouData: tourouData,
+                      profileImageHeight: profileImageHeight,
+                      profileFunction: profileFunction,
+                      userNameFontSize: userNameFontSize,
+                      tourouTextFontSize: tourouTextFontSize,
+                      tourouTextWidth: tourouContentWidth,
+                      contentBottomPadding: contentBottomPadding,
+                      textColor: textColor,
+                      userIdColor: userIdColor,
+                      fontFamily: fontFamily,
+                      tourouImageHeight: tourouImageHeight,
+                      tourouImageFunction: tourouImageFunction,
+                    ),
+                    SizedBox(
+                      width: tourouContentWidth,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          CustomElevatedButton(
+                            text: goodButtonText,
+                            height: goodButtonHeight,
+                            width: goodButtonWidth,
+                            color: textColor,
+                            fontFamily: fontFamily,
+                            buttonColor: buttonColor,
+                            fontSize: buttonFontSize,
+                            function: () {
+                              goodButtonFunction(tourouData);
+                            },
+                          ),
+                          SizedBox(
+                            width: goodButtonTextWidth,
+                            child: CustomText(
+                              text: tourouData.goodNumber,
+                              fontSize: goodNumberFontSize,
+                              color: goodNumberColor,
                               fontFamily: fontFamily,
-                              buttonColor: buttonColor,
-                              fontSize: buttonFontSize,
-                              function: () {
-                                goodButtonFunction(tourouData);
-                              },
                             ),
-                            SizedBox(
-                              width: goodButtonTextWidth,
-                              child: CustomText(
-                                text: tourouData.goodNumber,
-                                fontSize: goodNumberFontSize,
-                                color: goodNumberColor,
-                                fontFamily: fontFamily,
-                              ),
-                            ),
-                            // SizedBox(),
-                          ],
-                        ),
+                          ),
+                          // SizedBox(),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
