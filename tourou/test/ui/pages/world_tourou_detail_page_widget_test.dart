@@ -42,13 +42,13 @@ void main() {
     await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: size6);
 
     //マスターのスクリーンショットと同じかテストする
-    await screenMatchesGolden(tester, 'world_tourou_detail_iphone6_en');
+    await screenMatchesGolden(tester, 'world_tourou_detail_page_iphone6_en');
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
     await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: size6);
 
     //マスターのスクリーンショットと同じかテストする
-    await screenMatchesGolden(tester, 'world_tourou_detail_iphone6_ja');
+    await screenMatchesGolden(tester, 'world_tourou_detail_page_iphone6_ja');
 
     //デバイスの画面サイズ
     final sizePad = Size(1024, 1366);
