@@ -92,7 +92,6 @@ class WorldTourouTemplate extends StatelessWidget {
                             contentBottomPadding: tourouContentBottomPadding,
                             goodButtonText: AppLocalizations.of(context)!.good,
                             goodButtonFunction: goodButtonFunction,
-                            goodNumber: worldTourou.goodNumber,
                             textColor: ColorName.mainBlack,
                             userIdColor: ColorName.userIdText,
                             tourouContentWidth:
@@ -143,7 +142,6 @@ class WorldTourouTemplate extends StatelessWidget {
                             contentBottomPadding: tourouContentBottomPadding,
                             goodButtonText: AppLocalizations.of(context)!.good,
                             goodButtonFunction: goodButtonFunction,
-                            goodNumber: worldTourou.goodNumber,
                             textColor: ColorName.mainBlack,
                             userIdColor: ColorName.userIdText,
                             tourouContentWidth:

@@ -48,7 +48,6 @@ class WorldTourouOrganism extends StatelessWidget {
 
   final double goodButtonTextWidth;
 
-  final String goodNumber;
   final double goodNumberFontSize;
   final Color goodNumberColor;
 
@@ -69,7 +68,6 @@ class WorldTourouOrganism extends StatelessWidget {
     required this.reportFunction,
     required this.goodButtonText,
     required this.goodButtonFunction,
-    required this.goodNumber,
     required this.textColor,
     required this.userIdColor,
     required this.tourouContentWidth,
