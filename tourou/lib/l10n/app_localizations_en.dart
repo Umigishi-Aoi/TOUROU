@@ -1,4 +1,6 @@
-// Project imports:
+
+
+
 import 'app_localizations.dart';
 
 /// The translations for English (`en`).
@@ -76,4 +78,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get good => 'Good';
+
+  @override
+  String get detail => 'Detail';
 }
