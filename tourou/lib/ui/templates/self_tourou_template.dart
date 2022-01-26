@@ -89,9 +89,6 @@ class SelfTourouTemplate extends StatelessWidget {
                             tourouImageHeight:
                                 displayHeight * tourouProfileImageHeightRatio,
                             tourouImageFunction: tourouImageFunction,
-                            goodNumberFontSize: displayHeight *
-                                goodButtonHeightRatio *
-                                buttonHeightFontSizeRatio,
                             goodNumberColor: ColorName.switchAccentColor,
                             fontFamily: FontFamily.mplus1,
                             goodPadding: selfTourouGoodPadding,
@@ -124,9 +121,6 @@ class SelfTourouTemplate extends StatelessWidget {
                             tourouImageHeight:
                                 displayHeight * tourouProfileImageHeightRatio,
                             tourouImageFunction: tourouImageFunction,
-                            goodNumberFontSize: displayHeight *
-                                goodButtonHeightRatio *
-                                buttonHeightFontSizeRatio,
                             goodNumberColor: ColorName.switchAccentColor,
                             fontFamily: FontFamily.mplus1,
                             goodPadding: selfTourouGoodPadding,

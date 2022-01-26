@@ -33,7 +33,6 @@ class SelfTourouOrganism extends StatelessWidget {
   final double tourouImageHeight;
   final void Function(TourouData tourouData) tourouImageFunction;
 
-  final double goodNumberFontSize;
   final Color goodNumberColor;
 
   const SelfTourouOrganism({
@@ -55,7 +54,6 @@ class SelfTourouOrganism extends StatelessWidget {
     required this.contentBottomPadding,
     required this.tourouImageHeight,
     required this.tourouImageFunction,
-    required this.goodNumberFontSize,
     required this.goodNumberColor,
     required this.goodPadding,
   }) : super(key: key);
@@ -80,7 +78,7 @@ class SelfTourouOrganism extends StatelessWidget {
                 right: goodPadding,
                 child: CustomText(
                   text: tourouData.goodNumber,
-                  fontSize: goodNumberFontSize,
+                  fontSize: tourouTextFontSize,
                   color: goodNumberColor,
                   fontFamily: fontFamily,
                 )),
