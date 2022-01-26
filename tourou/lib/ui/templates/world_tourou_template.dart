@@ -197,7 +197,9 @@ class WorldTourouTemplate extends StatelessWidget {
           child: CustomFloatingActionButton(
               fabColor: ColorName.fABBackgoround,
               fabFunction: fabFunction,
-              iconColor: ColorName.textWhite),
+              iconColor: ColorName.textWhite,
+              iconSize: fabIconSize,
+          ),
         ),
       ),
     );
