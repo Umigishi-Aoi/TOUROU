@@ -61,7 +61,7 @@ void main() {
     await loadAppFonts();
     await loadJapaneseFont();
 
-    await _loadIconFont;
+    await _loadIconFont();
 
     //デバイスの画面サイズ
     final size6 = Size(375, 667);
