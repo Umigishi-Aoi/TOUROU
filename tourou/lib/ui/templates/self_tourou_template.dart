@@ -1,8 +1,8 @@
-// Flutter imports:
+// Dart imports:
 import 'dart:math';
 
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/ui/molecules/custom_floating_action_button.dart';
 
 // Project imports:
 import '../../ads/adaptive_banner_ad.dart';
@@ -12,6 +12,7 @@ import '../../l10n/app_localizations.dart';
 import '../../res/constants.dart';
 import '../../temp/toruou_data.dart';
 import '../atoms/tourou_tab_bar.dart';
+import '../molecules/custom_floating_action_button.dart';
 import '../organisms/self_tourou_organism.dart';
 
 class SelfTourouTemplate extends StatelessWidget {

@@ -24,7 +24,7 @@ Future<void> _loadIconFont() async {
   const FileSystem fs = LocalFileSystem();
   const Platform platform = LocalPlatform();
   final Directory flutterRoot =
-  fs.directory(platform.environment['FLUTTER_ROOT']);
+      fs.directory(platform.environment['FLUTTER_ROOT']);
 
   final File iconFont = flutterRoot.childFile(
     fs.path.join(
@@ -37,7 +37,7 @@ Future<void> _loadIconFont() async {
   );
 
   final Future<ByteData> bytes =
-  Future<ByteData>.value(iconFont.readAsBytesSync().buffer.asByteData());
+      Future<ByteData>.value(iconFont.readAsBytesSync().buffer.asByteData());
 
   await (FontLoader('MaterialIcons')..addFont(bytes)).load();
 }
