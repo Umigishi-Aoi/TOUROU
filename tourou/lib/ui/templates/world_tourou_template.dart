@@ -1,5 +1,8 @@
 // Flutter imports:
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:tourou/ui/molecules/custom_floating_action_button.dart';
 
 // Project imports:
 import '../../ads/adaptive_banner_ad.dart';
@@ -22,6 +25,7 @@ class WorldTourouTemplate extends StatelessWidget {
   final void Function(TourouData tourouData) profileFunction;
   final void Function(TourouData tourouData) goodButtonFunction;
   final void Function(TourouData tourouData) tourouImageFunction;
+  final void Function() fabFunction;
 
   const WorldTourouTemplate({
     Key? key,
@@ -33,12 +37,17 @@ class WorldTourouTemplate extends StatelessWidget {
     required this.profileFunction,
     required this.goodButtonFunction,
     required this.tourouImageFunction,
+    required this.fabFunction,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final double displayHeight = MediaQuery.of(context).size.height;
     final double displayWidth = MediaQuery.of(context).size.width;
+    final double bannerAdHeight = min(
+        displayHeight * adaptiveBannerMaximumHeightRatio,
+        adaptiveBannerMaximumHeight);
+
     return DefaultTabController(
       initialIndex: initialTabIndex,
       length: tabLength,
@@ -173,7 +182,7 @@ class WorldTourouTemplate extends StatelessWidget {
                 if (isTest)
                   Container(
                     width: displayWidth,
-                    height: 50,
+                    height: bannerAdHeight,
                     color: ColorName.itemBackground,
                   )
                 else
@@ -181,6 +190,13 @@ class WorldTourouTemplate extends StatelessWidget {
               ],
             ),
           ),
+        ),
+        floatingActionButton: Padding(
+          padding: EdgeInsets.only(bottom: bannerAdHeight + fabHeightMargin),
+          child: CustomFloatingActionButton(
+              fabColor: ColorName.fABBackgoround,
+              fabFunction: fabFunction,
+              iconColor: ColorName.textWhite),
         ),
       ),
     );

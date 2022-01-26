@@ -93,6 +93,10 @@ const double newRegistrationItemHorizontalPadding = 64;
 //sign in page setting
 const double signInMarginRatio = 0.2;
 
+const double adaptiveBannerMaximumHeightRatio = 0.15;
+const double adaptiveBannerMaximumHeight = 90;
+const double fabHeightMargin = 16;
+
 const flavor = String.fromEnvironment('FLAVOR');
 
 enum Flavor { dev, stg, prod, undefined }
