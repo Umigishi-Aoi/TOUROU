@@ -23,6 +23,7 @@ class SelfTourouPage extends StatelessWidget {
       selfTourouTapFunction: (tourouData) {},
       profileFunction: (tourouData) {},
       tourouImageFunction: (tourouData) {},
+      fabFunction: () {},
     );
   }
 }
