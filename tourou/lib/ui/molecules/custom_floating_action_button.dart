@@ -9,12 +9,14 @@ class CustomFloatingActionButton extends StatelessWidget {
   final void Function() fabFunction;
 
   final Color iconColor;
+  final double iconSize;
 
   const CustomFloatingActionButton(
       {Key? key,
       required this.fabColor,
       required this.fabFunction,
-      required this.iconColor})
+      required this.iconColor,
+      required this.iconSize})
       : super(key: key);
 
   @override
@@ -25,6 +27,7 @@ class CustomFloatingActionButton extends StatelessWidget {
       child: CustomIcon(
         iconData: Icons.add,
         color: iconColor,
+        size: iconSize,
       ),
     );
   }
