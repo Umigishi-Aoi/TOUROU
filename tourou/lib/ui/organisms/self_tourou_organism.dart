@@ -76,7 +76,7 @@ class SelfTourouOrganism extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-                top: profileImageHeight,
+                top: profileImageHeight + tourouTextFontSize * 2,
                 right: goodPadding,
                 child: CustomText(
                   text: tourouData.goodNumber,
