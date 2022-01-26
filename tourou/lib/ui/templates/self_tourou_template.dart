@@ -1,3 +1,6 @@
+// Dart imports:
+import 'dart:math';
+
 // Flutter imports:
 import 'package:flutter/material.dart';
 
@@ -9,6 +12,7 @@ import '../../l10n/app_localizations.dart';
 import '../../res/constants.dart';
 import '../../temp/toruou_data.dart';
 import '../atoms/tourou_tab_bar.dart';
+import '../molecules/custom_floating_action_button.dart';
 import '../organisms/self_tourou_organism.dart';
 
 class SelfTourouTemplate extends StatelessWidget {
@@ -20,21 +24,26 @@ class SelfTourouTemplate extends StatelessWidget {
   final void Function(TourouData tourouData) selfTourouTapFunction;
   final void Function(TourouData tourouData) profileFunction;
   final void Function(TourouData tourouData) tourouImageFunction;
+  final void Function() fabFunction;
 
-  const SelfTourouTemplate(
-      {Key? key,
-      required this.isTest,
-      required this.newSelfTourous,
-      required this.trendSelfTourous,
-      required this.selfTourouTapFunction,
-      required this.profileFunction,
-      required this.tourouImageFunction})
-      : super(key: key);
+  const SelfTourouTemplate({
+    Key? key,
+    required this.isTest,
+    required this.newSelfTourous,
+    required this.trendSelfTourous,
+    required this.selfTourouTapFunction,
+    required this.profileFunction,
+    required this.tourouImageFunction,
+    required this.fabFunction,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final double displayHeight = MediaQuery.of(context).size.height;
     final double displayWidth = MediaQuery.of(context).size.width;
+    final double bannerAdHeight = min(
+        displayHeight * adaptiveBannerMaximumHeightRatio,
+        adaptiveBannerMaximumHeight);
     return DefaultTabController(
       initialIndex: initialTabIndex,
       length: tabLength,
@@ -133,13 +142,22 @@ class SelfTourouTemplate extends StatelessWidget {
                 if (isTest)
                   Container(
                     width: displayWidth,
-                    height: 50,
+                    height: bannerAdHeight,
                     color: ColorName.itemBackground,
                   )
                 else
                   AdaptiveBannerAd(),
               ],
             ),
+          ),
+        ),
+        floatingActionButton: Padding(
+          padding: EdgeInsets.only(bottom: bannerAdHeight + fabHeightMargin),
+          child: CustomFloatingActionButton(
+            fabColor: ColorName.fABBackgoround,
+            fabFunction: fabFunction,
+            iconColor: ColorName.textWhite,
+            iconSize: fabIconSize,
           ),
         ),
       ),

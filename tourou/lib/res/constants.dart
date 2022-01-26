@@ -3,7 +3,7 @@ const double mainTextFontSize = 24;
 const int imageDuration = 1;
 const double radiusRatio = 0.2;
 const double buttonHeightFontSizeRatio = 0.43;
-const double fabIconSize = 24;
+const double fabIconSize = 48;
 const double buttonHeightRatio = 0.06;
 const double buttonWidthRatio = 0.8;
 const double howToUseTitleFontSize = 28;
@@ -92,6 +92,10 @@ const double newRegistrationItemHorizontalPadding = 64;
 
 //sign in page setting
 const double signInMarginRatio = 0.2;
+
+const double adaptiveBannerMaximumHeightRatio = 0.15;
+const double adaptiveBannerMaximumHeight = 90;
+const double fabHeightMargin = 16;
 
 const flavor = String.fromEnvironment('FLAVOR');
 

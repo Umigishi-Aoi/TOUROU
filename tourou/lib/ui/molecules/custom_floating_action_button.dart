@@ -5,29 +5,29 @@ import 'package:flutter/material.dart';
 import '../atoms/custom_icon.dart';
 
 class CustomFloatingActionButton extends StatelessWidget {
-  final void Function() function;
-  final Color buttonColor;
+  final Color fabColor;
+  final void Function() fabFunction;
 
-  final double iconSize;
   final Color iconColor;
+  final double iconSize;
 
   const CustomFloatingActionButton(
       {Key? key,
-      required this.function,
-      required this.buttonColor,
-      required this.iconSize,
-      required this.iconColor})
+      required this.fabColor,
+      required this.fabFunction,
+      required this.iconColor,
+      required this.iconSize})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-      foregroundColor: buttonColor,
-      onPressed: function,
+      backgroundColor: fabColor,
+      onPressed: fabFunction,
       child: CustomIcon(
         iconData: Icons.add,
-        size: iconSize,
         color: iconColor,
+        size: iconSize,
       ),
     );
   }
