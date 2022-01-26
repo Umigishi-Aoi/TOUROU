@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 // Package imports:
+import 'package:file/file.dart';
+import 'package:file/local.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
+import 'package:platform/platform.dart';
 
 // Project imports:
 import '../../../lib/l10n/app_localizations.dart';
@@ -15,6 +18,28 @@ Future<void> loadJapaneseFont() async {
   final binary = rootBundle.load('assets/fonts/Mplus1-Regular.ttf');
   final loader = FontLoader('Roboto')..addFont(binary);
   await loader.load();
+}
+
+Future<void> _loadIconFont() async {
+  const FileSystem fs = LocalFileSystem();
+  const Platform platform = LocalPlatform();
+  final Directory flutterRoot =
+  fs.directory(platform.environment['FLUTTER_ROOT']);
+
+  final File iconFont = flutterRoot.childFile(
+    fs.path.join(
+      'bin',
+      'cache',
+      'artifacts',
+      'material_fonts',
+      'MaterialIcons-Regular.otf',
+    ),
+  );
+
+  final Future<ByteData> bytes =
+  Future<ByteData>.value(iconFont.readAsBytesSync().buffer.asByteData());
+
+  await (FontLoader('MaterialIcons')..addFont(bytes)).load();
 }
 
 Widget TestWidget(String language) {
@@ -32,6 +57,8 @@ void main() {
   testGoldens('self_tourou_page_golden_test', (WidgetTester tester) async {
     await loadAppFonts();
     await loadJapaneseFont();
+
+    await _loadIconFont();
 
     //デバイスの画面サイズ
     final size6 = Size(375, 667);
