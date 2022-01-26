@@ -195,10 +195,10 @@ class WorldTourouTemplate extends StatelessWidget {
         floatingActionButton: Padding(
           padding: EdgeInsets.only(bottom: bannerAdHeight + fabHeightMargin),
           child: CustomFloatingActionButton(
-              fabColor: ColorName.fABBackgoround,
-              fabFunction: fabFunction,
-              iconColor: ColorName.textWhite,
-              iconSize: fabIconSize,
+            fabColor: ColorName.fABBackgoround,
+            fabFunction: fabFunction,
+            iconColor: ColorName.textWhite,
+            iconSize: fabIconSize,
           ),
         ),
       ),

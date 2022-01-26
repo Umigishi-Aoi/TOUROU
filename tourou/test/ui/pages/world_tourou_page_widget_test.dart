@@ -1,11 +1,12 @@
 // Flutter imports:
 
-import 'package:file/file.dart';
-import 'package:file/local.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 // Package imports:
+import 'package:file/file.dart';
+import 'package:file/local.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
 import 'package:platform/platform.dart';
@@ -24,7 +25,8 @@ Future<void> loadJapaneseFont() async {
 Future<void> _loadIconFont() async {
   const FileSystem fs = LocalFileSystem();
   const Platform platform = LocalPlatform();
-  final Directory flutterRoot = fs.directory(platform.environment['FLUTTER_ROOT']);
+  final Directory flutterRoot =
+      fs.directory(platform.environment['FLUTTER_ROOT']);
 
   final File iconFont = flutterRoot.childFile(
     fs.path.join(
@@ -36,11 +38,8 @@ Future<void> _loadIconFont() async {
     ),
   );
 
-  final Future<ByteData> bytes = Future<ByteData>.value(
-      iconFont.readAsBytesSync()
-          .buffer
-          .asByteData()
-  );
+  final Future<ByteData> bytes =
+      Future<ByteData>.value(iconFont.readAsBytesSync().buffer.asByteData());
 
   await (FontLoader('MaterialIcons')..addFont(bytes)).load();
 }
