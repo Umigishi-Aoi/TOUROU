@@ -31,38 +31,38 @@ Widget TestWidget(String language) {
 
 void main() {
   testGoldens('self_tourou_detail_page_golden_test',
-          (WidgetTester tester) async {
-        await loadAppFonts();
-        await loadJapaneseFont();
+      (WidgetTester tester) async {
+    await loadAppFonts();
+    await loadJapaneseFont();
 
-        //デバイスの画面サイズ
-        final size6 = Size(375, 667);
+    //デバイスの画面サイズ
+    final size6 = Size(375, 667);
 
-        //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-        await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: size6);
+    //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
+    await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: size6);
 
-        //マスターのスクリーンショットと同じかテストする
-        await screenMatchesGolden(tester, 'self_tourou_detail_page_iphone6_en');
+    //マスターのスクリーンショットと同じかテストする
+    await screenMatchesGolden(tester, 'self_tourou_detail_page_iphone6_en');
 
-        //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-        await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: size6);
+    //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
+    await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: size6);
 
-        //マスターのスクリーンショットと同じかテストする
-        await screenMatchesGolden(tester, 'self_tourou_detail_page_iphone6_ja');
+    //マスターのスクリーンショットと同じかテストする
+    await screenMatchesGolden(tester, 'self_tourou_detail_page_iphone6_ja');
 
-        //デバイスの画面サイズ
-        final sizePad = Size(1024, 1366);
+    //デバイスの画面サイズ
+    final sizePad = Size(1024, 1366);
 
-        //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-        await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: sizePad);
+    //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
+    await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: sizePad);
 
-        //マスターのスクリーンショットと同じかテストする
-        await screenMatchesGolden(tester, 'self_tourou_detail_page_ipad_en');
+    //マスターのスクリーンショットと同じかテストする
+    await screenMatchesGolden(tester, 'self_tourou_detail_page_ipad_en');
 
-        //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-        await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: sizePad);
+    //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
+    await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: sizePad);
 
-        //マスターのスクリーンショットと同じかテストする
-        await screenMatchesGolden(tester, 'self_tourou_detail_page_ipad_ja');
-      });
+    //マスターのスクリーンショットと同じかテストする
+    await screenMatchesGolden(tester, 'self_tourou_detail_page_ipad_ja');
+  });
 }
