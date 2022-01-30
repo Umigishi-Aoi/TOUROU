@@ -4,6 +4,7 @@ import 'package:tourou/gen/colors.gen.dart';
 import 'package:tourou/gen/fonts.gen.dart';
 import 'package:tourou/ui/atoms/custom_textfield.dart';
 import 'package:tourou/ui/molecules/custom_elevated_button.dart';
+import 'package:tourou/ui/molecules/custom_icon_button.dart';
 
 class NewTourouTemplate extends StatelessWidget {
   final TextEditingController controller;
@@ -40,6 +41,11 @@ class NewTourouTemplate extends StatelessWidget {
                 FilteringTextInputFormatter.allow(RegExp(r'{,300}')),
               ],
             ),
+            CustomIconButton(function: function,
+                iconData: Icons.insert_photo,
+                size: size,
+                color: ColorName.textWhite,
+            )
             CustomElevatedButton(
               text: text,
               color: ColorName.mainBlack,
