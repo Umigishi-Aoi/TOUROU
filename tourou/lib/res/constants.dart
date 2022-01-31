@@ -1,4 +1,6 @@
 //atoms settings
+import 'package:flutter/services.dart';
+
 const double mainTextFontSize = 24;
 const int imageDuration = 1;
 const double radiusRatio = 0.2;
@@ -96,6 +98,9 @@ const double signInMarginRatio = 0.2;
 const double adaptiveBannerMaximumHeightRatio = 0.15;
 const double adaptiveBannerMaximumHeight = 90;
 const double fabHeightMargin = 16;
+
+//newtourou setting
+TextInputFormatter newTourouFormatter = FilteringTextInputFormatter.allow(RegExp(r'{,300}'));
 
 const flavor = String.fromEnvironment('FLAVOR');
 

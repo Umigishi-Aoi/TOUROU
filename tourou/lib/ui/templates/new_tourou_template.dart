@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tourou/gen/colors.gen.dart';
 import 'package:tourou/gen/fonts.gen.dart';
+import 'package:tourou/res/constants.dart';
 import 'package:tourou/ui/atoms/custom_textfield.dart';
 import 'package:tourou/ui/molecules/custom_elevated_button.dart';
 import 'package:tourou/ui/molecules/custom_icon_button.dart';
@@ -38,7 +39,7 @@ class NewTourouTemplate extends StatelessWidget {
               fillColor: ColorName.tourouBackground,
               borderColor: ColorName.tourouBackground,
               textInputFormatters: [
-                FilteringTextInputFormatter.allow(RegExp(r'{,300}')),
+                newTourouFormatter,
               ],
             ),
             CustomIconButton(function: function,
