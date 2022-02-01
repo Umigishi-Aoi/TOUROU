@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:tourou/gen/colors.gen.dart';
 import 'package:tourou/gen/fonts.gen.dart';
 import 'package:tourou/res/constants.dart';
@@ -9,6 +8,8 @@ import 'package:tourou/ui/molecules/custom_icon_button.dart';
 
 class NewTourouTemplate extends StatelessWidget {
   final TextEditingController controller;
+
+  final void Function() function;
 
   const NewTourouTemplate({Key? key}) : super(key: key);
 
@@ -22,6 +23,7 @@ class NewTourouTemplate extends StatelessWidget {
         .of(context)
         .size
         .width;
+    final double width = displayWidth * buttonWidthRatio;
     return Scaffold(
       appBar: AppBar(),
       body: Center(
@@ -46,13 +48,15 @@ class NewTourouTemplate extends StatelessWidget {
                 iconData: Icons.insert_photo,
                 size: size,
                 color: ColorName.textWhite,
-            )
+            ),
             CustomElevatedButton(
               text: text,
               color: ColorName.mainBlack,
-              fontSize: fontSize,
+              fontSize: displayHeight *
+                  buttonHeightRatio *
+                  buttonHeightFontSizeRatio,
               fontFamily: FontFamily.mplus1,
-              height: height,
+              height: displayHeight * buttonHeightRatio,
               width: width,
               buttonColor: ColorName.tourouBackground,
               function: function,
