@@ -101,6 +101,7 @@ const double fabHeightMargin = 16;
 
 //newtourou setting
 TextInputFormatter newTourouFormatter = FilteringTextInputFormatter.allow(RegExp(r'{,300}'));
+const int newTourouTextFieldMinLines = 1;
 
 const flavor = String.fromEnvironment('FLAVOR');
 

@@ -34,7 +34,7 @@ class NewTourouTemplate extends StatelessWidget {
               controller: controller,
               height: height,
               width: width,
-              minLines: minLines,
+              minLines: newTourouTextFieldMinLines,
               fontSize: fontSize,
               textColor: ColorName.mainBlack,
               fontFamily: FontFamily.mplus1,
