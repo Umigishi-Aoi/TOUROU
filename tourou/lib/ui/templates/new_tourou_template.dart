@@ -46,7 +46,7 @@ class NewTourouTemplate extends StatelessWidget {
             ),
             CustomIconButton(function: function,
                 iconData: Icons.insert_photo,
-                size: size,
+                size: displayHeight * newTourouIconHeightRatio,
                 color: ColorName.textWhite,
             ),
             CustomElevatedButton(
