@@ -32,7 +32,7 @@ class NewTourouTemplate extends StatelessWidget {
             CustomTextField(
               hint: hint,
               controller: controller,
-              height: height,
+              height: displayHeight * newTourouTextFieldHeightRatio,
               width: width,
               minLines: newTourouTextFieldMinLines,
               fontSize: newTourouFontSize,

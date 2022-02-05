@@ -104,6 +104,7 @@ TextInputFormatter newTourouFormatter = FilteringTextInputFormatter.allow(RegExp
 const int newTourouTextFieldMinLines = 1;
 const double newTourouIconHeightRatio = 0.05;
 const double newTourouFontSize = 16;
+const double newTourouTextFieldHeightRatio =0.35;
 
 const flavor = String.fromEnvironment('FLAVOR');
 
