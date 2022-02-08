@@ -11,7 +11,9 @@ class NewTourouTemplate extends StatelessWidget {
 
   final void Function() function;
 
-  const NewTourouTemplate({Key? key}) : super(key: key);
+  const NewTourouTemplate(
+      {Key? key, required this.controller, required this.function})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +47,9 @@ class NewTourouTemplate extends StatelessWidget {
               ],
             ),
             CustomIconButton(function: function,
-                iconData: Icons.insert_photo,
-                size: displayHeight * newTourouIconHeightRatio,
-                color: ColorName.textWhite,
+              iconData: Icons.insert_photo,
+              size: displayHeight * newTourouIconHeightRatio,
+              color: ColorName.textWhite,
             ),
             CustomElevatedButton(
               text: text,
