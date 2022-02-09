@@ -11,9 +11,10 @@ class NewTourouTemplate extends StatelessWidget {
 
   final void Function() function;
 
-  const NewTourouTemplate(
-      {Key? key, required this.controller, required this.function})
-      : super(key: key);
+  const NewTourouTemplate({Key? key,
+    required this.controller,
+    required this.function,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
