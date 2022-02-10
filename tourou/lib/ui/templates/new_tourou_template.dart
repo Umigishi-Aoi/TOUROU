@@ -5,6 +5,7 @@ import 'package:tourou/res/constants.dart';
 import 'package:tourou/ui/atoms/custom_textfield.dart';
 import 'package:tourou/ui/molecules/custom_elevated_button.dart';
 import 'package:tourou/ui/molecules/custom_icon_button.dart';
+import '../../l10n/app_localizations.dart';
 
 class NewTourouTemplate extends StatelessWidget {
   final TextEditingController controller;
@@ -33,7 +34,7 @@ class NewTourouTemplate extends StatelessWidget {
         child: Column(
           children: [
             CustomTextField(
-              hint: hint,
+              hint: AppLocalizations.of(context)!.newTourouHint,
               controller: controller,
               height: displayHeight * newTourouTextFieldHeightRatio,
               width: width,
@@ -53,7 +54,7 @@ class NewTourouTemplate extends StatelessWidget {
               color: ColorName.textWhite,
             ),
             CustomElevatedButton(
-              text: text,
+              text: AppLocalizations.of(context)!.gims,
               color: ColorName.mainBlack,
               fontSize: displayHeight *
                   buttonHeightRatio *
@@ -67,6 +68,6 @@ class NewTourouTemplate extends StatelessWidget {
           ],
         ),
       ),
-    )
+    );
   }
 }

@@ -243,6 +243,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Detail'**
   String get detail;
+
+  /// No description provided for @newTourouHint.
+  ///
+  /// In en, this message translates to:
+  /// **'What do you think?'**
+  String get newTourouHint;
+
+  /// No description provided for @gims.
+  ///
+  /// In en, this message translates to:
+  /// **'GIMS'**
+  String get gims;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
