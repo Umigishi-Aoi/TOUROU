@@ -1,4 +1,6 @@
 //atoms settings
+
+// Flutter imports:
 import 'package:flutter/services.dart';
 
 const double mainTextFontSize = 24;
@@ -100,11 +102,12 @@ const double adaptiveBannerMaximumHeight = 90;
 const double fabHeightMargin = 16;
 
 //newtourou setting
-TextInputFormatter newTourouFormatter = FilteringTextInputFormatter.allow(RegExp(r'{,300}'));
+TextInputFormatter newTourouFormatter =
+    FilteringTextInputFormatter.allow(RegExp(r'{,300}'));
 const int newTourouTextFieldMinLines = 1;
 const double newTourouIconHeightRatio = 0.05;
 const double newTourouFontSize = 16;
-const double newTourouTextFieldHeightRatio =0.35;
+const double newTourouTextFieldHeightRatio = 0.35;
 
 const flavor = String.fromEnvironment('FLAVOR');
 

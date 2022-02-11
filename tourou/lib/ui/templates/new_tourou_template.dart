@@ -1,32 +1,30 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/gen/colors.gen.dart';
-import 'package:tourou/gen/fonts.gen.dart';
-import 'package:tourou/res/constants.dart';
-import 'package:tourou/ui/atoms/custom_textfield.dart';
-import 'package:tourou/ui/molecules/custom_elevated_button.dart';
-import 'package:tourou/ui/molecules/custom_icon_button.dart';
+
+// Project imports:
+import '../../gen/colors.gen.dart';
+import '../../gen/fonts.gen.dart';
 import '../../l10n/app_localizations.dart';
+import '../../res/constants.dart';
+import '../atoms/custom_textfield.dart';
+import '../molecules/custom_elevated_button.dart';
+import '../molecules/custom_icon_button.dart';
 
 class NewTourouTemplate extends StatelessWidget {
   final TextEditingController controller;
 
   final void Function() function;
 
-  const NewTourouTemplate({Key? key,
+  const NewTourouTemplate({
+    Key? key,
     required this.controller,
     required this.function,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final double displayHeight = MediaQuery
-        .of(context)
-        .size
-        .height;
-    final double displayWidth = MediaQuery
-        .of(context)
-        .size
-        .width;
+    final double displayHeight = MediaQuery.of(context).size.height;
+    final double displayWidth = MediaQuery.of(context).size.width;
     final double width = displayWidth * buttonWidthRatio;
     return Scaffold(
       appBar: AppBar(),
@@ -48,7 +46,8 @@ class NewTourouTemplate extends StatelessWidget {
                 newTourouFormatter,
               ],
             ),
-            CustomIconButton(function: function,
+            CustomIconButton(
+              function: function,
               iconData: Icons.insert_photo,
               size: displayHeight * newTourouIconHeightRatio,
               color: ColorName.textWhite,
@@ -56,9 +55,8 @@ class NewTourouTemplate extends StatelessWidget {
             CustomElevatedButton(
               text: AppLocalizations.of(context)!.gims,
               color: ColorName.mainBlack,
-              fontSize: displayHeight *
-                  buttonHeightRatio *
-                  buttonHeightFontSizeRatio,
+              fontSize:
+                  displayHeight * buttonHeightRatio * buttonHeightFontSizeRatio,
               fontFamily: FontFamily.mplus1,
               height: displayHeight * buttonHeightRatio,
               width: width,
