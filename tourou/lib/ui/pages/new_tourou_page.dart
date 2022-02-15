@@ -1,5 +1,8 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/ui/templates/new_tourou_template.dart';
+
+// Project imports:
+import '../templates/new_tourou_template.dart';
 
 class NewTourouPage extends StatefulWidget {
   const NewTourouPage({Key? key}) : super(key: key);
@@ -20,7 +23,7 @@ class _NewTourouPageState extends State<NewTourouPage> {
   @override
   Widget build(BuildContext context) {
     return NewTourouTemplate(
-      function: () {  },
+      function: () {},
       controller: _controller,
     );
   }
