@@ -46,11 +46,15 @@ class NewTourouTemplate extends StatelessWidget {
                 newTourouFormatter,
               ],
             ),
-            CustomIconButton(
-              function: function,
-              iconData: Icons.insert_photo,
-              size: displayHeight * newTourouIconHeightRatio,
-              color: ColorName.textWhite,
+            Row(
+              children: [
+                CustomIconButton(
+                  function: function,
+                  iconData: Icons.insert_photo,
+                  size: displayHeight * newTourouIconHeightRatio,
+                  color: ColorName.textWhite,
+                ),
+              ],
             ),
             CustomElevatedButton(
               text: AppLocalizations.of(context)!.gims,
