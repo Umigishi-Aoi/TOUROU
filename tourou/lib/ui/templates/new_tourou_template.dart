@@ -29,12 +29,12 @@ class NewTourouTemplate extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
-        child: Column(
+        child: ListView(
           children: [
             CustomTextField(
               hint: AppLocalizations.of(context)!.newTourouHint,
               controller: controller,
-              height: displayHeight * newTourouTextFieldHeightRatio,
+              height: double.infinity,
               width: width,
               minLines: newTourouTextFieldMinLines,
               fontSize: newTourouFontSize,
