@@ -1,5 +1,7 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:tourou/ui/atoms/custom_check_box.dart';
+import 'package:tourou/ui/atoms/custom_text.dart';
 
 // Project imports:
 import '../../gen/colors.gen.dart';
@@ -14,11 +16,13 @@ class NewTourouTemplate extends StatelessWidget {
   final TextEditingController controller;
 
   final void Function() function;
+  final void Function(bool?) checkFunction;
 
   const NewTourouTemplate({
     Key? key,
     required this.controller,
     required this.function,
+    required this.checkFunction,
   }) : super(key: key);
 
   @override
@@ -47,12 +51,29 @@ class NewTourouTemplate extends StatelessWidget {
               ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CustomIconButton(
                   function: function,
                   iconData: Icons.insert_photo,
                   size: displayHeight * newTourouIconHeightRatio,
                   color: ColorName.textWhite,
+                ),
+                Row(
+                  children: [
+                    CustomText(
+                      text: text,
+                      color: ColorName.textWhite,
+                      fontSize: displayHeight *
+                          buttonHeightRatio *
+                          buttonHeightFontSizeRatio,
+                      fontFamily: FontFamily.mplus1,
+                    ),
+                    CustomCheckBox(
+                      color: ColorName.itemBackground,
+                      onChanged: checkFunction,
+                    ),
+                  ],
                 ),
               ],
             ),
