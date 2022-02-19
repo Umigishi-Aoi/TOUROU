@@ -23,8 +23,9 @@ class _NewTourouPageState extends State<NewTourouPage> {
   @override
   Widget build(BuildContext context) {
     return NewTourouTemplate(
-      function: () {},
+      buttonFunction: () {},
       controller: _controller,
+      checkFunction: (bool) {},
     );
   }
 

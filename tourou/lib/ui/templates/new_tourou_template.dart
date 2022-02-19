@@ -15,13 +15,13 @@ import '../molecules/custom_icon_button.dart';
 class NewTourouTemplate extends StatelessWidget {
   final TextEditingController controller;
 
-  final void Function() function;
+  final void Function() buttonFunction;
   final void Function(bool?) checkFunction;
 
   const NewTourouTemplate({
     Key? key,
     required this.controller,
-    required this.function,
+    required this.buttonFunction,
     required this.checkFunction,
   }) : super(key: key);
 
@@ -54,7 +54,7 @@ class NewTourouTemplate extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CustomIconButton(
-                  function: function,
+                  function: buttonFunction,
                   iconData: Icons.insert_photo,
                   size: displayHeight * newTourouIconHeightRatio,
                   color: ColorName.textWhite,
@@ -86,7 +86,7 @@ class NewTourouTemplate extends StatelessWidget {
               height: displayHeight * buttonHeightRatio,
               width: width,
               buttonColor: ColorName.tourouBackground,
-              function: function,
+              function: buttonFunction,
             )
           ],
         ),
