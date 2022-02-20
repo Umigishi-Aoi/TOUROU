@@ -1,4 +1,6 @@
-// Project imports:
+
+
+
 import 'app_localizations.dart';
 
 /// The translations for Japanese (`ja`).
@@ -85,4 +87,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get gims => 'GIMS';
+
+  @override
+  String get notShare => '共有しない';
 }

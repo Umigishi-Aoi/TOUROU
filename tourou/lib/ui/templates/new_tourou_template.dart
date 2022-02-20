@@ -62,7 +62,7 @@ class NewTourouTemplate extends StatelessWidget {
                 Row(
                   children: [
                     CustomText(
-                      text: text,
+                      text: AppLocalizations.of(context)!.notShare,
                       color: ColorName.textWhite,
                       fontSize: displayHeight *
                           buttonHeightRatio *
