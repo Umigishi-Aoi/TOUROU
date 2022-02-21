@@ -1,0 +1,52 @@
+{
+    "configurations": [
+        {
+            "name": "Run dev",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--dart-define=FLAVOR=dev"
+            ]
+        },
+        {
+            "name": "Run stg",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--dart-define=FLAVOR=stg"
+            ]
+        },
+        {
+            "name": "Run prod",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--dart-define=FLAVOR=prod"
+            ]
+        },
+        {
+            "name": "Run release dev",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--release --dart-define=FLAVOR=dev"
+            ]
+        },
+        {
+            "name": "Run release stg",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--release --dart-define=FLAVOR=stg"
+            ]
+        },
+        {
+            "name": "Run release prod",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--release --dart-define=FLAVOR=prod"
+            ]
+        }
+    ]
+}
