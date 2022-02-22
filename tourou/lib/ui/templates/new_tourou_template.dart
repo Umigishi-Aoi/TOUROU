@@ -31,14 +31,17 @@ class NewTourouTemplate extends StatelessWidget {
     final double displayWidth = MediaQuery.of(context).size.width;
     final double width = displayWidth * buttonWidthRatio;
     return Scaffold(
-      appBar: AppBar(),
+      backgroundColor: ColorName.mainBlack,
+      appBar: AppBar(
+        backgroundColor: ColorName.mainBlack,
+      ),
       body: Center(
         child: ListView(
           children: [
             CustomTextField(
               hint: AppLocalizations.of(context)!.newTourouHint,
               controller: controller,
-              height: double.infinity,
+              height: displayHeight * newTourouTextFieldHeightRatio,
               width: width,
               minLines: newTourouTextFieldMinLines,
               fontSize: newTourouFontSize,
