@@ -73,7 +73,8 @@ class NewTourouTemplate extends StatelessWidget {
                       fontFamily: FontFamily.mplus1,
                     ),
                     CustomCheckBox(
-                      color: ColorName.itemBackground,
+                      activeColor: ColorName.goodBackgoround,
+                      borderColor: ColorName.textWhite,
                       onChanged: checkFunction,
                     ),
                   ],
