@@ -61,6 +61,7 @@ class NewTourouTemplate extends StatelessWidget {
               fontFamily: FontFamily.mplus1,
               fillColor: ColorName.tourouBackground,
               borderColor: ColorName.tourouBackground,
+              counterColor: ColorName.textWhite,
               textInputFormatters: [],
               autofocus: true,
             ),

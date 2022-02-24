@@ -76,6 +76,7 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                         fieldTextColor: ColorName.mainBlack,
                         fillColor: ColorName.tourouBackground,
                         borderColor: ColorName.textWhite,
+                        counterColor: ColorName.textWhite,
                         textInputFormatters: [
                           FilteringTextInputFormatter.allow(
                               RegExp(r'^[A-Za-z0–9]')),
@@ -100,6 +101,7 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                       fieldTextColor: ColorName.mainBlack,
                       fillColor: ColorName.tourouBackground,
                       borderColor: ColorName.textWhite,
+                      counterColor: ColorName.textWhite,
                       textInputFormatters: [],
                       autofocus: false,
                     ),
