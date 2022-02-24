@@ -104,7 +104,7 @@ const double fabHeightMargin = 16;
 //newtourou setting
 TextInputFormatter newTourouFormatter =
     FilteringTextInputFormatter.allow(RegExp(r'{,300}'));
-const int newTourouTextFieldMaxLines = 1;
+const int newTourouTextFieldMaxLines = 50;
 const double newTourouIconHeightRatio = 0.05;
 const double newTourouFontSize = 16;
 const double newTourouTextFieldHeightRatio = 0.35;
