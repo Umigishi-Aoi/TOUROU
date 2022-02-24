@@ -16,13 +16,16 @@ class SelfTourouDetailTemplate extends StatelessWidget {
   final void Function(TourouData tourouData) profileFunction;
   final void Function(TourouData tourouData) goodButtonFunction;
   final void Function(TourouData tourouData) tourouImageFunction;
+  final void Function() backFunction;
 
   const SelfTourouDetailTemplate(
       {Key? key,
       required this.selfTourou,
       required this.profileFunction,
       required this.goodButtonFunction,
-      required this.tourouImageFunction})
+      required this.tourouImageFunction,
+      required this.backFunction,
+      })
       : super(key: key);
 
   @override
@@ -33,15 +36,23 @@ class SelfTourouDetailTemplate extends StatelessWidget {
       backgroundColor: ColorName.mainBlack,
       appBar: AppBar(
         backgroundColor: ColorName.mainBlack,
-        title: Center(
+        leading: Center(
           child: CustomText(
-            text: AppLocalizations.of(context)!.detail,
-            color: ColorName.textWhite,
-            fontSize: howToUseTitleFontSize,
+            text: AppLocalizations.of(context)!.back,
+            color: ColorName.switchAccentColor,
+            fontSize: newTourouFontSize,
             fontFamily: FontFamily.mplus1,
-            textAlign: TextAlign.center,
+            function: backFunction,
           ),
         ),
+        title: CustomText(
+          text: AppLocalizations.of(context)!.detail,
+          color: ColorName.textWhite,
+          fontSize: howToUseTitleFontSize,
+          fontFamily: FontFamily.mplus1,
+          textAlign: TextAlign.center,
+        ),
+        centerTitle: true,
       ),
       body: Center(
         child: Column(
