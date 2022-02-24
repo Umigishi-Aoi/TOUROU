@@ -90,4 +90,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get notShare => '共有しない';
+
+  @override
+  String get back => '戻る';
 }

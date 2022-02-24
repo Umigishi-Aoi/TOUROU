@@ -17,12 +17,14 @@ class NewTourouTemplate extends StatelessWidget {
 
   final void Function() buttonFunction;
   final void Function(bool?) checkFunction;
+  final void Function() backFunction;
 
   const NewTourouTemplate({
     Key? key,
     required this.controller,
     required this.buttonFunction,
     required this.checkFunction,
+    required this.backFunction,
   }) : super(key: key);
 
   @override
@@ -33,6 +35,15 @@ class NewTourouTemplate extends StatelessWidget {
     return Scaffold(
       backgroundColor: ColorName.mainBlack,
       appBar: AppBar(
+        leading: Center(
+          child: CustomText(
+            text: AppLocalizations.of(context)!.back,
+            color: ColorName.switchAccentColor,
+            fontSize: newTourouFontSize,
+            fontFamily: FontFamily.mplus1,
+            function: backFunction,
+          ),
+        ),
         backgroundColor: ColorName.mainBlack,
       ),
       body: Center(
@@ -63,7 +74,7 @@ class NewTourouTemplate extends StatelessWidget {
                   color: ColorName.textWhite,
                 ),
                 Row(
-                  crossAxisAlignment:CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     CustomText(
                       text: AppLocalizations.of(context)!.notShare,
@@ -74,7 +85,7 @@ class NewTourouTemplate extends StatelessWidget {
                       fontFamily: FontFamily.mplus1,
                     ),
                     CustomCheckBox(
-                      activeColor: ColorName.goodBackgoround,
+                      activeColor: ColorName.switchAccentColor,
                       borderColor: ColorName.textWhite,
                       onChanged: checkFunction,
                     ),

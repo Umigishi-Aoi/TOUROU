@@ -261,6 +261,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'not share'**
   String get notShare;
+
+  /// No description provided for @back.
+  ///
+  /// In en, this message translates to:
+  /// **'back'**
+  String get back;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
