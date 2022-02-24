@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 // Project imports:
 import 'l10n/app_localizations.dart';
-import 'ui/pages/world_tourou_page.dart';
+import 'ui/pages/new_tourou_page.dart';
 
 // Package imports:
 
@@ -16,9 +16,7 @@ class Tourou extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: WorldTourouPage(
-        isTest: true,
-      ),
+      home: NewTourouPage(),
     );
   }
 }

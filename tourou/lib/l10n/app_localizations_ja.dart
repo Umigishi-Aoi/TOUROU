@@ -79,4 +79,16 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get detail => '詳細';
+
+  @override
+  String get newTourouHint => '何を思っていますか？';
+
+  @override
+  String get gims => 'GIMS';
+
+  @override
+  String get notShare => '共有しない';
+
+  @override
+  String get back => '戻る';
 }

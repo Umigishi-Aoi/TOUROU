@@ -16,30 +16,36 @@ class TextTextField extends StatelessWidget {
   final TextEditingController controller;
   final double height;
   final double width;
-  final int minLines;
+  final int? maxLines;
+  final int maxLength;
   final double fieldFontSize;
   final Color fieldTextColor;
   final Color fillColor;
   final Color borderColor;
+  final Color counterColor;
   final List<TextInputFormatter> textInputFormatters;
+  final bool autofocus;
 
-  const TextTextField({
-    Key? key,
-    required this.text,
-    required this.titleTextColor,
-    required this.titleFontSize,
-    required this.fontFamily,
-    required this.hint,
-    required this.controller,
-    required this.height,
-    required this.width,
-    required this.minLines,
-    required this.fieldFontSize,
-    required this.fieldTextColor,
-    required this.fillColor,
-    required this.borderColor,
-    required this.textInputFormatters,
-  }) : super(key: key);
+  const TextTextField(
+      {Key? key,
+      required this.text,
+      required this.titleTextColor,
+      required this.titleFontSize,
+      required this.fontFamily,
+      required this.hint,
+      required this.controller,
+      required this.height,
+      required this.width,
+      required this.maxLines,
+      required this.maxLength,
+      required this.fieldFontSize,
+      required this.fieldTextColor,
+      required this.fillColor,
+      required this.borderColor,
+      required this.counterColor,
+      required this.textInputFormatters,
+      required this.autofocus})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -57,13 +63,16 @@ class TextTextField extends StatelessWidget {
           controller: controller,
           height: height,
           width: width,
-          minLines: minLines,
+          maxLines: maxLines,
+          maxLength: maxLength,
           fontSize: fieldFontSize,
           textColor: fieldTextColor,
           fontFamily: fontFamily,
           fillColor: fillColor,
           borderColor: borderColor,
+          counterColor: counterColor,
           textInputFormatters: textInputFormatters,
+          autofocus: autofocus,
         )
       ],
     );

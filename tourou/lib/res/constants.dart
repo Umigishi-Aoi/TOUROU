@@ -1,4 +1,8 @@
 //atoms settings
+
+// Flutter imports:
+import 'package:flutter/services.dart';
+
 const double mainTextFontSize = 24;
 const int imageDuration = 1;
 const double radiusRatio = 0.2;
@@ -82,7 +86,9 @@ const double newProfileSettingFieldHeightRatio = 0.1;
 const double newProfileSettingFieldFontSizeRatio = 0.3;
 const double newProfileSettingButtonTopMarginRatio = 0.15;
 const double newProfileSettingButtonMargin = 18;
-const int newProfileSettingMinLine = 1;
+const int newProfileSettingMaxLine = 1;
+const int newProfileSettingIdMaxLength = 8;
+const int newProfileSettingNameMaxLength = 16;
 
 //new user registration page setting
 const double signInButtonsMarginRatio = 0.1;
@@ -96,6 +102,16 @@ const double signInMarginRatio = 0.2;
 const double adaptiveBannerMaximumHeightRatio = 0.15;
 const double adaptiveBannerMaximumHeight = 90;
 const double fabHeightMargin = 16;
+
+//newtourou setting
+TextInputFormatter newTourouFormatter =
+    FilteringTextInputFormatter.allow(RegExp(r'{,300}'));
+const int newTourouTextFieldMaxLines = 50;
+const double newTourouIconHeightRatio = 0.05;
+const double newTourouFontSize = 16;
+const double newTourouTextFieldHeightRatio = 0.3;
+const int newTourouTextFieldMaxLength = 200;
+const double newTourouButtonTopMargin = 8;
 
 const flavor = String.fromEnvironment('FLAVOR');
 

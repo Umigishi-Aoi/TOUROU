@@ -31,7 +31,7 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.2
   file: ^6.1.2
-  firebase_core: ^1.10.5
+  firebase_core: ^1.12.0
   flutter:
     sdk: flutter
   flutter_localizations:
@@ -50,7 +50,7 @@ dev_dependencies:
   flutter_lints: ^1.0.0
   flutter_test:
     sdk: flutter
-  golden_toolkit: ^0.12.0
+  golden_toolkit: ^0.13.0
   import_path_converter: ^1.0.1
   import_sorter: ^4.6.0
   pedantic_mono: any
