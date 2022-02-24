@@ -43,7 +43,7 @@ class NewTourouTemplate extends StatelessWidget {
               controller: controller,
               height: displayHeight * newTourouTextFieldHeightRatio,
               width: width,
-              minLines: newTourouTextFieldMinLines,
+              maxLines: newTourouTextFieldMaxLines,
               fontSize: newTourouFontSize,
               textColor: ColorName.mainBlack,
               fontFamily: FontFamily.mplus1,
@@ -63,6 +63,7 @@ class NewTourouTemplate extends StatelessWidget {
                   color: ColorName.textWhite,
                 ),
                 Row(
+                  crossAxisAlignment:CrossAxisAlignment.center,
                   children: [
                     CustomText(
                       text: AppLocalizations.of(context)!.notShare,

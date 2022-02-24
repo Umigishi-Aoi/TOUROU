@@ -16,7 +16,7 @@ class TextTextField extends StatelessWidget {
   final TextEditingController controller;
   final double height;
   final double width;
-  final int minLines;
+  final int? maxLines;
   final double fieldFontSize;
   final Color fieldTextColor;
   final Color fillColor;
@@ -33,7 +33,7 @@ class TextTextField extends StatelessWidget {
     required this.controller,
     required this.height,
     required this.width,
-    required this.minLines,
+    required this.maxLines,
     required this.fieldFontSize,
     required this.fieldTextColor,
     required this.fillColor,
@@ -57,7 +57,7 @@ class TextTextField extends StatelessWidget {
           controller: controller,
           height: height,
           width: width,
-          minLines: minLines,
+          maxLines: maxLines,
           fontSize: fieldFontSize,
           textColor: fieldTextColor,
           fontFamily: fontFamily,

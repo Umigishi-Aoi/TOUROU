@@ -9,7 +9,7 @@ class CustomTextField extends StatelessWidget {
 
   final double height;
   final double width;
-  final int minLines;
+  final int? maxLines;
   final double fontSize;
   final Color textColor;
   final String fontFamily;
@@ -24,7 +24,7 @@ class CustomTextField extends StatelessWidget {
     required this.controller,
     required this.height,
     required this.width,
-    required this.minLines,
+    required this.maxLines,
     required this.fontSize,
     required this.textColor,
     required this.fontFamily,
@@ -41,6 +41,7 @@ class CustomTextField extends StatelessWidget {
       child: TextField(
         inputFormatters: textInputFormatters,
         controller: controller,
+        maxLines: maxLines,
         style: TextStyle(
           fontSize: fontSize,
           color: textColor,

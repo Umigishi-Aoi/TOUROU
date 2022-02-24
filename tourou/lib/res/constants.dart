@@ -86,7 +86,7 @@ const double newProfileSettingFieldHeightRatio = 0.1;
 const double newProfileSettingFieldFontSizeRatio = 0.3;
 const double newProfileSettingButtonTopMarginRatio = 0.15;
 const double newProfileSettingButtonMargin = 18;
-const int newProfileSettingMinLine = 1;
+const int newProfileSettingMaxLine = 1;
 
 //new user registration page setting
 const double signInButtonsMarginRatio = 0.1;
@@ -104,7 +104,7 @@ const double fabHeightMargin = 16;
 //newtourou setting
 TextInputFormatter newTourouFormatter =
     FilteringTextInputFormatter.allow(RegExp(r'{,300}'));
-const int newTourouTextFieldMinLines = 1;
+const int newTourouTextFieldMaxLines = 1;
 const double newTourouIconHeightRatio = 0.05;
 const double newTourouFontSize = 16;
 const double newTourouTextFieldHeightRatio = 0.35;
