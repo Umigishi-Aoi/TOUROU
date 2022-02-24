@@ -23,6 +23,7 @@ class TextTextField extends StatelessWidget {
   final Color fillColor;
   final Color borderColor;
   final List<TextInputFormatter> textInputFormatters;
+  final bool autofocus;
 
   const TextTextField({
     Key? key,
@@ -41,6 +42,7 @@ class TextTextField extends StatelessWidget {
     required this.fillColor,
     required this.borderColor,
     required this.textInputFormatters,
+    required this.autofocus
   }) : super(key: key);
 
   @override
@@ -67,6 +69,7 @@ class TextTextField extends StatelessWidget {
           fillColor: fillColor,
           borderColor: borderColor,
           textInputFormatters: textInputFormatters,
+          autofocus: autofocus,
         )
       ],
     );

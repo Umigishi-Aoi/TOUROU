@@ -79,7 +79,9 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                         textInputFormatters: [
                           FilteringTextInputFormatter.allow(
                               RegExp(r'^[A-Za-z0–9]')),
-                        ]),
+                        ],
+                        autofocus: false,
+                        ),
                   ),
                   Padding(
                     padding: EdgeInsets.all(newProfileSettingFieldPadding),
@@ -99,6 +101,7 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                       fillColor: ColorName.tourouBackground,
                       borderColor: ColorName.textWhite,
                       textInputFormatters: [],
+                      autofocus: false,
                     ),
                   ),
                 ],

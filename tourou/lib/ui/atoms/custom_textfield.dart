@@ -16,6 +16,7 @@ class CustomTextField extends StatelessWidget {
   final String fontFamily;
   final Color fillColor;
   final Color borderColor;
+  final bool autofocus;
 
   final List<TextInputFormatter> textInputFormatters;
 
@@ -33,6 +34,7 @@ class CustomTextField extends StatelessWidget {
     required this.fillColor,
     required this.borderColor,
     required this.textInputFormatters,
+    required this.autofocus
   }) : super(key: key);
 
   @override
@@ -61,6 +63,7 @@ class CustomTextField extends StatelessWidget {
           fillColor: fillColor,
           filled: true,
         ),
+        autofocus: autofocus,
       ),
     );
   }
