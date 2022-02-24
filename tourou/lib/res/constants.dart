@@ -111,7 +111,7 @@ const double newTourouIconHeightRatio = 0.05;
 const double newTourouFontSize = 16;
 const double newTourouTextFieldHeightRatio = 0.3;
 const int newTourouTextFieldMaxLength = 200;
-const double newTourouButtonTopMargin = 8;
+const double newTourouButtonTopMarginRatio = 0.02;
 
 const flavor = String.fromEnvironment('FLAVOR');
 

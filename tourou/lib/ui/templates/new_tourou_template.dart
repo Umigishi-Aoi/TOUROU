@@ -65,37 +65,39 @@ class NewTourouTemplate extends StatelessWidget {
               textInputFormatters: [],
               autofocus: true,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CustomIconButton(
-                  function: buttonFunction,
-                  iconData: Icons.insert_photo,
-                  size: displayHeight * newTourouIconHeightRatio,
-                  color: ColorName.textWhite,
-                ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    CustomText(
-                      text: AppLocalizations.of(context)!.notShare,
-                      color: ColorName.textWhite,
-                      fontSize: displayHeight *
-                          buttonHeightRatio *
-                          buttonHeightFontSizeRatio,
-                      fontFamily: FontFamily.mplus1,
-                    ),
-                    CustomCheckBox(
-                      activeColor: ColorName.switchAccentColor,
-                      borderColor: ColorName.textWhite,
-                      onChanged: checkFunction,
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            SizedBox(
-              height: newTourouButtonTopMargin,
+            Padding(
+              padding: EdgeInsets.only(
+                  bottom: displayHeight * newTourouButtonTopMarginRatio),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  CustomIconButton(
+                    function: buttonFunction,
+                    iconData: Icons.insert_photo,
+                    size: displayHeight * newTourouIconHeightRatio,
+                    color: ColorName.textWhite,
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      CustomText(
+                        text: AppLocalizations.of(context)!.notShare,
+                        color: ColorName.textWhite,
+                        fontSize: displayHeight *
+                            buttonHeightRatio *
+                            buttonHeightFontSizeRatio,
+                        fontFamily: FontFamily.mplus1,
+                      ),
+                      CustomCheckBox(
+                        activeColor: ColorName.switchAccentColor,
+                        borderColor: ColorName.textWhite,
+                        onChanged: checkFunction,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
             CustomElevatedButton(
               text: AppLocalizations.of(context)!.gims,
