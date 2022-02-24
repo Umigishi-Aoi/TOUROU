@@ -1,6 +1,5 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:tourou/ui/atoms/custom_check_box.dart';
 import 'package:tourou/ui/atoms/custom_text.dart';
 
