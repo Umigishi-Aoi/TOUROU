@@ -19,7 +19,7 @@ class WorldTourouDetailPage extends StatelessWidget {
       profileFunction: (tourouData) {},
       goodButtonFunction: (tourouData) {},
       tourouImageFunction: (tourouData) {},
-      backFunction: (){},
+      backFunction: () {},
     );
   }
 }

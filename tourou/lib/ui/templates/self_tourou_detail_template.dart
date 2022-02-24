@@ -18,15 +18,14 @@ class SelfTourouDetailTemplate extends StatelessWidget {
   final void Function(TourouData tourouData) tourouImageFunction;
   final void Function() backFunction;
 
-  const SelfTourouDetailTemplate(
-      {Key? key,
-      required this.selfTourou,
-      required this.profileFunction,
-      required this.goodButtonFunction,
-      required this.tourouImageFunction,
-      required this.backFunction,
-      })
-      : super(key: key);
+  const SelfTourouDetailTemplate({
+    Key? key,
+    required this.selfTourou,
+    required this.profileFunction,
+    required this.goodButtonFunction,
+    required this.tourouImageFunction,
+    required this.backFunction,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

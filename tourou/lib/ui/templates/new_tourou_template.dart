@@ -1,13 +1,13 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/ui/atoms/custom_check_box.dart';
-import 'package:tourou/ui/atoms/custom_text.dart';
 
 // Project imports:
 import '../../gen/colors.gen.dart';
 import '../../gen/fonts.gen.dart';
 import '../../l10n/app_localizations.dart';
 import '../../res/constants.dart';
+import '../atoms/custom_check_box.dart';
+import '../atoms/custom_text.dart';
 import '../atoms/custom_textfield.dart';
 import '../molecules/custom_elevated_button.dart';
 import '../molecules/custom_icon_button.dart';
@@ -94,7 +94,9 @@ class NewTourouTemplate extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: newTourouButtonTopMargin,),
+            SizedBox(
+              height: newTourouButtonTopMargin,
+            ),
             CustomElevatedButton(
               text: AppLocalizations.of(context)!.gims,
               color: ColorName.mainBlack,

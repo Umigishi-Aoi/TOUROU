@@ -21,23 +21,23 @@ class CustomTextField extends StatelessWidget {
 
   final List<TextInputFormatter> textInputFormatters;
 
-  const CustomTextField({
-    Key? key,
-    required this.hint,
-    required this.controller,
-    required this.height,
-    required this.width,
-    required this.maxLines,
-    required this.maxLength,
-    required this.fontSize,
-    required this.textColor,
-    required this.fontFamily,
-    required this.fillColor,
-    required this.borderColor,
-    required this.counterColor,
-    required this.textInputFormatters,
-    required this.autofocus
-  }) : super(key: key);
+  const CustomTextField(
+      {Key? key,
+      required this.hint,
+      required this.controller,
+      required this.height,
+      required this.width,
+      required this.maxLines,
+      required this.maxLength,
+      required this.fontSize,
+      required this.textColor,
+      required this.fontFamily,
+      required this.fillColor,
+      required this.borderColor,
+      required this.counterColor,
+      required this.textInputFormatters,
+      required this.autofocus})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,7 @@ class CustomTextField extends StatelessWidget {
         controller: controller,
         maxLines: maxLines,
         maxLength: maxLength,
-        maxLengthEnforcement: MaxLengthEnforcement.none ,
+        maxLengthEnforcement: MaxLengthEnforcement.none,
         style: TextStyle(
           fontSize: fontSize,
           color: textColor,
@@ -64,7 +64,9 @@ class CustomTextField extends StatelessWidget {
           hintText: hint,
           fillColor: fillColor,
           filled: true,
-          counterStyle: TextStyle(color: counterColor,),
+          counterStyle: TextStyle(
+            color: counterColor,
+          ),
         ),
         autofocus: autofocus,
       ),

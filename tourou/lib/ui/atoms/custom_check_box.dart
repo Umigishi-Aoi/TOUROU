@@ -6,7 +6,11 @@ class CustomCheckBox extends StatefulWidget {
   final Color borderColor;
   final void Function(bool?) onChanged;
 
-  const CustomCheckBox({Key? key, required this.activeColor, required this.onChanged, required this.borderColor})
+  const CustomCheckBox(
+      {Key? key,
+      required this.activeColor,
+      required this.onChanged,
+      required this.borderColor})
       : super(key: key);
 
   @override
@@ -29,7 +33,7 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
           setState(() {
             _isCheck = value!;
           });
-    
+
           widget.onChanged(value);
         },
       ),
