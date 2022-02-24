@@ -66,7 +66,8 @@ class NewTourouTemplate extends StatelessWidget {
               autofocus: true,
             ),
             Padding(
-              padding: EdgeInsets.only(bottom: displayHeight * newTourouButtonTopMarginRatio),
+              padding: EdgeInsets.only(
+                  bottom: displayHeight * newTourouButtonTopMarginRatio),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -74,8 +75,7 @@ class NewTourouTemplate extends StatelessWidget {
                   CustomIconButton(
                     function: buttonFunction,
                     iconData: Icons.insert_photo,
-                    size: displayHeight *
-                            newTourouIconHeightRatio,
+                    size: displayHeight * newTourouIconHeightRatio,
                     color: ColorName.textWhite,
                   ),
                   Row(
