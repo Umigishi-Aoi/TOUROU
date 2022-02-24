@@ -94,6 +94,7 @@ class NewTourouTemplate extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: newTourouButtonTopMargin,),
             CustomElevatedButton(
               text: AppLocalizations.of(context)!.gims,
               color: ColorName.mainBlack,
