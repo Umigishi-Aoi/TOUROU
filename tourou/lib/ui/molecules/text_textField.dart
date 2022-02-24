@@ -17,6 +17,7 @@ class TextTextField extends StatelessWidget {
   final double height;
   final double width;
   final int? maxLines;
+  final int maxLength;
   final double fieldFontSize;
   final Color fieldTextColor;
   final Color fillColor;
@@ -34,6 +35,7 @@ class TextTextField extends StatelessWidget {
     required this.height,
     required this.width,
     required this.maxLines,
+    required this.maxLength,
     required this.fieldFontSize,
     required this.fieldTextColor,
     required this.fillColor,
@@ -58,6 +60,7 @@ class TextTextField extends StatelessWidget {
           height: height,
           width: width,
           maxLines: maxLines,
+          maxLength: maxLength,
           fontSize: fieldFontSize,
           textColor: fieldTextColor,
           fontFamily: fontFamily,

@@ -71,13 +71,14 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                         height: fieldHeight,
                         width: fieldWidth,
                         maxLines: newProfileSettingMaxLine,
+                        maxLength: newProfileSettingIdMaxLength,
                         fieldFontSize: fieldFontSize,
                         fieldTextColor: ColorName.mainBlack,
                         fillColor: ColorName.tourouBackground,
                         borderColor: ColorName.textWhite,
                         textInputFormatters: [
                           FilteringTextInputFormatter.allow(
-                              RegExp(r'^[A-Za-z0–9]{4,8}')),
+                              RegExp(r'^[A-Za-z0–9]')),
                         ]),
                   ),
                   Padding(
@@ -92,13 +93,12 @@ class NewUserRegistrationTemplate extends StatelessWidget {
                       height: fieldHeight,
                       width: fieldWidth,
                       maxLines: newProfileSettingMaxLine,
+                      maxLength: newProfileSettingNameMaxLength,
                       fieldFontSize: fieldFontSize,
                       fieldTextColor: ColorName.mainBlack,
                       fillColor: ColorName.tourouBackground,
                       borderColor: ColorName.textWhite,
-                      textInputFormatters: [
-                        FilteringTextInputFormatter.allow(RegExp(r'{,16}')),
-                      ],
+                      textInputFormatters: [],
                     ),
                   ),
                 ],

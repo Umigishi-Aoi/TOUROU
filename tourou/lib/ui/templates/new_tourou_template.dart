@@ -45,6 +45,7 @@ class NewTourouTemplate extends StatelessWidget {
               height: displayHeight * newTourouTextFieldHeightRatio,
               width: width,
               maxLines: newTourouTextFieldMaxLines,
+              maxLength: 100,
               fontSize: newTourouFontSize,
               textColor: ColorName.mainBlack,
               fontFamily: FontFamily.mplus1,

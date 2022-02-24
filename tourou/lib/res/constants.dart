@@ -87,6 +87,8 @@ const double newProfileSettingFieldFontSizeRatio = 0.3;
 const double newProfileSettingButtonTopMarginRatio = 0.15;
 const double newProfileSettingButtonMargin = 18;
 const int newProfileSettingMaxLine = 1;
+const int newProfileSettingIdMaxLength = 8;
+const int newProfileSettingNameMaxLength = 16;
 
 //new user registration page setting
 const double signInButtonsMarginRatio = 0.1;
@@ -108,6 +110,7 @@ const int newTourouTextFieldMaxLines = 50;
 const double newTourouIconHeightRatio = 0.05;
 const double newTourouFontSize = 16;
 const double newTourouTextFieldHeightRatio = 0.35;
+const int newTourouTextFieldMaxLength = 200;
 
 const flavor = String.fromEnvironment('FLAVOR');
 
