@@ -109,7 +109,7 @@ TextInputFormatter newTourouFormatter =
 const int newTourouTextFieldMaxLines = 50;
 const double newTourouIconHeightRatio = 0.05;
 const double newTourouFontSize = 16;
-const double newTourouTextFieldHeightRatio = 0.35;
+const double newTourouTextFieldHeightRatio = 0.3;
 const int newTourouTextFieldMaxLength = 200;
 
 const flavor = String.fromEnvironment('FLAVOR');
