@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 
 class SettingTemplate extends StatelessWidget {
-  const SettingTemplate({ Key? key }) : super(key: key);
+  const SettingTemplate({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Container(),),
+      body: SafeArea(
+        child: Center(
+          child: Container(),
+        ),
+      ),
     );
   }
 }
