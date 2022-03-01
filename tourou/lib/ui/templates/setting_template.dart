@@ -8,7 +8,7 @@ class SettingTemplate extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Container(),
+          child: Column(),
         ),
       ),
     );
