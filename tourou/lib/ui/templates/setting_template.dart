@@ -3,6 +3,8 @@ import 'package:tourou/gen/colors.gen.dart';
 import 'package:tourou/gen/fonts.gen.dart';
 import 'package:tourou/ui/molecules/custom_elevated_button.dart';
 
+import '../../res/constants.dart';
+
 class SettingTemplate extends StatelessWidget {
 
   final void Function() editProfileFunction;
@@ -11,6 +13,9 @@ class SettingTemplate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double displayHeight = MediaQuery.of(context).size.height;
+    final double displayWidth = MediaQuery.of(context).size.width;
+    final double width = displayWidth * buttonWidthRatio;
     return Scaffold(
       body: SafeArea(
         child: Center(
