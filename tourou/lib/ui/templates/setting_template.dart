@@ -21,7 +21,16 @@ class SettingTemplate extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              CustomElevatedButton(text: , color: ColorName.mainBlack, fontSize: fontSize, fontFamily: FontFamily.mplus1, height: height, width: width, buttonColor: ColorName.tourouBackground, function: editProfileFunction,),
+              CustomElevatedButton(
+                text: ,
+                color: ColorName.mainBlack,
+                fontSize: fontSize,
+                fontFamily: FontFamily.mplus1,
+                height: height,
+                width: width,
+                buttonColor: ColorName.tourouBackground,
+                function: editProfileFunction,
+              ),
             ],
           ),
         ),
