@@ -15,7 +15,9 @@ class SettingTemplate extends StatelessWidget {
   Widget build(BuildContext context) {
     final double displayHeight = MediaQuery.of(context).size.height;
     final double displayWidth = MediaQuery.of(context).size.width;
-    final double width = displayWidth * buttonWidthRatio;
+    final double buttonHeight = displayHeight * buttonHeightRatio;
+    final double buttonWidth = displayWidth * buttonWidthRatio;
+    final double fontSize = buttonHeight * buttonHeightFontSizeRatio;
     return Scaffold(
       body: SafeArea(
         child: Center(
@@ -26,8 +28,8 @@ class SettingTemplate extends StatelessWidget {
                 color: ColorName.mainBlack,
                 fontSize: fontSize,
                 fontFamily: FontFamily.mplus1,
-                height: height,
-                width: width,
+                height: buttonHeight,
+                width: buttonWidth,
                 buttonColor: ColorName.tourouBackground,
                 function: editProfileFunction,
               ),
