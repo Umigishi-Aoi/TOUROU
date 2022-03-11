@@ -21,8 +21,68 @@ class SettingTemplate extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Column(
+          child: ListView(
             children: [
+              CustomElevatedButton(
+                text: ,
+                color: ColorName.mainBlack,
+                fontSize: fontSize,
+                fontFamily: FontFamily.mplus1,
+                height: buttonHeight,
+                width: buttonWidth,
+                buttonColor: ColorName.tourouBackground,
+                function: editProfileFunction,
+              ),
+              CustomElevatedButton(
+                text: ,
+                color: ColorName.mainBlack,
+                fontSize: fontSize,
+                fontFamily: FontFamily.mplus1,
+                height: buttonHeight,
+                width: buttonWidth,
+                buttonColor: ColorName.tourouBackground,
+                function: editProfileFunction,
+              ),
+              CustomElevatedButton(
+                text: ,
+                color: ColorName.mainBlack,
+                fontSize: fontSize,
+                fontFamily: FontFamily.mplus1,
+                height: buttonHeight,
+                width: buttonWidth,
+                buttonColor: ColorName.tourouBackground,
+                function: editProfileFunction,
+              ),
+              CustomElevatedButton(
+                text: ,
+                color: ColorName.mainBlack,
+                fontSize: fontSize,
+                fontFamily: FontFamily.mplus1,
+                height: buttonHeight,
+                width: buttonWidth,
+                buttonColor: ColorName.tourouBackground,
+                function: editProfileFunction,
+              ),
+              CustomElevatedButton(
+                text: ,
+                color: ColorName.mainBlack,
+                fontSize: fontSize,
+                fontFamily: FontFamily.mplus1,
+                height: buttonHeight,
+                width: buttonWidth,
+                buttonColor: ColorName.tourouBackground,
+                function: editProfileFunction,
+              ),
+              CustomElevatedButton(
+                text: ,
+                color: ColorName.mainBlack,
+                fontSize: fontSize,
+                fontFamily: FontFamily.mplus1,
+                height: buttonHeight,
+                width: buttonWidth,
+                buttonColor: ColorName.tourouBackground,
+                function: editProfileFunction,
+              ),
               CustomElevatedButton(
                 text: ,
                 color: ColorName.mainBlack,
