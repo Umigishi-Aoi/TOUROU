@@ -113,6 +113,9 @@ const double newTourouTextFieldHeightRatio = 0.3;
 const int newTourouTextFieldMaxLength = 200;
 const double newTourouButtonTopMarginRatio = 0.02;
 
+//setting setting
+const double settingMarginHeightRatio = 0.05;
+
 const flavor = String.fromEnvironment('FLAVOR');
 
 enum Flavor { dev, stg, prod, undefined }

@@ -18,11 +18,13 @@ class SettingTemplate extends StatelessWidget {
     final double buttonHeight = displayHeight * buttonHeightRatio;
     final double buttonWidth = displayWidth * buttonWidthRatio;
     final double fontSize = buttonHeight * buttonHeightFontSizeRatio;
+    final double marginHeight = displayHeight * settingMarginHeightRatio;
     return Scaffold(
       body: SafeArea(
         child: Center(
           child: ListView(
             children: [
+              SizedBox(height: marginHeight,),
               CustomElevatedButton(
                 text: ,
                 color: ColorName.mainBlack,
@@ -33,6 +35,7 @@ class SettingTemplate extends StatelessWidget {
                 buttonColor: ColorName.tourouBackground,
                 function: editProfileFunction,
               ),
+              SizedBox(height: marginHeight,),
               CustomElevatedButton(
                 text: ,
                 color: ColorName.mainBlack,
@@ -43,6 +46,7 @@ class SettingTemplate extends StatelessWidget {
                 buttonColor: ColorName.tourouBackground,
                 function: editProfileFunction,
               ),
+              SizedBox(height: marginHeight,),
               CustomElevatedButton(
                 text: ,
                 color: ColorName.mainBlack,
@@ -53,6 +57,7 @@ class SettingTemplate extends StatelessWidget {
                 buttonColor: ColorName.tourouBackground,
                 function: editProfileFunction,
               ),
+              SizedBox(height: marginHeight,),
               CustomElevatedButton(
                 text: ,
                 color: ColorName.mainBlack,
@@ -63,6 +68,7 @@ class SettingTemplate extends StatelessWidget {
                 buttonColor: ColorName.tourouBackground,
                 function: editProfileFunction,
               ),
+              SizedBox(height: marginHeight,),
               CustomElevatedButton(
                 text: ,
                 color: ColorName.mainBlack,
@@ -73,6 +79,7 @@ class SettingTemplate extends StatelessWidget {
                 buttonColor: ColorName.tourouBackground,
                 function: editProfileFunction,
               ),
+              SizedBox(height: marginHeight,),
               CustomElevatedButton(
                 text: ,
                 color: ColorName.mainBlack,
@@ -83,6 +90,7 @@ class SettingTemplate extends StatelessWidget {
                 buttonColor: ColorName.tourouBackground,
                 function: editProfileFunction,
               ),
+              SizedBox(height: marginHeight,),
               CustomElevatedButton(
                 text: ,
                 color: ColorName.mainBlack,
