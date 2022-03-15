@@ -3,6 +3,7 @@ import 'package:tourou/gen/colors.gen.dart';
 import 'package:tourou/gen/fonts.gen.dart';
 import 'package:tourou/ui/molecules/custom_elevated_button.dart';
 
+import '../../l10n/app_localizations.dart';
 import '../../res/constants.dart';
 
 class SettingTemplate extends StatelessWidget {
@@ -26,7 +27,7 @@ class SettingTemplate extends StatelessWidget {
             children: [
               SizedBox(height: marginHeight,),
               CustomElevatedButton(
-                text: ,
+                text: AppLocalizations.of(context)!.editProfile,
                 color: ColorName.mainBlack,
                 fontSize: fontSize,
                 fontFamily: FontFamily.mplus1,
@@ -37,7 +38,7 @@ class SettingTemplate extends StatelessWidget {
               ),
               SizedBox(height: marginHeight,),
               CustomElevatedButton(
-                text: ,
+                text: AppLocalizations.of(context)!.setLanguage,
                 color: ColorName.mainBlack,
                 fontSize: fontSize,
                 fontFamily: FontFamily.mplus1,
@@ -48,7 +49,7 @@ class SettingTemplate extends StatelessWidget {
               ),
               SizedBox(height: marginHeight,),
               CustomElevatedButton(
-                text: ,
+                text: AppLocalizations.of(context)!.howToUseTitle,
                 color: ColorName.mainBlack,
                 fontSize: fontSize,
                 fontFamily: FontFamily.mplus1,
@@ -59,7 +60,7 @@ class SettingTemplate extends StatelessWidget {
               ),
               SizedBox(height: marginHeight,),
               CustomElevatedButton(
-                text: ,
+                text: AppLocalizations.of(context)!.disclaimer,
                 color: ColorName.mainBlack,
                 fontSize: fontSize,
                 fontFamily: FontFamily.mplus1,
@@ -70,7 +71,7 @@ class SettingTemplate extends StatelessWidget {
               ),
               SizedBox(height: marginHeight,),
               CustomElevatedButton(
-                text: ,
+                text: AppLocalizations.of(context)!.privacyPolicy,
                 color: ColorName.mainBlack,
                 fontSize: fontSize,
                 fontFamily: FontFamily.mplus1,
@@ -81,7 +82,7 @@ class SettingTemplate extends StatelessWidget {
               ),
               SizedBox(height: marginHeight,),
               CustomElevatedButton(
-                text: ,
+                text: AppLocalizations.of(context)!.logOut,
                 color: ColorName.mainBlack,
                 fontSize: fontSize,
                 fontFamily: FontFamily.mplus1,
@@ -92,7 +93,7 @@ class SettingTemplate extends StatelessWidget {
               ),
               SizedBox(height: marginHeight,),
               CustomElevatedButton(
-                text: ,
+                text: AppLocalizations.of(context)!.deleteAccount,
                 color: ColorName.mainBlack,
                 fontSize: fontSize,
                 fontFamily: FontFamily.mplus1,
