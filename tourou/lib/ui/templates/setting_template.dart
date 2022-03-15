@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:tourou/gen/colors.gen.dart';
 import 'package:tourou/gen/fonts.gen.dart';
 import 'package:tourou/ui/molecules/custom_elevated_button.dart';
@@ -9,8 +10,23 @@ import '../../res/constants.dart';
 class SettingTemplate extends StatelessWidget {
 
   final void Function() editProfileFunction;
-
-  const SettingTemplate({Key? key}) : super(key: key);
+  final void Function() setLanguageFunction;
+  final void Function() howToUseFunction;
+  final void Function() disclaimerFunction;
+  final void Function() privacyPolicyFunction;
+  final void Function() logOutFunction;
+  final void Function() deleteAccountFunction;
+  
+  const SettingTemplate({
+    Key? key,
+    required this.editProfileFunction,
+    required this.setLanguageFunction,
+    required this.howToUseFunction,
+    required this.disclaimerFunction,
+    required this.privacyPolicyFunction,
+    required this.logOutFunction,
+    required this.deleteAccountFunction,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +61,7 @@ class SettingTemplate extends StatelessWidget {
                 height: buttonHeight,
                 width: buttonWidth,
                 buttonColor: ColorName.tourouBackground,
-                function: editProfileFunction,
+                function: setLanguageFunction,
               ),
               SizedBox(height: marginHeight,),
               CustomElevatedButton(
@@ -56,7 +72,7 @@ class SettingTemplate extends StatelessWidget {
                 height: buttonHeight,
                 width: buttonWidth,
                 buttonColor: ColorName.tourouBackground,
-                function: editProfileFunction,
+                function: howToUseFunction,
               ),
               SizedBox(height: marginHeight,),
               CustomElevatedButton(
@@ -67,7 +83,7 @@ class SettingTemplate extends StatelessWidget {
                 height: buttonHeight,
                 width: buttonWidth,
                 buttonColor: ColorName.tourouBackground,
-                function: editProfileFunction,
+                function: disclaimerFunction,
               ),
               SizedBox(height: marginHeight,),
               CustomElevatedButton(
@@ -78,7 +94,7 @@ class SettingTemplate extends StatelessWidget {
                 height: buttonHeight,
                 width: buttonWidth,
                 buttonColor: ColorName.tourouBackground,
-                function: editProfileFunction,
+                function: privacyPolicyFunction,
               ),
               SizedBox(height: marginHeight,),
               CustomElevatedButton(
@@ -89,7 +105,7 @@ class SettingTemplate extends StatelessWidget {
                 height: buttonHeight,
                 width: buttonWidth,
                 buttonColor: ColorName.tourouBackground,
-                function: editProfileFunction,
+                function: logOutFunction,
               ),
               SizedBox(height: marginHeight,),
               CustomElevatedButton(
@@ -100,7 +116,7 @@ class SettingTemplate extends StatelessWidget {
                 height: buttonHeight,
                 width: buttonWidth,
                 buttonColor: ColorName.tourouBackground,
-                function: editProfileFunction,
+                function: deleteAccountFunction,
               ),
             ],
           ),
