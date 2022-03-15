@@ -1,5 +1,8 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/ui/templates/setting_template.dart';
+
+// Project imports:
+import '../templates/setting_template.dart';
 
 class SettingPage extends StatelessWidget {
   const SettingPage({Key? key}) : super(key: key);

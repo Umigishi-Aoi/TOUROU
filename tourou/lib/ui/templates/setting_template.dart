@@ -1,14 +1,14 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
-import 'package:tourou/gen/colors.gen.dart';
-import 'package:tourou/gen/fonts.gen.dart';
-import 'package:tourou/ui/molecules/custom_elevated_button.dart';
-
+// Project imports:
+import '../../gen/colors.gen.dart';
+import '../../gen/fonts.gen.dart';
 import '../../l10n/app_localizations.dart';
 import '../../res/constants.dart';
+import '../molecules/custom_elevated_button.dart';
 
 class SettingTemplate extends StatelessWidget {
-
   final void Function() editProfileFunction;
   final void Function() setLanguageFunction;
   final void Function() howToUseFunction;
@@ -16,7 +16,7 @@ class SettingTemplate extends StatelessWidget {
   final void Function() privacyPolicyFunction;
   final void Function() logOutFunction;
   final void Function() deleteAccountFunction;
-  
+
   const SettingTemplate({
     Key? key,
     required this.editProfileFunction,
@@ -41,7 +41,9 @@ class SettingTemplate extends StatelessWidget {
         child: Center(
           child: ListView(
             children: [
-              SizedBox(height: marginHeight,),
+              SizedBox(
+                height: marginHeight,
+              ),
               CustomElevatedButton(
                 text: AppLocalizations.of(context)!.editProfile,
                 color: ColorName.mainBlack,
@@ -52,7 +54,9 @@ class SettingTemplate extends StatelessWidget {
                 buttonColor: ColorName.tourouBackground,
                 function: editProfileFunction,
               ),
-              SizedBox(height: marginHeight,),
+              SizedBox(
+                height: marginHeight,
+              ),
               CustomElevatedButton(
                 text: AppLocalizations.of(context)!.setLanguage,
                 color: ColorName.mainBlack,
@@ -63,7 +67,9 @@ class SettingTemplate extends StatelessWidget {
                 buttonColor: ColorName.tourouBackground,
                 function: setLanguageFunction,
               ),
-              SizedBox(height: marginHeight,),
+              SizedBox(
+                height: marginHeight,
+              ),
               CustomElevatedButton(
                 text: AppLocalizations.of(context)!.howToUseTitle,
                 color: ColorName.mainBlack,
@@ -74,7 +80,9 @@ class SettingTemplate extends StatelessWidget {
                 buttonColor: ColorName.tourouBackground,
                 function: howToUseFunction,
               ),
-              SizedBox(height: marginHeight,),
+              SizedBox(
+                height: marginHeight,
+              ),
               CustomElevatedButton(
                 text: AppLocalizations.of(context)!.disclaimer,
                 color: ColorName.mainBlack,
@@ -85,7 +93,9 @@ class SettingTemplate extends StatelessWidget {
                 buttonColor: ColorName.tourouBackground,
                 function: disclaimerFunction,
               ),
-              SizedBox(height: marginHeight,),
+              SizedBox(
+                height: marginHeight,
+              ),
               CustomElevatedButton(
                 text: AppLocalizations.of(context)!.privacyPolicy,
                 color: ColorName.mainBlack,
@@ -96,7 +106,9 @@ class SettingTemplate extends StatelessWidget {
                 buttonColor: ColorName.tourouBackground,
                 function: privacyPolicyFunction,
               ),
-              SizedBox(height: marginHeight,),
+              SizedBox(
+                height: marginHeight,
+              ),
               CustomElevatedButton(
                 text: AppLocalizations.of(context)!.logOut,
                 color: ColorName.mainBlack,
@@ -107,7 +119,9 @@ class SettingTemplate extends StatelessWidget {
                 buttonColor: ColorName.tourouBackground,
                 function: logOutFunction,
               ),
-              SizedBox(height: marginHeight,),
+              SizedBox(
+                height: marginHeight,
+              ),
               CustomElevatedButton(
                 text: AppLocalizations.of(context)!.deleteAccount,
                 color: ColorName.mainBlack,
