@@ -27,5 +27,9 @@
   "newTourouHint": "What do you think?",
   "gims": "GIMS",
   "notShare": "not share",
-  "back": "back"
+  "back": "back",
+  "editProfile":"Edit Profile",
+  "setLanguage":"Set Language",
+  "logOut":"Log Out",
+  "deleteAccount":"Delete Account"
 }

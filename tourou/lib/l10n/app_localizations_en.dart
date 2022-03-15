@@ -91,4 +91,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get back => 'back';
+
+  @override
+  String get editProfile => 'Edit Profile';
+
+  @override
+  String get setLanguage => 'Set Language';
+
+  @override
+  String get logOut => 'Log Out';
+
+  @override
+  String get deleteAccount => 'Delete Account';
 }

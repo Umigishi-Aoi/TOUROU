@@ -1,0 +1,141 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Project imports:
+import '../../gen/colors.gen.dart';
+import '../../gen/fonts.gen.dart';
+import '../../l10n/app_localizations.dart';
+import '../../res/constants.dart';
+import '../molecules/custom_elevated_button.dart';
+
+class SettingTemplate extends StatelessWidget {
+  final void Function() editProfileFunction;
+  final void Function() setLanguageFunction;
+  final void Function() howToUseFunction;
+  final void Function() disclaimerFunction;
+  final void Function() privacyPolicyFunction;
+  final void Function() logOutFunction;
+  final void Function() deleteAccountFunction;
+
+  const SettingTemplate({
+    Key? key,
+    required this.editProfileFunction,
+    required this.setLanguageFunction,
+    required this.howToUseFunction,
+    required this.disclaimerFunction,
+    required this.privacyPolicyFunction,
+    required this.logOutFunction,
+    required this.deleteAccountFunction,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final double displayHeight = MediaQuery.of(context).size.height;
+    final double displayWidth = MediaQuery.of(context).size.width;
+    final double buttonHeight = displayHeight * buttonHeightRatio;
+    final double buttonWidth = displayWidth * buttonWidthRatio;
+    final double fontSize = buttonHeight * buttonHeightFontSizeRatio;
+    final double marginHeight = displayHeight * settingMarginHeightRatio;
+    return Scaffold(
+      body: SafeArea(
+        child: Center(
+          child: ListView(
+            children: [
+              SizedBox(
+                height: marginHeight,
+              ),
+              CustomElevatedButton(
+                text: AppLocalizations.of(context)!.editProfile,
+                color: ColorName.mainBlack,
+                fontSize: fontSize,
+                fontFamily: FontFamily.mplus1,
+                height: buttonHeight,
+                width: buttonWidth,
+                buttonColor: ColorName.tourouBackground,
+                function: editProfileFunction,
+              ),
+              SizedBox(
+                height: marginHeight,
+              ),
+              CustomElevatedButton(
+                text: AppLocalizations.of(context)!.setLanguage,
+                color: ColorName.mainBlack,
+                fontSize: fontSize,
+                fontFamily: FontFamily.mplus1,
+                height: buttonHeight,
+                width: buttonWidth,
+                buttonColor: ColorName.tourouBackground,
+                function: setLanguageFunction,
+              ),
+              SizedBox(
+                height: marginHeight,
+              ),
+              CustomElevatedButton(
+                text: AppLocalizations.of(context)!.howToUseTitle,
+                color: ColorName.mainBlack,
+                fontSize: fontSize,
+                fontFamily: FontFamily.mplus1,
+                height: buttonHeight,
+                width: buttonWidth,
+                buttonColor: ColorName.tourouBackground,
+                function: howToUseFunction,
+              ),
+              SizedBox(
+                height: marginHeight,
+              ),
+              CustomElevatedButton(
+                text: AppLocalizations.of(context)!.disclaimer,
+                color: ColorName.mainBlack,
+                fontSize: fontSize,
+                fontFamily: FontFamily.mplus1,
+                height: buttonHeight,
+                width: buttonWidth,
+                buttonColor: ColorName.tourouBackground,
+                function: disclaimerFunction,
+              ),
+              SizedBox(
+                height: marginHeight,
+              ),
+              CustomElevatedButton(
+                text: AppLocalizations.of(context)!.privacyPolicy,
+                color: ColorName.mainBlack,
+                fontSize: fontSize,
+                fontFamily: FontFamily.mplus1,
+                height: buttonHeight,
+                width: buttonWidth,
+                buttonColor: ColorName.tourouBackground,
+                function: privacyPolicyFunction,
+              ),
+              SizedBox(
+                height: marginHeight,
+              ),
+              CustomElevatedButton(
+                text: AppLocalizations.of(context)!.logOut,
+                color: ColorName.mainBlack,
+                fontSize: fontSize,
+                fontFamily: FontFamily.mplus1,
+                height: buttonHeight,
+                width: buttonWidth,
+                buttonColor: ColorName.tourouBackground,
+                function: logOutFunction,
+              ),
+              SizedBox(
+                height: marginHeight,
+              ),
+              CustomElevatedButton(
+                text: AppLocalizations.of(context)!.deleteAccount,
+                color: ColorName.mainBlack,
+                fontSize: fontSize,
+                fontFamily: FontFamily.mplus1,
+                height: buttonHeight,
+                width: buttonWidth,
+                buttonColor: ColorName.tourouBackground,
+                function: deleteAccountFunction,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

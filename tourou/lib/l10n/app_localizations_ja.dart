@@ -91,4 +91,16 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get back => '戻る';
+
+  @override
+  String get editProfile => 'プロフィール編集';
+
+  @override
+  String get setLanguage => '言語設定';
+
+  @override
+  String get logOut => 'ログアウト';
+
+  @override
+  String get deleteAccount => 'アカウント削除';
 }

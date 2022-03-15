@@ -27,5 +27,9 @@
   "newTourouHint": "何を思っていますか？",
   "gims": "GIMS",
   "notShare": "共有しない",
-  "back": "戻る"
+  "back": "戻る",
+  "editProfile":"プロフィール編集",
+  "setLanguage":"言語設定",
+  "logOut":"ログアウト",
+  "deleteAccount":"アカウント削除"
 }

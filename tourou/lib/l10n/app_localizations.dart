@@ -274,6 +274,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'back'**
   String get back;
+
+  /// No description provided for @editProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Profile'**
+  String get editProfile;
+
+  /// No description provided for @setLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Set Language'**
+  String get setLanguage;
+
+  /// No description provided for @logOut.
+  ///
+  /// In en, this message translates to:
+  /// **'Log Out'**
+  String get logOut;
+
+  /// No description provided for @deleteAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Account'**
+  String get deleteAccount;
 }
 
 class _AppLocalizationsDelegate
