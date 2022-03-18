@@ -22,7 +22,7 @@ Widget TestWidget(String language) {
     localizationsDelegates: AppLocalizations.localizationsDelegates,
     supportedLocales: AppLocalizations.supportedLocales,
     locale: Locale(language),
-    home: SettingPage(),
+    home: SettingPage(isTest: true,),
   );
 }
 

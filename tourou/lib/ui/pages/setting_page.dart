@@ -5,7 +5,12 @@ import 'package:flutter/material.dart';
 import '../templates/setting_template.dart';
 
 class SettingPage extends StatelessWidget {
-  const SettingPage({Key? key}) : super(key: key);
+  final bool isTest;
+
+  const SettingPage({
+    Key? key,
+    required this.isTest,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +21,8 @@ class SettingPage extends StatelessWidget {
         disclaimerFunction: () {},
         privacyPolicyFunction: () {},
         logOutFunction: () {},
-        deleteAccountFunction: () {});
+        deleteAccountFunction: () {},
+        isTest: isTest,
+        );
   }
 }
