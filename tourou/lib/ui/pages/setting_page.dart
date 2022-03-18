@@ -15,14 +15,14 @@ class SettingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SettingTemplate(
-        editProfileFunction: () {},
-        setLanguageFunction: () {},
-        howToUseFunction: () {},
-        disclaimerFunction: () {},
-        privacyPolicyFunction: () {},
-        logOutFunction: () {},
-        deleteAccountFunction: () {},
-        isTest: isTest,
-        );
+      editProfileFunction: () {},
+      setLanguageFunction: () {},
+      howToUseFunction: () {},
+      disclaimerFunction: () {},
+      privacyPolicyFunction: () {},
+      logOutFunction: () {},
+      deleteAccountFunction: () {},
+      isTest: isTest,
+    );
   }
 }

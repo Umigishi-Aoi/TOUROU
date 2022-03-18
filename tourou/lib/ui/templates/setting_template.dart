@@ -1,6 +1,7 @@
-// Flutter imports:
+// Dart imports:
 import 'dart:math';
 
+// Flutter imports:
 import 'package:flutter/material.dart';
 
 // Project imports:
@@ -151,13 +152,13 @@ class SettingTemplate extends StatelessWidget {
                 ),
               ),
               if (isTest)
-                  Container(
-                    width: displayWidth,
-                    height: bannerAdHeight,
-                    color: ColorName.itemBackground,
-                  )
-                else
-                  AdaptiveBannerAd(),
+                Container(
+                  width: displayWidth,
+                  height: bannerAdHeight,
+                  color: ColorName.itemBackground,
+                )
+              else
+                AdaptiveBannerAd(),
             ],
           ),
         ),
