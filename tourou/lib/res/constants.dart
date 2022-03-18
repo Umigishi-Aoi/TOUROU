@@ -115,6 +115,7 @@ const double newTourouButtonTopMarginRatio = 0.02;
 
 //setting setting
 const double settingMarginHeightRatio = 0.05;
+const double settingButtonPadding = 8.0;
 
 const flavor = String.fromEnvironment('FLAVOR');
 
