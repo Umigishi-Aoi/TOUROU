@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:tourou/ui/molecules/custom_elevated_button.dart';
 import 'package:tourou/ui/molecules/text_textField.dart';
 
@@ -16,9 +17,14 @@ class EditProfileTemplate extends StatelessWidget {
 
   final TextEditingController userNameController; 
 
+  final void Function() saveFunction;
+
   const EditProfileTemplate({
     Key? key,
     required this.backFunction,
+    required this.imageFunction,
+    required this.userNameController,
+    required this.saveFunction,
   }) : super(key: key);
 
   @override
@@ -30,6 +36,9 @@ class EditProfileTemplate extends StatelessWidget {
     final double fieldFontSize =
         fieldHeight * newProfileSettingFieldFontSizeRatio;
     final double fieldWidth = displayWidth * buttonWidthRatio;
+    final double buttonHeight = displayHeight * buttonHeightRatio;
+    final double buttonWidth = displayWidth * buttonWidthRatio;
+    final double fontSize = buttonHeight * buttonHeightFontSizeRatio;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: ColorName.mainBlack,
@@ -82,14 +91,14 @@ class EditProfileTemplate extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(newProfileSettingFieldPadding),
               child: CustomElevatedButton(
-                  text: text,
-                  color: color,
+                  text: AppLocalizations.of(context)!.save,
+                  color: ColorName.mainBlack,
                   fontSize: fontSize,
-                  fontFamily: fontFamily,
-                  height: height,
-                  width: width,
-                  buttonColor: buttonColor,
-                  function: function),
+                  fontFamily: FontFamily.mplus1,
+                  height: buttonHeight,
+                  width: buttonWidth,
+                  buttonColor: ColorName.tourouBackground,
+                  function: saveFunction),
             )
           ],
         )),

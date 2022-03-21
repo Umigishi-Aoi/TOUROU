@@ -1,4 +1,6 @@
-// Project imports:
+
+
+
 import 'app_localizations.dart';
 
 /// The translations for Japanese (`ja`).
@@ -103,4 +105,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get deleteAccount => 'アカウント削除';
+
+  @override
+  String get save => '保存';
 }

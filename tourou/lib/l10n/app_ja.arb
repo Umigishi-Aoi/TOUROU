@@ -31,5 +31,6 @@
   "editProfile":"プロフィール編集",
   "setLanguage":"言語設定",
   "logOut":"ログアウト",
-  "deleteAccount":"アカウント削除"
+  "deleteAccount":"アカウント削除",
+  "save":"保存"
 }
