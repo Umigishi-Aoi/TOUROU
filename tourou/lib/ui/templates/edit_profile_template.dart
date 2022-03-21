@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:tourou/ui/atoms/custom_image.dart';
-import 'package:tourou/ui/atoms/custom_textfield.dart';
+import 'package:tourou/ui/molecules/custom_elevated_button.dart';
+import 'package:tourou/ui/molecules/text_textField.dart';
 
+import '../../gen/assets.gen.dart';
 import '../../gen/colors.gen.dart';
 import '../../gen/fonts.gen.dart';
 import '../../l10n/app_localizations.dart';
 import '../../res/constants.dart';
 import '../atoms/custom_text.dart';
+import '../molecules/image_button.dart';
 
 class EditProfileTemplate extends StatelessWidget {
-  
   final void Function() backFunction;
+  final void Function() imageFunction;
+
+  final TextEditingController userNameController; 
 
   const EditProfileTemplate({
     Key? key,
@@ -19,6 +23,13 @@ class EditProfileTemplate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double displayHeight = MediaQuery.of(context).size.height;
+    final double displayWidth = MediaQuery.of(context).size.width;
+    final double fieldHeight =
+        displayHeight * newProfileSettingFieldHeightRatio;
+    final double fieldFontSize =
+        fieldHeight * newProfileSettingFieldFontSizeRatio;
+    final double fieldWidth = displayWidth * buttonWidthRatio;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: ColorName.mainBlack,
@@ -34,14 +45,54 @@ class EditProfileTemplate extends StatelessWidget {
       ),
       body: SafeArea(
         child: Center(
-          child: Column(
-            children: [
-              CustomImage(fit: , height: null, path: '',),
-              CustomTextField(hint: hint, controller: controller, height: height, width: width, maxLines: maxLines, maxLength: maxLength, fontSize: fontSize, textColor: textColor, fontFamily: fontFamily, fillColor: fillColor, borderColor: borderColor, counterColor: counterColor, textInputFormatters: textInputFormatters, autofocus: autofocus),
-              CustomTextField(hint: hint, controller: controller, height: height, width: width, maxLines: maxLines, maxLength: maxLength, fontSize: fontSize, textColor: textColor, fontFamily: fontFamily, fillColor: fillColor, borderColor: borderColor, counterColor: counterColor, textInputFormatters: textInputFormatters, autofocus: autofocus),
-            ],
-          )
-        ),
+            child: Column(
+          children: [
+            SizedBox(
+              height: displayHeight * newProfileSettingImageTopMarginRatio,
+            ),
+            ImageButton(
+              firstImagePath: Assets.images.iconNoImage.path,
+              height: displayHeight * newProfileSettingImageHeightRatio,
+              function: imageFunction,
+              fit: BoxFit.cover,
+              isCircle: true,
+            ),
+            Padding(
+              padding: EdgeInsets.all(newProfileSettingFieldPadding),
+              child: TextTextField(
+                text: AppLocalizations.of(context)!.userName,
+                titleTextColor: ColorName.textWhite,
+                titleFontSize: fieldFontSize,
+                fontFamily: FontFamily.mplus1,
+                hint: AppLocalizations.of(context)!.userNameHint,
+                controller: userNameController,
+                height: fieldHeight,
+                width: fieldWidth,
+                maxLines: newProfileSettingMaxLine,
+                maxLength: newProfileSettingNameMaxLength,
+                fieldFontSize: fieldFontSize,
+                fieldTextColor: ColorName.mainBlack,
+                fillColor: ColorName.tourouBackground,
+                borderColor: ColorName.textWhite,
+                counterColor: ColorName.textWhite,
+                textInputFormatters: [],
+                autofocus: false,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(newProfileSettingFieldPadding),
+              child: CustomElevatedButton(
+                  text: text,
+                  color: color,
+                  fontSize: fontSize,
+                  fontFamily: fontFamily,
+                  height: height,
+                  width: width,
+                  buttonColor: buttonColor,
+                  function: function),
+            )
+          ],
+        )),
       ),
     );
   }
