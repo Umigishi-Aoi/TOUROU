@@ -1,21 +1,22 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
-import 'package:tourou/ui/molecules/custom_elevated_button.dart';
-import 'package:tourou/ui/molecules/text_textField.dart';
-
+// Project imports:
 import '../../gen/assets.gen.dart';
 import '../../gen/colors.gen.dart';
 import '../../gen/fonts.gen.dart';
 import '../../l10n/app_localizations.dart';
 import '../../res/constants.dart';
 import '../atoms/custom_text.dart';
+import '../molecules/custom_elevated_button.dart';
 import '../molecules/image_button.dart';
+import '../molecules/text_textField.dart';
 
 class EditProfileTemplate extends StatelessWidget {
   final void Function() backFunction;
   final void Function() imageFunction;
 
-  final TextEditingController userNameController; 
+  final TextEditingController userNameController;
   final TextEditingController detailController;
 
   final void Function() saveFunction;
@@ -38,7 +39,7 @@ class EditProfileTemplate extends StatelessWidget {
     final double fieldFontSize =
         fieldHeight * newProfileSettingFieldFontSizeRatio;
     final double fieldWidth = displayWidth * buttonWidthRatio;
-        final double detailFieldHeight =
+    final double detailFieldHeight =
         displayHeight * editProfileDetailFieldHeightRatio;
     final double buttonHeight = displayHeight * buttonHeightRatio;
     final double buttonWidth = displayWidth * buttonWidthRatio;
@@ -47,11 +48,11 @@ class EditProfileTemplate extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: ColorName.mainBlack,
         title: CustomText(
-            text: AppLocalizations.of(context)!.editProfile,
-            color: ColorName.textWhite,
-            fontSize: newTourouFontSize,
-            fontFamily: FontFamily.mplus1,
-          ),
+          text: AppLocalizations.of(context)!.editProfile,
+          color: ColorName.textWhite,
+          fontSize: newTourouFontSize,
+          fontFamily: FontFamily.mplus1,
+        ),
         leading: Center(
           child: CustomText(
             text: AppLocalizations.of(context)!.back,

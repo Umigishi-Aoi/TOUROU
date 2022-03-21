@@ -1,5 +1,8 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:tourou/ui/templates/edit_profile_template.dart';
+
+// Project imports:
+import '../templates/edit_profile_template.dart';
 
 class EditProfilePage extends StatefulWidget {
   const EditProfilePage({Key? key}) : super(key: key);
