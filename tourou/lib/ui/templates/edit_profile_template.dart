@@ -16,6 +16,7 @@ class EditProfileTemplate extends StatelessWidget {
   final void Function() imageFunction;
 
   final TextEditingController userNameController; 
+  final TextEditingController detailController;
 
   final void Function() saveFunction;
 
@@ -24,6 +25,7 @@ class EditProfileTemplate extends StatelessWidget {
     required this.backFunction,
     required this.imageFunction,
     required this.userNameController,
+    required this.detailController,
     required this.saveFunction,
   }) : super(key: key);
 
@@ -105,7 +107,7 @@ class EditProfileTemplate extends StatelessWidget {
                 titleFontSize: fieldFontSize,
                 fontFamily: FontFamily.mplus1,
                 hint: AppLocalizations.of(context)!.userNameHint,
-                controller: userNameController,
+                controller: detailController,
                 height: detailFieldHeight,
                 width: fieldWidth,
                 maxLines: editProfileDetailMaxLine,
