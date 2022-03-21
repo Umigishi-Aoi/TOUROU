@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tourou/ui/atoms/custom_image.dart';
+import 'package:tourou/ui/atoms/custom_textfield.dart';
 
 import '../../gen/colors.gen.dart';
 import '../../gen/fonts.gen.dart';
@@ -32,7 +34,13 @@ class EditProfileTemplate extends StatelessWidget {
       ),
       body: SafeArea(
         child: Center(
-          child: Container(),
+          child: Column(
+            children: [
+              CustomImage(fit: , height: null, path: '',),
+              CustomTextField(hint: hint, controller: controller, height: height, width: width, maxLines: maxLines, maxLength: maxLength, fontSize: fontSize, textColor: textColor, fontFamily: fontFamily, fillColor: fillColor, borderColor: borderColor, counterColor: counterColor, textInputFormatters: textInputFormatters, autofocus: autofocus),
+              CustomTextField(hint: hint, controller: controller, height: height, width: width, maxLines: maxLines, maxLength: maxLength, fontSize: fontSize, textColor: textColor, fontFamily: fontFamily, fillColor: fillColor, borderColor: borderColor, counterColor: counterColor, textInputFormatters: textInputFormatters, autofocus: autofocus),
+            ],
+          )
         ),
       ),
     );
