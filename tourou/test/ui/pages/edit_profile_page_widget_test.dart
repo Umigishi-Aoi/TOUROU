@@ -9,7 +9,6 @@ import 'package:golden_toolkit/golden_toolkit.dart';
 // Project imports:
 import '../../../lib/l10n/app_localizations.dart';
 import '../../../lib/ui/pages/edit_profile_page.dart';
-import '../../../lib/ui/pages/setting_page.dart';
 
 Future<void> loadJapaneseFont() async {
   TestWidgetsFlutterBinding.ensureInitialized();
