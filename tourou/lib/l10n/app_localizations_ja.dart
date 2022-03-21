@@ -103,4 +103,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get deleteAccount => 'アカウント削除';
+
+  @override
+  String get save => '保存';
 }

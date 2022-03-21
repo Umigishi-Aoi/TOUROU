@@ -31,5 +31,6 @@
   "editProfile":"Edit Profile",
   "setLanguage":"Set Language",
   "logOut":"Log Out",
-  "deleteAccount":"Delete Account"
+  "deleteAccount":"Delete Account",
+  "save":"save"
 }
