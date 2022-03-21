@@ -36,12 +36,20 @@ class EditProfileTemplate extends StatelessWidget {
     final double fieldFontSize =
         fieldHeight * newProfileSettingFieldFontSizeRatio;
     final double fieldWidth = displayWidth * buttonWidthRatio;
+        final double detailFieldHeight =
+        displayHeight * editProfileDetailFieldHeightRatio;
     final double buttonHeight = displayHeight * buttonHeightRatio;
     final double buttonWidth = displayWidth * buttonWidthRatio;
     final double fontSize = buttonHeight * buttonHeightFontSizeRatio;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: ColorName.mainBlack,
+        title: CustomText(
+            text: AppLocalizations.of(context)!.editProfile,
+            color: ColorName.textWhite,
+            fontSize: newTourouFontSize,
+            fontFamily: FontFamily.mplus1,
+          ),
         leading: Center(
           child: CustomText(
             text: AppLocalizations.of(context)!.back,
@@ -51,6 +59,7 @@ class EditProfileTemplate extends StatelessWidget {
             function: backFunction,
           ),
         ),
+        centerTitle: true,
       ),
       body: SafeArea(
         child: Center(
@@ -79,6 +88,28 @@ class EditProfileTemplate extends StatelessWidget {
                 width: fieldWidth,
                 maxLines: newProfileSettingMaxLine,
                 maxLength: newProfileSettingNameMaxLength,
+                fieldFontSize: fieldFontSize,
+                fieldTextColor: ColorName.mainBlack,
+                fillColor: ColorName.tourouBackground,
+                borderColor: ColorName.textWhite,
+                counterColor: ColorName.textWhite,
+                textInputFormatters: [],
+                autofocus: false,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(newProfileSettingFieldPadding),
+              child: TextTextField(
+                text: AppLocalizations.of(context)!.detail,
+                titleTextColor: ColorName.textWhite,
+                titleFontSize: fieldFontSize,
+                fontFamily: FontFamily.mplus1,
+                hint: AppLocalizations.of(context)!.userNameHint,
+                controller: userNameController,
+                height: detailFieldHeight,
+                width: fieldWidth,
+                maxLines: editProfileDetailMaxLine,
+                maxLength: editProfileDetailMaxLength,
                 fieldFontSize: fieldFontSize,
                 fieldTextColor: ColorName.mainBlack,
                 fillColor: ColorName.tourouBackground,
