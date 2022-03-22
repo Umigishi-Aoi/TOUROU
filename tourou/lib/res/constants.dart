@@ -118,7 +118,7 @@ const double settingMarginHeightRatio = 0.05;
 const double settingButtonPadding = 8.0;
 
 //edit Profile setting
-const double editProfileDetailFieldHeightRatio = 0.4;
+const double editProfileDetailFieldHeightRatio = 0.3;
 const int editProfileDetailMaxLine = 10;
 const int editProfileDetailMaxLength = 200;
 

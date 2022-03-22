@@ -45,6 +45,7 @@ class EditProfileTemplate extends StatelessWidget {
     final double buttonWidth = displayWidth * buttonWidthRatio;
     final double fontSize = buttonHeight * buttonHeightFontSizeRatio;
     return Scaffold(
+      backgroundColor: ColorName.mainBlack,
       appBar: AppBar(
         backgroundColor: ColorName.mainBlack,
         title: CustomText(
@@ -79,7 +80,8 @@ class EditProfileTemplate extends StatelessWidget {
               isCircle: true,
             ),
             Padding(
-              padding: EdgeInsets.all(newProfileSettingFieldPadding),
+              padding: EdgeInsets.symmetric(
+                  horizontal: newProfileSettingFieldPadding),
               child: TextTextField(
                 text: AppLocalizations.of(context)!.userName,
                 titleTextColor: ColorName.textWhite,
@@ -101,7 +103,8 @@ class EditProfileTemplate extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(newProfileSettingFieldPadding),
+              padding: EdgeInsets.symmetric(
+                  horizontal: newProfileSettingFieldPadding),
               child: TextTextField(
                 text: AppLocalizations.of(context)!.detail,
                 titleTextColor: ColorName.textWhite,
