@@ -1,3 +1,6 @@
+// Project imports:
+import '../gen/assets.gen.dart';
+
 class TourouData {
   final String profileImagePath;
   final String userName;
@@ -13,4 +16,15 @@ class TourouData {
       required this.tourouText,
       this.tourouImagePath,
       required this.goodNumber});
+
+  factory TourouData.profile() {
+    return TourouData(
+      profileImagePath: Assets.images.iconNoImage.path,
+      userName: 'kenta',
+      userId: 'kenta3456',
+      tourouText:
+          '私はFlutterが大好きです。私はFlutterが大好きです。私はFlutterが大好きです。私はFlutterが大好きです。私はFlutterがÏ大好きです。私はFlutterが大好きです。私はFlutterが大好きです。',
+      goodNumber: '0',
+    );
+  }
 }
