@@ -41,11 +41,15 @@ class DiscalimerTemplate extends StatelessWidget {
       ),
       body: Padding(
         padding: EdgeInsets.all(textPadding),
-        child: CustomText(
-          color: ColorName.mainBlack,
-          fontSize: mainTextFontSize,
-          text: AppLocalizations.of(context)!.disclaimerText,
-          fontFamily: FontFamily.mplus1,
+        child: ListView(
+          children: [
+            CustomText(
+              color: ColorName.mainBlack,
+              fontSize: mainTextFontSize,
+              text: AppLocalizations.of(context)!.disclaimerText,
+              fontFamily: FontFamily.mplus1,
+            ),
+          ],
         ),
       ),
     );
