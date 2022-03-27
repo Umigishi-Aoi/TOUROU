@@ -122,6 +122,9 @@ const double editProfileDetailFieldHeightRatio = 0.3;
 const int editProfileDetailMaxLine = 10;
 const int editProfileDetailMaxLength = 200;
 
+//profile page setting
+const double profileImageHeightRatio = 0.2;
+
 const flavor = String.fromEnvironment('FLAVOR');
 
 enum Flavor { dev, stg, prod, undefined }
