@@ -126,7 +126,7 @@ const int editProfileDetailMaxLength = 200;
 const double profileImageHeightRatio = 0.2;
 
 //disclaimer page setting
-const double sentencePadding = 16;
+const double textPadding = 16;
 
 const flavor = String.fromEnvironment('FLAVOR');
 

@@ -1,5 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
+// Project imports:
 import '../../gen/colors.gen.dart';
 import '../../gen/fonts.gen.dart';
 import '../../l10n/app_localizations.dart';
@@ -38,11 +40,11 @@ class DiscalimerTemplate extends StatelessWidget {
         centerTitle: true,
       ),
       body: Padding(
-        padding: EdgeInsets.all(sentencePadding),
+        padding: EdgeInsets.all(textPadding),
         child: CustomText(
-          color: ColorName.mainBlack, 
-          fontSize: mainTextFontSize, 
-          text: '',
+          color: ColorName.mainBlack,
+          fontSize: mainTextFontSize,
+          text: AppLocalizations.of(context)!.disclaimerText,
           fontFamily: FontFamily.mplus1,
         ),
       ),
