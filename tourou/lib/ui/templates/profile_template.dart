@@ -67,21 +67,29 @@ class ProfileTemplate extends StatelessWidget {
                 margin: EdgeInsets.symmetric(
                     vertical: tourouHorizontalMargin / 2,
                     horizontal: tourouHorizontalMargin),
-                color: ColorName.tourouBackground,
-                child: TourouOrganism(
-                    tourouData: tourouData,
-                    profileImageHeight:
-                        displayHeight * tourouProfileImageHeightRatio,
-                    profileFunction: (tourouData) {},
-                    textColor: ColorName.mainBlack,
-                    fontFamily: FontFamily.mplus1,
-                    userIdColor: ColorName.userIdText,
-                    userNameFontSize: tourouUserNameFontSize,
-                    tourouTextWidth: displayWidth * tourouContentWidthRatio,
-                    tourouTextFontSize: tourouUserNameFontSize,
-                    contentBottomPadding: tourouContentBottomPadding,
-                    tourouImageHeight: 0,
-                    tourouImageFunction: (tourouData) {}),
+                decoration: BoxDecoration(
+                  color: ColorName.tourouBackground,
+                  borderRadius: BorderRadius.circular(tourouBorderRadius),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                    vertical: tourouVerticalPadding,
+                  ),
+                  child: TourouOrganism(
+                      tourouData: tourouData,
+                      profileImageHeight:
+                          displayHeight * profileImageHeightRatio,
+                      profileFunction: (tourouData) {},
+                      textColor: ColorName.mainBlack,
+                      fontFamily: FontFamily.mplus1,
+                      userIdColor: ColorName.userIdText,
+                      userNameFontSize: tourouUserNameFontSize,
+                      tourouTextWidth: displayWidth * tourouContentWidthRatio,
+                      tourouTextFontSize: tourouUserNameFontSize,
+                      contentBottomPadding: tourouContentBottomPadding,
+                      tourouImageHeight: 0,
+                      tourouImageFunction: (tourouData) {}),
+                ),
               ),
               if (isTest)
                 Container(
