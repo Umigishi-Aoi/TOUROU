@@ -125,6 +125,9 @@ const int editProfileDetailMaxLength = 200;
 //profile page setting
 const double profileImageHeightRatio = 0.2;
 
+//disclaimer page setting
+const double textPadding = 16;
+
 const flavor = String.fromEnvironment('FLAVOR');
 
 enum Flavor { dev, stg, prod, undefined }
