@@ -8,10 +8,10 @@ import '../../l10n/app_localizations.dart';
 import '../../res/constants.dart';
 import '../atoms/custom_text.dart';
 
-class DiscalimerTemplate extends StatelessWidget {
+class PrivacyPolicyTemplate extends StatelessWidget {
   final void Function() backFunction;
 
-  const DiscalimerTemplate({
+  const PrivacyPolicyTemplate({
     Key? key,
     required this.backFunction,
   }) : super(key: key);
