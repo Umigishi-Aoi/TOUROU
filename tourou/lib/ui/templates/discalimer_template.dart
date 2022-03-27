@@ -44,7 +44,7 @@ class DiscalimerTemplate extends StatelessWidget {
         child: ListView(
           children: [
             CustomText(
-              color: ColorName.mainBlack,
+              color: ColorName.textWhite,
               fontSize: mainTextFontSize,
               text: AppLocalizations.of(context)!.disclaimerText,
               fontFamily: FontFamily.mplus1,
