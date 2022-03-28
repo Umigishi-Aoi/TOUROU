@@ -114,4 +114,10 @@ class AppLocalizationsJa extends AppLocalizations {
   @override
   String get privacyPolicyText =>
       'ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ';
+
+  @override
+  String get english => 'English';
+
+  @override
+  String get japanese => '日本語';
 }
