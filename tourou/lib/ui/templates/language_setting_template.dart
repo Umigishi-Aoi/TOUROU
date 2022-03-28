@@ -23,7 +23,6 @@ class LanguageSettingTemplate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double displayHeight = MediaQuery.of(context).size.height;
     final double displayWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: ColorName.mainBlack,
