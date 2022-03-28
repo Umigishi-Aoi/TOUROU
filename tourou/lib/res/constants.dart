@@ -128,6 +128,9 @@ const double profileImageHeightRatio = 0.2;
 //disclaimer page setting
 const double textPadding = 16;
 
+//language setting page settinng
+const double languageSettingTextSwitchWidthRatio = 0.5;
+
 const flavor = String.fromEnvironment('FLAVOR');
 
 enum Flavor { dev, stg, prod, undefined }
