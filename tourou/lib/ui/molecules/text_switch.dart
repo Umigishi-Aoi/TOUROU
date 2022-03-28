@@ -16,6 +16,7 @@ class TextSwitch extends StatelessWidget {
 
   final void Function()? function;
 
+  final Key? switchKey;
   final Color activeColor;
   final Color inactiveColor;
   final void Function(bool?) onChanged;
@@ -29,6 +30,7 @@ class TextSwitch extends StatelessWidget {
       this.bold,
       required this.fontFamily,
       this.function,
+      this.switchKey,
       required this.activeColor,
       required this.inactiveColor,
       required this.onChanged})
@@ -49,6 +51,7 @@ class TextSwitch extends StatelessWidget {
             fontFamily: fontFamily,
           ),
           CustomSwitch(
+            key: switchKey,
             onChanged: onChanged,
             activeColor: activeColor,
             inactiveColor: inactiveColor,
