@@ -1,17 +1,20 @@
 // Flutter imports:
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CustomSwitch extends StatefulWidget {
   final Color activeColor;
-  final Color inactiveColor;
+  final Color thumbColor;
+  final Color trackColor;
   final void Function(bool?) onChanged;
 
-  const CustomSwitch(
-      {Key? key,
-      required this.activeColor,
-      required this.inactiveColor,
-      required this.onChanged})
-      : super(key: key);
+  const CustomSwitch({
+    Key? key,
+    required this.activeColor,
+    required this.thumbColor,
+    required this.trackColor,
+    required this.onChanged,
+  }) : super(key: key);
 
   @override
   State<CustomSwitch> createState() => _CustomSwitchState();
@@ -22,10 +25,11 @@ class _CustomSwitchState extends State<CustomSwitch> {
 
   @override
   Widget build(BuildContext context) {
-    return Switch(
+    return CupertinoSwitch(
       value: _isActive,
       activeColor: widget.activeColor,
-      inactiveThumbColor: widget.inactiveColor,
+      thumbColor: widget.thumbColor,
+      trackColor: widget.trackColor,
       onChanged: (value) {
         setState(() {
           _isActive = value;

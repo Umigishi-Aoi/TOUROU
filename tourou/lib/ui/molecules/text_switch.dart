@@ -18,7 +18,8 @@ class TextSwitch extends StatelessWidget {
 
   final Key? switchKey;
   final Color activeColor;
-  final Color inactiveColor;
+  final Color thumbColor;
+  final Color trackColor;
   final void Function(bool?) onChanged;
 
   const TextSwitch(
@@ -32,8 +33,9 @@ class TextSwitch extends StatelessWidget {
       this.function,
       this.switchKey,
       required this.activeColor,
-      required this.inactiveColor,
-      required this.onChanged})
+      required this.thumbColor,
+      required this.trackColor,
+      required this.onChanged,})
       : super(key: key);
 
   @override
@@ -54,7 +56,8 @@ class TextSwitch extends StatelessWidget {
             key: switchKey,
             onChanged: onChanged,
             activeColor: activeColor,
-            inactiveColor: inactiveColor,
+            thumbColor: thumbColor,
+            trackColor: trackColor,
           ),
         ],
       ),
