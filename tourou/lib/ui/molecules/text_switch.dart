@@ -22,21 +22,21 @@ class TextSwitch extends StatelessWidget {
   final Color trackColor;
   final void Function(bool?) onChanged;
 
-  const TextSwitch(
-      {Key? key,
-      required this.width,
-      required this.text,
-      required this.color,
-      required this.fontSize,
-      this.bold,
-      required this.fontFamily,
-      this.function,
-      this.switchKey,
-      required this.activeColor,
-      required this.thumbColor,
-      required this.trackColor,
-      required this.onChanged,})
-      : super(key: key);
+  const TextSwitch({
+    Key? key,
+    required this.width,
+    required this.text,
+    required this.color,
+    required this.fontSize,
+    this.bold,
+    required this.fontFamily,
+    this.function,
+    this.switchKey,
+    required this.activeColor,
+    required this.thumbColor,
+    required this.trackColor,
+    required this.onChanged,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
