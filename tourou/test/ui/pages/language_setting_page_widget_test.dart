@@ -42,6 +42,20 @@ void main() {
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, '${title}_iphone6_en');
 
+    //Switchをタップして切り替えできることの確認テスト
+    await tester.tap(find.byKey(ValueKey('English Switch')));
+
+    await screenMatchesGolden(tester, '${title}_iphone6_en_english_switch');
+
+    //Switchをタップして切り替えできることの確認テスト
+    await tester.tap(find.byKey(ValueKey('Japanese Switch')));
+
+    await screenMatchesGolden(tester, '${title}_iphone6_en_japanese_switch');
+
+    //Switchを元に戻す
+    await tester.tap(find.byKey(ValueKey('English Switch')));
+    await tester.tap(find.byKey(ValueKey('Japanese Switch')));
+
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
     await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: size6);
 
