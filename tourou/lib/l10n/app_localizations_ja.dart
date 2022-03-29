@@ -120,4 +120,13 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get japanese => '日本語';
+
+  @override
+  String get deleteAccountContent => 'アカウントを削除します。\n本当によろしいですか？';
+
+  @override
+  String get yes => 'はい';
+
+  @override
+  String get no => 'いいえ';
 }

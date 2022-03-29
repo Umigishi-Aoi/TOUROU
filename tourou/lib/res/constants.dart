@@ -131,6 +131,10 @@ const double textPadding = 16;
 //language setting page settinng
 const double languageSettingTextSwitchWidthRatio = 0.5;
 
+//dialog setting
+const double dialogButtonHeightRatio = 0.05;
+const double dialogButtonWidthRatio = 0.3;
+
 const flavor = String.fromEnvironment('FLAVOR');
 
 enum Flavor { dev, stg, prod, undefined }
