@@ -40,6 +40,7 @@ class DeleteAccountDialog extends StatelessWidget {
         ),
         actions: [
           CustomElevatedButton(
+            key: ValueKey('Yes Button'),
             text: AppLocalizations.of(context)!.yes,
             color: ColorName.signInButtonBlack,
             fontSize: mainTextFontSize,
@@ -50,6 +51,7 @@ class DeleteAccountDialog extends StatelessWidget {
             function: yesFunction,
           ),
           CustomElevatedButton(
+            key: ValueKey('No Button'),
             text: AppLocalizations.of(context)!.no,
             color: ColorName.signInButtonBlack,
             fontSize: mainTextFontSize,
