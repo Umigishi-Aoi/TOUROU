@@ -1,5 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
+// Project imports:
 import '../../gen/colors.gen.dart';
 import '../../gen/fonts.gen.dart';
 import '../../l10n/app_localizations.dart';
@@ -8,7 +10,7 @@ import '../atoms/custom_text.dart';
 import '../molecules/custom_elevated_button.dart';
 
 class LogoutDialog extends StatelessWidget {
-    final void Function() yesFunction;
+  final void Function() yesFunction;
   final void Function() noFunction;
   const LogoutDialog({
     Key? key,
