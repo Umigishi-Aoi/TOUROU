@@ -39,5 +39,6 @@
   "japanese": "日本語",
   "deleteAccountContent": "アカウントを削除します。\n本当によろしいですか？",
   "yes": "はい",
-  "no": "いいえ"
+  "no": "いいえ",
+  "logoutContent": "ログアウトします。\n本当によろしいですか？"
 }
