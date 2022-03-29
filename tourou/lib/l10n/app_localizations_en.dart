@@ -120,4 +120,14 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get japanese => 'Japanese';
+
+  @override
+  String get deleteAccountContent =>
+      'Account will be deleted.\nAre you really sure?';
+
+  @override
+  String get yes => 'Yes';
+
+  @override
+  String get no => 'No';
 }

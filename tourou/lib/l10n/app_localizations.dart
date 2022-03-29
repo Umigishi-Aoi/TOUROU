@@ -328,6 +328,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Japanese'**
   String get japanese;
+
+  /// No description provided for @deleteAccountContent.
+  ///
+  /// In en, this message translates to:
+  /// **'Account will be deleted.\nAre you really sure?'**
+  String get deleteAccountContent;
+
+  /// No description provided for @yes.
+  ///
+  /// In en, this message translates to:
+  /// **'Yes'**
+  String get yes;
+
+  /// No description provided for @no.
+  ///
+  /// In en, this message translates to:
+  /// **'No'**
+  String get no;
 }
 
 class _AppLocalizationsDelegate
