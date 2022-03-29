@@ -129,4 +129,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get no => 'いいえ';
+
+  @override
+  String get logoutContent => 'ログアウトします。\n本当によろしいですか？';
 }

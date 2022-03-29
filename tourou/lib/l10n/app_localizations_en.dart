@@ -130,4 +130,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get no => 'No';
+
+  @override
+  String get logoutContent => 'Account will be logouted.\nAre you really sure?';
 }

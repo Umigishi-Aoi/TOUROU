@@ -346,6 +346,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No'**
   String get no;
+
+  /// No description provided for @logoutContent.
+  ///
+  /// In en, this message translates to:
+  /// **'Account will be logouted.\nAre you really sure?'**
+  String get logoutContent;
 }
 
 class _AppLocalizationsDelegate

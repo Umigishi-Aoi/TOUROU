@@ -39,5 +39,6 @@
   "japanese": "Japanese",
   "deleteAccountContent":"Account will be deleted.\nAre you really sure?",
   "yes":"Yes",
-  "no":"No"
+  "no":"No",
+  "logoutContent": "Account will be logouted.\nAre you really sure?"
 }
