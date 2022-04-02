@@ -12,6 +12,7 @@ class TourouTestData {
 
     for (int i = 0; i < 25; i++) {
       testData.add(TourouData(
+        id:'normal${i}',
         profileImagePath: Assets.images.iconNoImage.path,
         userName: 'kenta',
         userId: 'kenta1234',
@@ -19,6 +20,7 @@ class TourouTestData {
         goodNumber: '0',
       ));
       testData.add(TourouData(
+        id:'name_long${i}',
         profileImagePath: Assets.images.iconNoImage.path,
         userName: 'kentakentakentakenta',
         userId: 'kenta5678',
@@ -26,6 +28,7 @@ class TourouTestData {
         goodNumber: '1',
       ));
       testData.add(TourouData(
+        id: 'text_long${i}',
         profileImagePath: Assets.images.iconNoImage.path,
         userName: 'kenta',
         userId: 'kenta9012',
@@ -34,6 +37,7 @@ class TourouTestData {
         goodNumber: '0',
       ));
       testData.add(TourouData(
+        id: 'good_many${i}',
         profileImagePath: Assets.images.iconNoImage.path,
         userName: 'kenta',
         userId: 'kenta3456',

@@ -2,6 +2,7 @@
 import '../gen/assets.gen.dart';
 
 class TourouData {
+  final String id;
   final String profileImagePath;
   final String userName;
   final String userId;
@@ -10,7 +11,8 @@ class TourouData {
   final String goodNumber;
 
   TourouData(
-      {required this.profileImagePath,
+      {required this.id,
+      required this.profileImagePath,
       required this.userName,
       required this.userId,
       required this.tourouText,
@@ -19,6 +21,7 @@ class TourouData {
 
   factory TourouData.profile() {
     return TourouData(
+      id: 'profile',
       profileImagePath: Assets.images.iconNoImage.path,
       userName: 'kenta',
       userId: 'kenta3456',
