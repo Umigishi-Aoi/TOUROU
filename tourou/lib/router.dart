@@ -79,7 +79,7 @@ final router = Provider((ref) {
         ),
       ),
       GoRoute(
-        path: '/title_page',
+        path: '/title',
         builder: (context, state) => TitlePage(
         ),
       ),
