@@ -1,6 +1,8 @@
+// Package imports:
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+// Project imports:
 import 'ui/pages/pages.dart';
 
 final router = Provider((ref) {
@@ -48,12 +50,12 @@ final router = Provider((ref) {
           isTest: isTest,
         ),
       ),
-      GoRoute(
-        path: '/self_tourou_detail',
-        builder: (context, state) => SelfTourouDetailPage(
-          selfTourou: null,
-        ),
-      ),
+      // GoRoute(
+      //   path: '/self_tourou_detail',
+      //   builder: (context, state) => SelfTourouDetailPage(
+      //     selfTourou: null,
+      //   ),
+      // ),
       GoRoute(
         path: '/self_tourou',
         builder: (context, state) => SelfTourouPage(
@@ -80,15 +82,14 @@ final router = Provider((ref) {
       ),
       GoRoute(
         path: '/title',
-        builder: (context, state) => TitlePage(
-        ),
+        builder: (context, state) => TitlePage(),
       ),
-      GoRoute(
-        path: '/world_tourou_detail',
-        builder: (context, state) => WorldTourouDetailPage(
-          worldTourou: null,
-        ),
-      ),
+      // GoRoute(
+      //   path: '/world_tourou_detail',
+      //   builder: (context, state) => WorldTourouDetailPage(
+      //     worldTourou: null,
+      //   ),
+      // ),
       GoRoute(
         path: '/world_tourou',
         builder: (context, state) => WorldTourouPage(
