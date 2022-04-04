@@ -8,8 +8,6 @@ import 'package:golden_toolkit/golden_toolkit.dart';
 
 // Project imports:
 import '../../../lib/l10n/app_localizations.dart';
-import '../../../lib/temp/toruou_data.dart';
-import '../../../lib/temp/tourou_test_data.dart';
 import '../../../lib/ui/pages/world_tourou_detail_page.dart';
 
 Future<void> loadJapaneseFont() async {
@@ -20,12 +18,11 @@ Future<void> loadJapaneseFont() async {
 }
 
 Widget TestWidget(String language) {
-  TourouData worldTourou = TourouTestData().tourouTestData[2];
   return MaterialApp(
     localizationsDelegates: AppLocalizations.localizationsDelegates,
     supportedLocales: AppLocalizations.supportedLocales,
     locale: Locale(language),
-    home: WorldTourouDetailPage(worldTourou: worldTourou),
+    home: WorldTourouDetailPage(tourouId: 'text_long1'),
   );
 }
 
