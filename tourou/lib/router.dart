@@ -1,4 +1,5 @@
 // Package imports:
+import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
@@ -50,17 +51,19 @@ final router = Provider((ref) {
           isTest: isTest,
         ),
       ),
-      // GoRoute(
-      //   path: '/self_tourou_detail',
-      //   builder: (context, state) => SelfTourouDetailPage(
-      //     selfTourou: null,
-      //   ),
-      // ),
       GoRoute(
         path: '/self_tourou',
         builder: (context, state) => SelfTourouPage(
           isTest: isTest,
         ),
+        routes: [
+                GoRoute(
+              path: '/detail/:id',
+              builder: (context, state) => SelfTourouDetailPage(
+                tourouId: state.params['id']!,
+              ),
+            ),
+        ]
       ),
       GoRoute(
         path: '/setting',
@@ -84,18 +87,19 @@ final router = Provider((ref) {
         path: '/title',
         builder: (context, state) => TitlePage(),
       ),
-      // GoRoute(
-      //   path: '/world_tourou_detail',
-      //   builder: (context, state) => WorldTourouDetailPage(
-      //     worldTourou: null,
-      //   ),
-      // ),
       GoRoute(
-        path: '/world_tourou',
-        builder: (context, state) => WorldTourouPage(
-          isTest: isTest,
-        ),
-      ),
+          path: '/world_tourou',
+          builder: (context, state) => WorldTourouPage(
+                isTest: isTest,
+              ),
+          routes: [
+            GoRoute(
+              path: '/detail/:id',
+              builder: (context, state) => WorldTourouDetailPage(
+                tourouId: state.params['id']!,
+              ),
+            ),
+          ]),
     ],
   );
 });
