@@ -9,11 +9,8 @@ final router = Provider((ref) {
   bool isTest = false;
 
   return GoRouter(
+    initialLocation: '/title',
     routes: [
-      GoRoute(
-        path: '/title',
-        builder: (context, state) => TitlePage(),
-      ),
       GoRoute(
         path: '/edit_profile',
         builder: (context, state) => EditProfilePage(),
@@ -51,19 +48,18 @@ final router = Provider((ref) {
         ),
       ),
       GoRoute(
-        path: '/self_tourou',
-        builder: (context, state) => SelfTourouPage(
-          isTest: isTest,
-        ),
-        routes: [
-                GoRoute(
-              path: '/detail/:id',
+          path: '/self_tourou',
+          builder: (context, state) => SelfTourouPage(
+                isTest: isTest,
+              ),
+          routes: [
+            GoRoute(
+              path: 'detail/:id',
               builder: (context, state) => SelfTourouDetailPage(
                 tourouId: state.params['id']!,
               ),
             ),
-        ]
-      ),
+          ]),
       GoRoute(
         path: '/setting',
         builder: (context, state) => SettingPage(
@@ -93,7 +89,7 @@ final router = Provider((ref) {
               ),
           routes: [
             GoRoute(
-              path: '/detail/:id',
+              path: 'detail/:id',
               builder: (context, state) => WorldTourouDetailPage(
                 tourouId: state.params['id']!,
               ),
