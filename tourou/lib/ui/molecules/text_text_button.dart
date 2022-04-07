@@ -50,6 +50,7 @@ class TextTextButton extends StatelessWidget {
           fontSize: fontSize,
           bold: secondBold,
           fontFamily: fontFamily,
+          function: function,
         )
       ],
     );

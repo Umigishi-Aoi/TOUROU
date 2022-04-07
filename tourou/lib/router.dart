@@ -73,12 +73,6 @@ final router = Provider((ref) {
         ),
       ),
       GoRoute(
-        path: '/sign_in',
-        builder: (context, state) => SignInPage(
-          isTest: isTest,
-        ),
-      ),
-      GoRoute(
         path: '/title',
         builder: (context, state) => TitlePage(),
       ),
