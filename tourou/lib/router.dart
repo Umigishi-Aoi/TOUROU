@@ -12,6 +12,10 @@ final router = Provider((ref) {
     initialLocation: '/title',
     routes: [
       GoRoute(
+        path: '/disclaimer',
+        builder: (context, state) => DisclaimerPage(),
+      ),
+      GoRoute(
         path: '/edit_profile',
         builder: (context, state) => EditProfilePage(),
       ),
