@@ -1,6 +1,9 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
+// Package imports:
+import 'package:go_router/go_router.dart';
+
 // Project imports:
 import '../templates/new_profile_setting_template.dart';
 
@@ -29,7 +32,9 @@ class _NewUserRegistrationPageState extends State<NewUserRegistrationPage> {
       userIdController: userIdController,
       userNameController: userNameController,
       imageFunction: () {},
-      buttonFunction: () {},
+      buttonFunction: () {
+        context.go('/how_to_use');
+      },
     );
   }
 }
