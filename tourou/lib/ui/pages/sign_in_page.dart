@@ -1,5 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 // Project imports:
 import '../templates/sign_in_template.dart';
@@ -14,7 +15,9 @@ class SignInPage extends StatelessWidget {
     return SignInTemplate(
         googleFunction: () {},
         appleFunction: () {},
-        goBackToTitleFunction: () {},
+        goBackToTitleFunction: () {
+          context.go('/title');
+        },
         isTest: isTest);
   }
 }
