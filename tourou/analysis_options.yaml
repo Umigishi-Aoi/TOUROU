@@ -33,6 +33,7 @@ analyzer:
     - lib/ads/adaptive_banner_ad.dart
     - "**/*.g.dart"
     - "**/*.freezed.dart"
+    - "**/app_localizations*.dart"
 
   errors:
     asset_directory_does_not_exist : ignore
