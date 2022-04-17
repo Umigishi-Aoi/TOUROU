@@ -2,15 +2,7 @@
 import 'package:flutter/material.dart';
 
 class CustomText extends StatelessWidget {
-  final String text;
-  final Color color;
-  final double fontSize;
-  final FontWeight? bold;
-  final TextAlign? textAlign;
-  final String? fontFamily;
-  final void Function()? function;
-
-  CustomText({
+  const CustomText({
     Key? key,
     required this.text,
     required this.color,
@@ -21,19 +13,28 @@ class CustomText extends StatelessWidget {
     this.fontFamily,
   }) : super(key: key);
 
+  final String text;
+  final Color color;
+  final double fontSize;
+  final FontWeight? bold;
+  final TextAlign? textAlign;
+  final String? fontFamily;
+  final void Function()? function;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: function,
       child: Text(
         text,
         textAlign: textAlign,
         style: TextStyle(
-            color: color,
-            fontSize: fontSize,
-            fontWeight: bold,
-            fontFamily: fontFamily),
+          color: color,
+          fontSize: fontSize,
+          fontWeight: bold,
+          fontFamily: fontFamily,
+        ),
       ),
-      onTap: function,
     );
   }
 }

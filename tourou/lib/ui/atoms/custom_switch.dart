@@ -2,11 +2,6 @@
 import 'package:flutter/cupertino.dart';
 
 class CustomSwitch extends StatefulWidget {
-  final Color activeColor;
-  final Color thumbColor;
-  final Color trackColor;
-  final void Function(bool?) onChanged;
-
   const CustomSwitch({
     Key? key,
     required this.activeColor,
@@ -14,6 +9,11 @@ class CustomSwitch extends StatefulWidget {
     required this.trackColor,
     required this.onChanged,
   }) : super(key: key);
+
+  final Color activeColor;
+  final Color thumbColor;
+  final Color trackColor;
+  final void Function(bool?) onChanged;
 
   @override
   State<CustomSwitch> createState() => _CustomSwitchState();
