@@ -1,6 +1,5 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-
 // Package imports:
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -8,6 +7,22 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../atoms/custom_text.dart';
 
 class SignInButton extends StatelessWidget {
+  const SignInButton({
+    Key? key,
+    required this.icon,
+    required this.text,
+    required this.textColor,
+    required this.fontSize,
+    required this.height,
+    required this.width,
+    required this.buttonColor,
+    required this.function,
+    required this.horizontalPadding,
+    required this.iconMargin,
+    required this.iconSize,
+    this.fontFamily,
+  }) : super(key: key);
+
   final SvgPicture icon;
   final String text;
   final Color textColor;
@@ -24,22 +39,6 @@ class SignInButton extends StatelessWidget {
   final double horizontalPadding;
   final double iconMargin;
   final double iconSize;
-
-  const SignInButton({
-    Key? key,
-    required this.icon,
-    required this.text,
-    required this.textColor,
-    required this.fontSize,
-    required this.height,
-    required this.width,
-    required this.buttonColor,
-    required this.function,
-    required this.horizontalPadding,
-    required this.iconMargin,
-    required this.iconSize,
-    this.fontFamily,
-  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

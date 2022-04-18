@@ -10,7 +10,7 @@ import '../../res/constants.dart';
 import '../atoms/custom_text.dart';
 import '../molecules/custom_elevated_button.dart';
 import '../molecules/image_button.dart';
-import '../molecules/text_textField.dart';
+import '../molecules/text_text_field.dart';
 
 class EditProfileTemplate extends StatelessWidget {
   final void Function() backFunction;

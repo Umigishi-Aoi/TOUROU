@@ -5,18 +5,6 @@ import 'package:flutter/material.dart';
 import '../atoms/custom_text.dart';
 
 class SettingHeader extends StatelessWidget {
-  final double width;
-  final String backText;
-  final double backFontSize;
-  final Color backTextColor;
-  final String fontFamily;
-  final void Function() function;
-
-  final String titleText;
-  final double titleFontSize;
-  final FontWeight titleBold;
-  final Color titleTextColor;
-
   const SettingHeader({
     Key? key,
     required this.width,
@@ -30,10 +18,22 @@ class SettingHeader extends StatelessWidget {
     required this.titleBold,
     required this.titleTextColor,
   }) : super(key: key);
+  
+  final double width;
+  final String backText;
+  final double backFontSize;
+  final Color backTextColor;
+  final String fontFamily;
+  final void Function() function;
+
+  final String titleText;
+  final double titleFontSize;
+  final FontWeight titleBold;
+  final Color titleTextColor;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: width,
       child: Stack(
         children: [

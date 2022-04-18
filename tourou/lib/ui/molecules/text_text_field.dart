@@ -7,6 +7,27 @@ import '../atoms/custom_text.dart';
 import '../atoms/custom_textfield.dart';
 
 class TextTextField extends StatelessWidget {
+  const TextTextField({
+    Key? key,
+    required this.text,
+    required this.titleTextColor,
+    required this.titleFontSize,
+    required this.fontFamily,
+    required this.hint,
+    required this.controller,
+    required this.height,
+    required this.width,
+    required this.maxLines,
+    required this.maxLength,
+    required this.fieldFontSize,
+    required this.fieldTextColor,
+    required this.fillColor,
+    required this.borderColor,
+    required this.counterColor,
+    required this.textInputFormatters,
+    required this.autofocus,
+  }) : super(key: key);
+
   final String text;
   final Color titleTextColor;
   final double titleFontSize;
@@ -25,27 +46,6 @@ class TextTextField extends StatelessWidget {
   final Color counterColor;
   final List<TextInputFormatter> textInputFormatters;
   final bool autofocus;
-
-  const TextTextField(
-      {Key? key,
-      required this.text,
-      required this.titleTextColor,
-      required this.titleFontSize,
-      required this.fontFamily,
-      required this.hint,
-      required this.controller,
-      required this.height,
-      required this.width,
-      required this.maxLines,
-      required this.maxLength,
-      required this.fieldFontSize,
-      required this.fieldTextColor,
-      required this.fillColor,
-      required this.borderColor,
-      required this.counterColor,
-      required this.textInputFormatters,
-      required this.autofocus})
-      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

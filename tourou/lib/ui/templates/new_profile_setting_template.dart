@@ -10,7 +10,7 @@ import '../../l10n/app_localizations.dart';
 import '../../res/constants.dart';
 import '../molecules/custom_elevated_button.dart';
 import '../molecules/image_button.dart';
-import '../molecules/text_textField.dart';
+import '../molecules/text_text_field.dart';
 
 class NewUserRegistrationTemplate extends StatelessWidget {
   final void Function() imageFunction;
