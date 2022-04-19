@@ -7,6 +7,29 @@ import '../atoms/custom_text.dart';
 import 'tourou_organism.dart';
 
 class SelfTourouOrganism extends StatelessWidget {
+  const SelfTourouOrganism({
+    Key? key,
+    required this.tourouData,
+    required this.tourouWidth,
+    required this.tourouColor,
+    required this.borderRadius,
+    required this.verticalPadding,
+    required this.selfTourouTapFunction,
+    required this.profileImageHeight,
+    required this.profileFunction,
+    required this.userNameFontSize,
+    required this.userIdColor,
+    required this.tourouTextFontSize,
+    required this.fontFamily,
+    required this.textColor,
+    required this.tourouContentWidth,
+    required this.contentBottomPadding,
+    required this.tourouImageHeight,
+    required this.tourouImageFunction,
+    required this.goodNumberColor,
+    required this.goodPadding,
+  }) : super(key: key);
+
   final TourouData tourouData;
   final double tourouWidth;
   final Color tourouColor;
@@ -35,29 +58,6 @@ class SelfTourouOrganism extends StatelessWidget {
 
   final Color goodNumberColor;
 
-  const SelfTourouOrganism({
-    Key? key,
-    required this.tourouData,
-    required this.tourouWidth,
-    required this.tourouColor,
-    required this.borderRadius,
-    required this.verticalPadding,
-    required this.selfTourouTapFunction,
-    required this.profileImageHeight,
-    required this.profileFunction,
-    required this.userNameFontSize,
-    required this.userIdColor,
-    required this.tourouTextFontSize,
-    required this.fontFamily,
-    required this.textColor,
-    required this.tourouContentWidth,
-    required this.contentBottomPadding,
-    required this.tourouImageHeight,
-    required this.tourouImageFunction,
-    required this.goodNumberColor,
-    required this.goodPadding,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -74,14 +74,15 @@ class SelfTourouOrganism extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-                top: profileImageHeight + tourouTextFontSize * 2,
-                right: goodPadding,
-                child: CustomText(
-                  text: tourouData.goodNumber,
-                  fontSize: tourouTextFontSize,
-                  color: goodNumberColor,
-                  fontFamily: fontFamily,
-                )),
+              top: profileImageHeight + tourouTextFontSize * 2,
+              right: goodPadding,
+              child: CustomText(
+                text: tourouData.goodNumber,
+                fontSize: tourouTextFontSize,
+                color: goodNumberColor,
+                fontFamily: fontFamily,
+              ),
+            ),
             Align(
               alignment: Alignment.topCenter,
               child: Padding(

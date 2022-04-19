@@ -1,6 +1,5 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-
 // Package imports:
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -8,26 +7,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../molecules/sign_in_button.dart';
 
 class SignInButtonsOrganism extends StatelessWidget {
-  final SvgPicture googleIcon;
-  final String googleText;
-  final Color textColor;
-  final double fontSize;
-  final double height;
-  final double width;
-  final Color buttonColor;
-  final void Function() googleFunction;
-  final double horizontalPadding;
-  final double iconMargin;
-  final double iconSize;
-
-  final double buttonMargin;
-
-  final SvgPicture appleIcon;
-  final String appleText;
-  final void Function() appleFunction;
-  final String fontFamilyInApple;
-  final String? fontFamilyInGoogle;
-
   const SignInButtonsOrganism({
     Key? key,
     required this.googleIcon,
@@ -48,6 +27,26 @@ class SignInButtonsOrganism extends StatelessWidget {
     required this.fontFamilyInApple,
     this.fontFamilyInGoogle,
   }) : super(key: key);
+
+  final SvgPicture googleIcon;
+  final String googleText;
+  final Color textColor;
+  final double fontSize;
+  final double height;
+  final double width;
+  final Color buttonColor;
+  final void Function() googleFunction;
+  final double horizontalPadding;
+  final double iconMargin;
+  final double iconSize;
+
+  final double buttonMargin;
+
+  final SvgPicture appleIcon;
+  final String appleText;
+  final void Function() appleFunction;
+  final String fontFamilyInApple;
+  final String? fontFamilyInGoogle;
 
   @override
   Widget build(BuildContext context) {
