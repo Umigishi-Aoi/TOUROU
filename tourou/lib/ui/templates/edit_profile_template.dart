@@ -13,14 +13,6 @@ import '../molecules/image_button.dart';
 import '../molecules/text_text_field.dart';
 
 class EditProfileTemplate extends StatelessWidget {
-  final void Function() backFunction;
-  final void Function() imageFunction;
-
-  final TextEditingController userNameController;
-  final TextEditingController detailController;
-
-  final void Function() saveFunction;
-
   const EditProfileTemplate({
     Key? key,
     required this.backFunction,
@@ -30,20 +22,25 @@ class EditProfileTemplate extends StatelessWidget {
     required this.saveFunction,
   }) : super(key: key);
 
+  final void Function() backFunction;
+  final void Function() imageFunction;
+
+  final TextEditingController userNameController;
+  final TextEditingController detailController;
+
+  final void Function() saveFunction;
+
   @override
   Widget build(BuildContext context) {
-    final double displayHeight = MediaQuery.of(context).size.height;
-    final double displayWidth = MediaQuery.of(context).size.width;
-    final double fieldHeight =
-        displayHeight * newProfileSettingFieldHeightRatio;
-    final double fieldFontSize =
-        fieldHeight * newProfileSettingFieldFontSizeRatio;
-    final double fieldWidth = displayWidth * buttonWidthRatio;
-    final double detailFieldHeight =
-        displayHeight * editProfileDetailFieldHeightRatio;
-    final double buttonHeight = displayHeight * buttonHeightRatio;
-    final double buttonWidth = displayWidth * buttonWidthRatio;
-    final double fontSize = buttonHeight * buttonHeightFontSizeRatio;
+    final displayHeight = MediaQuery.of(context).size.height;
+    final displayWidth = MediaQuery.of(context).size.width;
+    final fieldHeight = displayHeight * newProfileSettingFieldHeightRatio;
+    final fieldFontSize = fieldHeight * newProfileSettingFieldFontSizeRatio;
+    final fieldWidth = displayWidth * buttonWidthRatio;
+    final detailFieldHeight = displayHeight * editProfileDetailFieldHeightRatio;
+    final buttonHeight = displayHeight * buttonHeightRatio;
+    final buttonWidth = displayWidth * buttonWidthRatio;
+    final fontSize = buttonHeight * buttonHeightFontSizeRatio;
     return Scaffold(
       backgroundColor: ColorName.mainBlack,
       appBar: AppBar(
@@ -67,67 +64,69 @@ class EditProfileTemplate extends StatelessWidget {
       ),
       body: SafeArea(
         child: Center(
-            child: Column(
-          children: [
-            SizedBox(
-              height: displayHeight * newProfileSettingImageTopMarginRatio,
-            ),
-            ImageButton(
-              firstImagePath: Assets.images.iconNoImage.path,
-              height: displayHeight * newProfileSettingImageHeightRatio,
-              function: imageFunction,
-              fit: BoxFit.cover,
-              isCircle: true,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: newProfileSettingFieldPadding),
-              child: TextTextField(
-                text: AppLocalizations.of(context)!.userName,
-                titleTextColor: ColorName.textWhite,
-                titleFontSize: fieldFontSize,
-                fontFamily: FontFamily.mplus1,
-                hint: AppLocalizations.of(context)!.userNameHint,
-                controller: userNameController,
-                height: fieldHeight,
-                width: fieldWidth,
-                maxLines: newProfileSettingMaxLine,
-                maxLength: newProfileSettingNameMaxLength,
-                fieldFontSize: fieldFontSize,
-                fieldTextColor: ColorName.mainBlack,
-                fillColor: ColorName.tourouBackground,
-                borderColor: ColorName.textWhite,
-                counterColor: ColorName.textWhite,
-                textInputFormatters: [],
-                autofocus: false,
+          child: Column(
+            children: [
+              SizedBox(
+                height: displayHeight * newProfileSettingImageTopMarginRatio,
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(
-                  horizontal: newProfileSettingFieldPadding),
-              child: TextTextField(
-                text: AppLocalizations.of(context)!.detail,
-                titleTextColor: ColorName.textWhite,
-                titleFontSize: fieldFontSize,
-                fontFamily: FontFamily.mplus1,
-                hint: AppLocalizations.of(context)!.userNameHint,
-                controller: detailController,
-                height: detailFieldHeight,
-                width: fieldWidth,
-                maxLines: editProfileDetailMaxLine,
-                maxLength: editProfileDetailMaxLength,
-                fieldFontSize: fieldFontSize,
-                fieldTextColor: ColorName.mainBlack,
-                fillColor: ColorName.tourouBackground,
-                borderColor: ColorName.textWhite,
-                counterColor: ColorName.textWhite,
-                textInputFormatters: [],
-                autofocus: false,
+              ImageButton(
+                firstImagePath: Assets.images.iconNoImage.path,
+                height: displayHeight * newProfileSettingImageHeightRatio,
+                function: imageFunction,
+                fit: BoxFit.cover,
+                isCircle: true,
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(newProfileSettingFieldPadding),
-              child: CustomElevatedButton(
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: newProfileSettingFieldPadding,
+                ),
+                child: TextTextField(
+                  text: AppLocalizations.of(context)!.userName,
+                  titleTextColor: ColorName.textWhite,
+                  titleFontSize: fieldFontSize,
+                  fontFamily: FontFamily.mplus1,
+                  hint: AppLocalizations.of(context)!.userNameHint,
+                  controller: userNameController,
+                  height: fieldHeight,
+                  width: fieldWidth,
+                  maxLines: newProfileSettingMaxLine,
+                  maxLength: newProfileSettingNameMaxLength,
+                  fieldFontSize: fieldFontSize,
+                  fieldTextColor: ColorName.mainBlack,
+                  fillColor: ColorName.tourouBackground,
+                  borderColor: ColorName.textWhite,
+                  counterColor: ColorName.textWhite,
+                  textInputFormatters: const [],
+                  autofocus: false,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: newProfileSettingFieldPadding,
+                ),
+                child: TextTextField(
+                  text: AppLocalizations.of(context)!.detail,
+                  titleTextColor: ColorName.textWhite,
+                  titleFontSize: fieldFontSize,
+                  fontFamily: FontFamily.mplus1,
+                  hint: AppLocalizations.of(context)!.userNameHint,
+                  controller: detailController,
+                  height: detailFieldHeight,
+                  width: fieldWidth,
+                  maxLines: editProfileDetailMaxLine,
+                  maxLength: editProfileDetailMaxLength,
+                  fieldFontSize: fieldFontSize,
+                  fieldTextColor: ColorName.mainBlack,
+                  fillColor: ColorName.tourouBackground,
+                  borderColor: ColorName.textWhite,
+                  counterColor: ColorName.textWhite,
+                  textInputFormatters: const [],
+                  autofocus: false,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(newProfileSettingFieldPadding),
+                child: CustomElevatedButton(
                   text: AppLocalizations.of(context)!.save,
                   color: ColorName.mainBlack,
                   fontSize: fontSize,
@@ -135,10 +134,12 @@ class EditProfileTemplate extends StatelessWidget {
                   height: buttonHeight,
                   width: buttonWidth,
                   buttonColor: ColorName.tourouBackground,
-                  function: saveFunction),
-            )
-          ],
-        )),
+                  function: saveFunction,
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

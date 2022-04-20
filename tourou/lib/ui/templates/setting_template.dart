@@ -13,15 +13,6 @@ import '../../res/constants.dart';
 import '../molecules/custom_elevated_button.dart';
 
 class SettingTemplate extends StatelessWidget {
-  final void Function() editProfileFunction;
-  final void Function() setLanguageFunction;
-  final void Function() howToUseFunction;
-  final void Function() disclaimerFunction;
-  final void Function() privacyPolicyFunction;
-  final void Function() logOutFunction;
-  final void Function() deleteAccountFunction;
-  final bool isTest;
-
   const SettingTemplate({
     Key? key,
     required this.editProfileFunction,
@@ -34,17 +25,27 @@ class SettingTemplate extends StatelessWidget {
     required this.isTest,
   }) : super(key: key);
 
+  final void Function() editProfileFunction;
+  final void Function() setLanguageFunction;
+  final void Function() howToUseFunction;
+  final void Function() disclaimerFunction;
+  final void Function() privacyPolicyFunction;
+  final void Function() logOutFunction;
+  final void Function() deleteAccountFunction;
+  final bool isTest;
+
   @override
   Widget build(BuildContext context) {
-    final double displayHeight = MediaQuery.of(context).size.height;
-    final double displayWidth = MediaQuery.of(context).size.width;
-    final double buttonHeight = displayHeight * buttonHeightRatio;
-    final double buttonWidth = displayWidth * buttonWidthRatio;
-    final double fontSize = buttonHeight * buttonHeightFontSizeRatio;
-    final double marginHeight = displayHeight * settingMarginHeightRatio;
+    final displayHeight = MediaQuery.of(context).size.height;
+    final displayWidth = MediaQuery.of(context).size.width;
+    final buttonHeight = displayHeight * buttonHeightRatio;
+    final buttonWidth = displayWidth * buttonWidthRatio;
+    final fontSize = buttonHeight * buttonHeightFontSizeRatio;
+    final marginHeight = displayHeight * settingMarginHeightRatio;
     final double bannerAdHeight = min(
-        displayHeight * adaptiveBannerMaximumHeightRatio,
-        adaptiveBannerMaximumHeight);
+      displayHeight * adaptiveBannerMaximumHeightRatio,
+      adaptiveBannerMaximumHeight,
+    );
     return Scaffold(
       backgroundColor: ColorName.mainBlack,
       body: SafeArea(
@@ -158,7 +159,7 @@ class SettingTemplate extends StatelessWidget {
                   color: ColorName.itemBackground,
                 )
               else
-                AdaptiveBannerAd(),
+                const AdaptiveBannerAd(),
             ],
           ),
         ),

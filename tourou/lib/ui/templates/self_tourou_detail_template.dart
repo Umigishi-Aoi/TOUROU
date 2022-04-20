@@ -11,13 +11,6 @@ import '../atoms/custom_text.dart';
 import '../organisms/self_tourou_organism.dart';
 
 class SelfTourouDetailTemplate extends StatelessWidget {
-  final TourouData selfTourou;
-
-  final void Function(TourouData tourouData) profileFunction;
-  final void Function(TourouData tourouData) goodButtonFunction;
-  final void Function(TourouData tourouData) tourouImageFunction;
-  final void Function() backFunction;
-
   const SelfTourouDetailTemplate({
     Key? key,
     required this.selfTourou,
@@ -27,10 +20,17 @@ class SelfTourouDetailTemplate extends StatelessWidget {
     required this.backFunction,
   }) : super(key: key);
 
+  final TourouData selfTourou;
+
+  final void Function(TourouData tourouData) profileFunction;
+  final void Function(TourouData tourouData) goodButtonFunction;
+  final void Function(TourouData tourouData) tourouImageFunction;
+  final void Function() backFunction;
+
   @override
   Widget build(BuildContext context) {
-    final double displayHeight = MediaQuery.of(context).size.height;
-    final double displayWidth = MediaQuery.of(context).size.width;
+    final displayHeight = MediaQuery.of(context).size.height;
+    final displayWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: ColorName.mainBlack,
       appBar: AppBar(
@@ -59,9 +59,10 @@ class SelfTourouDetailTemplate extends StatelessWidget {
           children: [
             SingleChildScrollView(
               child: Padding(
-                padding: EdgeInsets.symmetric(
-                    vertical: tourouHorizontalMargin / 2,
-                    horizontal: tourouHorizontalMargin),
+                padding: const EdgeInsets.symmetric(
+                  vertical: tourouHorizontalMargin / 2,
+                  horizontal: tourouHorizontalMargin,
+                ),
                 child: SelfTourouOrganism(
                   tourouData: selfTourou,
                   selfTourouTapFunction: (tourouData) {},

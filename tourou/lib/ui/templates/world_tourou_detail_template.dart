@@ -11,14 +11,6 @@ import '../atoms/custom_text.dart';
 import '../organisms/world_tourou_organism.dart';
 
 class WorldTourouDetailTemplate extends StatelessWidget {
-  final TourouData worldTourou;
-
-  final void Function(TourouData tourouData) reportFunction;
-  final void Function(TourouData tourouData) profileFunction;
-  final void Function(TourouData tourouData) goodButtonFunction;
-  final void Function(TourouData tourouData) tourouImageFunction;
-  final void Function() backFunction;
-
   const WorldTourouDetailTemplate({
     Key? key,
     required this.worldTourou,
@@ -29,10 +21,18 @@ class WorldTourouDetailTemplate extends StatelessWidget {
     required this.backFunction,
   }) : super(key: key);
 
+  final TourouData worldTourou;
+
+  final void Function(TourouData tourouData) reportFunction;
+  final void Function(TourouData tourouData) profileFunction;
+  final void Function(TourouData tourouData) goodButtonFunction;
+  final void Function(TourouData tourouData) tourouImageFunction;
+  final void Function() backFunction;
+
   @override
   Widget build(BuildContext context) {
-    final double displayHeight = MediaQuery.of(context).size.height;
-    final double displayWidth = MediaQuery.of(context).size.width;
+    final displayHeight = MediaQuery.of(context).size.height;
+    final displayWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: ColorName.mainBlack,
       appBar: AppBar(
@@ -61,9 +61,10 @@ class WorldTourouDetailTemplate extends StatelessWidget {
           children: [
             SingleChildScrollView(
               child: Padding(
-                padding: EdgeInsets.symmetric(
-                    vertical: tourouHorizontalMargin / 2,
-                    horizontal: tourouHorizontalMargin),
+                padding: const EdgeInsets.symmetric(
+                  vertical: tourouHorizontalMargin / 2,
+                  horizontal: tourouHorizontalMargin,
+                ),
                 child: WorldTourouOrganism(
                   tourouData: worldTourou,
                   worldTourouTapFunction: (tourouData) {},

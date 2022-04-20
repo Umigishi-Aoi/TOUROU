@@ -13,12 +13,6 @@ import '../molecules/custom_elevated_button.dart';
 import '../molecules/custom_icon_button.dart';
 
 class NewTourouTemplate extends StatelessWidget {
-  final TextEditingController controller;
-
-  final void Function() buttonFunction;
-  final void Function(bool?) checkFunction;
-  final void Function() backFunction;
-
   const NewTourouTemplate({
     Key? key,
     required this.controller,
@@ -27,11 +21,17 @@ class NewTourouTemplate extends StatelessWidget {
     required this.backFunction,
   }) : super(key: key);
 
+  final TextEditingController controller;
+
+  final void Function() buttonFunction;
+  final void Function(bool?) checkFunction;
+  final void Function() backFunction;
+
   @override
   Widget build(BuildContext context) {
-    final double displayHeight = MediaQuery.of(context).size.height;
-    final double displayWidth = MediaQuery.of(context).size.width;
-    final double width = displayWidth * buttonWidthRatio;
+    final displayHeight = MediaQuery.of(context).size.height;
+    final displayWidth = MediaQuery.of(context).size.width;
+    final width = displayWidth * buttonWidthRatio;
     return Scaffold(
       backgroundColor: ColorName.mainBlack,
       appBar: AppBar(
@@ -62,12 +62,13 @@ class NewTourouTemplate extends StatelessWidget {
               fillColor: ColorName.tourouBackground,
               borderColor: ColorName.tourouBackground,
               counterColor: ColorName.textWhite,
-              textInputFormatters: [],
+              textInputFormatters: const [],
               autofocus: true,
             ),
             Padding(
               padding: EdgeInsets.only(
-                  bottom: displayHeight * newTourouButtonTopMarginRatio),
+                bottom: displayHeight * newTourouButtonTopMarginRatio,
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
