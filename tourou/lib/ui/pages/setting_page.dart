@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import '../templates/setting_template.dart';
 
 class SettingPage extends StatelessWidget {
-  final bool isTest;
-
   const SettingPage({
     Key? key,
     required this.isTest,
   }) : super(key: key);
+
+  final bool isTest;
 
   @override
   Widget build(BuildContext context) {

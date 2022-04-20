@@ -5,18 +5,22 @@ import 'package:flutter/material.dart';
 import '../templates/new_registration_template.dart';
 
 class NewRegistrationPage extends StatelessWidget {
-  final bool isTest;
+  const NewRegistrationPage({
+    Key? key,
+    required this.isTest,
+  }) : super(key: key);
 
-  const NewRegistrationPage({Key? key, required this.isTest}) : super(key: key);
+  final bool isTest;
 
   @override
   Widget build(BuildContext context) {
     return NewRegistrationTemplate(
-        googleFunction: () {},
-        appleFunction: () {},
-        privacyPolicyFunction: () {},
-        disclaimerFunction: () {},
-        goBackToTitleFunction: () {},
-        isTest: isTest);
+      googleFunction: () {},
+      appleFunction: () {},
+      privacyPolicyFunction: () {},
+      disclaimerFunction: () {},
+      goBackToTitleFunction: () {},
+      isTest: isTest,
+    );
   }
 }
