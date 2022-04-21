@@ -1,8 +1,6 @@
 // ignore_for_file: lines_longer_than_80_chars
 
 // Project imports:
-
-// Project imports:
 import '../gen/assets.gen.dart';
 import 'toruou_data.dart';
 
