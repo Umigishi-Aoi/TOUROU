@@ -17,13 +17,23 @@ Future<void> loadJapaneseFont() async {
   await loader.load();
 }
 
-Widget TestWidget(String language) {
-  return MaterialApp(
-    localizationsDelegates: AppLocalizations.localizationsDelegates,
-    supportedLocales: AppLocalizations.supportedLocales,
-    locale: Locale(language),
-    home: NewTourouPage(),
-  );
+class TestWidget extends StatelessWidget {
+  const TestWidget({
+    Key? key,
+    required this.language,
+  }) : super(key: key);
+
+  final String language;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      locale: Locale(language),
+      home: const NewTourouPage(),
+    );
+  }
 }
 
 void main() {
@@ -32,31 +42,43 @@ void main() {
     await loadJapaneseFont();
 
     //デバイスの画面サイズ
-    final size6 = Size(375, 667);
+    const size6 = Size(375, 667);
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: size6);
+    await tester.pumpWidgetBuilder(
+      const TestWidget(language: 'en'),
+      surfaceSize: size6,
+    );
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'new_toruou_page_iphone6_en');
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: size6);
+    await tester.pumpWidgetBuilder(
+      const TestWidget(language: 'ja'),
+      surfaceSize: size6,
+    );
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'new_toruou_page_iphone6_ja');
 
     //デバイスの画面サイズ
-    final sizePad = Size(1024, 1366);
+    const sizePad = Size(1024, 1366);
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: sizePad);
+    await tester.pumpWidgetBuilder(
+      const TestWidget(language: 'en'),
+      surfaceSize: sizePad,
+    );
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'new_toruou_page_ipad_en');
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: sizePad);
+    await tester.pumpWidgetBuilder(
+      const TestWidget(language: 'ja'),
+      surfaceSize: sizePad,
+    );
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'new_toruou_page_ipad_ja');
