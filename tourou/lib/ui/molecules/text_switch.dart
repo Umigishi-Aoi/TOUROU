@@ -6,22 +6,6 @@ import '../atoms/custom_switch.dart';
 import '../atoms/custom_text.dart';
 
 class TextSwitch extends StatelessWidget {
-  final double width;
-
-  final String text;
-  final Color color;
-  final double fontSize;
-  final FontWeight? bold;
-  final String fontFamily;
-
-  final void Function()? function;
-
-  final Key? switchKey;
-  final Color activeColor;
-  final Color thumbColor;
-  final Color trackColor;
-  final void Function(bool?) onChanged;
-
   const TextSwitch({
     Key? key,
     required this.width,
@@ -37,6 +21,22 @@ class TextSwitch extends StatelessWidget {
     required this.trackColor,
     required this.onChanged,
   }) : super(key: key);
+
+  final double width;
+
+  final String text;
+  final Color color;
+  final double fontSize;
+  final FontWeight? bold;
+  final String fontFamily;
+
+  final void Function()? function;
+
+  final Key? switchKey;
+  final Color activeColor;
+  final Color thumbColor;
+  final Color trackColor;
+  final void Function(bool?) onChanged;
 
   @override
   Widget build(BuildContext context) {

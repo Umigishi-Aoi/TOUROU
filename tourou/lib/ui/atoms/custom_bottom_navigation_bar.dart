@@ -2,13 +2,6 @@
 import 'package:flutter/material.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
-  final Icon worldIcon;
-  final Icon selfIcon;
-  final Icon settingIcon;
-  final Color backgroundColor;
-  final Color itemColor;
-  final void Function(int) function;
-
   const CustomBottomNavigationBar({
     Key? key,
     required this.worldIcon,
@@ -18,6 +11,13 @@ class CustomBottomNavigationBar extends StatefulWidget {
     required this.backgroundColor,
     required this.itemColor,
   }) : super(key: key);
+
+  final Icon worldIcon;
+  final Icon selfIcon;
+  final Icon settingIcon;
+  final Color backgroundColor;
+  final Color itemColor;
+  final void Function(int) function;
 
   @override
   State<CustomBottomNavigationBar> createState() =>

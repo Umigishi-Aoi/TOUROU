@@ -23,10 +23,9 @@ Future<void> loadJapaneseFont() async {
 Future<void> _loadIconFont() async {
   const FileSystem fs = LocalFileSystem();
   const Platform platform = LocalPlatform();
-  final Directory flutterRoot =
-      fs.directory(platform.environment['FLUTTER_ROOT']);
+  final flutterRoot = fs.directory(platform.environment['FLUTTER_ROOT']);
 
-  final File iconFont = flutterRoot.childFile(
+  final iconFont = flutterRoot.childFile(
     fs.path.join(
       'bin',
       'cache',
@@ -36,21 +35,31 @@ Future<void> _loadIconFont() async {
     ),
   );
 
-  final Future<ByteData> bytes =
+  final bytes =
       Future<ByteData>.value(iconFont.readAsBytesSync().buffer.asByteData());
 
   await (FontLoader('MaterialIcons')..addFont(bytes)).load();
 }
 
-Widget TestWidget(String language) {
-  return MaterialApp(
-    localizationsDelegates: AppLocalizations.localizationsDelegates,
-    supportedLocales: AppLocalizations.supportedLocales,
-    locale: Locale(language),
-    home: WorldTourouPage(
-      isTest: true,
-    ),
-  );
+class TestWidget extends StatelessWidget {
+  const TestWidget({
+    Key? key,
+    required this.language,
+  }) : super(key: key);
+
+  final String language;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      locale: Locale(language),
+      home: const WorldTourouPage(
+        isTest: true,
+      ),
+    );
+  }
 }
 
 void main() {
@@ -61,53 +70,65 @@ void main() {
     await _loadIconFont();
 
     //デバイスの画面サイズ
-    final size6 = Size(375, 667);
+    const size6 = Size(375, 667);
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: size6);
+    await tester.pumpWidgetBuilder(
+      const TestWidget(language: 'en'),
+      surfaceSize: size6,
+    );
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'world_tourou_page_iphone6_en');
 
     //下にスワイプできることの確認テスト
-    await tester.fling(find.byType(ListView), Offset(0.0, -250.0), 300);
+    await tester.fling(find.byType(ListView), const Offset(0, -250), 300);
 
     await screenMatchesGolden(tester, 'world_tourou_page_iphone6_en_fling_y');
 
     //右にスワイプしてタブ切り替えできることの確認テスト
-    await tester.fling(find.byType(TabBarView), Offset(-250.0, 0.0), 300);
+    await tester.fling(find.byType(TabBarView), const Offset(-250, 0), 300);
 
     await screenMatchesGolden(tester, 'world_tourou_page_iphone6_en_fling_x');
 
     //タブをタップして切り替えできることの確認テスト
-    await tester.tap(find.byKey(ValueKey('firstTab')));
+    await tester.tap(find.byKey(const ValueKey('firstTab')));
 
     await screenMatchesGolden(tester, 'world_tourou_page_iphone6_en_firstTab');
 
     //タブをタップして切り替えできることの確認テスト
-    await tester.tap(find.byKey(ValueKey('secondTab')));
+    await tester.tap(find.byKey(const ValueKey('secondTab')));
 
     await screenMatchesGolden(tester, 'world_tourou_page_iphone6_en_secondTab');
 
-    await tester.tap(find.byKey(ValueKey('firstTab')));
+    await tester.tap(find.byKey(const ValueKey('firstTab')));
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: size6);
+    await tester.pumpWidgetBuilder(
+      const TestWidget(language: 'ja'),
+      surfaceSize: size6,
+    );
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'world_tourou_page_iphone6_ja');
 
     //デバイスの画面サイズ
-    final sizePad = Size(1024, 1366);
+    const sizePad = Size(1024, 1366);
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: sizePad);
+    await tester.pumpWidgetBuilder(
+      const TestWidget(language: 'en'),
+      surfaceSize: sizePad,
+    );
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'world_tourou_page_ipad_en');
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: sizePad);
+    await tester.pumpWidgetBuilder(
+      const TestWidget(language: 'ja'),
+      surfaceSize: sizePad,
+    );
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'world_tourou_page_ipad_ja');

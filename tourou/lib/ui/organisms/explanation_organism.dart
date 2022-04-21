@@ -5,24 +5,6 @@ import 'package:flutter/material.dart';
 import '../atoms/custom_text.dart';
 
 class ExplanationOrganism extends StatelessWidget {
-  final double titleHeight;
-  final String titleText;
-  final Color textColor;
-  final double titleFontSize;
-  final FontWeight titleBold;
-  final String fontFamily;
-
-  final double explanationTextHeight;
-  final double explanationTextWidth;
-  final String explanationText;
-  final double explanationFontSize;
-
-  final double buttonHeight;
-  final String buttonText;
-  final Color textButtonColor;
-  final double textButtonFontSize;
-  final void Function() function;
-
   const ExplanationOrganism({
     Key? key,
     required this.titleHeight,
@@ -41,6 +23,24 @@ class ExplanationOrganism extends StatelessWidget {
     required this.textButtonFontSize,
     required this.function,
   }) : super(key: key);
+
+  final double titleHeight;
+  final String titleText;
+  final Color textColor;
+  final double titleFontSize;
+  final FontWeight titleBold;
+  final String fontFamily;
+
+  final double explanationTextHeight;
+  final double explanationTextWidth;
+  final String explanationText;
+  final double explanationFontSize;
+
+  final double buttonHeight;
+  final String buttonText;
+  final Color textButtonColor;
+  final double textButtonFontSize;
+  final void Function() function;
 
   @override
   Widget build(BuildContext context) {

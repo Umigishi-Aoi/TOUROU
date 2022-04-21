@@ -7,6 +7,22 @@ import '../atoms/custom_text.dart';
 import '../molecules/image_button.dart';
 
 class TourouOrganism extends StatelessWidget {
+  const TourouOrganism({
+    Key? key,
+    required this.tourouData,
+    required this.profileImageHeight,
+    required this.profileFunction,
+    required this.textColor,
+    required this.fontFamily,
+    required this.userIdColor,
+    required this.userNameFontSize,
+    required this.tourouTextWidth,
+    required this.tourouTextFontSize,
+    required this.contentBottomPadding,
+    required this.tourouImageHeight,
+    required this.tourouImageFunction,
+  }) : super(key: key);
+
   final TourouData tourouData;
 
   final double profileImageHeight;
@@ -24,22 +40,6 @@ class TourouOrganism extends StatelessWidget {
 
   final double tourouImageHeight;
   final void Function(TourouData tourouData) tourouImageFunction;
-
-  const TourouOrganism({
-    Key? key,
-    required this.tourouData,
-    required this.profileImageHeight,
-    required this.profileFunction,
-    required this.textColor,
-    required this.fontFamily,
-    required this.userIdColor,
-    required this.userNameFontSize,
-    required this.tourouTextWidth,
-    required this.tourouTextFontSize,
-    required this.contentBottomPadding,
-    required this.tourouImageHeight,
-    required this.tourouImageFunction,
-  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

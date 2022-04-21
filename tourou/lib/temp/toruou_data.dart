@@ -1,21 +1,17 @@
+// ignore_for_file: lines_longer_than_80_chars
+
 // Project imports:
 import '../gen/assets.gen.dart';
 
 class TourouData {
-  final String profileImagePath;
-  final String userName;
-  final String userId;
-  final String tourouText;
-  final String? tourouImagePath;
-  final String goodNumber;
-
-  TourouData(
-      {required this.profileImagePath,
-      required this.userName,
-      required this.userId,
-      required this.tourouText,
-      this.tourouImagePath,
-      required this.goodNumber});
+  TourouData({
+    required this.profileImagePath,
+    required this.userName,
+    required this.userId,
+    required this.tourouText,
+    this.tourouImagePath,
+    required this.goodNumber,
+  });
 
   factory TourouData.profile() {
     return TourouData(
@@ -27,4 +23,11 @@ class TourouData {
       goodNumber: '0',
     );
   }
+
+  final String profileImagePath;
+  final String userName;
+  final String userId;
+  final String tourouText;
+  final String? tourouImagePath;
+  final String goodNumber;
 }

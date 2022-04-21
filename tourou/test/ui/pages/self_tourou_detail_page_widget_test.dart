@@ -8,7 +8,6 @@ import 'package:golden_toolkit/golden_toolkit.dart';
 
 // Project imports:
 import '../../../lib/l10n/app_localizations.dart';
-import '../../../lib/temp/toruou_data.dart';
 import '../../../lib/temp/tourou_test_data.dart';
 import '../../../lib/ui/pages/self_tourou_detail_page.dart';
 
@@ -19,14 +18,24 @@ Future<void> loadJapaneseFont() async {
   await loader.load();
 }
 
-Widget TestWidget(String language) {
-  TourouData selfTourou = TourouTestData().tourouTestData[2];
-  return MaterialApp(
-    localizationsDelegates: AppLocalizations.localizationsDelegates,
-    supportedLocales: AppLocalizations.supportedLocales,
-    locale: Locale(language),
-    home: SelfTourouDetailPage(selfTourou: selfTourou),
-  );
+class TestWidget extends StatelessWidget {
+  const TestWidget({
+    Key? key,
+    required this.language,
+  }) : super(key: key);
+
+  final String language;
+
+  @override
+  Widget build(BuildContext context) {
+    final selfTourou = TourouTestData().tourouTestData[2];
+    return MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      locale: Locale(language),
+      home: SelfTourouDetailPage(selfTourou: selfTourou),
+    );
+  }
 }
 
 void main() {
@@ -36,32 +45,43 @@ void main() {
     await loadJapaneseFont();
 
     //デバイスの画面サイズ
-    final size6 = Size(375, 667);
+    const size6 = Size(375, 667);
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: size6);
+    await tester.pumpWidgetBuilder(
+      const TestWidget(language: 'en'),
+      surfaceSize: size6,
+    );
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'self_tourou_detail_page_iphone6_en');
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: size6);
+    await tester.pumpWidgetBuilder(
+      const TestWidget(language: 'ja'),
+      surfaceSize: size6,
+    );
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'self_tourou_detail_page_iphone6_ja');
 
     //デバイスの画面サイズ
-    final sizePad = Size(1024, 1366);
+    const sizePad = Size(1024, 1366);
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: sizePad);
+    await tester.pumpWidgetBuilder(
+      const TestWidget(language: 'en'),
+      surfaceSize: sizePad,
+    );
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'self_tourou_detail_page_ipad_en');
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: sizePad);
-
+    await tester.pumpWidgetBuilder(
+      const TestWidget(language: 'ja'),
+      surfaceSize: sizePad,
+    );
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, 'self_tourou_detail_page_ipad_ja');
   });

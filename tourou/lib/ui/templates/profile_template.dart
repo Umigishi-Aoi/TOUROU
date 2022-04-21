@@ -15,12 +15,6 @@ import '../atoms/custom_text.dart';
 import '../organisms/tourou_organism.dart';
 
 class ProfileTemplate extends StatelessWidget {
-  final bool isTest;
-
-  final TourouData tourouData;
-
-  final void Function() backFunction;
-
   const ProfileTemplate({
     Key? key,
     required this.isTest,
@@ -28,13 +22,20 @@ class ProfileTemplate extends StatelessWidget {
     required this.backFunction,
   }) : super(key: key);
 
+  final bool isTest;
+
+  final TourouData tourouData;
+
+  final void Function() backFunction;
+
   @override
   Widget build(BuildContext context) {
-    final double displayHeight = MediaQuery.of(context).size.height;
-    final double displayWidth = MediaQuery.of(context).size.width;
+    final displayHeight = MediaQuery.of(context).size.height;
+    final displayWidth = MediaQuery.of(context).size.width;
     final double bannerAdHeight = min(
-        displayHeight * adaptiveBannerMaximumHeightRatio,
-        adaptiveBannerMaximumHeight);
+      displayHeight * adaptiveBannerMaximumHeightRatio,
+      adaptiveBannerMaximumHeight,
+    );
     return Scaffold(
       backgroundColor: ColorName.mainBlack,
       appBar: AppBar(
@@ -64,31 +65,32 @@ class ProfileTemplate extends StatelessWidget {
             children: [
               Container(
                 width: displayWidth * tourouWidthRatio,
-                margin: EdgeInsets.symmetric(
-                    vertical: tourouHorizontalMargin / 2,
-                    horizontal: tourouHorizontalMargin),
+                margin: const EdgeInsets.symmetric(
+                  vertical: tourouHorizontalMargin / 2,
+                  horizontal: tourouHorizontalMargin,
+                ),
                 decoration: BoxDecoration(
                   color: ColorName.tourouBackground,
                   borderRadius: BorderRadius.circular(tourouBorderRadius),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     vertical: tourouVerticalPadding,
                   ),
                   child: TourouOrganism(
-                      tourouData: tourouData,
-                      profileImageHeight:
-                          displayHeight * profileImageHeightRatio,
-                      profileFunction: (tourouData) {},
-                      textColor: ColorName.mainBlack,
-                      fontFamily: FontFamily.mplus1,
-                      userIdColor: ColorName.userIdText,
-                      userNameFontSize: tourouUserNameFontSize,
-                      tourouTextWidth: displayWidth * tourouContentWidthRatio,
-                      tourouTextFontSize: tourouUserNameFontSize,
-                      contentBottomPadding: tourouContentBottomPadding,
-                      tourouImageHeight: 0,
-                      tourouImageFunction: (tourouData) {}),
+                    tourouData: tourouData,
+                    profileImageHeight: displayHeight * profileImageHeightRatio,
+                    profileFunction: (tourouData) {},
+                    textColor: ColorName.mainBlack,
+                    fontFamily: FontFamily.mplus1,
+                    userIdColor: ColorName.userIdText,
+                    userNameFontSize: tourouUserNameFontSize,
+                    tourouTextWidth: displayWidth * tourouContentWidthRatio,
+                    tourouTextFontSize: tourouUserNameFontSize,
+                    contentBottomPadding: tourouContentBottomPadding,
+                    tourouImageHeight: 0,
+                    tourouImageFunction: (tourouData) {},
+                  ),
                 ),
               ),
               if (isTest)
@@ -98,7 +100,7 @@ class ProfileTemplate extends StatelessWidget {
                   color: ColorName.itemBackground,
                 )
               else
-                AdaptiveBannerAd(),
+                const AdaptiveBannerAd(),
             ],
           ),
         ),

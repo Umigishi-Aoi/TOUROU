@@ -5,17 +5,6 @@ import 'package:flutter/material.dart';
 import '../atoms/custom_image.dart';
 
 class ImageButton extends StatefulWidget {
-  final String firstImagePath;
-  final double height;
-  final void Function() function;
-
-  final String? secondImagePath;
-  final double? width;
-  final BoxFit fit;
-  final bool isCircle;
-
-  final int? duration;
-
   const ImageButton({
     Key? key,
     required this.firstImagePath,
@@ -27,6 +16,17 @@ class ImageButton extends StatefulWidget {
     required this.isCircle,
     this.duration,
   }) : super(key: key);
+
+  final String firstImagePath;
+  final double height;
+  final void Function() function;
+
+  final String? secondImagePath;
+  final double? width;
+  final BoxFit fit;
+  final bool isCircle;
+
+  final int? duration;
 
   @override
   _ImageButtonState createState() => _ImageButtonState();
@@ -55,7 +55,8 @@ class _ImageButtonState extends State<ImageButton> {
                 });
                 if (widget.secondImagePath != null && widget.duration != null) {
                   await Future<void>.delayed(
-                      Duration(milliseconds: widget.duration!));
+                    Duration(milliseconds: widget.duration!),
+                  );
                 }
 
                 widget.function();

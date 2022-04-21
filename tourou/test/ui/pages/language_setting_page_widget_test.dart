@@ -17,13 +17,23 @@ Future<void> loadJapaneseFont() async {
   await loader.load();
 }
 
-Widget TestWidget(String language) {
-  return MaterialApp(
-    localizationsDelegates: AppLocalizations.localizationsDelegates,
-    supportedLocales: AppLocalizations.supportedLocales,
-    locale: Locale(language),
-    home: LanguageSettingPage(),
-  );
+class TestWidget extends StatelessWidget {
+  const TestWidget({
+    Key? key,
+    required this.language,
+  }) : super(key: key);
+
+  final String language;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      locale: Locale(language),
+      home: const LanguageSettingPage(),
+    );
+  }
 }
 
 const title = 'language_setting_page';
@@ -34,45 +44,57 @@ void main() {
     await loadJapaneseFont();
 
     //デバイスの画面サイズ
-    final size6 = Size(375, 667);
+    const size6 = Size(375, 667);
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: size6);
+    await tester.pumpWidgetBuilder(
+      const TestWidget(language: 'en'),
+      surfaceSize: size6,
+    );
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, '${title}_iphone6_en');
 
     //Switchをタップして切り替えできることの確認テスト
-    await tester.tap(find.byKey(ValueKey('English Switch')));
+    await tester.tap(find.byKey(const ValueKey('English Switch')));
 
     await screenMatchesGolden(tester, '${title}_iphone6_en_english_switch');
 
     //Switchをタップして切り替えできることの確認テスト
-    await tester.tap(find.byKey(ValueKey('Japanese Switch')));
+    await tester.tap(find.byKey(const ValueKey('Japanese Switch')));
 
     await screenMatchesGolden(tester, '${title}_iphone6_en_japanese_switch');
 
     //Switchを元に戻す
-    await tester.tap(find.byKey(ValueKey('English Switch')));
-    await tester.tap(find.byKey(ValueKey('Japanese Switch')));
+    await tester.tap(find.byKey(const ValueKey('English Switch')));
+    await tester.tap(find.byKey(const ValueKey('Japanese Switch')));
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: size6);
+    await tester.pumpWidgetBuilder(
+      const TestWidget(language: 'ja'),
+      surfaceSize: size6,
+    );
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, '${title}_iphone6_ja');
 
     //デバイスの画面サイズ
-    final sizePad = Size(1024, 1366);
+    const sizePad = Size(1024, 1366);
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(TestWidget('en'), surfaceSize: sizePad);
+    await tester.pumpWidgetBuilder(
+      const TestWidget(language: 'en'),
+      surfaceSize: sizePad,
+    );
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, '${title}_ipad_en');
 
     //第一引数はどのWidgetをビルドするのか指定、どのサイズにビルドするかがsurfaceSize
-    await tester.pumpWidgetBuilder(TestWidget('ja'), surfaceSize: sizePad);
+    await tester.pumpWidgetBuilder(
+      const TestWidget(language: 'ja'),
+      surfaceSize: sizePad,
+    );
 
     //マスターのスクリーンショットと同じかテストする
     await screenMatchesGolden(tester, '${title}_ipad_ja');

@@ -5,18 +5,6 @@ import 'package:flutter/material.dart';
 import '../atoms/custom_text.dart';
 
 class CustomElevatedButton extends StatelessWidget {
-  final String text;
-  final Color color;
-  final double fontSize;
-  final String fontFamily;
-
-  final double height;
-  final double width;
-
-  final Color buttonColor;
-
-  final void Function() function;
-
   const CustomElevatedButton({
     Key? key,
     required this.text,
@@ -29,6 +17,18 @@ class CustomElevatedButton extends StatelessWidget {
     required this.function,
   }) : super(key: key);
 
+  final String text;
+  final Color color;
+  final double fontSize;
+  final String fontFamily;
+
+  final double height;
+  final double width;
+
+  final Color buttonColor;
+
+  final void Function() function;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -36,17 +36,17 @@ class CustomElevatedButton extends StatelessWidget {
       width: width,
       child: ElevatedButton(
         onPressed: function,
-        child: CustomText(
-          text: text,
-          color: color,
-          fontSize: fontSize,
-          fontFamily: fontFamily,
-        ),
         style: ElevatedButton.styleFrom(
           primary: buttonColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(height / 2),
           ),
+        ),
+        child: CustomText(
+          text: text,
+          color: color,
+          fontSize: fontSize,
+          fontFamily: fontFamily,
         ),
       ),
     );

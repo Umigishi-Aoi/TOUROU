@@ -5,19 +5,19 @@ import 'package:flutter/material.dart';
 import '../atoms/custom_icon.dart';
 
 class CustomIconButton extends StatelessWidget {
+  const CustomIconButton({
+    Key? key,
+    required this.function,
+    required this.iconData,
+    required this.size,
+    required this.color,
+  }) : super(key: key);
+
   final void Function() function;
 
   final IconData iconData;
   final double size;
   final Color color;
-
-  const CustomIconButton(
-      {Key? key,
-      required this.function,
-      required this.iconData,
-      required this.size,
-      required this.color})
-      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

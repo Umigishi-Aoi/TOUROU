@@ -3,6 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class CustomTextField extends StatelessWidget {
+  const CustomTextField({
+    Key? key,
+    required this.hint,
+    required this.controller,
+    required this.height,
+    required this.width,
+    required this.maxLines,
+    required this.maxLength,
+    required this.fontSize,
+    required this.textColor,
+    required this.fontFamily,
+    required this.fillColor,
+    required this.borderColor,
+    required this.counterColor,
+    required this.textInputFormatters,
+    required this.autofocus,
+  }) : super(key: key);
+
   final String hint;
 
   final TextEditingController controller;
@@ -20,24 +38,6 @@ class CustomTextField extends StatelessWidget {
   final bool autofocus;
 
   final List<TextInputFormatter> textInputFormatters;
-
-  const CustomTextField(
-      {Key? key,
-      required this.hint,
-      required this.controller,
-      required this.height,
-      required this.width,
-      required this.maxLines,
-      required this.maxLength,
-      required this.fontSize,
-      required this.textColor,
-      required this.fontFamily,
-      required this.fillColor,
-      required this.borderColor,
-      required this.counterColor,
-      required this.textInputFormatters,
-      required this.autofocus})
-      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

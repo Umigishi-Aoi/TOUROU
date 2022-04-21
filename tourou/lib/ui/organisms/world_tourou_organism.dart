@@ -9,6 +9,39 @@ import '../molecules/custom_icon_button.dart';
 import 'tourou_organism.dart';
 
 class WorldTourouOrganism extends StatelessWidget {
+  const WorldTourouOrganism({
+    Key? key,
+    required this.tourouData,
+    required this.worldTourouTapFunction,
+    required this.tourouWidth,
+    required this.tourouColor,
+    required this.borderRadius,
+    required this.verticalPadding,
+    required this.iconColor,
+    required this.profileImageHeight,
+    required this.profileFunction,
+    required this.userNameFontSize,
+    required this.tourouTextFontSize,
+    required this.contentBottomPadding,
+    required this.reportFunction,
+    required this.goodButtonText,
+    required this.goodButtonFunction,
+    required this.textColor,
+    required this.userIdColor,
+    required this.tourouContentWidth,
+    required this.tourouImageHeight,
+    required this.tourouImageFunction,
+    required this.goodButtonHeight,
+    required this.goodButtonWidth,
+    required this.buttonColor,
+    required this.buttonFontSize,
+    required this.goodNumberFontSize,
+    required this.goodNumberColor,
+    required this.errorIconSize,
+    required this.fontFamily,
+    required this.goodButtonTextWidth,
+  }) : super(key: key);
+
   final TourouData tourouData;
 
   final void Function(TourouData tourouData) worldTourouTapFunction;
@@ -50,39 +83,6 @@ class WorldTourouOrganism extends StatelessWidget {
 
   final double goodNumberFontSize;
   final Color goodNumberColor;
-
-  const WorldTourouOrganism({
-    Key? key,
-    required this.tourouData,
-    required this.worldTourouTapFunction,
-    required this.tourouWidth,
-    required this.tourouColor,
-    required this.borderRadius,
-    required this.verticalPadding,
-    required this.iconColor,
-    required this.profileImageHeight,
-    required this.profileFunction,
-    required this.userNameFontSize,
-    required this.tourouTextFontSize,
-    required this.contentBottomPadding,
-    required this.reportFunction,
-    required this.goodButtonText,
-    required this.goodButtonFunction,
-    required this.textColor,
-    required this.userIdColor,
-    required this.tourouContentWidth,
-    required this.tourouImageHeight,
-    required this.tourouImageFunction,
-    required this.goodButtonHeight,
-    required this.goodButtonWidth,
-    required this.buttonColor,
-    required this.buttonFontSize,
-    required this.goodNumberFontSize,
-    required this.goodNumberColor,
-    required this.errorIconSize,
-    required this.fontFamily,
-    required this.goodButtonTextWidth,
-  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

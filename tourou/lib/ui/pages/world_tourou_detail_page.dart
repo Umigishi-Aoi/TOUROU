@@ -6,10 +6,12 @@ import '../../temp/toruou_data.dart';
 import '../templates/world_tourou_detail_template.dart';
 
 class WorldTourouDetailPage extends StatelessWidget {
-  final TourouData worldTourou;
+  const WorldTourouDetailPage({
+    Key? key,
+    required this.worldTourou,
+  }) : super(key: key);
 
-  const WorldTourouDetailPage({Key? key, required this.worldTourou})
-      : super(key: key);
+  final TourouData worldTourou;
 
   @override
   Widget build(BuildContext context) {

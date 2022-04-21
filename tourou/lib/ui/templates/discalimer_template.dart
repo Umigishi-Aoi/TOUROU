@@ -9,12 +9,12 @@ import '../../res/constants.dart';
 import '../atoms/custom_text.dart';
 
 class DiscalimerTemplate extends StatelessWidget {
-  final void Function() backFunction;
-
   const DiscalimerTemplate({
     Key? key,
     required this.backFunction,
   }) : super(key: key);
+
+  final void Function() backFunction;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class DiscalimerTemplate extends StatelessWidget {
         centerTitle: true,
       ),
       body: Padding(
-        padding: EdgeInsets.all(textPadding),
+        padding: const EdgeInsets.all(textPadding),
         child: ListView(
           children: [
             CustomText(

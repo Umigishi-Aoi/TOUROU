@@ -10,10 +10,6 @@ import '../atoms/custom_text.dart';
 import '../molecules/text_switch.dart';
 
 class LanguageSettingTemplate extends StatelessWidget {
-  final void Function() backFunction;
-  final void Function(bool?) englishFunction;
-  final void Function(bool?) japaneseFunction;
-
   const LanguageSettingTemplate({
     Key? key,
     required this.backFunction,
@@ -21,9 +17,13 @@ class LanguageSettingTemplate extends StatelessWidget {
     required this.japaneseFunction,
   }) : super(key: key);
 
+  final void Function() backFunction;
+  final void Function(bool?) englishFunction;
+  final void Function(bool?) japaneseFunction;
+
   @override
   Widget build(BuildContext context) {
-    final double displayWidth = MediaQuery.of(context).size.width;
+    final displayWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: ColorName.mainBlack,
       appBar: AppBar(
@@ -56,7 +56,7 @@ class LanguageSettingTemplate extends StatelessWidget {
                 color: ColorName.textWhite,
                 fontSize: mainTextFontSize,
                 fontFamily: FontFamily.mplus1,
-                switchKey: ValueKey('English Switch'),
+                switchKey: const ValueKey('English Switch'),
                 activeColor: ColorName.switchAccentColor,
                 thumbColor: ColorName.textWhite,
                 trackColor: ColorName.itemBackground,
@@ -68,13 +68,13 @@ class LanguageSettingTemplate extends StatelessWidget {
                 color: ColorName.textWhite,
                 fontSize: mainTextFontSize,
                 fontFamily: FontFamily.mplus1,
-                switchKey: ValueKey('Japanese Switch'),
+                switchKey: const ValueKey('Japanese Switch'),
                 activeColor: ColorName.switchAccentColor,
                 thumbColor: ColorName.textWhite,
                 trackColor: ColorName.itemBackground,
                 onChanged: japaneseFunction,
               ),
-              SizedBox(),
+              const SizedBox(),
             ],
           ),
         ),
