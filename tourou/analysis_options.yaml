@@ -27,6 +27,7 @@ linter:
     # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
     avoid_classes_with_only_static_members : false
     avoid_relative_lib_imports : false
+    directives_ordering : false
 
 analyzer:
   exclude:

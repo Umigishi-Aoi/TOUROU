@@ -142,8 +142,7 @@ enum Flavor { dev, stg, prod, undefined }
 Flavor makeFlavor(String flavor) {
   try {
     return Flavor.values.byName(flavor);
-  }
-  on Exception catch (_) {
+  } on Exception catch (_) {
     return Flavor.undefined;
   }
 }

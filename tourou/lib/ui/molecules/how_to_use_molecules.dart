@@ -14,7 +14,7 @@ class HowToUseMolecules extends StatefulWidget {
     required this.imageWidth,
     required this.imageFit,
   }) : super(key: key);
-  
+
   final ValueNotifier<double> notifier;
 
   final int pageCount;

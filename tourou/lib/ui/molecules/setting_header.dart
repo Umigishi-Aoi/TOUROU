@@ -18,7 +18,7 @@ class SettingHeader extends StatelessWidget {
     required this.titleBold,
     required this.titleTextColor,
   }) : super(key: key);
-  
+
   final double width;
   final String backText;
   final double backFontSize;
