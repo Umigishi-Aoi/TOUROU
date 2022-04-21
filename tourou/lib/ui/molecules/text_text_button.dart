@@ -5,19 +5,6 @@ import 'package:flutter/material.dart';
 import '../atoms/custom_text.dart';
 
 class TextTextButton extends StatelessWidget {
-  final String firstText;
-  final Color firstColor;
-  final double fontSize;
-  final FontWeight? firstBold;
-  final String fontFamily;
-
-  final String secondText;
-  final Color secondColor;
-  final FontWeight? secondBold;
-  final void Function() function;
-
-  final MainAxisAlignment mainAxisAlignment;
-
   const TextTextButton({
     Key? key,
     required this.firstText,
@@ -31,6 +18,19 @@ class TextTextButton extends StatelessWidget {
     required this.function,
     required this.mainAxisAlignment,
   }) : super(key: key);
+
+  final String firstText;
+  final Color firstColor;
+  final double fontSize;
+  final FontWeight? firstBold;
+  final String fontFamily;
+
+  final String secondText;
+  final Color secondColor;
+  final FontWeight? secondBold;
+  final void Function() function;
+
+  final MainAxisAlignment mainAxisAlignment;
 
   @override
   Widget build(BuildContext context) {

@@ -2,6 +2,28 @@
 import 'package:flutter/material.dart';
 
 class TourouTabBar extends StatelessWidget {
+  TourouTabBar({
+    Key? key,
+    required this.firstTabText,
+    required this.secondTabText,
+    required this.labelColor,
+    required this.unselectedLabelColor,
+    required this.indicatorWeight,
+    required this.horizontalPadding,
+    required this.verticalPadding,
+  }) : super(key: key) {
+    tabs = [
+      Tab(
+        key: const ValueKey('firstTab'),
+        text: firstTabText,
+      ),
+      Tab(
+        key: const ValueKey('secondTab'),
+        text: secondTabText,
+      ),
+    ];
+  }
+
   final String firstTabText;
   final String secondTabText;
 
@@ -13,34 +35,12 @@ class TourouTabBar extends StatelessWidget {
 
   late final List<Tab> tabs;
 
-  TourouTabBar({
-    Key? key,
-    required this.firstTabText,
-    required this.secondTabText,
-    required this.labelColor,
-    required this.unselectedLabelColor,
-    required this.indicatorWeight,
-    required this.horizontalPadding,
-    required this.verticalPadding,
-  }) : super(key: key) {
-    this.tabs = [
-      Tab(
-        key: ValueKey('firstTab'),
-        text: firstTabText,
-      ),
-      Tab(
-        key: ValueKey('secondTab'),
-        text: secondTabText,
-      ),
-    ];
-  }
-
   @override
   Widget build(BuildContext context) {
     return TabBar(
       tabs: tabs,
       labelColor: labelColor,
-      labelStyle: TextStyle(fontWeight: FontWeight.bold),
+      labelStyle: const TextStyle(fontWeight: FontWeight.bold),
       unselectedLabelColor: unselectedLabelColor,
       indicatorColor: labelColor,
       indicatorSize: TabBarIndicatorSize.tab,

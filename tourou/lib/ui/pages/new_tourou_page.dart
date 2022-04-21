@@ -25,7 +25,7 @@ class _NewTourouPageState extends State<NewTourouPage> {
     return NewTourouTemplate(
       buttonFunction: () {},
       controller: _controller,
-      checkFunction: (bool) {},
+      checkFunction: (flag) {},
       backFunction: () {},
     );
   }

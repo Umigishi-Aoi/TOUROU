@@ -6,11 +6,12 @@ import '../../temp/toruou_data.dart';
 import '../templates/profile_template.dart';
 
 class ProfilePage extends StatelessWidget {
-  final bool isTest;
   const ProfilePage({
     Key? key,
     required this.isTest,
   }) : super(key: key);
+
+  final bool isTest;
 
   @override
   Widget build(BuildContext context) {

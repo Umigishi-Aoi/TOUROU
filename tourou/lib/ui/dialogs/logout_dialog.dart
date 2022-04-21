@@ -10,57 +10,59 @@ import '../atoms/custom_text.dart';
 import '../molecules/custom_elevated_button.dart';
 
 class LogoutDialog extends StatelessWidget {
-  final void Function() yesFunction;
-  final void Function() noFunction;
   const LogoutDialog({
     Key? key,
     required this.yesFunction,
     required this.noFunction,
   }) : super(key: key);
 
+  final void Function() yesFunction;
+  final void Function() noFunction;
+
   @override
   Widget build(BuildContext context) {
-    final double displayHeight = MediaQuery.of(context).size.height;
-    final double displayWidth = MediaQuery.of(context).size.width;
-    final double dialogButtonHeight = displayHeight * dialogButtonHeightRatio;
-    final double dialogButtonWidth = displayWidth * dialogButtonWidthRatio;
+    final displayHeight = MediaQuery.of(context).size.height;
+    final displayWidth = MediaQuery.of(context).size.width;
+    final dialogButtonHeight = displayHeight * dialogButtonHeightRatio;
+    final dialogButtonWidth = displayWidth * dialogButtonWidthRatio;
     return AlertDialog(
-        title: CustomText(
-          text: AppLocalizations.of(context)!.logOut,
-          color: ColorName.signInButtonBlack,
-          fontSize: howToUseTitleFontSize,
-          fontFamily: FontFamily.mplus1,
-        ),
-        content: CustomText(
-          text: AppLocalizations.of(context)!.logoutContent,
+      title: CustomText(
+        text: AppLocalizations.of(context)!.logOut,
+        color: ColorName.signInButtonBlack,
+        fontSize: howToUseTitleFontSize,
+        fontFamily: FontFamily.mplus1,
+      ),
+      content: CustomText(
+        text: AppLocalizations.of(context)!.logoutContent,
+        color: ColorName.signInButtonBlack,
+        fontSize: mainTextFontSize,
+        fontFamily: FontFamily.mplus1,
+      ),
+      actions: [
+        CustomElevatedButton(
+          key: const ValueKey('Yes Button'),
+          text: AppLocalizations.of(context)!.yes,
           color: ColorName.signInButtonBlack,
           fontSize: mainTextFontSize,
           fontFamily: FontFamily.mplus1,
+          height: dialogButtonHeight,
+          width: dialogButtonWidth,
+          buttonColor: ColorName.tourouBackground,
+          function: yesFunction,
         ),
-        actions: [
-          CustomElevatedButton(
-            key: ValueKey('Yes Button'),
-            text: AppLocalizations.of(context)!.yes,
-            color: ColorName.signInButtonBlack,
-            fontSize: mainTextFontSize,
-            fontFamily: FontFamily.mplus1,
-            height: dialogButtonHeight,
-            width: dialogButtonWidth,
-            buttonColor: ColorName.tourouBackground,
-            function: yesFunction,
-          ),
-          CustomElevatedButton(
-            key: ValueKey('No Button'),
-            text: AppLocalizations.of(context)!.no,
-            color: ColorName.signInButtonBlack,
-            fontSize: mainTextFontSize,
-            fontFamily: FontFamily.mplus1,
-            height: dialogButtonHeight,
-            width: dialogButtonWidth,
-            buttonColor: ColorName.tourouBackground,
-            function: noFunction,
-          ),
-        ],
-        actionsAlignment: MainAxisAlignment.spaceEvenly);
+        CustomElevatedButton(
+          key: const ValueKey('No Button'),
+          text: AppLocalizations.of(context)!.no,
+          color: ColorName.signInButtonBlack,
+          fontSize: mainTextFontSize,
+          fontFamily: FontFamily.mplus1,
+          height: dialogButtonHeight,
+          width: dialogButtonWidth,
+          buttonColor: ColorName.tourouBackground,
+          function: noFunction,
+        ),
+      ],
+      actionsAlignment: MainAxisAlignment.spaceEvenly,
+    );
   }
 }

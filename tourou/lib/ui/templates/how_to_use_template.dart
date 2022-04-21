@@ -12,18 +12,18 @@ import '../molecules/how_to_use_indicator.dart';
 import '../molecules/how_to_use_molecules.dart';
 
 class HowToUseTemplate extends StatelessWidget {
-  final void Function() function;
-
   const HowToUseTemplate({
     Key? key,
     required this.function,
   }) : super(key: key);
 
+  final void Function() function;
+
   @override
   Widget build(BuildContext context) {
-    final ValueNotifier<double> notifier = ValueNotifier(0);
-    final double deviceHeight = MediaQuery.of(context).size.height;
-    final double deviceWidth = MediaQuery.of(context).size.width;
+    final notifier = ValueNotifier<double>(0);
+    final deviceHeight = MediaQuery.of(context).size.height;
+    final deviceWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: ColorName.mainBlack,
@@ -60,19 +60,20 @@ class HowToUseTemplate extends StatelessWidget {
                 activeColor: ColorName.signInButtonWhite,
               ),
               Padding(
-                  padding: const EdgeInsets.all(howToUseButtonPadding),
-                  child: CustomElevatedButton(
-                    text: AppLocalizations.of(context)!.howToUseText,
-                    height: deviceHeight * buttonHeightRatio,
-                    width: deviceWidth * buttonWidthRatio,
-                    buttonColor: ColorName.tourouBackground,
-                    function: function,
-                    color: ColorName.mainBlack,
-                    fontSize: deviceHeight *
-                        buttonHeightRatio *
-                        buttonHeightFontSizeRatio,
-                    fontFamily: FontFamily.mplus1,
-                  )),
+                padding: const EdgeInsets.all(howToUseButtonPadding),
+                child: CustomElevatedButton(
+                  text: AppLocalizations.of(context)!.howToUseText,
+                  height: deviceHeight * buttonHeightRatio,
+                  width: deviceWidth * buttonWidthRatio,
+                  buttonColor: ColorName.tourouBackground,
+                  function: function,
+                  color: ColorName.mainBlack,
+                  fontSize: deviceHeight *
+                      buttonHeightRatio *
+                      buttonHeightFontSizeRatio,
+                  fontFamily: FontFamily.mplus1,
+                ),
+              ),
             ],
           ),
         ),

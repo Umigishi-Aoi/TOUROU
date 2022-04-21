@@ -13,20 +13,20 @@ import '../molecules/image_button.dart';
 import '../molecules/text_text_button.dart';
 
 class TitleTemplate extends StatelessWidget {
-  final void Function() imageButtonFunction;
-
-  final void Function() textButtonFunction;
-
   const TitleTemplate({
     Key? key,
     required this.imageButtonFunction,
     required this.textButtonFunction,
   }) : super(key: key);
 
+  final void Function() imageButtonFunction;
+
+  final void Function() textButtonFunction;
+
   @override
   Widget build(BuildContext context) {
-    final double displayHeight = MediaQuery.of(context).size.height;
-    final double displayWidth = MediaQuery.of(context).size.width;
+    final displayHeight = MediaQuery.of(context).size.height;
+    final displayWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: ColorName.mainBlack,
       body: SafeArea(

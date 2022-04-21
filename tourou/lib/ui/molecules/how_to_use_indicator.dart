@@ -8,17 +8,6 @@ import 'package:flutter_sliding_tutorial/flutter_sliding_tutorial.dart';
 import '../atoms/custom_icon.dart';
 
 class HowToUseIndicator extends StatelessWidget {
-  final ValueNotifier<double> notifier;
-
-  final int pageCount;
-
-  final double indicatorHeight;
-  final double indicatorSize;
-  final double indicatorMargin;
-
-  final Color activeColor;
-  final Color inActiveColor;
-
   const HowToUseIndicator({
     Key? key,
     required this.notifier,
@@ -29,6 +18,17 @@ class HowToUseIndicator extends StatelessWidget {
     required this.activeColor,
     required this.inActiveColor,
   }) : super(key: key);
+
+  final ValueNotifier<double> notifier;
+
+  final int pageCount;
+
+  final double indicatorHeight;
+  final double indicatorSize;
+  final double indicatorMargin;
+
+  final Color activeColor;
+  final Color inActiveColor;
 
   @override
   Widget build(BuildContext context) {

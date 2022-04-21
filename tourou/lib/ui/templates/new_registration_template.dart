@@ -13,14 +13,6 @@ import '../molecules/text_text_button.dart';
 import '../organisms/sign_in_buttons_organism.dart';
 
 class NewRegistrationTemplate extends StatelessWidget {
-  final void Function() googleFunction;
-  final void Function() appleFunction;
-  final void Function() privacyPolicyFunction;
-  final void Function() disclaimerFunction;
-  final void Function() goBackToTitleFunction;
-
-  final bool isTest;
-
   const NewRegistrationTemplate({
     Key? key,
     required this.googleFunction,
@@ -31,11 +23,19 @@ class NewRegistrationTemplate extends StatelessWidget {
     required this.isTest,
   }) : super(key: key);
 
+  final void Function() googleFunction;
+  final void Function() appleFunction;
+  final void Function() privacyPolicyFunction;
+  final void Function() disclaimerFunction;
+  final void Function() goBackToTitleFunction;
+
+  final bool isTest;
+
   @override
   Widget build(BuildContext context) {
-    final double displayHeight = MediaQuery.of(context).size.height;
-    final double displayWidth = MediaQuery.of(context).size.width;
-    final double fontSize =
+    final displayHeight = MediaQuery.of(context).size.height;
+    final displayWidth = MediaQuery.of(context).size.width;
+    final fontSize =
         displayHeight * buttonHeightRatio * buttonHeightFontSizeRatio;
     return Scaffold(
       backgroundColor: ColorName.mainBlack,
@@ -94,9 +94,9 @@ class NewRegistrationTemplate extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal:
-                            newRegistrationExplanationHorizontalPadding),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: newRegistrationExplanationHorizontalPadding,
+                    ),
                     child: CustomText(
                       text: AppLocalizations.of(context)!.signUpExplanation,
                       color: ColorName.textWhite,
@@ -108,8 +108,9 @@ class NewRegistrationTemplate extends StatelessWidget {
                     height: displayHeight * newRegistrationTextMarginRatio,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: newRegistrationItemHorizontalPadding),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: newRegistrationItemHorizontalPadding,
+                    ),
                     child: TextTextButton(
                       firstText: AppLocalizations.of(context)!.dot,
                       firstColor: ColorName.textWhite,
@@ -125,8 +126,9 @@ class NewRegistrationTemplate extends StatelessWidget {
                     height: displayHeight * newRegistrationTextMarginRatio,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: newRegistrationItemHorizontalPadding),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: newRegistrationItemHorizontalPadding,
+                    ),
                     child: TextTextButton(
                       firstText: AppLocalizations.of(context)!.dot,
                       firstColor: ColorName.textWhite,

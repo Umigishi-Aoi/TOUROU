@@ -11,25 +11,25 @@ import '../molecules/text_text_button.dart';
 import '../organisms/sign_in_buttons_organism.dart';
 
 class SignInTemplate extends StatelessWidget {
+  const SignInTemplate({
+    Key? key,
+    required this.googleFunction,
+    required this.appleFunction,
+    required this.goBackToTitleFunction,
+    required this.isTest,
+  }) : super(key: key);
+
   final void Function() googleFunction;
   final void Function() appleFunction;
   final void Function() goBackToTitleFunction;
 
   final bool isTest;
 
-  const SignInTemplate(
-      {Key? key,
-      required this.googleFunction,
-      required this.appleFunction,
-      required this.goBackToTitleFunction,
-      required this.isTest})
-      : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    final double displayHeight = MediaQuery.of(context).size.height;
-    final double displayWidth = MediaQuery.of(context).size.width;
-    final double fontSize =
+    final displayHeight = MediaQuery.of(context).size.height;
+    final displayWidth = MediaQuery.of(context).size.width;
+    final fontSize =
         displayHeight * buttonHeightRatio * buttonHeightFontSizeRatio;
     return Scaffold(
       backgroundColor: ColorName.mainBlack,

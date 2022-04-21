@@ -6,10 +6,12 @@ import '../../temp/tourou_test_data.dart';
 import '../templates/self_tourou_detail_template.dart';
 
 class SelfTourouDetailPage extends StatelessWidget {
-  final String tourouId;
+  const SelfTourouDetailPage({
+    Key? key,
+    required this.tourouId,
+  }) : super(key: key);
 
-  const SelfTourouDetailPage({Key? key, required this.tourouId})
-      : super(key: key);
+  final String tourouId;
 
   @override
   Widget build(BuildContext context) {

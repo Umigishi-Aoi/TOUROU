@@ -39,9 +39,9 @@ const double explanationTextButtonHeightRatio = 0.1;
 const double titleTextFontSizeConstants = 32;
 
 //tourou tab bar setting
-const double tabBarIndicatorWeight = 3.0;
-const double tabBarIndicatorHorizontalPadding = 16.0;
-const double tabBarIndicatorVerticalPadding = 0.0;
+const double tabBarIndicatorWeight = 3;
+const double tabBarIndicatorHorizontalPadding = 16;
+const double tabBarIndicatorVerticalPadding = 0;
 
 const int initialTabIndex = 0;
 const int tabLength = 2;
@@ -115,7 +115,7 @@ const double newTourouButtonTopMarginRatio = 0.02;
 
 //setting setting
 const double settingMarginHeightRatio = 0.05;
-const double settingButtonPadding = 8.0;
+const double settingButtonPadding = 8;
 
 //edit Profile setting
 const double editProfileDetailFieldHeightRatio = 0.3;
@@ -142,7 +142,7 @@ enum Flavor { dev, stg, prod, undefined }
 Flavor makeFlavor(String flavor) {
   try {
     return Flavor.values.byName(flavor);
-  } catch (e) {
+  } on Exception catch (_) {
     return Flavor.undefined;
   }
 }

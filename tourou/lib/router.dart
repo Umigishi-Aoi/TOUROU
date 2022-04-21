@@ -6,93 +6,95 @@ import 'package:go_router/go_router.dart';
 import 'ui/pages/pages.dart';
 
 final router = Provider((ref) {
-  bool isTest = false;
+  const isTest = false;
 
   return GoRouter(
     initialLocation: '/title',
     routes: [
       GoRoute(
         path: '/disclaimer',
-        builder: (context, state) => DisclaimerPage(),
+        builder: (context, state) => const DisclaimerPage(),
       ),
       GoRoute(
         path: '/edit_profile',
-        builder: (context, state) => EditProfilePage(),
+        builder: (context, state) => const EditProfilePage(),
       ),
       GoRoute(
         path: '/how_to_use',
-        builder: (context, state) => HowToUsePage(),
+        builder: (context, state) => const HowToUsePage(),
       ),
       GoRoute(
         path: '/language_setting',
-        builder: (context, state) => LanguageSettingPage(),
+        builder: (context, state) => const LanguageSettingPage(),
       ),
       GoRoute(
         path: '/new_profile_setting',
-        builder: (context, state) => NewUserRegistrationPage(),
+        builder: (context, state) => const NewUserRegistrationPage(),
       ),
       GoRoute(
         path: '/new_registration',
-        builder: (context, state) => NewRegistrationPage(
+        builder: (context, state) => const NewRegistrationPage(
           isTest: isTest,
         ),
       ),
       GoRoute(
         path: '/new_tourou',
-        builder: (context, state) => NewTourouPage(),
+        builder: (context, state) => const NewTourouPage(),
       ),
       GoRoute(
         path: '/privacy_policy',
-        builder: (context, state) => PrivacyPolicyPage(),
+        builder: (context, state) => const PrivacyPolicyPage(),
       ),
       GoRoute(
         path: '/profile',
-        builder: (context, state) => ProfilePage(
+        builder: (context, state) => const ProfilePage(
           isTest: isTest,
         ),
       ),
       GoRoute(
-          path: '/self_tourou',
-          builder: (context, state) => SelfTourouPage(
-                isTest: isTest,
-              ),
-          routes: [
-            GoRoute(
-              path: 'detail/:id',
-              builder: (context, state) => SelfTourouDetailPage(
-                tourouId: state.params['id']!,
-              ),
+        path: '/self_tourou',
+        builder: (context, state) => const SelfTourouPage(
+          isTest: isTest,
+        ),
+        routes: [
+          GoRoute(
+            path: 'detail/:id',
+            builder: (context, state) => SelfTourouDetailPage(
+              tourouId: state.params['id']!,
             ),
-          ]),
+          ),
+        ],
+      ),
       GoRoute(
         path: '/setting',
-        builder: (context, state) => SettingPage(
+        builder: (context, state) => const SettingPage(
           isTest: isTest,
         ),
       ),
       GoRoute(
         path: '/sign_in',
-        builder: (context, state) => SignInPage(
+        builder: (context, state) => const SignInPage(
           isTest: isTest,
         ),
       ),
       GoRoute(
         path: '/title',
-        builder: (context, state) => TitlePage(),
+        builder: (context, state) => const TitlePage(),
       ),
       GoRoute(
-          path: '/world_tourou',
-          builder: (context, state) => WorldTourouPage(
-                isTest: isTest,
-              ),
-          routes: [
-            GoRoute(
-              path: 'detail/:id',
-              builder: (context, state) => WorldTourouDetailPage(
-                tourouId: state.params['id']!,
-              ),
+        path: '/world_tourou',
+        builder: (context, state) => const WorldTourouPage(
+          isTest: isTest,
+        ),
+        routes: [
+          GoRoute(
+            path: 'detail/:id',
+            builder: (context, state) => WorldTourouDetailPage(
+              tourouId: state.params['id']!,
             ),
-          ]),
+          ),
+        ],
+      ),
     ],
   );
 });
