@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'user_id_value_object.dart';
+part of 'user_id.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,30 +15,27 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$UserIdValueObject {
+mixin _$UserId {
   String? get userId => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $UserIdValueObjectCopyWith<UserIdValueObject> get copyWith =>
-      throw _privateConstructorUsedError;
+  $UserIdCopyWith<UserId> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UserIdValueObjectCopyWith<$Res> {
-  factory $UserIdValueObjectCopyWith(
-          UserIdValueObject value, $Res Function(UserIdValueObject) then) =
-      _$UserIdValueObjectCopyWithImpl<$Res>;
+abstract class $UserIdCopyWith<$Res> {
+  factory $UserIdCopyWith(UserId value, $Res Function(UserId) then) =
+      _$UserIdCopyWithImpl<$Res>;
   $Res call({String? userId});
 }
 
 /// @nodoc
-class _$UserIdValueObjectCopyWithImpl<$Res>
-    implements $UserIdValueObjectCopyWith<$Res> {
-  _$UserIdValueObjectCopyWithImpl(this._value, this._then);
+class _$UserIdCopyWithImpl<$Res> implements $UserIdCopyWith<$Res> {
+  _$UserIdCopyWithImpl(this._value, this._then);
 
-  final UserIdValueObject _value;
+  final UserId _value;
   // ignore: unused_field
-  final $Res Function(UserIdValueObject) _then;
+  final $Res Function(UserId) _then;
 
   @override
   $Res call({
@@ -54,31 +51,27 @@ class _$UserIdValueObjectCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$UserIdValueObjectCopyWith<$Res>
-    implements $UserIdValueObjectCopyWith<$Res> {
-  factory _$UserIdValueObjectCopyWith(
-          _UserIdValueObject value, $Res Function(_UserIdValueObject) then) =
-      __$UserIdValueObjectCopyWithImpl<$Res>;
+abstract class _$UserIdCopyWith<$Res> implements $UserIdCopyWith<$Res> {
+  factory _$UserIdCopyWith(_UserId value, $Res Function(_UserId) then) =
+      __$UserIdCopyWithImpl<$Res>;
   @override
   $Res call({String? userId});
 }
 
 /// @nodoc
-class __$UserIdValueObjectCopyWithImpl<$Res>
-    extends _$UserIdValueObjectCopyWithImpl<$Res>
-    implements _$UserIdValueObjectCopyWith<$Res> {
-  __$UserIdValueObjectCopyWithImpl(
-      _UserIdValueObject _value, $Res Function(_UserIdValueObject) _then)
-      : super(_value, (v) => _then(v as _UserIdValueObject));
+class __$UserIdCopyWithImpl<$Res> extends _$UserIdCopyWithImpl<$Res>
+    implements _$UserIdCopyWith<$Res> {
+  __$UserIdCopyWithImpl(_UserId _value, $Res Function(_UserId) _then)
+      : super(_value, (v) => _then(v as _UserId));
 
   @override
-  _UserIdValueObject get _value => super._value as _UserIdValueObject;
+  _UserId get _value => super._value as _UserId;
 
   @override
   $Res call({
     Object? userId = freezed,
   }) {
-    return _then(_UserIdValueObject(
+    return _then(_UserId(
       userId: userId == freezed
           ? _value.userId
           : userId // ignore: cast_nullable_to_non_nullable
@@ -89,22 +82,22 @@ class __$UserIdValueObjectCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UserIdValueObject implements _UserIdValueObject {
-  _$_UserIdValueObject({this.userId});
+class _$_UserId implements _UserId {
+  _$_UserId({this.userId});
 
   @override
   final String? userId;
 
   @override
   String toString() {
-    return 'UserIdValueObject(userId: $userId)';
+    return 'UserId(userId: $userId)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UserIdValueObject &&
+            other is _UserId &&
             const DeepCollectionEquality().equals(other.userId, userId));
   }
 
@@ -114,17 +107,16 @@ class _$_UserIdValueObject implements _UserIdValueObject {
 
   @JsonKey(ignore: true)
   @override
-  _$UserIdValueObjectCopyWith<_UserIdValueObject> get copyWith =>
-      __$UserIdValueObjectCopyWithImpl<_UserIdValueObject>(this, _$identity);
+  _$UserIdCopyWith<_UserId> get copyWith =>
+      __$UserIdCopyWithImpl<_UserId>(this, _$identity);
 }
 
-abstract class _UserIdValueObject implements UserIdValueObject {
-  factory _UserIdValueObject({final String? userId}) = _$_UserIdValueObject;
+abstract class _UserId implements UserId {
+  factory _UserId({final String? userId}) = _$_UserId;
 
   @override
   String? get userId => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$UserIdValueObjectCopyWith<_UserIdValueObject> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$UserIdCopyWith<_UserId> get copyWith => throw _privateConstructorUsedError;
 }
