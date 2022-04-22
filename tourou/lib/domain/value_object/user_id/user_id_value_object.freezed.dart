@@ -12,21 +12,7 @@ part of 'user_id_value_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$UserIdValueObjectTearOff {
-  const _$UserIdValueObjectTearOff();
-
-  _UserIdValueObject call({String? userId}) {
-    return _UserIdValueObject(
-      userId: userId,
-    );
-  }
-}
-
-/// @nodoc
-const $UserIdValueObject = _$UserIdValueObjectTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$UserIdValueObject {
@@ -133,10 +119,10 @@ class _$_UserIdValueObject implements _UserIdValueObject {
 }
 
 abstract class _UserIdValueObject implements UserIdValueObject {
-  factory _UserIdValueObject({String? userId}) = _$_UserIdValueObject;
+  factory _UserIdValueObject({final String? userId}) = _$_UserIdValueObject;
 
   @override
-  String? get userId;
+  String? get userId => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserIdValueObjectCopyWith<_UserIdValueObject> get copyWith =>
