@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$UserName {
-  String? get userId => throw _privateConstructorUsedError;
+  String? get userName => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $UserNameCopyWith<UserName> get copyWith =>
@@ -27,7 +27,7 @@ mixin _$UserName {
 abstract class $UserNameCopyWith<$Res> {
   factory $UserNameCopyWith(UserName value, $Res Function(UserName) then) =
       _$UserNameCopyWithImpl<$Res>;
-  $Res call({String? userId});
+  $Res call({String? userName});
 }
 
 /// @nodoc
@@ -40,12 +40,12 @@ class _$UserNameCopyWithImpl<$Res> implements $UserNameCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? userId = freezed,
+    Object? userName = freezed,
   }) {
     return _then(_value.copyWith(
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      userName: userName == freezed
+          ? _value.userName
+          : userName // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -56,7 +56,7 @@ abstract class _$UserNameCopyWith<$Res> implements $UserNameCopyWith<$Res> {
   factory _$UserNameCopyWith(_UserName value, $Res Function(_UserName) then) =
       __$UserNameCopyWithImpl<$Res>;
   @override
-  $Res call({String? userId});
+  $Res call({String? userName});
 }
 
 /// @nodoc
@@ -70,12 +70,12 @@ class __$UserNameCopyWithImpl<$Res> extends _$UserNameCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? userId = freezed,
+    Object? userName = freezed,
   }) {
     return _then(_UserName(
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      userName: userName == freezed
+          ? _value.userName
+          : userName // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -84,14 +84,14 @@ class __$UserNameCopyWithImpl<$Res> extends _$UserNameCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_UserName implements _UserName {
-  _$_UserName({this.userId});
+  _$_UserName({this.userName});
 
   @override
-  final String? userId;
+  final String? userName;
 
   @override
   String toString() {
-    return 'UserName(userId: $userId)';
+    return 'UserName(userName: $userName)';
   }
 
   @override
@@ -99,12 +99,12 @@ class _$_UserName implements _UserName {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _UserName &&
-            const DeepCollectionEquality().equals(other.userId, userId));
+            const DeepCollectionEquality().equals(other.userName, userName));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(userId));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(userName));
 
   @JsonKey(ignore: true)
   @override
@@ -113,10 +113,10 @@ class _$_UserName implements _UserName {
 }
 
 abstract class _UserName implements UserName {
-  factory _UserName({final String? userId}) = _$_UserName;
+  factory _UserName({final String? userName}) = _$_UserName;
 
   @override
-  String? get userId => throw _privateConstructorUsedError;
+  String? get userName => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserNameCopyWith<_UserName> get copyWith =>

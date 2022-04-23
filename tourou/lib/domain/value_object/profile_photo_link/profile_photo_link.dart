@@ -5,5 +5,5 @@ part 'profile_photo_link.freezed.dart';
 
 @freezed
 class ProfilePhotoLink with _$ProfilePhotoLink {
-  factory ProfilePhotoLink({String? userId}) = _ProfilePhotoLink;
+  factory ProfilePhotoLink({String? profilePhotoLink}) = _ProfilePhotoLink;
 }
