@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$ProfilePhotoLink {
-  String? get userId => throw _privateConstructorUsedError;
+  String? get profilePhotoLink => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ProfilePhotoLinkCopyWith<ProfilePhotoLink> get copyWith =>
@@ -28,7 +28,7 @@ abstract class $ProfilePhotoLinkCopyWith<$Res> {
   factory $ProfilePhotoLinkCopyWith(
           ProfilePhotoLink value, $Res Function(ProfilePhotoLink) then) =
       _$ProfilePhotoLinkCopyWithImpl<$Res>;
-  $Res call({String? userId});
+  $Res call({String? profilePhotoLink});
 }
 
 /// @nodoc
@@ -42,12 +42,12 @@ class _$ProfilePhotoLinkCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? userId = freezed,
+    Object? profilePhotoLink = freezed,
   }) {
     return _then(_value.copyWith(
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      profilePhotoLink: profilePhotoLink == freezed
+          ? _value.profilePhotoLink
+          : profilePhotoLink // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -60,7 +60,7 @@ abstract class _$ProfilePhotoLinkCopyWith<$Res>
           _ProfilePhotoLink value, $Res Function(_ProfilePhotoLink) then) =
       __$ProfilePhotoLinkCopyWithImpl<$Res>;
   @override
-  $Res call({String? userId});
+  $Res call({String? profilePhotoLink});
 }
 
 /// @nodoc
@@ -76,12 +76,12 @@ class __$ProfilePhotoLinkCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? userId = freezed,
+    Object? profilePhotoLink = freezed,
   }) {
     return _then(_ProfilePhotoLink(
-      userId: userId == freezed
-          ? _value.userId
-          : userId // ignore: cast_nullable_to_non_nullable
+      profilePhotoLink: profilePhotoLink == freezed
+          ? _value.profilePhotoLink
+          : profilePhotoLink // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -90,14 +90,14 @@ class __$ProfilePhotoLinkCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_ProfilePhotoLink implements _ProfilePhotoLink {
-  _$_ProfilePhotoLink({this.userId});
+  _$_ProfilePhotoLink({this.profilePhotoLink});
 
   @override
-  final String? userId;
+  final String? profilePhotoLink;
 
   @override
   String toString() {
-    return 'ProfilePhotoLink(userId: $userId)';
+    return 'ProfilePhotoLink(profilePhotoLink: $profilePhotoLink)';
   }
 
   @override
@@ -105,12 +105,13 @@ class _$_ProfilePhotoLink implements _ProfilePhotoLink {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ProfilePhotoLink &&
-            const DeepCollectionEquality().equals(other.userId, userId));
+            const DeepCollectionEquality()
+                .equals(other.profilePhotoLink, profilePhotoLink));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(userId));
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(profilePhotoLink));
 
   @JsonKey(ignore: true)
   @override
@@ -119,10 +120,11 @@ class _$_ProfilePhotoLink implements _ProfilePhotoLink {
 }
 
 abstract class _ProfilePhotoLink implements ProfilePhotoLink {
-  factory _ProfilePhotoLink({final String? userId}) = _$_ProfilePhotoLink;
+  factory _ProfilePhotoLink({final String? profilePhotoLink}) =
+      _$_ProfilePhotoLink;
 
   @override
-  String? get userId => throw _privateConstructorUsedError;
+  String? get profilePhotoLink => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ProfilePhotoLinkCopyWith<_ProfilePhotoLink> get copyWith =>
