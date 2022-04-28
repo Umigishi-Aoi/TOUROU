@@ -1,8 +1,10 @@
+// ignore_for_file: use_setters_to_change_properties
+
 // Project imports:
 import '../value_object/value_object.dart';
 
 class User {
-  const User({
+  User({
     required this.userId,
     required UserName userName,
     required ProfilePhotoLink profilePhotoLink,
@@ -14,7 +16,7 @@ class User {
         _goodTourous = goodTourous;
 
   final UserId userId;
-  final UserName _userName;
+  UserName _userName;
   final ProfilePhotoLink _profilePhotoLink;
   final List<UserId> _blockedUsers;
   final List<TourouId> _goodTourous;
@@ -39,5 +41,9 @@ class User {
         profilePhotoLink.hashCode ^
         blockedUsers.hashCode ^
         goodTourous.hashCode;
+  }
+
+  void changeUserName(UserName newUserName) {
+    _userName = newUserName;
   }
 }
