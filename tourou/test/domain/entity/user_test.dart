@@ -113,5 +113,21 @@ void main() {
         [gTourouId_1, gTourouId_2, gTourouId_3, goodTourouId],
       );
     });
+
+    test('delete goodTourou', () {
+      final goodTourouId = TourouId(tourouId: 'goodTourouId');
+
+      user
+        ..deleteTourouIdFromGoodList(gTourouId_3)
+        ..deleteTourouIdFromGoodList(goodTourouId);
+
+      expect(
+        user.goodTourous,
+        [
+          gTourouId_1,
+          gTourouId_2,
+        ],
+      );
+    });
   });
 }
