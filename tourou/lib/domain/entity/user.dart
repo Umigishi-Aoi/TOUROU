@@ -24,22 +24,6 @@ class User {
   List<UserId> get blockedUsers => _blockedUsers;
   List<TourouId> get goodTourous => _goodTourous;
 
-  User copyWith({
-    UserId? userId,
-    UserName? userName,
-    ProfilePhotoLink? profilePhotoLink,
-    List<UserId>? blockedUsers,
-    List<TourouId>? goodTourous,
-  }) {
-    return User(
-      userId: userId ?? this.userId,
-      userName: userName ?? this.userName,
-      profilePhotoLink: profilePhotoLink ?? this.profilePhotoLink,
-      blockedUsers: blockedUsers ?? this.blockedUsers,
-      goodTourous: goodTourous ?? this.goodTourous,
-    );
-  }
-
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) {
