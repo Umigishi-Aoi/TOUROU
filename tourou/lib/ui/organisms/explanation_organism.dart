@@ -45,7 +45,6 @@ class ExplanationOrganism extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
           height: titleHeight,

@@ -46,7 +46,6 @@ class SelfTourouTemplate extends StatelessWidget {
       adaptiveBannerMaximumHeight,
     );
     return DefaultTabController(
-      initialIndex: initialTabIndex,
       length: tabLength,
       child: Scaffold(
         backgroundColor: ColorName.mainBlack,

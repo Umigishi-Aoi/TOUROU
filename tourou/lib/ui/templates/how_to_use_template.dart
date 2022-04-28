@@ -30,7 +30,6 @@ class HowToUseTemplate extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.all(howToUseTitlePadding),

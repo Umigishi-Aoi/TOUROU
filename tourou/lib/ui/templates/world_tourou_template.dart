@@ -51,7 +51,6 @@ class WorldTourouTemplate extends StatelessWidget {
     );
 
     return DefaultTabController(
-      initialIndex: initialTabIndex,
       length: tabLength,
       child: Scaffold(
         backgroundColor: ColorName.mainBlack,

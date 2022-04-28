@@ -41,10 +41,8 @@ class NewUserRegistrationTemplate extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(
                     height:
