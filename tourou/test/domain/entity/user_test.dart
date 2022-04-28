@@ -92,10 +92,10 @@ void main() {
       });
     });
 
-    test('add blockUsers', () {
+    test('add blockedUsers', () {
       final blockedUserId = UserId(userId: 'blockedUserId');
 
-      user.addBlockUserList(blockedUserId);
+      user.addUserIdToBlockList(blockedUserId);
 
       expect(
         user.blockedUsers,
