@@ -17,7 +17,7 @@ class User {
 
   final UserId userId;
   UserName _userName;
-  final ProfilePhotoLink _profilePhotoLink;
+  ProfilePhotoLink _profilePhotoLink;
   final List<UserId> _blockedUsers;
   final List<TourouId> _goodTourous;
 
@@ -45,5 +45,9 @@ class User {
 
   void changeUserName(UserName newUserName) {
     _userName = newUserName;
+  }
+
+  void changeProfilePhotoLink(ProfilePhotoLink newProfilePhotoLink) {
+    _profilePhotoLink = newProfilePhotoLink;
   }
 }
