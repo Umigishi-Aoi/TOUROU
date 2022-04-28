@@ -1,6 +1,9 @@
+// Package imports:
 import 'package:flutter_test/flutter_test.dart';
-import 'package:tourou/domain/entity/user.dart';
-import 'package:tourou/domain/value_object/value_object.dart';
+
+// Project imports:
+import '../../../lib/domain/entity/user.dart';
+import '../../../lib/domain/value_object/value_object.dart';
 
 void main() {
   //テスト用データのセット
