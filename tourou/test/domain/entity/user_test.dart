@@ -47,5 +47,40 @@ void main() {
         expect(user.goodTourous, goodTourous);
       });
     });
+
+    group('overrides', () {
+      test('==', () {
+        final userId_2 = UserId(userId: 'testUserId_2');
+        final user_2 = User(
+          userId: userId_2,
+          userName: userName,
+          profilePhotoLink: profilePhotoLink,
+          blockedUsers: blockedUsers,
+          goodTourous: goodTourous,
+        );
+        expect(user == user_2, false);
+      });
+
+      test('hashCode', () {
+        final user_3 = User(
+          userId: userId,
+          userName: userName,
+          profilePhotoLink: profilePhotoLink,
+          blockedUsers: blockedUsers,
+          goodTourous: goodTourous,
+        );
+        expect(user.hashCode, user_3.hashCode);
+      });
+    });
+
+    group('change field', () {
+      test('_userName', () {
+        final testUserName = UserName(userName: 'Ozaki Yutaka');
+
+        user.changeUserName(testUserName);
+
+        expect(user.userName, testUserName);
+      });
+    });
   });
 }
