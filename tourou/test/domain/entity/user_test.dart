@@ -73,7 +73,7 @@ void main() {
       });
     });
 
-    group('change field', () {
+    group('added method', () {
       test('_userName', () {
         final testUserName = UserName(userName: 'Ozaki Yutaka');
 
@@ -90,6 +90,17 @@ void main() {
 
         expect(user.profilePhotoLink, testProfilePhotoLink);
       });
+    });
+
+    test('add blockUsers', () {
+      final blockedUserId = UserId(userId: 'blockedUserId');
+
+      user.addBlockUserList(blockedUserId);
+
+      expect(
+        user.blockedUsers,
+        [bUserId_1, bUserId_2, bUserId_3, blockedUserId],
+      );
     });
   });
 }
