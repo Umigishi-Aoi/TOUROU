@@ -58,4 +58,10 @@ class User {
   void addTourouIdToGoodList(TourouId newGoodTourouId) {
     _goodTourous.add(newGoodTourouId);
   }
+
+  void deleteTourouIdFromGoodList(TourouId goodTourouId) {
+    if (_goodTourous.contains(goodTourouId)) {
+      _goodTourous.remove(goodTourouId);
+    }
+  }
 }
