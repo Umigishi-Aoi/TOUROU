@@ -47,5 +47,15 @@ void main() {
         expect(user.goodTourous, goodTourous);
       });
     });
+
+    group('change field', () {
+      test('_userName', () {
+        final testUserName = UserName(userName: 'Ozaki Yutaka');
+
+        user.changeUserName(testUserName);
+
+        expect(user.userName, testUserName);
+      });
+    });
   });
 }
