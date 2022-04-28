@@ -115,7 +115,6 @@ class WorldTourouOrganism extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.symmetric(vertical: verticalPadding),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     TourouOrganism(
                       tourouData: tourouData,

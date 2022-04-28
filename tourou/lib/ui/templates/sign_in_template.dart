@@ -37,7 +37,6 @@ class SignInTemplate extends StatelessWidget {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
                 height: displayHeight * titleButtonHeightRatio,

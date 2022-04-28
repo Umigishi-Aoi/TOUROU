@@ -57,7 +57,6 @@ class WorldTourouDetailTemplate extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SingleChildScrollView(
               child: Padding(

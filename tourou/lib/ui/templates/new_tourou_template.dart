@@ -71,7 +71,6 @@ class NewTourouTemplate extends StatelessWidget {
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   CustomIconButton(
                     function: buttonFunction,
@@ -80,7 +79,6 @@ class NewTourouTemplate extends StatelessWidget {
                     color: ColorName.textWhite,
                   ),
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       CustomText(
                         text: AppLocalizations.of(context)!.notShare,

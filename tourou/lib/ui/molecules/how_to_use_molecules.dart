@@ -28,7 +28,7 @@ class HowToUseMolecules extends StatefulWidget {
 }
 
 class _HowToUseMoleculesState extends State<HowToUseMolecules> {
-  final _pageController = PageController(initialPage: 0);
+  final _pageController = PageController();
 
   @override
   void initState() {

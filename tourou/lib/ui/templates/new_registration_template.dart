@@ -43,7 +43,6 @@ class NewRegistrationTemplate extends StatelessWidget {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               CustomImage(
                 path: Assets.images.enterIconTourou.path,
@@ -91,7 +90,6 @@ class NewRegistrationTemplate extends StatelessWidget {
                   fontFamilyInApple: FontFamily.mplus1,
                 ),
               Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(

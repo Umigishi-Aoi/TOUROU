@@ -48,7 +48,6 @@ class SettingHeader extends StatelessWidget {
             ),
           ),
           Align(
-            alignment: Alignment.center,
             child: CustomText(
               text: titleText,
               fontSize: titleFontSize,
