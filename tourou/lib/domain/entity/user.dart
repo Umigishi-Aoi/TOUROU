@@ -4,7 +4,7 @@
 import '../value_object/value_object.dart';
 
 class User {
-  const User({
+  User({
     required this.userId,
     required UserName userName,
     required ProfilePhotoLink profilePhotoLink,
