@@ -1,8 +1,8 @@
 // Package imports:
 import 'package:flutter_test/flutter_test.dart';
 
-import '../../../lib/domain/entity/tourou_entity.dart';
 // Project imports:
+import '../../../lib/domain/entity/tourou_entity.dart';
 import '../../../lib/domain/value_object/value_object.dart';
 
 void main() {
