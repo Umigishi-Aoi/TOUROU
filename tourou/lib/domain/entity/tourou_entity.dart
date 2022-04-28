@@ -36,6 +36,16 @@ class TourouEntity {
   final List<UserId> _userIdListTourouLikedBy;
   final List<UserId> _userIdsListTourouReportedBy;
 
+  UserId get userId => _userId;
+  UserName get userName => _userName;
+  ProfilePhotoLink get profilePhotoLink => _profilePhotoLink;
+  TourouContent get tourouContent => _tourouContent;
+  TourouPhotoLink get tourouPhotoLink => _tourouPhotoLink;
+  TourouTime get tourouTime => _tourouTime;
+  TourouLanguage get tourouLanguage => _tourouLanguage;
+  List<UserId> get userIdListTourouLikedBy => _userIdListTourouLikedBy;
+  List<UserId> get userIdsListTourouReportedBy => _userIdsListTourouReportedBy;
+
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) {
