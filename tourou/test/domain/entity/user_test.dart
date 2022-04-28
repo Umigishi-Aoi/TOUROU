@@ -102,5 +102,16 @@ void main() {
         [bUserId_1, bUserId_2, bUserId_3, blockedUserId],
       );
     });
+
+    test('add goodTourou', () {
+      final goodTourouId = TourouId(tourouId: 'goodTourouId');
+
+      user.addTourouIdToGoodList(goodTourouId);
+
+      expect(
+        user.goodTourous,
+        [gTourouId_1, gTourouId_2, gTourouId_3, goodTourouId],
+      );
+    });
   });
 }
