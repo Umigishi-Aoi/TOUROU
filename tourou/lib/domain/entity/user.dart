@@ -50,4 +50,8 @@ class User {
   void changeProfilePhotoLink(ProfilePhotoLink newProfilePhotoLink) {
     _profilePhotoLink = newProfilePhotoLink;
   }
+
+  void addBlockUserList(UserId newBlockUserId) {
+    _blockedUsers.add(newBlockUserId);
+  }
 }
