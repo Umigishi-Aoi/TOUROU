@@ -81,6 +81,15 @@ void main() {
 
         expect(user.userName, testUserName);
       });
+
+      test('_profilePhotoLink', () {
+        final testProfilePhotoLink =
+            ProfilePhotoLink(profilePhotoLink: 'test_profile_photo_link');
+
+        user.changeProfilePhotoLink(testProfilePhotoLink);
+
+        expect(user.profilePhotoLink, testProfilePhotoLink);
+      });
     });
   });
 }
