@@ -27,7 +27,7 @@ class TourouEntity {
 
   final TourouId tourouId;
   final UserId _userId;
-  final UserName _userName;
+  UserName _userName;
   final ProfilePhotoLink _profilePhotoLink;
   final TourouContent _tourouContent;
   final TourouPhotoLink _tourouPhotoLink;
@@ -67,5 +67,9 @@ class TourouEntity {
         _tourouLanguage.hashCode ^
         _userIdListTourouLikedBy.hashCode ^
         _userIdsListTourouReportedBy.hashCode;
+  }
+
+  void changeUserName(UserName newUserName) {
+    _userName = newUserName;
   }
 }
