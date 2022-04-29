@@ -128,5 +128,14 @@ void main() {
         expect(tourouEntity.userName, testUserName);
       });
     });
+
+    test('_profilePhotoLink', () {
+      final testProfilePhotoLink =
+          ProfilePhotoLink(profilePhotoLink: 'test_profile_photo_link');
+
+      tourouEntity.changeProfilePhotoLink(testProfilePhotoLink);
+
+      expect(tourouEntity.profilePhotoLink, testProfilePhotoLink);
+    });
   });
 }

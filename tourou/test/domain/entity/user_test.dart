@@ -90,44 +90,44 @@ void main() {
 
         expect(user.profilePhotoLink, testProfilePhotoLink);
       });
-    });
 
-    test('add blockedUsers', () {
-      final blockedUserId = UserId(userId: 'blockedUserId');
+      test('add blockedUsers', () {
+        final blockedUserId = UserId(userId: 'blockedUserId');
 
-      user.addUserIdToBlockList(blockedUserId);
+        user.addUserIdToBlockList(blockedUserId);
 
-      expect(
-        user.blockedUsers,
-        [bUserId_1, bUserId_2, bUserId_3, blockedUserId],
-      );
-    });
+        expect(
+          user.blockedUsers,
+          [bUserId_1, bUserId_2, bUserId_3, blockedUserId],
+        );
+      });
 
-    test('add goodTourou', () {
-      final goodTourouId = TourouId(tourouId: 'goodTourouId');
+      test('add goodTourou', () {
+        final goodTourouId = TourouId(tourouId: 'goodTourouId');
 
-      user.addTourouIdToGoodList(goodTourouId);
+        user.addTourouIdToGoodList(goodTourouId);
 
-      expect(
-        user.goodTourous,
-        [gTourouId_1, gTourouId_2, gTourouId_3, goodTourouId],
-      );
-    });
+        expect(
+          user.goodTourous,
+          [gTourouId_1, gTourouId_2, gTourouId_3, goodTourouId],
+        );
+      });
 
-    test('delete goodTourou', () {
-      final goodTourouId = TourouId(tourouId: 'goodTourouId');
+      test('delete goodTourou', () {
+        final goodTourouId = TourouId(tourouId: 'goodTourouId');
 
-      user
-        ..deleteTourouIdFromGoodList(gTourouId_3)
-        ..deleteTourouIdFromGoodList(goodTourouId);
+        user
+          ..deleteTourouIdFromGoodList(gTourouId_3)
+          ..deleteTourouIdFromGoodList(goodTourouId);
 
-      expect(
-        user.goodTourous,
-        [
-          gTourouId_1,
-          gTourouId_2,
-        ],
-      );
+        expect(
+          user.goodTourous,
+          [
+            gTourouId_1,
+            gTourouId_2,
+          ],
+        );
+      });
     });
   });
 }
