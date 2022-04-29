@@ -28,7 +28,7 @@ class TourouEntity {
   final TourouId tourouId;
   final UserId _userId;
   UserName _userName;
-  final ProfilePhotoLink _profilePhotoLink;
+  ProfilePhotoLink _profilePhotoLink;
   final TourouContent _tourouContent;
   final TourouPhotoLink _tourouPhotoLink;
   final TourouTime _tourouTime;
@@ -71,5 +71,9 @@ class TourouEntity {
 
   void changeUserName(UserName newUserName) {
     _userName = newUserName;
+  }
+
+  void changeProfilePhotoLink(ProfilePhotoLink newProfilePhotoLink) {
+    _profilePhotoLink = newProfilePhotoLink;
   }
 }
