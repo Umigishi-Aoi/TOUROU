@@ -137,5 +137,16 @@ void main() {
 
       expect(tourouEntity.profilePhotoLink, testProfilePhotoLink);
     });
+
+    test('add likedUserId', () {
+      final likedUserId = UserId(userId: 'likedUserId');
+
+      tourouEntity.addUserIdInLikedList(likedUserId);
+
+      expect(
+        tourouEntity.userIdListTourouLikedBy,
+        [lUserId_1, lUserId_2, lUserId_3, likedUserId],
+      );
+    });
   });
 }
