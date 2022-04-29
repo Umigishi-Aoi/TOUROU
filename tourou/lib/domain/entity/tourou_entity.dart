@@ -77,7 +77,7 @@ class TourouEntity {
     _profilePhotoLink = newProfilePhotoLink;
   }
 
-  void addUserIdToLikedList(UserId newUserId) {
+  void addUserIdInLikedList(UserId newUserId) {
     _userIdListTourouLikedBy.add(newUserId);
   }
 }
