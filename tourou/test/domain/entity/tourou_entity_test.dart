@@ -118,5 +118,15 @@ void main() {
         expect(tourouEntity.hashCode, tourouEntity_3.hashCode);
       });
     });
+
+    group('added method', () {
+      test('_userName', () {
+        final testUserName = UserName(userName: 'Ozaki Yutaka');
+
+        tourouEntity.changeUserName(testUserName);
+
+        expect(tourouEntity.userName, testUserName);
+      });
+    });
   });
 }
