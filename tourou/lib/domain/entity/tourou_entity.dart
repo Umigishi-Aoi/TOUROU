@@ -90,4 +90,8 @@ class TourouEntity {
   int getNumberOfUserIdInLikedList() {
     return _userIdListTourouLikedBy.length;
   }
+
+  int getNumberOfUserIdInReportedList() {
+    return _userIdsListTourouReportedBy.length;
+  }
 }
