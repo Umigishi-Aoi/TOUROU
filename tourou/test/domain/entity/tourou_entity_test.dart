@@ -177,11 +177,23 @@ void main() {
         );
       });
 
+      test('delete reportedUserId', () {
+        final reportedUserId_2 = UserId(userId: 'reportedUserId_2');
+
+        tourouEntity
+          ..deleteUserIdInReportedList(reportedUserId)
+          ..deleteUserIdInReportedList(reportedUserId_2);
+
+        expect(
+          tourouEntity.userIdsListTourouReportedBy,
+          [rUserId_1, rUserId_2, rUserId_3],
+        );
+      });
+
       test('get the number of userIds in reported list', () {
         expect(
           tourouEntity.getNumberOfUserIdInReportedList(),
-          // TODO(aoi): 一時的に4, delete のテスト実装後3に戻す。
-          4,
+          3,
         );
       });
     });
