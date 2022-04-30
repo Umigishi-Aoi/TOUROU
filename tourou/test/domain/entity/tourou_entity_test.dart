@@ -127,39 +127,45 @@ void main() {
 
         expect(tourouEntity.userName, testUserName);
       });
-    });
 
-    test('_profilePhotoLink', () {
-      final testProfilePhotoLink =
-          ProfilePhotoLink(profilePhotoLink: 'test_profile_photo_link');
+      test('_profilePhotoLink', () {
+        final testProfilePhotoLink =
+            ProfilePhotoLink(profilePhotoLink: 'test_profile_photo_link');
 
-      tourouEntity.changeProfilePhotoLink(testProfilePhotoLink);
+        tourouEntity.changeProfilePhotoLink(testProfilePhotoLink);
 
-      expect(tourouEntity.profilePhotoLink, testProfilePhotoLink);
-    });
+        expect(tourouEntity.profilePhotoLink, testProfilePhotoLink);
+      });
 
-    test('add likedUserId', () {
       final likedUserId = UserId(userId: 'likedUserId');
+      test('add likedUserId', () {
+        tourouEntity.addUserIdInLikedList(likedUserId);
 
-      tourouEntity.addUserIdInLikedList(likedUserId);
+        expect(
+          tourouEntity.userIdListTourouLikedBy,
+          [lUserId_1, lUserId_2, lUserId_3, likedUserId],
+        );
+      });
 
-      expect(
-        tourouEntity.userIdListTourouLikedBy,
-        [lUserId_1, lUserId_2, lUserId_3, likedUserId],
-      );
-    });
+      test('delete likedUserId', () {
+        final likedUserId_2 = UserId(userId: 'likedUserId_2');
 
-    test('delete likedUserId', () {
-      final likedUserId = UserId(userId: 'likedUserId');
+        tourouEntity
+          ..deleteUserIdInLikedList(likedUserId)
+          ..deleteUserIdInLikedList(likedUserId_2);
 
-      tourouEntity
-        ..deleteUserIdInLikedList(lUserId_3)
-        ..deleteUserIdInLikedList(likedUserId);
+        expect(
+          tourouEntity.userIdListTourouLikedBy,
+          [lUserId_1, lUserId_2, lUserId_3],
+        );
+      });
 
-      expect(
-        tourouEntity.userIdListTourouLikedBy,
-        [lUserId_1, lUserId_2],
-      );
+      test('get the number of userIds in liked list', () {
+        expect(
+          tourouEntity.getNumberOfUserIdInLikedList(),
+          3,
+        );
+      });
     });
   });
 }
