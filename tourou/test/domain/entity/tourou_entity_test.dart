@@ -148,5 +148,18 @@ void main() {
         [lUserId_1, lUserId_2, lUserId_3, likedUserId],
       );
     });
+
+    test('delete likedUserId', () {
+      final likedUserId = UserId(userId: 'likedUserId');
+
+      tourouEntity
+        ..deleteUserIdInLikedList(lUserId_3)
+        ..deleteUserIdInLikedList(likedUserId);
+
+      expect(
+        tourouEntity.userIdListTourouLikedBy,
+        [lUserId_1, lUserId_2],
+      );
+    });
   });
 }
