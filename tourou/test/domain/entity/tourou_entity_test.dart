@@ -73,12 +73,12 @@ void main() {
       });
 
       test('UserIdListTourouLikedBy', () {
-        expect(tourouEntity.userIdListTourouLikedBy, userIdListTourouLikedBy);
+        expect(tourouEntity.userIdListLikedBy, userIdListTourouLikedBy);
       });
 
       test('UserIdsListTourouReportedBy', () {
         expect(
-          tourouEntity.userIdsListTourouReportedBy,
+          tourouEntity.userIdListReportedBy,
           userIdsListTourouReportedBy,
         );
       });
@@ -142,7 +142,7 @@ void main() {
         tourouEntity.addUserIdInLikedList(likedUserId);
 
         expect(
-          tourouEntity.userIdListTourouLikedBy,
+          tourouEntity.userIdListLikedBy,
           [lUserId_1, lUserId_2, lUserId_3, likedUserId],
         );
       });
@@ -155,7 +155,7 @@ void main() {
           ..deleteUserIdInLikedList(likedUserId_2);
 
         expect(
-          tourouEntity.userIdListTourouLikedBy,
+          tourouEntity.userIdListLikedBy,
           [lUserId_1, lUserId_2, lUserId_3],
         );
       });
@@ -172,7 +172,7 @@ void main() {
         tourouEntity.addUserIdInReportedList(reportedUserId);
 
         expect(
-          tourouEntity.userIdsListTourouReportedBy,
+          tourouEntity.userIdListReportedBy,
           [rUserId_1, rUserId_2, rUserId_3, reportedUserId],
         );
       });
@@ -185,7 +185,7 @@ void main() {
           ..deleteUserIdInReportedList(reportedUserId_2);
 
         expect(
-          tourouEntity.userIdsListTourouReportedBy,
+          tourouEntity.userIdListReportedBy,
           [rUserId_1, rUserId_2, rUserId_3],
         );
       });
