@@ -12,8 +12,8 @@ class TourouEntity {
     required TourouPhotoLink tourouPhotoLink,
     required TourouTime tourouTime,
     required TourouLanguage tourouLanguage,
-    required List<UserId> userIdListTourouLikedBy,
-    required List<UserId> userIdsListTourouReportedBy,
+    required List<UserId> userIdListLikedBy,
+    required List<UserId> userIdListReportedBy,
     required this.tourouId,
   })  : _userId = userId,
         _userName = userName,
@@ -22,8 +22,8 @@ class TourouEntity {
         _tourouPhotoLink = tourouPhotoLink,
         _tourouTime = tourouTime,
         _tourouLanguage = tourouLanguage,
-        _userIdListTourouLikedBy = userIdListTourouLikedBy,
-        _userIdsListTourouReportedBy = userIdsListTourouReportedBy;
+        _userIdListLikedBy = userIdListLikedBy,
+        _userIdListReportedBy = userIdListReportedBy;
 
   final TourouId tourouId;
   final UserId _userId;
@@ -33,8 +33,8 @@ class TourouEntity {
   final TourouPhotoLink _tourouPhotoLink;
   final TourouTime _tourouTime;
   final TourouLanguage _tourouLanguage;
-  final List<UserId> _userIdListTourouLikedBy;
-  final List<UserId> _userIdsListTourouReportedBy;
+  final List<UserId> _userIdListLikedBy;
+  final List<UserId> _userIdListReportedBy;
 
   UserId get userId => _userId;
   UserName get userName => _userName;
@@ -43,8 +43,8 @@ class TourouEntity {
   TourouPhotoLink get tourouPhotoLink => _tourouPhotoLink;
   TourouTime get tourouTime => _tourouTime;
   TourouLanguage get tourouLanguage => _tourouLanguage;
-  List<UserId> get userIdListTourouLikedBy => _userIdListTourouLikedBy;
-  List<UserId> get userIdsListTourouReportedBy => _userIdsListTourouReportedBy;
+  List<UserId> get userIdListTourouLikedBy => _userIdListLikedBy;
+  List<UserId> get userIdsListTourouReportedBy => _userIdListReportedBy;
 
   @override
   bool operator ==(Object other) {
@@ -65,8 +65,8 @@ class TourouEntity {
         _tourouPhotoLink.hashCode ^
         _tourouTime.hashCode ^
         _tourouLanguage.hashCode ^
-        _userIdListTourouLikedBy.hashCode ^
-        _userIdsListTourouReportedBy.hashCode;
+        _userIdListLikedBy.hashCode ^
+        _userIdListReportedBy.hashCode;
   }
 
   void changeUserName(UserName newUserName) {
@@ -78,24 +78,24 @@ class TourouEntity {
   }
 
   void addUserIdInLikedList(UserId newUserId) {
-    _userIdListTourouLikedBy.add(newUserId);
+    _userIdListLikedBy.add(newUserId);
   }
 
   void deleteUserIdInLikedList(UserId deleteUserId) {
-    if (_userIdListTourouLikedBy.contains(deleteUserId)) {
-      _userIdListTourouLikedBy.remove(deleteUserId);
+    if (_userIdListLikedBy.contains(deleteUserId)) {
+      _userIdListLikedBy.remove(deleteUserId);
     }
   }
 
   int getNumberOfUserIdInLikedList() {
-    return _userIdListTourouLikedBy.length;
+    return _userIdListLikedBy.length;
   }
 
   void addUserIdInReportedList(UserId newUserId) {
-    _userIdsListTourouReportedBy.add(newUserId);
+    _userIdListReportedBy.add(newUserId);
   }
 
   int getNumberOfUserIdInReportedList() {
-    return _userIdsListTourouReportedBy.length;
+    return _userIdListReportedBy.length;
   }
 }

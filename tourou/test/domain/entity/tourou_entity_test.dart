@@ -37,8 +37,8 @@ void main() {
     tourouPhotoLink: tourouPhotoLink,
     tourouTime: tourouTime,
     tourouLanguage: tourouLanguage,
-    userIdListTourouLikedBy: userIdListTourouLikedBy,
-    userIdsListTourouReportedBy: userIdsListTourouReportedBy,
+    userIdListLikedBy: userIdListTourouLikedBy,
+    userIdListReportedBy: userIdsListTourouReportedBy,
     tourouId: tourouId,
   );
 
@@ -95,8 +95,8 @@ void main() {
           tourouPhotoLink: tourouPhotoLink,
           tourouTime: tourouTime,
           tourouLanguage: tourouLanguage,
-          userIdListTourouLikedBy: userIdListTourouLikedBy,
-          userIdsListTourouReportedBy: userIdsListTourouReportedBy,
+          userIdListLikedBy: userIdListTourouLikedBy,
+          userIdListReportedBy: userIdsListTourouReportedBy,
           tourouId: tourouId_2,
         );
         expect(tourouEntity == tourouEntity_2, false);
@@ -111,8 +111,8 @@ void main() {
           tourouPhotoLink: tourouPhotoLink,
           tourouTime: tourouTime,
           tourouLanguage: tourouLanguage,
-          userIdListTourouLikedBy: userIdListTourouLikedBy,
-          userIdsListTourouReportedBy: userIdsListTourouReportedBy,
+          userIdListLikedBy: userIdListTourouLikedBy,
+          userIdListReportedBy: userIdsListTourouReportedBy,
           tourouId: tourouId,
         );
         expect(tourouEntity.hashCode, tourouEntity_3.hashCode);
@@ -167,10 +167,21 @@ void main() {
         );
       });
 
+      final reportedUserId = UserId(userId: 'reportedUserId');
+      test('add reportedUserId', () {
+        tourouEntity.addUserIdInReportedList(reportedUserId);
+
+        expect(
+          tourouEntity.userIdsListTourouReportedBy,
+          [rUserId_1, rUserId_2, rUserId_3, reportedUserId],
+        );
+      });
+
       test('get the number of userIds in reported list', () {
         expect(
           tourouEntity.getNumberOfUserIdInReportedList(),
-          3,
+          // TODO(aoi): 一時的に4, delete のテスト実装後3に戻す。
+          4,
         );
       });
     });
