@@ -37,8 +37,8 @@ void main() {
     tourouPhotoLink: tourouPhotoLink,
     tourouTime: tourouTime,
     tourouLanguage: tourouLanguage,
-    userIdListTourouLikedBy: userIdListTourouLikedBy,
-    userIdsListTourouReportedBy: userIdsListTourouReportedBy,
+    userIdListLikedBy: userIdListTourouLikedBy,
+    userIdListReportedBy: userIdsListTourouReportedBy,
     tourouId: tourouId,
   );
 
@@ -95,8 +95,8 @@ void main() {
           tourouPhotoLink: tourouPhotoLink,
           tourouTime: tourouTime,
           tourouLanguage: tourouLanguage,
-          userIdListTourouLikedBy: userIdListTourouLikedBy,
-          userIdsListTourouReportedBy: userIdsListTourouReportedBy,
+          userIdListLikedBy: userIdListTourouLikedBy,
+          userIdListReportedBy: userIdsListTourouReportedBy,
           tourouId: tourouId_2,
         );
         expect(tourouEntity == tourouEntity_2, false);
@@ -111,8 +111,8 @@ void main() {
           tourouPhotoLink: tourouPhotoLink,
           tourouTime: tourouTime,
           tourouLanguage: tourouLanguage,
-          userIdListTourouLikedBy: userIdListTourouLikedBy,
-          userIdsListTourouReportedBy: userIdsListTourouReportedBy,
+          userIdListLikedBy: userIdListTourouLikedBy,
+          userIdListReportedBy: userIdsListTourouReportedBy,
           tourouId: tourouId,
         );
         expect(tourouEntity.hashCode, tourouEntity_3.hashCode);
