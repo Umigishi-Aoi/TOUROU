@@ -43,8 +43,8 @@ class TourouEntity {
   TourouPhotoLink get tourouPhotoLink => _tourouPhotoLink;
   TourouTime get tourouTime => _tourouTime;
   TourouLanguage get tourouLanguage => _tourouLanguage;
-  List<UserId> get userIdListTourouLikedBy => _userIdListLikedBy;
-  List<UserId> get userIdsListTourouReportedBy => _userIdListReportedBy;
+  List<UserId> get userIdListLikedBy => _userIdListLikedBy;
+  List<UserId> get userIdListReportedBy => _userIdListReportedBy;
 
   @override
   bool operator ==(Object other) {
