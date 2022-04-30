@@ -91,6 +91,10 @@ class TourouEntity {
     return _userIdListTourouLikedBy.length;
   }
 
+  void addUserIdInReportedList(UserId newUserId) {
+    _userIdsListTourouReportedBy.add(newUserId);
+  }
+
   int getNumberOfUserIdInReportedList() {
     return _userIdsListTourouReportedBy.length;
   }
