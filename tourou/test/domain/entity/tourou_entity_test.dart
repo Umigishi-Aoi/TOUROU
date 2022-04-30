@@ -166,6 +166,13 @@ void main() {
           3,
         );
       });
+
+      test('get the number of userIds in reported list', () {
+        expect(
+          tourouEntity.getNumberOfUserIdInReportedList(),
+          3,
+        );
+      });
     });
   });
 }
