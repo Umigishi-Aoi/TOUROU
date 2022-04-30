@@ -86,4 +86,8 @@ class TourouEntity {
       _userIdListTourouLikedBy.remove(deleteUserId);
     }
   }
+
+  int getNumberOfUserIdInLikedList() {
+    return _userIdListTourouLikedBy.length;
+  }
 }
