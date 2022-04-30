@@ -95,6 +95,12 @@ class TourouEntity {
     _userIdListReportedBy.add(newUserId);
   }
 
+  void deleteUserIdInReportedList(UserId deleteUserId) {
+    if (_userIdListReportedBy.contains(deleteUserId)) {
+      _userIdListReportedBy.remove(deleteUserId);
+    }
+  }
+
   int getNumberOfUserIdInReportedList() {
     return _userIdListReportedBy.length;
   }
