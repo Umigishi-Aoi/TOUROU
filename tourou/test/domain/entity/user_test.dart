@@ -102,9 +102,8 @@ void main() {
         );
       });
 
+      final goodTourouId = TourouId(tourouId: 'goodTourouId');
       test('add goodTourou', () {
-        final goodTourouId = TourouId(tourouId: 'goodTourouId');
-
         user.addTourouIdToGoodList(goodTourouId);
 
         expect(
@@ -114,18 +113,15 @@ void main() {
       });
 
       test('delete goodTourou', () {
-        final goodTourouId = TourouId(tourouId: 'goodTourouId');
+        final goodTourouId_2 = TourouId(tourouId: 'goodTourouId_2');
 
         user
-          ..deleteTourouIdFromGoodList(gTourouId_3)
-          ..deleteTourouIdFromGoodList(goodTourouId);
+          ..deleteTourouIdFromGoodList(goodTourouId)
+          ..deleteTourouIdFromGoodList(goodTourouId_2);
 
         expect(
           user.goodTourous,
-          [
-            gTourouId_1,
-            gTourouId_2,
-          ],
+          [gTourouId_1, gTourouId_2, gTourouId_3],
         );
       });
     });
