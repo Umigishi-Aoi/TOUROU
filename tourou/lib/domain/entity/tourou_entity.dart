@@ -80,4 +80,10 @@ class TourouEntity {
   void addUserIdInLikedList(UserId newUserId) {
     _userIdListTourouLikedBy.add(newUserId);
   }
+
+  void deleteUserIdInLikedList(UserId deleteUserId) {
+    if (_userIdListTourouLikedBy.contains(deleteUserId)) {
+      _userIdListTourouLikedBy.remove(deleteUserId);
+    }
+  }
 }
