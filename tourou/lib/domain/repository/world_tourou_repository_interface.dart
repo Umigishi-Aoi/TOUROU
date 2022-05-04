@@ -1,6 +1,6 @@
-import 'package:tourou/domain/value_object/tourou_language/tourou_language.dart';
-
+// Project imports:
 import '../entity/tourou_entity.dart';
+import '../value_object/tourou_language/tourou_language.dart';
 
 abstract class WorldTourouRepositoryInterface {
   Future<List<TourouEntity>> getTourouOrderedByGood();
