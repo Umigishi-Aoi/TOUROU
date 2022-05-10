@@ -1,6 +1,8 @@
+import 'package:tourou/domain/entity/user.dart';
 import 'package:tourou/domain/repository/user_repository_interface.dart';
 
-class UserTestRepository implements UserRepositoryInterface{
+class UserTestRepository implements UserRepositoryInterface {
+  final List<User> users =[];
 
   @override
   void appleSignIn() {
@@ -47,5 +49,4 @@ class UserTestRepository implements UserRepositoryInterface{
   void signOut() {
     // TODO: implement signOut
   }
-  
 }
