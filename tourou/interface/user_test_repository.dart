@@ -1,8 +1,12 @@
 import 'package:tourou/domain/entity/user.dart';
 import 'package:tourou/domain/repository/user_repository_interface.dart';
 
+import '../lib/domain/value_object/value_object.dart';
+
 class UserTestRepository implements UserRepositoryInterface {
-  final List<User> users =[];
+  final List<User> users =[
+    User(userId: UserId(userId: 'id'), userName: userName, profilePhotoLink: profilePhotoLink, blockedUsers: blockedUsers, goodTourous: goodTourous)
+  ];
 
   @override
   void appleSignIn() {
