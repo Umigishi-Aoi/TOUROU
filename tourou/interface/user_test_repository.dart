@@ -15,9 +15,11 @@ class UserTestRepository implements UserRepositoryInterface {
     ),
   );
 
+  User? currentUser;
+
   @override
   void appleSignIn() {
-    // TODO: implement appleSignIn
+    currentUser = users[0];
   }
 
   @override
