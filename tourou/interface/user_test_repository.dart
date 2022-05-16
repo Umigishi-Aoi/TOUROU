@@ -24,7 +24,19 @@ class UserTestRepository implements UserRepositoryInterface {
 
   @override
   void appleSignUp() {
-    // TODO: implement appleSignUp
+    final newUser = User(
+      userId: UserId(userId: 'id_new'),
+      userName: UserName(userName: 'name_new'),
+      profilePhotoLink: ProfilePhotoLink(profilePhotoLink: 'link_new'),
+      blockedUsers: [],
+      goodTourous: [],
+    );
+
+    if (!users.contains(newUser)) {
+      users.add(newUser);
+    }
+
+    currentUser = newUser;
   }
 
   @override
