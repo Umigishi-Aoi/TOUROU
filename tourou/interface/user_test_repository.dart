@@ -51,7 +51,7 @@ class UserTestRepository implements UserRepositoryInterface {
 
   @override
   void googleSignIn() {
-    // TODO: implement googleSignIn
+    currentUser = users[0];
   }
 
   @override
